@@ -1,6 +1,6 @@
 #Sharebnb
 
-[insert heroku link here](https://id.heroku.com/login)
+[Insert Heroku Link Here](https://id.heroku.com/login)
 
 [Trello](https://trello.com/b/bAlvQnD5/airbnb-clone-think-of-new-name)
 
@@ -28,3 +28,13 @@ Sharebnb is a web application inspired by Airbnb using Ruby on Rails and React/R
 ###Phase 1: Backend setup and Front End User Authentication (2 days)
 
 **Objective:** Functioning rails project with front-end Authentication
+
+###Phase 2: tbd
+
+**Objective:** tbd
+
+###Bonus Features(TBD)
+
+- [ ] User/host profiles
+- [ ] Experiences
+- [ ] Messaging
