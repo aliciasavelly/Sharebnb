@@ -17,5 +17,5 @@ Sharebnb is a web application inspired by Airbnb using Ruby on Rails and React/R
 - [ ] Reviews
 
 ##Design Docs
-* [View Wireframes](./wireframes)
+* [View Wireframes](wireframes)
 * [React Components](./component-hierarchy.md)
