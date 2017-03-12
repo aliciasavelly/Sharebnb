@@ -19,3 +19,13 @@ Sharebnb is a web application inspired by Airbnb using Ruby on Rails and React/R
 ##Design Docs
 * [View Wireframes](wireframes)
 * [React Components](./component-hierarchy.md)
+* [API Endpoints](./api-endpoints.md)
+* [DB Schema](./schema.md)
+* [Sample State](./sample-state.md)
+
+##Implementation Timeline
+
+###Phase 1: Backend setup and Front End User Authentication (2 days)
+
+####Objective:
+Functioning rails project with front-end Authentication
