@@ -12,6 +12,17 @@
     logIn: {errors: []},
     bookSpot: {errors: ["Each section must be filled out."]}
   },
+  trips: {
+    1: {
+      spot_id: 1,
+      user_id: 1,
+      status: "upcoming",
+      user_id: 1,
+      check_in: "01/23/2017",
+      check_out: "01/27/2017",
+      num_guests: 2
+    }
+  },
   spots: {
     1: {
       title: "Spacious home in the mission",
@@ -19,8 +30,8 @@
       destination_id: 1,
       price: 123,
       cleaning_fee: 44,
-      check_in: "Anytime after 3pm",
-      check_out: "12PM (noon)",
+      check_in_time: "Anytime after 3pm",
+      check_out_time: "12PM (noon)",
       pet_owner: "Some pets",
       property_type: "House",
       room_type: "Entire home/apt",
@@ -35,18 +46,25 @@
       }
     }
   },
-  trips: {
+  destinations: {
     1: {
-      spot_id: 1,
-      status: upcoming,
-      user_id: 1,
-      check_in: "01/23/2017",
-      check_out: "01/27/2017",
-      num_guests: 2
+      city: "San Francisco",
+      state: "California",
+      country: "United States of America"
+    },
+    2: {
+      city: "New York City",
+      state: "New York",
+      country: "United States of America"
+    },
+    3: {
+      city: "Boston",
+      state: "Massachusetts",
+      country: "United States of America"
     }
   },
   searchFilters: {
-    destination: "San Francisco",
+    destination_id: 2,
     price_low: 30,
     price_high: 120,
     check_in: "01/23/2017",
