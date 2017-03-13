@@ -1,29 +1,36 @@
 #Component Hierarchy
 
+###AppContainer
+* AuthFormContainer
+* MainContainer
+* SearchPageContainer
+* SpotsShowContainer
+* MyTripsContainer
+
 ###AuthFormContainer
 
 * AuthForm Component
 
 ###MainContainer
 
-* Navbar
-* Searchbar
+* NavbarComponent
+<!-- * SearchbarComponent -->
 * DestinationsIndexComponent
  * DestinationsIndexItem
 * SpotsIndexComponent
  * SpotsIndexItem
 
-###SearchContainer
+###SearchPageContainer
 
-* Navbar
-* Filterbar
+* NavbarComponent
+* FilterbarComponent
 * GoogleMapsAPI
 * SpotsIndexComponent
  * SpotsIndexItem
 
 ###SpotsShowContainer
 
-* Navbar
+* NavbarComponent
 * SpotSummaryComponent
 * SpotBookingComponent
 * SpotDetailComponent
@@ -32,7 +39,7 @@
 
 ###MyTripsContainer
 
-* Navbar
+* NavbarComponent
 * TripsIndexComponent
  * TripsIndexItem
 
@@ -40,9 +47,10 @@
 
 | Path                  | Component            |
 | --------------------- | -------------------- |
+| "/"                   | "App"
 | "/sign-up"            | "AuthFormContainer"  |
 | "/sign-in"            | "AuthFormContainer"  |
 | "/main"               | "MainContainer"      |
-| "/search"             | "SearchContainer"    |
+| "/search-page"        | "SearchPageContainer"    |
 | "/spots-show/:spotId" | "SpotsShowContainer" |
 | "/my-trips"           | "MyTripsContainer"   |
