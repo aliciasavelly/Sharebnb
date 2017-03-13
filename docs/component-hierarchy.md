@@ -8,9 +8,9 @@
 
 * Navbar
 * Searchbar
-* DestinationsIndex
+* DestinationsIndexComponent
  * DestinationsIndexItem
-* SpotsIndex
+* SpotsIndexComponent
  * SpotsIndexItem
 
 ###SearchContainer
@@ -18,11 +18,8 @@
 * Navbar
 * Filterbar
 * GoogleMapsAPI
-* SpotsIndexContainer
-
-###SpotsIndexContainer
-
-* SpotsIndexItem
+* SpotsIndexComponent
+ * SpotsIndexItem
 
 ###SpotsShowContainer
 
@@ -30,31 +27,22 @@
 * SpotSummaryComponent
 * SpotBookingComponent
 * SpotDetailComponent
-* ReviewsIndexContainer
-
-###ReviewsIndexContainer
-
-* ReviewsIndexItem
+* ReviewsIndexComponent
+ * ReviewsIndexItem
 
 ###MyTripsContainer
 
 * Navbar
-* TripsIndexContainer
-
-###TripsIndexContainer
-
-* TripsIndexItem
+* TripsIndexComponent
+ * TripsIndexItem
 
 #Routes
 
-| Path                                | Component               |
-| ----------------------------------- | ----------------------- |
-| "/sign-up"                          | "AuthFormContainer"     |
-| "/sign-in"                          | "AuthFormContainer"     |
-| "/main"                             | "MainContainer"         |
-| "/search"                           | "SearchContainer"       |
-| "/main/spots-index"                 | "SpotsIndexContainer"   |
-| "/spots-show/:spotId"               | "SpotsShowContainer"    |
-| "/spots-show/:spotId/reviews-index" | "ReviewsIndexContainer" |
-| "/my-trips"                         | "MyTripsContainer"      |
-| "/my-trips/trips-index"             | "TripsIndexContainer"   |
+| Path                  | Component            |
+| --------------------- | -------------------- |
+| "/sign-up"            | "AuthFormContainer"  |
+| "/sign-in"            | "AuthFormContainer"  |
+| "/main"               | "MainContainer"      |
+| "/search"             | "SearchContainer"    |
+| "/spots-show/:spotId" | "SpotsShowContainer" |
+| "/my-trips"           | "MyTripsContainer"   |
