@@ -1,10 +1,10 @@
 #Component Hierarchy
 
-##AuthFormContainer
+###AuthFormContainer
 
 * AuthForm Component
 
-##MainContainer
+###MainContainer
 
 * Navbar
 * Searchbar
@@ -13,18 +13,18 @@
 * SpotsIndex
  * SpotsIndexItem
 
-##SearchContainer
+###SearchContainer
 
 * Navbar
 * Filterbar
 * GoogleMapsAPI
 * SpotsIndexContainer
 
-##SpotsIndexContainer
+###SpotsIndexContainer
 
 * SpotsIndexItem
 
-##SpotsShowContainer
+###SpotsShowContainer
 
 * Navbar
 * SpotSummaryComponent
@@ -32,16 +32,16 @@
 * SpotDetailComponent
 * ReviewsIndexContainer
 
-##ReviewsIndexContainer
+###ReviewsIndexContainer
 
 * ReviewsIndexItem
 
-##MyTripsContainer
+###MyTripsContainer
 
 * Navbar
 * TripsIndexContainer
 
-##TripsIndexContainer
+###TripsIndexContainer
 
 * TripsIndexItem
 
