@@ -3,7 +3,7 @@
 ###AppContainer
 * AuthFormContainer
 * MainContainer
-* SearchPageContainer
+* SpotsSearchContainer
 * SpotsShowContainer
 * MyTripsContainer
 
@@ -14,13 +14,13 @@
 ###MainContainer
 
 * NavbarComponent
-<!-- * SearchbarComponent -->
 * DestinationsIndexComponent
  * DestinationsIndexItem
 * SpotsIndexComponent
  * SpotsIndexItem
+* BONUS: SearchbarComponent
 
-###SearchPageContainer
+###SpotsSearchContainer
 
 * NavbarComponent
 * FilterbarComponent
@@ -45,12 +45,12 @@
 
 #Routes
 
-| Path                  | Component            |
-| --------------------- | -------------------- |
-| "/"                   | "App"
-| "/sign-up"            | "AuthFormContainer"  |
-| "/sign-in"            | "AuthFormContainer"  |
-| "/main"               | "MainContainer"      |
-| "/search-page"        | "SearchPageContainer"    |
-| "/spots-show/:spotId" | "SpotsShowContainer" |
-| "/my-trips"           | "MyTripsContainer"   |
+| Path             | Component              |
+| ---------------- | ---------------------- |
+| "/"              | "App"                  |
+| "/sign-up"       | "AuthFormContainer"    |
+| "/sign-in"       | "AuthFormContainer"    |
+| "/main"          | "MainContainer"        |
+| "/spots-search"  | "SpotsSearchContainer" |
+| "/spots/:spotId" | "SpotsShowContainer"   |
+| "/my-trips"      | "MyTripsContainer"     |
