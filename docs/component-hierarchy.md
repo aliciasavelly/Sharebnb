@@ -9,4 +9,4 @@
 * Navbar
 * Searchbar
 * DestinationIndex
-..* DestinationIndexItem
+ * DestinationIndexItem
