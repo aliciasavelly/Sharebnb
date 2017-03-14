@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 
+# Allows us to view Heroku logs and wil precompile our assets
+gem 'rails_12factor'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use postgresql as the database for Active Record

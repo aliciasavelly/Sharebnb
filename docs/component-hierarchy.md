@@ -7,6 +7,7 @@
 * SpotsSearchContainer
 * SpotsShowContainer
 * MyTripsContainer
+* MyListingsContainer
 
 ### AuthFormContainer
 
@@ -16,9 +17,9 @@
 
 * NavbarComponent
 * DestinationsIndexComponent
- * DestinationsIndexItem
+  * DestinationsIndexItem
 * SpotsIndexComponent
- * SpotsIndexItem
+  * SpotsIndexItem
 * BONUS: SearchbarComponent
 
 ### SpotsSearchContainer
@@ -27,7 +28,7 @@
 * FilterbarComponent
 * GoogleMapsAPI
 * SpotsIndexComponent
- * SpotsIndexItem
+  * SpotsIndexItem
 
 ### SpotsShowContainer
 
@@ -36,7 +37,7 @@
 * SpotBookingComponent
 * SpotDetailComponent
 * ReviewsIndexComponent
- * ReviewsIndexItem
+  * ReviewsIndexItem
 
 ### SpotsCreateContainer
 
@@ -47,11 +48,13 @@
 
 * NavbarComponent
 * TripsIndexComponent
- * TripsIndexItem
+  * TripsIndexItem
 
-## HostedSpotsContainer
+### MyListingsContainer
 
 * NavbarComponent
+* ListingsIndexComponent
+* ListingsIndexItem
 
 # Routes
 
@@ -63,5 +66,6 @@
 | "/main"          | "MainContainer"        |
 | "/spots-search"  | "SpotsSearchContainer" |
 | "/spots/:spotId" | "SpotsShowContainer"   |
-| "/new-spot"      | "SpotsCreateContainer" |
+| "/new-listing"   | "SpotsCreateContainer" |
 | "/my-trips"      | "MyTripsContainer"     |
+| "/my-listings"   | "MyListingsContainer"
