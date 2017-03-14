@@ -7,11 +7,7 @@
     first_name: "Alicia",
     last_name: "Savelly"
   },
-  forms: {
-    signUp: {errors: []},
-    logIn: {errors: []},
-    bookSpot: {errors: ["Each section must be filled out."]}
-  },
+  errors: [],
   trips: {
     1: {
       spot_id: 1,
@@ -26,26 +22,23 @@
   spots: {
     1: {
       title: "Spacious home in the mission",
-      user_id: 1,
       destination_id: 1,
       price: 123,
-      cleaning_fee: 44,
-      check_in_time: "Anytime after 3pm",
-      check_out_time: "12PM (noon)",
-      pet_owner: "Some pets",
-      property_type: "House",
-      room_type: "Entire home/apt",
-      house_rules: "Have fun!",
-      description: "There's a lot to do here",
-      reviews: {
-        1: {
-          user_id: 2,
-          detail: "This is a great place to stay",
-          date: "March 2017"
-        }
-      }
+      image_url: "cloudinary.jpg"
     }
   },
+  spotDetail: {
+    id: 1,
+    user_id: 1,
+    description: "There's a lot to do here.",
+    reviews: {
+      1: {
+        user_id: 2,
+        detail: "This is a great place to stay",
+        date: "March 2017"
+      }
+    }
+  }
   destinations: {
     1: {
       city: "San Francisco",
