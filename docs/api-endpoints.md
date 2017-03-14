@@ -20,7 +20,7 @@
 ### Spots
 
 * ```GET /api/spots```
- * index/search
+  * index/search
  * accepts ```check_in``` date, ```check_out``` date, ```destination``` city, ```price_low```, and ```price_high``` query params to sort spots
 * ```GET /api/spots/new```
  * new
