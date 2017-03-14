@@ -1,6 +1,7 @@
 #Component Hierarchy
 
 ###AppContainer
+
 * AuthFormContainer
 * MainContainer
 * SpotsSearchContainer
@@ -37,6 +38,11 @@
 * ReviewsIndexComponent
  * ReviewsIndexItem
 
+###SpotsCreateContainer
+
+* NavbarComponent
+* MUST ADD HERE
+
 ###MyTripsContainer
 
 * NavbarComponent
@@ -53,4 +59,5 @@
 | "/main"          | "MainContainer"        |
 | "/spots-search"  | "SpotsSearchContainer" |
 | "/spots/:spotId" | "SpotsShowContainer"   |
+| "/new-spot"      | "SpotsCreateContainer" |
 | "/my-trips"      | "MyTripsContainer"     |
