@@ -10,6 +10,7 @@
 | password_digest | string    | not null, indexed, unique |
 
 ##spots
+
 | column name    | data type | details                        |
 | -------------- | --------- | ------------------------------ |
 | id             | integer   | not null, primary key          |
@@ -22,6 +23,7 @@
 | description    | text      |                                |
 
 ##trips
+
 | column name     | data type | details                        |
 | --------------- | --------- | ------------------------------ |
 | id              | integer   | not null, primary key          |
