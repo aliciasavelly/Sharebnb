@@ -12,7 +12,6 @@
       spot_id: 1,
       user_id: 1,
       status: "upcoming",
-      user_id: 1,
       check_in: "01/23/2017",
       check_out: "01/27/2017",
       num_guests: 2
