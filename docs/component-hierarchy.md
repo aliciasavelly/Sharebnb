@@ -49,6 +49,10 @@
 * TripsIndexComponent
  * TripsIndexItem
 
+##HostedSpotsContainer
+
+* NavbarComponent
+
 #Routes
 
 | Path             | Component              |
