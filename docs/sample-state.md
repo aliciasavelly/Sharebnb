@@ -5,12 +5,13 @@
     id: 1,
     username: "app-academy",
     first_name: "Alicia",
+    image_url: "cloudinary.jpg"
   },
   errors: [],
   trips: {
     1: {
       spot_id: 1,
-      spot: object,
+      spot: spot_object,
       user_id: 1,
       status: "upcoming",
       check_in: "01/23/2017",
@@ -43,17 +44,20 @@
     1: {
       city: "San Francisco",
       state: "California",
-      country: "United States of America"
+      country: "United States of America",
+      image_url "sf.jpg"
     },
     2: {
       city: "New York City",
       state: "New York",
-      country: "United States of America"
+      country: "United States of America",
+      image_url "nyc.jpg"
     },
     3: {
       city: "Boston",
       state: "Massachusetts",
-      country: "United States of America"
+      country: "United States of America",
+      image_url "bos.jpg"
     }
   },
   searchFilters: {

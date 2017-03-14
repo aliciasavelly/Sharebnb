@@ -8,6 +8,7 @@
 | username        | string    | not null, indexed, unique |
 | first_name      | string    | not null                  |
 | password_digest | string    | not null, indexed, unique |
+| image_url       | string    |                           |
 
 ## spots
 
@@ -52,6 +53,7 @@
 | city        | string    | not null              |
 | state       | string    | not null              |
 | country     | string    | not null              |
+| image_url   | string    | not null              |
 
 ## search_filters
 
