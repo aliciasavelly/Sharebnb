@@ -10,6 +10,7 @@ class Api::SessionsController < ApplicationController
     else
       render(json: ['Invalid username or password.'],
              status: 401)
+    end
   end
 
   def destroy
