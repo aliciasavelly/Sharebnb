@@ -21,25 +21,25 @@
 
 * ```GET /api/spots```
   * index/search
- * accepts ```check_in``` date, ```check_out``` date, ```destination``` city, ```price_low```, and ```price_high``` query params to sort spots
+  * accepts ```check_in``` date, ```check_out``` date, ```destination``` city, ```price_low```, and ```price_high``` query params to sort spots
 * ```GET /api/spots/new```
- * new
+  * new
 * ```POST /api/spots```
- * create
+  * create
 * ```GET /api/spots/spotId```
- * show
+  * show
 * ```GET /api/spots/spotId/edit```
- * edit
+  * edit
 * ```PATCH /api/spots/spotId```
- * update
+  * update
 * ```DELETE /api/spots/spotId```
- * destroy
+  * destroy
 
 ### MyTrips
 
 * ```POST api/trips```
- * create
+  * create
 * ```GET /api/trips```
- * index
+  * index
 * ```DELETE /api/trips```
- * destroy
+  * destroy
