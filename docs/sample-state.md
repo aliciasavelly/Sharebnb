@@ -5,7 +5,6 @@
     id: 1,
     username: "app-academy",
     first_name: "Alicia",
-    last_name: "Savelly"
   },
   errors: [],
   trips: {
@@ -30,6 +29,7 @@
   spotDetail: {
     id: 1,
     user_id: 1,
+    room_type: "Private room",
     description: "There's a lot to do here.",
     reviews: {
       1: {
@@ -38,7 +38,7 @@
         date: "March 2017"
       }
     }
-  }
+  },
   destinations: {
     1: {
       city: "San Francisco",

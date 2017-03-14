@@ -7,26 +7,19 @@
 | id              | integer   | not null, primary key     |
 | username        | string    | not null, indexed, unique |
 | first_name      | string    | not null                  |
-| last_name       | string    | not null                  |
-| password_digest | string    | not null, index, unique   |
+| password_digest | string    | not null, indexed, unique |
 
 ##spots
-| column name     | data type | details               |
-| --------------- | --------- | --------------------- |
-| id              | integer   | not null, primary key |
-| title           | string    | not null              |
-| user_id         | integer   | foreign key           |
-| destination_id  | integer   | foreign key           |
-| price           | integer   | not null              |
-| cleaning_fee    | integer   | not null              |
-| check_in_time   | string    | not null              |
-| check_out_time  | string    | not null              |
-| pet_owner       | string    |                       |
-| property_type   | string    | not null              |
-| room_type       | string    | not null              |
-| house_rules     | text      |                       |
-| description     | text      |                       |
-| reviews         | integer   |                       |
+| column name    | data type | details               |
+| -------------- | --------- | --------------------- |
+| id             | integer   | not null, primary key |
+| title          | string    | not null              |
+| destination_id | integer   | foreign key           |
+| price          | integer   | not null              |
+| image_url      | string    | foreign key           |
+| user_id        | integer   | foreign key           |
+| room_type      | string    | not null              |
+| description    | text      |                       |
 
 ##trips
 | column name     | data type | details               |
