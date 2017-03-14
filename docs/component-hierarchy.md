@@ -1,6 +1,6 @@
-#Component Hierarchy
+# Component Hierarchy
 
-###AppContainer
+### AppContainer
 
 * AuthFormContainer
 * MainContainer
@@ -8,11 +8,11 @@
 * SpotsShowContainer
 * MyTripsContainer
 
-###AuthFormContainer
+### AuthFormContainer
 
 * AuthForm Component
 
-###MainContainer
+### MainContainer
 
 * NavbarComponent
 * DestinationsIndexComponent
@@ -21,7 +21,7 @@
  * SpotsIndexItem
 * BONUS: SearchbarComponent
 
-###SpotsSearchContainer
+### SpotsSearchContainer
 
 * NavbarComponent
 * FilterbarComponent
@@ -29,7 +29,7 @@
 * SpotsIndexComponent
  * SpotsIndexItem
 
-###SpotsShowContainer
+### SpotsShowContainer
 
 * NavbarComponent
 * SpotSummaryComponent
@@ -38,22 +38,22 @@
 * ReviewsIndexComponent
  * ReviewsIndexItem
 
-###SpotsCreateContainer
+### SpotsCreateContainer
 
 * NavbarComponent
 * MUST ADD HERE
 
-###MyTripsContainer
+### MyTripsContainer
 
 * NavbarComponent
 * TripsIndexComponent
  * TripsIndexItem
 
-##HostedSpotsContainer
+## HostedSpotsContainer
 
 * NavbarComponent
 
-#Routes
+# Routes
 
 | Path             | Component              |
 | ---------------- | ---------------------- |

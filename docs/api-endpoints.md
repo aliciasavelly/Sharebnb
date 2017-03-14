@@ -1,23 +1,23 @@
-#API Endpoints
+# API Endpoints
 
-##HTML API
+## HTML API
 
-###Root
+### Root
 
 * ```GET /``` - loads React web app
 
-##JSON API
+## JSON API
 
-###Users
+### Users
 
 * ```POST /api/users```
 
-###Session
+### Session
 
 * ```POST /api/session```
 * ```DELETE /api/session```
 
-###Spots
+### Spots
 
 * ```GET /api/spots```
  * index/search
@@ -35,7 +35,7 @@
 * ```DELETE /api/spots/spotId```
  * destroy
 
-###MyTrips
+### MyTrips
 
 * ```POST api/trips```
  * create

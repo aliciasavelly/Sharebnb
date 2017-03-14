@@ -1,6 +1,6 @@
-#Schema Information
+# Schema Information
 
-##users
+## users
 
 | column name     | data type | details                   |
 | --------------- | --------- | ------------------------- |
@@ -9,7 +9,7 @@
 | first_name      | string    | not null                  |
 | password_digest | string    | not null, indexed, unique |
 
-##spots
+## spots
 
 | column name    | data type | details                        |
 | -------------- | --------- | ------------------------------ |
@@ -22,7 +22,7 @@
 | room_type      | string    | not null                       |
 | description    | text      |                                |
 
-##trips
+## trips
 
 | column name     | data type | details                        |
 | --------------- | --------- | ------------------------------ |
@@ -34,7 +34,7 @@
 | check_out       | string    | not null                       |
 | num_guests      | integer   | not null                       |
 
-##reviews
+## reviews
 
 | column name | data type | details                        |
 | ----------- | --------- | ------------------------------ |
@@ -44,7 +44,7 @@
 | detail      | text      | not null                       |
 | date        | string    | not null                       |
 
-##destinations
+## destinations
 
 | column name | data type | details               |
 | ----------- | --------- | --------------------- |
@@ -53,7 +53,7 @@
 | state       | string    | not null              |
 | country     | string    | not null              |
 
-##search_filters
+## search_filters
 
 | column name    | data type | details                        |
 | -----------    | --------- | ------------------------------ |
