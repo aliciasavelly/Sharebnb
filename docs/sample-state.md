@@ -10,6 +10,7 @@
   trips: {
     1: {
       spot_id: 1,
+      spot: object,
       user_id: 1,
       status: "upcoming",
       check_in: "01/23/2017",
