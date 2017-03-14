@@ -5,6 +5,6 @@ const App = ({ children }) => (
     <h1>Sharebnb</h1>
     { children }
   </div>
-)
+);
 
 export default App;
