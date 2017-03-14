@@ -38,5 +38,8 @@
 ###MyTrips
 
 * ```POST api/trips```
+ * create
 * ```GET /api/trips```
+ * index
 * ```DELETE /api/trips```
+ * destroy
