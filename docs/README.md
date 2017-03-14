@@ -29,39 +29,41 @@ Sharebnb is a web application inspired by Airbnb using Ruby on Rails and React/R
 
 **Objective:** Functioning rails project with front-end authentication.
 
-###Phase 2: Main page and Destinations (1 day)
+###Phase 2: App Container (.5 day)
 
-**Objective One:** Creation of navigation bar (which will have limited utility).
+**Objective:** Creation of navigation bar (which will have limited utility).
 
-**Objective Two:** Destinations can be created, read, edited, and destroyed through the API. Destinations created with seed data. Show destinations on main page.
+###Phase 3: Destinations (.5 day)
 
-###Phase 3: Spots model, API, and components (2 day)
+**Objective:** Destinations can be created, read, edited, and destroyed through the API. Destinations created with seed data. Show destinations on main page.
+
+###Phase 4: Spots model, API, and components (2 day)
 
 **Objective:** Spots can be created, read, edited/updated, and destroyed through the API. Spots created with seed data.
 
-###Phase 4: Search (1 day)
+###Phase 5: Search (1 day)
 
 **Objective:** Spots are searchable. Destinations have search pages, including Google Maps API.
 
-###Phase 5: Hosts/Users (.5 day)
+###Phase 6: Hosts/Users (.33 day)
 
 **Objective:** Add hosts/users seed data.
 
-###Phase 6: Reviews (.5 day)
+###Phase 7: Reviews (.33 day)
 
 **Objective:** Add reviews seed data.
 
-###Phase 7: Spots Show (1 day)
+###Phase 8: Trips (.33 day)
+
+**Objective:** User trips page shows users trips. Can book trips.
+
+###Phase 9: Spots Show (1 day)
 
 **Objective:** Spots show page created. Include reviews on spots show page.
 
-###Phase 8: Hosted spots create/edit/update (1 day)
+###Phase 10: Hosted spots create/edit/update (1 day)
 
 **Objective:** Users can create/edit/update their hosted spots. They can view these at their hosted spots page.
-
-###Phase 8: Trips (.5 day)
-
-**Objective:** User trips page shows users trips. Can book trips.
 
 ###Bonus Features(TBD)
 
