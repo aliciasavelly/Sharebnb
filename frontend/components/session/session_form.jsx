@@ -42,13 +42,13 @@ class SessionForm extends React.Component {
   redirectLink() {
     if (this.props.formType === "login") {
       return (
-      <div className="redirect-button">
+      <div className="redirect" id="bottom">
         <p>Don't have a Sharebnb account?</p>
         <Link to="/signup">Sign up</Link>
       </div>)
     } else {
       return (
-      <div className="redirect-button">
+      <div className="redirect" id="bottom">
         <p>Already have a Sharebnb account?</p>
         <Link to="/login">Log in</Link>
       </div>)
@@ -159,6 +159,7 @@ class SessionForm extends React.Component {
               <input id="button" className="button here" type="submit" value={title} />
             </div>
           </form>
+          <hr/>
           {this.redirectLink()}
         </div>
       </div>
