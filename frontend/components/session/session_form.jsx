@@ -82,13 +82,11 @@ class SessionForm extends React.Component {
   topSection() {
     if (this.props.formType === "login") {
       return(
-        <form onSubmit={this.loginGuestUser}>
-          <input type="submit" value="Log in with guest account" />
-        </form>
+        <div></div>
       )
     } else {
       return(
-        <p>Sign up to join Sharebnb's trusted community of millions and have your own unique experience.</p>
+        <p className="signup-top">Sign up to join Sharebnb's trusted community of millions and have your own unique experience.</p>
       )
     }
   }
@@ -108,30 +106,45 @@ class SessionForm extends React.Component {
 
   render() {
     let formType = this.props.formType;
-    let title = (formType === "login") ? "Log in" : "Sign up";
+    let title = (formType === "login") ? "Log In" : "Sign up";
 
     return(
       <div className="login-signup-form-container">
-        <h2>{title}</h2>
-        <Link to='/'>X</Link>
-        {this.topSection()}
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          {this.renderErrors()}
-          <div className="login-signup-form">
-            <input type="text"
-                   placeholder="Username"
-                   value={this.state.username}
-                   onChange={this.update("username")} />
-                 {this.firstNameInput()}
-            <input type="password"
-                   placeholder="Create a password"
-                   value={this.state.password}
-                   onChange={this.update("password")} />
-            <input type="submit" value={title} />
+        <div className="login-signup-header">
+          <h2>{title}</h2>
+          <Link to='/' className="main-redirect-x">
 
-          </div>
-        </form>
-        {this.redirectLink()}
+            <i className="fa fa-times main-redirect-x" aria-hidden="true"></i>
+          </Link>
+        </div>
+
+        <div className="login-signup-form-box">
+          {this.topSection()}
+
+          <form onSubmit={this.loginGuestUser}>
+            <input type="submit" value="Log in with guest account" />
+          </form>
+
+          <p>or</p>
+
+          <form onSubmit={this.handleSubmit} className="login-form-box">
+            {this.renderErrors()}
+            <div className="login-signup-form">
+              <input type="text"
+                placeholder="Username"
+                value={this.state.username}
+                onChange={this.update("username")} />
+              {this.firstNameInput()}
+              <input type="password"
+                placeholder="Create a password"
+                value={this.state.password}
+                onChange={this.update("password")} />
+              <input type="submit" value={title} />
+
+            </div>
+          </form>
+          {this.redirectLink()}
+        </div>
       </div>
     )
   }
