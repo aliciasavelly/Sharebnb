@@ -96,10 +96,13 @@ class SessionForm extends React.Component {
       return "";
     } else {
       return(
-        <input type="text"
-               placeholder="First name"
-               value={this.state.first_name}
-               onChange={this.update("first_name")} />
+        <div>
+          <input type="text"
+                 placeholder="First name"
+                 value={this.state.first_name}
+                 onChange={this.update("first_name")} />
+          <i className="fa fa-user-o" aria-hidden="true"></i>
+        </div>
       )
     }
   }
@@ -122,7 +125,7 @@ class SessionForm extends React.Component {
           {this.topSection()}
 
           <form onSubmit={this.loginGuestUser}>
-            <input type="submit" value="Log in with guest account" />
+            <input className="button" type="submit" value="Log in with guest account" />
           </form>
 
           <p>or</p>
@@ -134,13 +137,14 @@ class SessionForm extends React.Component {
                 placeholder="Username"
                 value={this.state.username}
                 onChange={this.update("username")} />
+              <i className="fa fa-envelope-o" aria-hidden="true"></i>
               {this.firstNameInput()}
               <input type="password"
                 placeholder="Create a password"
                 value={this.state.password}
                 onChange={this.update("password")} />
+              <i className="fa fa-lock" aria-hidden="true"></i>
               <input className="button" type="submit" value={title} />
-
             </div>
           </form>
           {this.redirectLink()}
