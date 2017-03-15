@@ -9,10 +9,10 @@
   padding: 12px;
   justify-content: center;
   border-bottom: 1px solid #dce0e0;
-  align-content: flex-end;
+  // align-content: flex-end;
 
   h2 {
-    align-self: flex-end;
+    // align-self: flex-end;
     font-size: 15px;
     font-weight: 400;
     color: #484848;
@@ -35,13 +35,29 @@
 
 .login-signup-form-box {
   display: flex;
-  width: 500px;
+  width: 725px;
   background: #d3f9ff;
-  align-content: center;
+  align-content: flex-start;
   flex-wrap: wrap;
   flex-direction: row;
 
   p {
+    padding: 25px;
+  }
+
+  .login-signup-form input {
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    background-color: #fff;
+    color: #484848;
     padding: 10px;
+    width: 675px;
+    margin: 25px;
+
+  }
+
+  .button {
+    cursor: pointer;
   }
 }

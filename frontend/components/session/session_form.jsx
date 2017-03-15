@@ -139,7 +139,7 @@ class SessionForm extends React.Component {
                 placeholder="Create a password"
                 value={this.state.password}
                 onChange={this.update("password")} />
-              <input type="submit" value={title} />
+              <input className="button" type="submit" value={title} />
 
             </div>
           </form>
