@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { requestLogin, requestSignup } from '../../actions/session_actions';
+import { requestLogin, requestSignup, requestGuestUser } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 const mapStateToProps = ({ session }) => ({
@@ -10,10 +10,11 @@ const mapStateToProps = ({ session }) => ({
 const mapDispatchToProps = (dispatch, ownProps) => {
   const formType = ownProps.location.pathname.slice(1);
   const processForm = (formType === "login") ? requestLogin : requestSignup;
-  return {
+  return ({
     processForm: user => dispatch(processForm(user)),
-    formType
-  };
+    formType,
+    requestGuestUser: () => dispatch(requestGuestUser())
+  });
 };
 
 export default connect(

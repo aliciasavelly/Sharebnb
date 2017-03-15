@@ -7,6 +7,8 @@ import { requestLogin, requestLogout, requestSignup } from './actions/session_ac
 window.login = requestLogin;
 window.logout = requestLogout;
 window.signup = requestSignup;
+// const windowFunctions = { requestLogin, requestLogout, requestSignup }
+// Object.assign(window, windowFunctions);
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;

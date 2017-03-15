@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { Link, withRouter, hashHistory } from 'react-router';
 import SessionFormContainer from './session_form_container';
 
 class SessionForm extends React.Component {
@@ -13,18 +13,18 @@ class SessionForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.guestUser = this.guestUser.bind(this);
+    this.loginGuestUser = this.loginGuestUser.bind(this);
   }
 
-  // componentDidUpdate() {
-  //   this.redirectIfLoggedIn();
-  // }
+  componentDidUpdate() {
+    this.redirectIfLoggedIn();
+  }
 
-  // redirectIfLoggedIn() {
-  //   if(this.props.loggedIn) {
-  //     this.props.router.push('/');
-  //   }
-  // }
+  redirectIfLoggedIn() {
+    if(this.props.loggedIn) {
+      this.props.router.push('/');
+    }
+  }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -64,21 +64,17 @@ class SessionForm extends React.Component {
     }
   }
 
-  guestUser() {
-    console.log(this);
-    this.setState({
-      username: "aliciacodes",
-      first_name: "Alicia",
-      password: "codingissupercool"
-    })
-    const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+  loginGuestUser(e) {
+    e.preventDefault();
+    this.props.requestGuestUser();
+    console.log(this.props);
+    // this.props.router.push('/');
   }
 
   topSection() {
     if (this.props.formType === "login") {
       return(
-        <form onSubmit={this.guestUser}>
+        <form onSubmit={this.loginGuestUser}>
           <input type="submit" value="Log in with guest account" />
         </form>
       )
@@ -106,4 +102,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);
