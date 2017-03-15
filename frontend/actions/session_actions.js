@@ -39,3 +39,11 @@ export const requestSignup = user => dispatch => (
     error => dispatch(receiveErrors(error.responseJSON))
   )
 );
+
+export const requestGuestUser = () => dispatch => (
+  APIUtil.loginGuestUser().then(
+    currentUser => dispatch(receiveCurrentUser(currentUser))
+  ).fail(
+    error => dispatch(receiveErrors(error.responseJSON))
+  )
+);
