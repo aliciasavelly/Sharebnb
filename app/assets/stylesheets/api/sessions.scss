@@ -2,67 +2,174 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.login-signup-header {
-  display: flex;
-  background: #edefed;
-  flex-direction: row;
-  padding: 12px;
-  justify-content: center;
-  border-bottom: 1px solid #dce0e0;
-  // align-content: flex-end;
+.login-signup-form-container {
+  // display: flex;
 
-  h2 {
-    // align-self: flex-end;
-    font-size: 15px;
-    font-weight: 400;
-    color: #484848;
-    // background: blue;
+  .login-signup-header {
+    display: flex;
+    background: #edefed;
+    flex-direction: row;
+    padding: 12px;
+    justify-content: center;
+    border-bottom: 1px solid #dce0e0;
+    // align-content: flex-end;
+
+    h2 {
+      // align-self: flex-end;
+      font-size: 15px;
+      font-weight: 400;
+      color: #767676;
+      // background: blue;
+    }
+
+    .main-redirect-x {
+      // justify-content: flex-end;
+      // margin-left: auto;
+      position: absolute;
+      right: 10px;
+      top: 7px;
+      // !!!
+      color: #aaa;
+    }
   }
 
-  .main-redirect-x {
-    // justify-content: flex-end;
-    // margin-left: auto;
-    position: absolute;
-    right: 10px;
-    top: 7px;
+  .login-signup-form-box {
+    display: flex;
+    width: 725px;
+    // background: #d3f9ff;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    //
+    // .top-section {
+    //   border-bottom: 1px solid #dce0e0;
+    // }
+
+    .signup-top {
+      font-size: 20px;
+      // font-weight: 350px;
+    }
+
+    .username-input, .first-name-input, .password-input {
+      position: relative;
+
+      i {
+        position: absolute;
+      }
+    }
+
+    .username-input i {
+      right: 38px;
+      top: 18px;
+    }
+
+    .first-name-input i {
+      right: 40px;
+      top: 20px;
+    }
+
+    .password-input i {
+      right: 42px;
+      top: 20px;
+    }
+
+    // .small {
+    //   // background: blue;
+    //   width: 100%;
+    //   // padding: 0;
+    //   // justify-content: center;
+    //   text-align: center;
+    //   border-bottom: 1px solid #dce0e0;
+    //   line-height: 0.1em;
+    //   margin: 10px 0 40px;
+    //   height: 40px;
+    //
+    //   span {
+    //     background: blue;
+    //     padding: 0 10px;
+    //   }
+    // }
+
+    .small {
+      width: 675px;
+      text-align: center;
+      padding: 0 25px;
+      font-weight: 400;
+      color: #767676;
+      font-size: 13px;
+    }
+
+    .small hr {
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+
+    p {
+      padding: 25px 25px 0;
+      color: #767676;
+      line-height: 2;
+    }
+
+    .login-signup-form input {
+      box-sizing: border-box;
+      border: 1px solid #aaa;
+      border-radius: 2px;
+      background-color: #fff;
+      color: #767676;
+      padding: 15px;
+      width: 675px;
+      margin: 3px 24px 3px 25px;
+
+      // .button {
+      //   background: blue;
+      //   color: green;
+      // }
+    }
+
+    .button {
+      box-sizing: border-box;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 4px;
+      background: #1D9C73;
+      border-color: #1D9C73;
+      color: #fff7f8;
+      width: 675px;
+      margin: 25px 24px 3px 25px;
+      padding: 15px;
+    }
+
+    .button:hover {
+      background: #38A783;
+      border-color: #38A783;
+    }
+
+    #button:hover {
+      background: #38A783;
+      border-color: #38A783;
+    }
+
+    #button {
+      border-color: #1D9C73;
+      background: #1D9C73;
+      color: #fff7f8;
+      // font-weight: normal;
+      border-radius: 4px;
+    }
+
+    .fa {
+      color: #aaa;
+      font-size: 22px;
+    }
   }
 
-  .signup-top {
-    font-size: 30px;
-  }
-
-}
-
-.login-signup-form-box {
-  display: flex;
-  width: 725px;
-  background: #d3f9ff;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  flex-direction: row;
-
-  p {
-    padding: 25px;
-  }
-
-  .login-signup-form input {
-    box-sizing: border-box;
-    border: 1px solid #aaa;
-    border-radius: 2px;
-    background-color: #fff;
-    color: #484848;
-    padding: 10px;
-    width: 675px;
-    margin: 3px 24px 3px 25px;
-
-  }
-
-  .button {
-    cursor: pointer;
-  }
-
-  .fa {
-    color: #aaa;
-    font-size: 20px;
-  }
 }
