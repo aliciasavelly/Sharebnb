@@ -14,6 +14,7 @@ class SessionForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.loginGuestUser = this.loginGuestUser.bind(this);
+    this.firstNameInput = this.firstNameInput.bind(this);
   }
 
   componentDidUpdate() {
@@ -40,9 +41,16 @@ class SessionForm extends React.Component {
 
   redirectLink() {
     if (this.props.formType === "login") {
-      return <Link to="/signup">Sign up</Link>
+      return (<div>
+        <p>Don't have a Sharebnb account?</p>
+        <Link to="/signup">Sign up</Link>
+      </div>)
     } else {
-      return <Link to="/login">Log in</Link>
+      return (<div>
+        <p>Already have a Sharebnb account?</p>
+        <Link to="/login">Log in</Link>
+
+      </div>)
     }
   }
 
@@ -85,6 +93,19 @@ class SessionForm extends React.Component {
     }
   }
 
+  firstNameInput() {
+    if (this.props.formType === "login") {
+      return "";
+    } else {
+      return(
+        <input type="text"
+               placeholder="First name"
+               value={this.state.first_name}
+               onChange={this.update("first_name")} />
+      )
+    }
+  }
+
   render() {
     let formType = this.props.formType;
     let title = (formType === "login") ? "Log in" : "Sign up";
@@ -92,6 +113,7 @@ class SessionForm extends React.Component {
     return(
       <div className="login-signup-form-container">
         <h2>{title}</h2>
+        <Link to='/'>X</Link>
         {this.topSection()}
         <form onSubmit={this.handleSubmit} className="login-form-box">
           {this.renderErrors()}
@@ -100,10 +122,7 @@ class SessionForm extends React.Component {
                    placeholder="Username"
                    value={this.state.username}
                    onChange={this.update("username")} />
-            <input type="text"
-                   placeholder="First name"
-                   value={this.state.first_name}
-                   onChange={this.update("first_name")} />
+                 {this.firstNameInput()}
             <input type="password"
                    placeholder="Create a password"
                    value={this.state.password}
@@ -112,7 +131,7 @@ class SessionForm extends React.Component {
 
           </div>
         </form>
-
+        {this.redirectLink()}
       </div>
     )
   }
