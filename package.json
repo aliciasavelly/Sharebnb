@@ -1,14 +1,14 @@
 {
   "name": "Sharebnb",
   "version": "1.0.0",
-  "description": "",
+  "description": "[Heroku link][https://sharebnb-aa.herokuapp.com/#/login?_k=aszepb]",
   "main": "index.js",
   "directories": {
     "doc": "docs",
     "test": "test"
   },
   "scripts": {
-    "postinstall": "webpack"
+    "heroku-postbuild": "webpack --config webpack.config.prod.js"
   },
   "engines": {
     "node": "7.6.0",
