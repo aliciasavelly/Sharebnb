@@ -1,0 +1,26 @@
+.main {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      color: #1D9C73;
+      font-size: 30px;
+      padding: 0 0 0 20px;
+      align-self: center;
+    }
+
+    .right {
+      display: flex;
+      justify-content: flex-end;
+
+      .nav-link {
+        font-weight: normal;
+        color: #646464;
+        padding: 20px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+    }
+  }
+}
