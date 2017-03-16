@@ -5,13 +5,29 @@ import MainContainer from './main_container';
 class MainPage extends React.Component {
   constructor(props) {
     super(props);
+
+    // debugger;
     this.logoutUser = this.logoutUser.bind(this);
     this.rightNav = this.rightNav.bind(this);
+    this.handleCloudinary = this.handleCloudinary.bind(this);
+
   }
 
   logoutUser() {
     // debugger;
     this.props.requestLogout();
+  }
+
+  handleCloudinary(e) {
+    e.preventDefault();
+    cloudinary.openUploadWidget(cloudinary_options, (error, results) => {
+      if(error) {
+        console.log(error);
+      } else {
+        // debugger;
+        this.props.updateUser(results[0].secure_url);
+      }
+    });
   }
 
   rightNav() {
@@ -21,6 +37,11 @@ class MainPage extends React.Component {
         <form onSubmit={this.logoutUser}>
           <input className="nav-link" type="submit" value="Log out" />
         </form>
+
+        <button className="new_user_icon"
+                onClick={this.handleCloudinary}>
+                Add user icon
+        </button>
       </div>)
     } else {
       return (
@@ -42,9 +63,8 @@ class MainPage extends React.Component {
           </div>
 
           {this.rightNav()}
-
+          <img className="index-image" src={this.props.currentUser.image_url} />
         </div>
-
       </div>
     )
   }

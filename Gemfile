@@ -6,6 +6,9 @@ git_source(:github) do |repo_name|
 end
 
 
+gem "paperclip", '~> 5.0.0'
+gem 'cloudinary'
+gem 'figaro'
 # Allows us to view Heroku logs and wil precompile our assets
 gem 'rails_12factor'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -48,6 +51,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem "guard", ">= 2.2.2", require: false
+  gem "guard-livereload", require: false
+  gem "rack-livereload"
+  gem "rb-fsevent", require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
