@@ -35,7 +35,7 @@ class SessionForm extends React.Component {
 
   redirectIfLoggedIn() {
     if(this.props.loggedIn) {
-      this.props.router.push('/');
+      this.props.router.push('/main');
     }
   }
 
@@ -126,7 +126,7 @@ class SessionForm extends React.Component {
       <div className="login-signup-form-container">
         <div className="login-signup-header">
           <h2>{title}</h2>
-          <Link to='/' className="main-redirect-x">
+          <Link to='/main' className="main-redirect-x">
 
             <i className="fa fa-times main-redirect-x" aria-hidden="true"></i>
           </Link>

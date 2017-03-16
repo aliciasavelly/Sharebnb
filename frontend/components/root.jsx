@@ -13,7 +13,7 @@ const Root = ({ store }) => {
     // debugger;
     store.dispatch(clearErrors());
     if (currentUser) {
-      replace('/');
+      replace('/main');
     }
   }
 
@@ -21,6 +21,7 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Router path='/' component={ App } >
+          <Route path='/main' component={ MainContainer } />
           <Route path='/login' component={ SessionFormContainer }
                                onEnter={_redirectIfLoggedIn} />
           <Router path='/signup' component={ SessionFormContainer }
