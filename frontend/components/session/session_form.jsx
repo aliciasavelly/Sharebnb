@@ -61,10 +61,10 @@ class SessionForm extends React.Component {
       return "";
     } else {
       return(
-        <ul>
+        <ul className="errors">
           {errors.map( (error, idx) => (
             <li key={`error-${idx}`}>
-              {error}
+              {error}.
             </li>
           ))}
 
@@ -76,8 +76,6 @@ class SessionForm extends React.Component {
   loginGuestUser(e) {
     e.preventDefault();
     this.props.requestGuestUser();
-    console.log(this.props);
-    // this.props.router.push('/');
   }
 
   topSection() {
@@ -158,8 +156,8 @@ class SessionForm extends React.Component {
               </div>
               <input id="button" className="button here" type="submit" value={title} />
             </div>
+            <hr></hr>
           </form>
-          <hr/>
           {this.redirectLink()}
         </div>
       </div>

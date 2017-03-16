@@ -1,11 +1,4 @@
-// Place all the styles related to the api/Sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .login-signup-form-container {
-  // display: flex;
-  // justify-content: center;
-
   .login-signup-header {
     display: flex;
     background: #edefed;
@@ -13,14 +6,11 @@
     padding: 12px;
     justify-content: center;
     border-bottom: 1px solid #dce0e0;
-    // align-content: flex-end;
 
     h2 {
-      // align-self: flex-end;
       font-size: 15px;
       font-weight: 400;
       color: #767676;
-      // background: blue;
     }
 
     .main-redirect-x {
@@ -28,9 +18,10 @@
       // margin-left: auto;
       position: absolute;
       right: 10px;
-      top: 7px;
+      top: 5px;
       // !!!
       color: #aaa;
+      font-size: 20px;
     }
   }
 
@@ -46,6 +37,22 @@
     // .top-section {
     //   border-bottom: 1px solid #dce0e0;
     // }
+
+    .login-form-box {
+
+      hr {
+        border: 0;
+        height: 1px;
+        background: #DCE0E0;
+        // background-image: linear-gradient(to right, #ccc, #333, #ccc);
+      }
+
+      .errors {
+        list-style: none;
+        padding: 0 0 15px;
+        color: #767676;
+      }
+    }
 
     .signup-top {
       font-size: 20px;
@@ -75,27 +82,10 @@
       top: 20px;
     }
 
-    // .small {
-    //   // background: blue;
-    //   width: 100%;
-    //   // padding: 0;
-    //   // justify-content: center;
-    //   text-align: center;
-    //   border-bottom: 1px solid #dce0e0;
-    //   line-height: 0.1em;
-    //   margin: 10px 0 40px;
-    //   height: 40px;
-    //
-    //   span {
-    //     background: blue;
-    //     padding: 0 10px;
-    //   }
-    // }
-
     .small {
       width: 675px;
       text-align: center;
-      padding: 0 25px;
+      // padding: 0 25px;
       font-weight: 400;
       color: #767676;
       font-size: 13px;
@@ -105,6 +95,7 @@
       margin-left: auto;
       margin-right: auto;
       width: 40%;
+      background: #DCE0E0;
     }
 
     .left {
@@ -116,7 +107,7 @@
     }
 
     p {
-      padding: 25px 25px 0;
+      padding: 25px 0 0;
       color: #767676;
       line-height: 2;
     }
@@ -129,12 +120,7 @@
       color: #767676;
       padding: 15px;
       width: 675px;
-      margin: 3px 24px 3px 25px;
-
-      // .button {
-      //   background: blue;
-      //   color: green;
-      // }
+      margin: 3px 0 3px 0;
     }
 
     .button {
@@ -146,7 +132,7 @@
       border-color: #1D9C73;
       color: #fff7f8;
       width: 675px;
-      margin: 25px 24px 3px 25px;
+      margin: 25px 0 3px 0;
       padding: 15px;
     }
 
@@ -179,13 +165,21 @@
       // flex-direction: row;
       justify-content: space-between;
       // align-content: flex-end;
-      padding-left: 25px;
+      // padding-left: 25px;
       width: 675px;
 
       a {
-        background: blue;
-        width: 50px;
+        padding: 6px 0 6px 0;
+        width: 100px;
         height: 20px;
+        border-radius: 4px;
+        border-color: #1D9C73;
+        border: 1px solid #1D9C73;
+        color: #1D9C73;
+        text-align: center;
+        font-size: 16px;
+        // align-items: center;
+
         // justify-content: space-between;
         // justify-content: flex-end;
         // margin: 0;
@@ -197,11 +191,6 @@
         // justify-content: space-between;
 
       }
-
-      // .bottom {
-      //   margin: 0;
-      // }
     }
   }
-
 }
