@@ -19,7 +19,19 @@ class SessionForm extends React.Component {
 
   componentDidUpdate() {
     this.redirectIfLoggedIn();
+    // debugger;
+    // if (this.props.formType !== newProps.formType) {
+    // this.props.removeErrors();
+    // }
   }
+
+  // componentWillMount() {
+  //   this.props.clearErrors;
+  // }
+
+  // componentWillReceiveProps(newProps) {
+  //
+  // }
 
   redirectIfLoggedIn() {
     if(this.props.loggedIn) {
@@ -64,7 +76,7 @@ class SessionForm extends React.Component {
         <ul className="errors">
           {errors.map( (error, idx) => (
             <li key={`error-${idx}`}>
-              {error}.
+              {error}
             </li>
           ))}
 
