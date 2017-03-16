@@ -78,7 +78,6 @@
     .small {
       width: 675px;
       text-align: center;
-      // padding: 0 25px;
       font-weight: 400;
       color: #767676;
       font-size: 13px;
@@ -145,7 +144,6 @@
       border-color: #1D9C73;
       background: #1D9C73;
       color: #fff7f8;
-      // font-weight: normal;
       border-radius: 4px;
       margin-top: 25px;
     }
@@ -157,10 +155,7 @@
 
     .redirect {
       display: flex;
-      // flex-direction: row;
       justify-content: space-between;
-      // align-content: flex-end;
-      // padding-left: 25px;
       width: 675px;
 
       a {
@@ -175,18 +170,10 @@
         font-size: 16px;
         font-weight: 400;
         letter-spacing: 1px;
-        // align-items: center;
-
-        // justify-content: space-between;
-        // justify-content: flex-end;
-        // margin: 0;
-        // line-height: 0;
       }
 
       p {
         padding: 0;
-        // justify-content: space-between;
-
       }
     }
   }
