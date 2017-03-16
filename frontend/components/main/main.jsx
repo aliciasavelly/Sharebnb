@@ -20,12 +20,13 @@ class MainPage extends React.Component {
 
   handleCloudinary(e) {
     e.preventDefault();
+
     cloudinary.openUploadWidget(cloudinary_options, (error, results) => {
       if(error) {
         console.log(error);
       } else {
         // debugger;
-        this.props.updateUser(results[0].secure_url);
+        this.props.updateUser(this.props.currentUser.id, { image_url: results[0].secure_url });
       }
     });
   }
@@ -39,9 +40,12 @@ class MainPage extends React.Component {
         </form>
 
         <button className="new_user_icon"
-                onClick={this.handleCloudinary}>
-                Add user icon
+          onClick={this.handleCloudinary}>Add user icon
         </button>
+
+        <div className="round">
+          <img className="index-image" src={this.props.currentUser.image_url} />
+        </div>
       </div>)
     } else {
       return (
@@ -63,7 +67,6 @@ class MainPage extends React.Component {
           </div>
 
           {this.rightNav()}
-          <img className="index-image" src={this.props.currentUser.image_url} />
         </div>
       </div>
     )

@@ -11,7 +11,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch, ownProps) => {
   return({
     requestLogout: () => dispatch(requestLogout()),
-    updateUser: () => dispatch(updateUser())
+    updateUser: (currentUserId, image_url) => dispatch(updateUser(currentUserId, image_url))
   });
 };
 

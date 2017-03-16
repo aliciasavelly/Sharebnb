@@ -21,6 +21,18 @@
         cursor: pointer;
         font-size: 14px;
       }
+
+      .round {
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        overflow: hidden;
+
+        img {
+          height: 60px;
+        }
+      }
+
     }
   }
 }
