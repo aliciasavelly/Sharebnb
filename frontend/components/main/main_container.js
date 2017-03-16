@@ -7,8 +7,6 @@ const mapStateToProps = ({ session }) => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  // debugger;
-  // const formType = ownProps.location.pathname.slice(1);
   return({
     requestLogout: () => dispatch(requestLogout())
   });
