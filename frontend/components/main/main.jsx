@@ -36,6 +36,8 @@ class MainPage extends React.Component {
       return (
       <div className="right">
 
+        <h3 className="nav-redirect">Host</h3>
+        <h3 className="nav-redirect">Trips</h3>
         <div className="outer-round">
           <div className="round">
             <img className="index-image" src={this.props.currentUser.image_url} />
@@ -47,10 +49,11 @@ class MainPage extends React.Component {
           <button className="new-user-icon"
             onClick={this.handleCloudinary}>Add user icon
           </button>
-
-          <form onSubmit={this.logoutUser}>
+          <hr />
+          <form className="nav-link-form" onSubmit={this.logoutUser}>
             <input className="nav-link" type="submit" value="Log out" />
-          </form>
+            <hr />
+        </form>
         </div>
 
       </div>)

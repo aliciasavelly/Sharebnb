@@ -16,8 +16,17 @@
       font-size: 14px;
       padding: 10px;
 
+      .nav-redirect {
+        font-size: 14px;
+        font-weight: normal;
+        color: #585858;
+        cursor: pointer;
+        margin-left: 20px;
+        padding-left: 10px;
+      }
+
       .outer-round {
-        padding: 0 0 15px 0;
+        padding: 0 0 15px 50px;
       }
 
       .round {
@@ -39,6 +48,28 @@
         position: relative;
         border: 1px solid black;
         width: 200px;
+
+        background-color: #ffffff;
+        border: 1px solid #DBDBDB;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        // min-width: 282px;
+        // max-width: 460px;
+        // min-height: 60px;
+        // position: absolute;
+        // right: 0px;
+        // top: 0px;
+
+        hr {
+          background: #DBDBDB;
+          border: 0;
+          height: 1px;
+          width: 90%;
+        }
+
+        .new-user-icon:hover + hr, .nav-link:hover + hr {
+          background: black;
+          // width: 100px;
+        }
       }
 
       // .hidden .new-user-icon {
@@ -72,12 +103,16 @@
       //   z-index: 1;
       // }
 
-      .nav-link {
+      .nav-link, .new-user-icon {
         font-weight: normal;
         color: #646464;
-        padding: 20px;
+        padding: 15px 80px 15px 15px;
         cursor: pointer;
         font-size: 14px;
+      }
+
+      .nav-link {
+        padding: 15px 120px 15px 15px;
       }
     }
   }
