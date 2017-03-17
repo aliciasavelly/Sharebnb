@@ -7,6 +7,8 @@ import { requestLogin, requestLogout, requestSignup } from './actions/session_ac
 window.login = requestLogin;
 window.logout = requestLogout;
 window.signup = requestSignup;
+import { requestDestinations } from './actions/destination_actions';
+window.requestDestinations = requestDestinations;
 // const windowFunctions = { requestLogin, requestLogout, requestSignup }
 // Object.assign(window, windowFunctions);
 

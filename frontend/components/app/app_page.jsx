@@ -6,7 +6,6 @@ class AppPage extends React.Component {
   constructor(props) {
     super(props);
 
-    // debugger;
     this.logoutUser = this.logoutUser.bind(this);
     this.rightNav = this.rightNav.bind(this);
     this.handleCloudinary = this.handleCloudinary.bind(this);
@@ -14,7 +13,6 @@ class AppPage extends React.Component {
   }
 
   logoutUser() {
-    // debugger;
     this.props.requestLogout();
   }
 
@@ -25,7 +23,6 @@ class AppPage extends React.Component {
       if(error) {
         console.log(error);
       } else {
-        // debugger;
         this.props.updateUser(this.props.currentUser.id, { image_url: results[0].secure_url });
       }
     });
@@ -80,7 +77,7 @@ class AppPage extends React.Component {
       <div className="main">
         <div className="navbar">
           <div className="left">
-            <Link to='/main'>Airbnburrow</Link>
+            <Link to='/main'>Sharebnb</Link>
               <div className="search-div">
                 <form className="search-form" onSubmit={this.handleSearch}>
                   <i className="fa fa-search" aria-hidden="true"></i>

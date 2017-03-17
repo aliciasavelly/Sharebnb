@@ -2,7 +2,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Destination.delete_all
-User.destroy!
+User.delete_all
 
 User.create!(
   username: "aliciacodes",

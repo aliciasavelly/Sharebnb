@@ -19,7 +19,6 @@ class SessionForm extends React.Component {
 
   componentDidUpdate() {
     this.redirectIfLoggedIn();
-    // debugger;
     // if (this.props.formType !== newProps.formType) {
     // this.props.removeErrors();
     // }
