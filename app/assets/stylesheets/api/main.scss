@@ -27,17 +27,38 @@
           font-size: 14px;
           color: gray;
           cursor: default;
-          // margin: 5px;
-          // font-weight: lighter;
-          left: 10px;
+          left: 30px;
           top: 15px;
         }
-      }
 
-      .search-input {
-        font-size: 14px;
-        color: gray;
-        margin-left: 30px;
+        .search-div {
+          border: 1px solid gray;
+          border-radius: 3px;
+        }
+
+        .search-form {
+          border: 1px solid gray;
+          border-radius: 3px;
+          margin-left: 20px;
+          display: flex;
+
+          .search-input {
+            font-size: 14px;
+            color: gray;
+            margin-left: 30px;
+          }
+
+          .search-input-checkin {
+            font-size: 14px;
+            color: gray;
+          }
+
+          label {
+            font-size: 14px;
+            color: gray;
+          }
+        }
+
       }
     }
 

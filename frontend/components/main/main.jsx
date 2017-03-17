@@ -83,10 +83,33 @@ class MainPage extends React.Component {
             <Link to='/main'>Airbnburrow</Link>
               <div className="search-div">
                 <form className="search-form" onSubmit={this.handleSearch}>
-                  <input className="search-input" type="text" placeholder="Search" />
-                </form>
-                <i className="fa fa-search" aria-hidden="true"></i>
+                  <i className="fa fa-search" aria-hidden="true"></i>
 
+                  <input className="search-input" type="text" placeholder="Where to?" />
+                  <label>
+                    Check In
+                    <input className="search-input-checkin" type="date" placeholder="Check In" />
+                  </label>
+
+                  <label>
+                    Check Out
+                    <input className="search-input-checkout" type="date" placeholder="Check In" />
+                  </label>
+                  <select name="search-input-guest">
+                    <option value="1">1 guest</option>
+                    <option value="2">2 guests</option>
+                    <option value="3">3 guests</option>
+                    <option value="4">4 guests</option>
+                    <option value="5">5 guests</option>
+                    <option value="6">6 guests</option>
+                    <option value="7">7 guests</option>
+                    <option value="8">8 guests</option>
+                    <option value="9">9 guests</option>
+                    <option value="10">10 guests</option>
+                    <option value="11">11 guests</option>
+                    <option value="12">12 guests</option>
+                  </select>
+                </form>
               </div>
           </div>
 
