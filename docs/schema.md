@@ -54,6 +54,8 @@
 | state       | string    | not null              |
 | country     | string    | not null              |
 | image_url   | string    | not null              |
+| lat         | float     | not null              |
+| lng         | float     | not null              |
 
 ## search_filters
 
