@@ -35,17 +35,24 @@ class MainPage extends React.Component {
     if (this.props.loggedIn) {
       return (
       <div className="right">
-        <form onSubmit={this.logoutUser}>
-          <input className="nav-link" type="submit" value="Log out" />
-        </form>
 
-        <button className="new_user_icon"
-          onClick={this.handleCloudinary}>Add user icon
-        </button>
-
-        <div className="round">
-          <img className="index-image" src={this.props.currentUser.image_url} />
+        <div className="outer-round">
+          <div className="round">
+            <img className="index-image" src={this.props.currentUser.image_url} />
+          </div>
         </div>
+
+        <div className="hidden">
+
+          <button className="new-user-icon"
+            onClick={this.handleCloudinary}>Add user icon
+          </button>
+
+          <form onSubmit={this.logoutUser}>
+            <input className="nav-link" type="submit" value="Log out" />
+          </form>
+        </div>
+
       </div>)
     } else {
       return (

@@ -13,6 +13,64 @@
     .right {
       display: flex;
       justify-content: flex-end;
+      font-size: 14px;
+      padding: 10px;
+
+      .outer-round {
+        padding: 0 0 15px 0;
+      }
+
+      .round {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        overflow: hidden;
+        border: 2px solid #DBDBDB;
+
+        img {
+          height: 30px;
+          cursor: pointer;
+
+        }
+      }
+
+      .hidden {
+        display: none;
+        position: relative;
+        border: 1px solid black;
+        width: 200px;
+      }
+
+      // .hidden .new-user-icon {
+      //   position: absolute;
+      //   right: 30px;
+      // }
+
+      .outer-round:hover + .hidden, .hidden:hover {
+        box-sizing: padding-box;
+        display: block;
+        // color: blue;
+        // background: blue;
+        position: absolute;
+        right: -5px;
+        top: 35px;
+        // width: 100px;
+        z-index: 1;
+        margin: 20px;
+      }
+
+
+
+      // .round:hover + .hidden:after {
+      //   display: block;
+      //   // color: blue;
+      //   // background: blue;
+      //   position: absolute;
+      //   right: -5px;
+      //   top: 55px;
+      //   // width: 100px;
+      //   z-index: 1;
+      // }
 
       .nav-link {
         font-weight: normal;
@@ -21,18 +79,6 @@
         cursor: pointer;
         font-size: 14px;
       }
-
-      .round {
-        width: 60px;
-        height: 60px;
-        border-radius: 30px;
-        overflow: hidden;
-
-        img {
-          height: 60px;
-        }
-      }
-
     }
   }
 }
