@@ -125,6 +125,7 @@ class SessionForm extends React.Component {
 
     return(
       <div className="login-signup-form-container">
+        <div className="padding"></div>
         <div className="login-signup-header">
           <h2>{title}</h2>
           <Link to='/main' className="main-redirect-x">

@@ -1,4 +1,8 @@
 .login-signup-form-container {
+  .padding {
+    height: 66px;
+  }
+
   .login-signup-header {
     display: flex;
     background: #edefed;
@@ -16,9 +20,10 @@
     .main-redirect-x {
       position: absolute;
       right: 10px;
-      top: 5px;
+      top: 38.5px;
       color: #aaa;
       font-size: 20px;
+      // padding-top: 100px;
     }
   }
 
@@ -28,6 +33,7 @@
     align-content: flex-start;
     flex-wrap: wrap;
     flex-direction: row;
+    // padding-top:
     margin: 0 auto;
 
     .login-form-box {
