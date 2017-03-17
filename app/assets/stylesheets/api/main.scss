@@ -14,6 +14,31 @@
       padding: 0 0 0 20px;
       align-self: center;
       cursor: pointer;
+      display: flex;
+      flex-direction: row;
+
+      .search-div {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        i {
+          position: absolute;
+          font-size: 14px;
+          color: gray;
+          cursor: default;
+          // margin: 5px;
+          // font-weight: lighter;
+          left: 10px;
+          top: 15px;
+        }
+      }
+
+      .search-input {
+        font-size: 14px;
+        color: gray;
+        margin-left: 30px;
+      }
     }
 
     .right {

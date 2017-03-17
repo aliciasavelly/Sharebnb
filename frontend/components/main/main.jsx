@@ -10,7 +10,7 @@ class MainPage extends React.Component {
     this.logoutUser = this.logoutUser.bind(this);
     this.rightNav = this.rightNav.bind(this);
     this.handleCloudinary = this.handleCloudinary.bind(this);
-
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   logoutUser() {
@@ -53,7 +53,7 @@ class MainPage extends React.Component {
           <form className="nav-link-form" onSubmit={this.logoutUser}>
             <input className="nav-link" type="submit" value="Log out" />
             <hr />
-        </form>
+          </form>
         </div>
 
       </div>)
@@ -68,12 +68,26 @@ class MainPage extends React.Component {
     }
   }
 
+  handleSearch() {
+
+    // return(
+    //
+    // )
+  }
+
   render() {
     return(
       <div className="main">
         <div className="navbar">
           <div className="left">
             <Link to='/main'>Airbnburrow</Link>
+              <div className="search-div">
+                <form className="search-form" onSubmit={this.handleSearch}>
+                  <input className="search-input" type="text" placeholder="Search" />
+                </form>
+                <i className="fa fa-search" aria-hidden="true"></i>
+
+              </div>
           </div>
 
           {this.rightNav()}
