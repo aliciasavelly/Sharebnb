@@ -2,12 +2,18 @@
   .navbar {
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 1;
+    background: white;
 
     .left {
       color: #1D9C73;
       font-size: 30px;
       padding: 0 0 0 20px;
       align-self: center;
+      cursor: pointer;
     }
 
     .right {

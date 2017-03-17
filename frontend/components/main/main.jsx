@@ -73,7 +73,7 @@ class MainPage extends React.Component {
       <div className="main">
         <div className="navbar">
           <div className="left">
-            <h2>Sharebnb</h2>
+            <Link to='/main'>Sharebnb</Link>
           </div>
 
           {this.rightNav()}
