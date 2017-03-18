@@ -24,7 +24,9 @@
       title: "Spacious home in the mission",
       destination_id: 1,
       price: 123,
-      image_url: "cloudinary.jpg"
+      image_url: "cloudinary.jpg",
+      lat: 42.336985,
+      lng: -83.054480
     }
   },
   spotDetail: {
@@ -45,7 +47,9 @@
       city: "San Francisco",
       state: "California",
       country: "United States of America",
-      image_url "sf.jpg"
+      image_url "sf.jpg",
+      lat: 37.792081,
+      lng: -122.419413
     },
     2: {
       city: "New York City",
