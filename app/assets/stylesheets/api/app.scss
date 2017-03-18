@@ -37,15 +37,29 @@
         }
 
         .search-form {
-          border: 1px solid gray;
-          border-radius: 3px;
+          border: 1px solid #DBDBDB;
+          box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.08);
+          border-radius: 4px;
           margin-left: 20px;
           display: flex;
+          font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+          font-size: 19px;
+    // line-height: 24px !important;
+    // letter-spacing: undefined !important;
+    // padding-top: 0px !important;
+    // padding-bottom: 0px !important;
+          color: #484848;
+    // padding: 0px !important;
+          // display: table;
+          // table-layout: fixed;
+          width: 100%;
+          padding: 10px;
 
           .search-input {
             font-size: 14px;
             color: gray;
             margin-left: 30px;
+            // padding-left: 5px;
           }
 
           .search-input-checkin {

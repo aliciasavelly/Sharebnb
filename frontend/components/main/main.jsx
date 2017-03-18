@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
 import MainContainer from './main_container';
+// import { GenericScrollBox, ScrollBox, ScrollAxes, FastTrack } from 'react-scroll-box';
+// var Slider = require('react-slick');
+import Slider from 'react-slick';
 
 class MainPage extends React.Component {
   constructor(props) {
@@ -14,17 +17,18 @@ class MainPage extends React.Component {
 
   renderDestinations() {
     // debugger;
-    return(
 
-      <div className="destinations-items">
-        {this.props.destinations.map( (destination, idx) => (
-          <div className="cursor-responsive" key={`destination-${idx}`}>
-            <img className="city-image" src={destination.image_url} />
-            <p className="city-name">{destination.city}</p>
-          </div>
-        )
-        )}
-      </div>
+
+    return(
+        <div className="destinations-items">
+          {this.props.destinations.map( (destination, idx) => (
+            <div className="cursor-responsive" key={`destination-${idx}`}>
+              <img className="city-image" src={destination.image_url} />
+              <p className="city-name">{destination.city}</p>
+            </div>
+          ))}
+        </div>
+
 
     )
   }

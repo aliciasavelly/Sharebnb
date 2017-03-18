@@ -84,13 +84,12 @@ class AppPage extends React.Component {
 
                   <input className="search-input" type="text" placeholder="Where to?" />
                   <label>
-                    Check In
-                    <input className="search-input-checkin" type="date" placeholder="Check In" />
+                    <p>Check In: <input className="search-input-checkin" type="date" placeholder="Check In" /></p>
+
                   </label>
 
                   <label>
-                    Check Out
-                    <input className="search-input-checkout" type="date" placeholder="Check In" />
+                    <p>Check Out: <input className="search-input-checkout" type="date" placeholder="Check In" /></p>
                   </label>
                   <select name="search-input-guest">
                     <option value="1">1 guest</option>
