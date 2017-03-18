@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
 import AppContainer from './app_container';
+// require('react-datetime');
+import Datetime from 'react-datetime';
 
 class AppPage extends React.Component {
   constructor(props) {
     super(props);
 
     this.logoutUser = this.logoutUser.bind(this);
+    this.leftNav = this.leftNav.bind(this);
     this.rightNav = this.rightNav.bind(this);
     this.handleCloudinary = this.handleCloudinary.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
@@ -65,6 +68,43 @@ class AppPage extends React.Component {
     }
   }
 
+  leftNav() {
+    return(
+    <div className="left">
+      <Link to='/main'>Sharebnb</Link>
+        <div className="search-div">
+          <form className="search-form" onSubmit={this.handleSearch}>
+            <i className="fa fa-search" aria-hidden="true"></i>
+
+            <input className="search-input" type="text" placeholder="Where to?" />
+            <label className="first-label">
+              <Datetime defaultValue="Check In" timeFormat={false}/>
+            </label>
+            <p></p>
+            <label className="second-label">
+              <Datetime defaultValue="Check Out" timeFormat={false}/>
+            </label>
+            <select className="search-input-guest">
+              <option value="1">1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5 guests</option>
+              <option value="6">6 guests</option>
+              <option value="7">7 guests</option>
+              <option value="8">8 guests</option>
+              <option value="9">9 guests</option>
+              <option value="10">10 guests</option>
+              <option value="11">11 guests</option>
+              <option value="12">12 guests</option>
+            </select>
+            <input type="submit" className="hidden-submit"/>
+          </form>
+        </div>
+    </div>
+    )
+  }
+
   handleSearch() {
 
     // return(
@@ -76,39 +116,7 @@ class AppPage extends React.Component {
     return(
       <div className="main">
         <div className="navbar">
-          <div className="left">
-            <Link to='/main'>Sharebnb</Link>
-              <div className="search-div">
-                <form className="search-form" onSubmit={this.handleSearch}>
-                  <i className="fa fa-search" aria-hidden="true"></i>
-
-                  <input className="search-input" type="text" placeholder="Where to?" />
-                  <label>
-                    <p>Check In: <input className="search-input-checkin" type="date" placeholder="Check In" /></p>
-
-                  </label>
-
-                  <label>
-                    <p>Check Out: <input className="search-input-checkout" type="date" placeholder="Check In" /></p>
-                  </label>
-                  <select name="search-input-guest">
-                    <option value="1">1 guest</option>
-                    <option value="2">2 guests</option>
-                    <option value="3">3 guests</option>
-                    <option value="4">4 guests</option>
-                    <option value="5">5 guests</option>
-                    <option value="6">6 guests</option>
-                    <option value="7">7 guests</option>
-                    <option value="8">8 guests</option>
-                    <option value="9">9 guests</option>
-                    <option value="10">10 guests</option>
-                    <option value="11">11 guests</option>
-                    <option value="12">12 guests</option>
-                  </select>
-                </form>
-              </div>
-          </div>
-
+          {this.leftNav()}
           {this.rightNav()}
         </div>
       </div>

@@ -22,13 +22,13 @@
         display: flex;
         align-items: center;
 
-        i {
+        .fa-search {
           position: absolute;
-          font-size: 14px;
-          color: gray;
+          font-size: 13px;
+          color: #AEA9A9;
           cursor: default;
           left: 30px;
-          top: 15px;
+          top: 11px;
         }
 
         .search-div {
@@ -37,42 +37,65 @@
         }
 
         .search-form {
-          border: 1px solid #DBDBDB;
-          box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.08);
           border-radius: 4px;
           margin-left: 20px;
           display: flex;
           font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
           font-size: 19px;
-    // line-height: 24px !important;
-    // letter-spacing: undefined !important;
-    // padding-top: 0px !important;
-    // padding-bottom: 0px !important;
           color: #484848;
-    // padding: 0px !important;
-          // display: table;
-          // table-layout: fixed;
           width: 100%;
-          padding: 10px;
 
           .search-input {
             font-size: 14px;
-            color: gray;
-            margin-left: 30px;
-            // padding-left: 5px;
-          }
+            color: #767676;
+            border-top: 1px solid #DBDBDB;
+            border-bottom: 1px solid #DBDBDB;
+            border-left: 1px solid #DBDBDB;
+            padding-left: 35px;
+            -webkit-border-top-left-radius: 2px;
+            -webkit-border-bottom-left-radius: 2px;
+            -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 
-          .search-input-checkin {
-            font-size: 14px;
-            color: gray;
           }
 
           label {
             font-size: 14px;
-            color: gray;
+            color: #AEA9A9;
+            padding: 5px 0 0 5px;
+            border-top: 1px solid #DBDBDB;
+            border-bottom: 1px solid #DBDBDB;
+            border-left: 1px solid #DBDBDB;
+            -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+          }
+
+          .search-input-guest {
+            background: transparent;
+            -webkit-appearance: button;
+            -webkit-border-top-right-radius: 2px;
+            -webkit-border-bottom-right-radius: 2px;
+            -webkit-border-top-left-radius: 0px;
+            -webkit-border-bottom-left-radius: 0px;
+            -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+            -webkit-padding-end: 20px;
+            -webkit-padding-start: 2px;
+            -webkit-user-select: none;
+            // background-image: url(http://i62.tinypic.com/15xvbd5.png);
+            background-position: 97% center;
+            background-repeat: no-repeat;
+            border: 1px solid #DBDBDB;
+            font-size: 14px;
+            color: #AEA9A9;
+            overflow: hidden;
+            padding: 5px 0 5px 5px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 100px;
+          }
+
+          .hidden-submit {
+            visibility: hidden;
           }
         }
-
       }
     }
 
@@ -81,6 +104,7 @@
       justify-content: flex-end;
       font-size: 14px;
       padding: 10px;
+      align-items: center;
 
       .nav-redirect {
         font-size: 14px;
@@ -92,7 +116,7 @@
       }
 
       .outer-round {
-        padding: 0 0 15px 50px;
+        padding: 0 0 0 50px;
       }
 
       .round {
@@ -105,7 +129,6 @@
         img {
           height: 30px;
           cursor: pointer;
-          // background-size: cover;
         }
       }
 
@@ -118,9 +141,6 @@
         background-color: #ffffff;
         border: 1px solid #DBDBDB;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        // min-width: 282px;
-        // max-width: 460px;
-        // min-height: 60px;
 
         hr {
           background: #DBDBDB;
@@ -131,45 +151,23 @@
 
         .new-user-icon:hover + hr, .nav-link:hover + hr {
           background: black;
-          // width: 100px;
         }
       }
-
-      // .hidden .new-user-icon {
-      //   position: absolute;
-      //   right: 30px;
-      // }
 
       .outer-round:hover + .hidden, .hidden:hover {
         box-sizing: padding-box;
         display: block;
-        // color: blue;
-        // background: blue;
         position: absolute;
         right: -5px;
         top: 35px;
-        // width: 100px;
         z-index: 1;
         margin: 20px;
       }
 
-
-
-      // .round:hover + .hidden:after {
-      //   display: block;
-      //   // color: blue;
-      //   // background: blue;
-      //   position: absolute;
-      //   right: -5px;
-      //   top: 55px;
-      //   // width: 100px;
-      //   z-index: 1;
-      // }
-
       .nav-link, .new-user-icon {
         font-weight: normal;
         color: #646464;
-        padding: 15px 80px 15px 15px;
+        padding: 18px 80px 15px 15px;
         cursor: pointer;
         font-size: 14px;
       }
