@@ -98,7 +98,7 @@ class AppPage extends React.Component {
               <option value="11">11 guests</option>
               <option value="12">12 guests</option>
             </select>
-            <input type="submit" className="hidden-submit"/>
+            <input type="submit" className="submit"/>
           </form>
         </div>
     </div>

@@ -61,9 +61,9 @@
 | Path             | Component              |
 | ---------------- | ---------------------- |
 | "/"              | "App"                  |
+| "/main"          | "MainContainer"        |
 | "/signup"        | "AuthFormContainer"    |
 | "/login"         | "AuthFormContainer"    |
-| "/main"          | "MainContainer"        |
 | "/spots-search"  | "SpotsSearchContainer" |
 | "/spots/:spotId" | "SpotsShowContainer"   |
 | "/new-listing"   | "SpotsCreateContainer" |
