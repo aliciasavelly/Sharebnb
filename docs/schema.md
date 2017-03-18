@@ -19,9 +19,10 @@
 | destination_id | integer   | not null, foreign key, indexed |
 | price          | integer   | not null                       |
 | image_url      | string    |                                |
-| user_id        | integer   | not null, foreign key, indexed |
-| room_type      | string    | not null                       |
+| host_id        | integer   | not null, foreign key, indexed |
 | description    | text      |                                |
+| lat            | float     | not null                       |
+| lng            | float     | not null                       |
 
 ## trips
 
