@@ -78,11 +78,15 @@ class AppPage extends React.Component {
 
             <input className="search-input" type="text" placeholder="Where to?" />
             <label className="first-label">
-              <Datetime defaultValue="Check In" timeFormat={false}/>
+              <Datetime className="datetime"
+                        defaultValue="Check In"
+                        timeFormat={false}/>
             </label>
             <p></p>
             <label className="second-label">
-              <Datetime defaultValue="Check Out" timeFormat={false}/>
+              <Datetime className="datetime"
+                        defaultValue="Check Out"
+                        timeFormat={false}/>
             </label>
             <select className="search-input-guest">
               <option value="1">1 guest</option>

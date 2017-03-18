@@ -8,7 +8,7 @@ User.create!(
   username: "aliciacodes",
   first_name: "Alicia",
   password: "codingissupercool",
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489782989/marion-michele-66097_ncghwp.jpg",
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489784361/marion-michele-66097_ncghwp.jpg",
 )
 
 Destination.create!(
