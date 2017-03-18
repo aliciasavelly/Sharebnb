@@ -64,7 +64,6 @@ class AppPage extends React.Component {
           <br />
         <Link to="/signup" className="nav-link">Sign up</Link>
       </div>)
-
     }
   }
 
