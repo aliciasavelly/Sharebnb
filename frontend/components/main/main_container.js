@@ -1,16 +1,17 @@
 import { connect } from 'react-redux';
 import MainPage from './main';
-import { requestLogout } from '../../actions/session_actions';
-import { updateUser } from '../../actions/users_actions';
+import { requestDestinations } from '../../actions/destination_actions';
+import { selectAllDestinations } from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
   loggedIn: !!state.session.currentUser,
-  currentUser: state.session.currentUser
+  currentUser: state.session.currentUser,
+  destinations: selectAllDestinations(state)
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return({
-
+    requestDestinations: () => dispatch(requestDestinations())
   });
 };
 

@@ -1,5 +1,6 @@
 .outer-main-div {
   padding-top: 60px;
+  margin: 0 auto;
 
   .top-title {
     font-size: 50px;
@@ -11,5 +12,58 @@
       font-weight: normal;
       color: #1D9C73;
     }
+  }
+
+  .destinations-index {
+    // position: relative;
+    // display: flex;
+    // align-items: center;
+    width: 100%;
+    padding: 30px 0 30px 70px;
+
+    h3 {
+      font-size: 19px;
+      color: #484848;
+      // margin-bottom: 24px;
+      font-weight: normal;
+      padding: 0 0 0 10px;
+      margin: 0 0 10px 0;
+      font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    }
+
+    .destinations-items {
+      display: flex;
+      // justify-content: center;
+      width: 200px;
+      // padding: 30px;
+
+      .cursor-responsive {
+        cursor: pointer;
+      }
+
+      div {
+        margin: 10px;
+
+        p {
+          font-weight: 600;
+          font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+          font-size: 15px;
+          text-align: left;
+        }
+      }
+
+    }
+
+    img {
+      position: relative;
+      width: 250px;
+      height: 150px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      border-radius: 2px;
+    }
+
+
   }
 }
