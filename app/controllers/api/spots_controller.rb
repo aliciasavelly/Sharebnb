@@ -2,7 +2,10 @@ class Api::SpotsController < ApplicationController
   #before_action :require_logged_in, only: [:create]
 
   def index
-    @spots = (bounds ? Spot.in_bounds(bounds) : Spot.all)
+    ##TODO
+    # switch out once google maps set up
+    # @spots = (bounds ? Spot.in_bounds(bounds) : Spot.all)
+    @spots = Spot.all
   end
 
   def show
@@ -10,7 +13,7 @@ class Api::SpotsController < ApplicationController
   end
 
   def create
-    @spot = Spot.create(spot_params)
+    @spot = Spot.create!(spot_params)
     render :show
   end
 
@@ -28,7 +31,9 @@ class Api::SpotsController < ApplicationController
     )
   end
 
-  def bounds
-    params[:bounds]
-  end
+##TODO
+#add this one once google maps set up
+  # def bounds
+  #   params[:bounds]
+  # end
 end
