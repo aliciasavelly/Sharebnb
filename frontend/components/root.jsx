@@ -5,6 +5,7 @@ import App from './app';
 import MainContainer from './main/main_container';
 import SessionFormContainer from './session/session_form_container';
 import { clearErrors } from '../actions/session_actions';
+import SpotsIndexContainer from './spots/spots_index_container';
 
 const Root = ({ store }) => {
   const _redirectIfLoggedIn = (nextState, replace) => {
@@ -26,7 +27,8 @@ const Root = ({ store }) => {
                                onEnter={_redirectIfLoggedIn} />
           <Route path='/signup' component={ SessionFormContainer }
                                  onEnter={_redirectIfLoggedIn} />
-        </Router>
+          <Route path='/spots-search' component={ SpotsIndexContainer } />
+      </Router>
       </Router>
     </Provider>
   )

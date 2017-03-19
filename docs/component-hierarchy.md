@@ -4,7 +4,7 @@
 
 * AuthFormContainer
 * MainContainer
-* SpotsSearchContainer
+* SpotsIndexContainer
 * SpotsShowContainer
 * MyTripsContainer
 * MyListingsContainer
@@ -22,7 +22,7 @@
   * SpotsIndexItem
 * BONUS: SearchbarComponent
 
-### SpotsSearchContainer
+### SpotsIndexContainer
 
 * NavbarComponent
 * FilterbarComponent
@@ -64,7 +64,7 @@
 | "/main"          | "MainContainer"        |
 | "/signup"        | "AuthFormContainer"    |
 | "/login"         | "AuthFormContainer"    |
-| "/spots-search"  | "SpotsSearchContainer" |
+| "/spots-search"  | "SpotsIndexContainer" |
 | "/spots/:spotId" | "SpotsShowContainer"   |
 | "/new-listing"   | "SpotsCreateContainer" |
 | "/my-trips"      | "MyTripsContainer"     |

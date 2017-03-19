@@ -11,4 +11,4 @@ export const requestDestinations = () => dispatch => (
   APIUtil.fetchDestinations().then(
     destinations => dispatch(receiveDestinations(destinations))
   )
-)
+);
