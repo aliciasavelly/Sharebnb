@@ -31,8 +31,7 @@
   },
   spotDetail: {
     id: 1,
-    user_id: 1,
-    room_type: "Private room",
+    host_id: 1,
     description: "There's a lot to do here.",
     reviews: {
       1: {

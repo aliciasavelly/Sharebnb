@@ -220,97 +220,134 @@ spot1 = Spot.create!(
   price: 113,
   image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879217/sayan-nath-165552-san-francisco_uiourb.jpg",
   host_id: user2.id,
-  description: "fun",
+  description: "Spend a night under the stars in a tent. You'll feel close to nature! It is an incredible
+                location to go camping. We will provide this tent to you and can put it together for an
+                additional cost. It fits three people, easily. We know you'll love this location! It's only
+                an hour from San Francisco, but you can still see the stars. We'll include a few towels, lamps
+                and sleeping bags as requested.",
   lat: 37.835816,
   lng: -122.490760
 )
 
-Spot.create!(
+spot2 = Spot.create!(
   title: "Beautiful villa with a pool",
   destination_id: destination1.id,
   price: 347,
   image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879215/vita-vilcina-3217-san-francisco_sshrfn.jpg",
-  host_id: user18.id,
-  description: "pool",
+  host_id: user3.id,
+  description: "Stay with us in the beautiful Presidio Heights of San Francisco. This home can fit up to 10
+                people quite comfortably. You will enjoy our beautiful, heated pool. There is a beautiful kitchen
+                and a spacious living room. This is not a shared space, so you will have a private space of your own
+                to enjoy. The outdoor space includes several patio chairs and a grill. There are many sites nearby,
+                such as the Presidio Golf Course, Golden Gate Park, Golden Gate Bridge, the Lyon Street Steps, and
+                the Palace of Fine Arts.",
   lat: 37.790091,
   lng: -122.453583
 )
 
-##TODO add more spots
-#
-# Spot.create!(
-#   title:
-#   destination_id:
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
-# Spot.create!(
-#   title:
-#   destination_id:
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
-# Spot.create!(
-#   title:
-#   destination_id:
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
-# Spot.create!(
-#   title:
-#   destination_id:
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
-# Spot.create!(
-#   title:
-#   destination_id:
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
-# Spot.create!(
-#   title:
-#   destination_id:
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
-# Spot.create!(
-#   title:
-#   destination_id:
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
+spot3 = Spot.create!(
+  title: "View of Lombard Street in the heart of San Francisco",
+  destination_id: destination1.id,
+  price: 139,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879213/pedro-lastra-167351-san-francisco_dwcrmf.jpg",
+  host_id: user1.id,
+  description: "You will be conveniently located in the heart of San Fransisco, with a view of Lombard Street,
+                and easy access to Fisherman's Wharf, Ghirardelli Square, Coit Tower,  and Chinatown. We will
+                provide you a queen size bed, in a private room. You will be able to meet other guests in the
+                shared living spaces. We would be happy to give you advice for what to enjoy while visiting the
+                city! You will not run out of things to do! We hope to see you soon!",
+  lat: 37.803130,
+  lng:-122.416458
+)
+
+spot4 = Spot.create!(
+  title: "Stunning views of the entire city at the top of Nob Hill",
+  destination_id: destination1.id,
+  price: 137,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879211/rezaul-karim-124516-san-francisco_etcx47.jpg",
+  host_id: user1.id,
+  description: "Nob Hill will provide a lot of nightlife, great restaurants, and wonderful views of the city. To
+                the north you will see the bay, and to the west you have a great view of the Bay Bridge. Walking up
+                Nob Hill is not for the faint of heart! There is easy access to this apartment from the cable cars,
+                which cost only $7 for a ride. This is a must do! You will have a private room will a full sized
+                bed. You'll share the bathroom, living room, and kitchen with us! We would love to meet you and give
+                you advice on what to see around the city! We are right near the heart of Chinatown, and only a 5
+                minute walk away from Union Square. Only a short walk from the Embarcadero as well, which also has
+                fantastic restaurants. Centrally located, you will have an easy time getting around to any other
+                part of the city.",
+  lat: 37.791929,
+  lng: -122.409278
+)
+
+spot5 = Spot.create!(
+  title: "Relaxing porch space near the heart of the mission",
+  destination_id: destination1.id,
+  price: 39,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879211/mad-house-37992-san-francisco_ov2hx3.jpg",
+  host_id: user4.id,
+  description: "We provide you a very comfortable couch on the porch. There is great weather here, so you'll
+                enjoy! There is great food in the mission that you can't miss! You will have full access to the
+                rest of our apartment. We provide bagels and coffee each morning for your comfort! You'll love
+                this area! Public transportation is very accessible, so you will be able to get around the city
+                very easily.",
+  lat: 37.766244,
+  lng: -122.411703
+)
+
+spot6 = Spot.create!(
+  title: "Great view and spacious room near Twin Peaks",
+  destination_id: destination1.id,
+  price: 136,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879208/kevin-fernandez-37634-san-francisco_xfcszn.jpg",
+  host_id: user1.id,
+  description: "You will have full access to a kitchen and living room, which you will be sharing with other
+                guests. You'll have your own room, which is quite spacious. There is a couch to sleep on, and
+                a balcony where you can enjoy a view of Twin Peaks. It's nice to get a little bit of nature in
+                the middle of the city! It is only an 18 minute walk from public transportation, and from there
+                you can get anywhere in the city. We are pet friendly! We'd love for you to enjoy your stay here
+                with your pets! Please understand that other guests may have pets here before choosing this
+                location. We do not live here, but respond quickly to messages and are close by in case you need
+                help with anything. We'd love to give you advice for visiting the city. Twin Peaks is a great place
+                to visit, and you are also close to the 16th Avenue Tiled Steps, Golden Gate Park, The Castro, and
+                The Mission. We hope you have a great stay!",
+  lat: 37.753114,
+  lng: -122.441517
+)
+
+spot7 = Spot.create!(
+  title: "Private trailer for camping near the ocean",
+  destination_id: destination1.id,
+  price: 195,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879203/eugene-quek-111785-san-francisco_j1i4tu.jpg",
+  host_id: user5.id,
+  description: "There is a small kitchen for your use. This space will be private for you. We provide, towels,
+                blankets, and other important necessities. We can provide more information if requested. This
+                is a great outdoor space to stay if you're tired of being in the city! There are many lovely
+                views near this area, and great hikes close by. It will only be a half an hour drive back to the
+                heart of San Francisco. There are great views of the Golden Gate Bridge in this area! We hope
+                you have a great stay!",
+  lat: 37.823686,
+  lng: -122.530372
+)
+
+Spot.create!(
+  title:
+  destination_id: destination1.id,
+  price:
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879206/joseph-barrientos-17377-san-francisco_hu5lgj.jpg",
+  host_id:
+  description:
+  lat:
+  lng:
+)
+
+Spot.create!(
+  title:
+  destination_id: destination1.id,
+  price:
+  image_url:
+  host_id:
+  description:
+  lat:
+  lng:
+)

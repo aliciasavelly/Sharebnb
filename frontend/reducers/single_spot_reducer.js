@@ -6,9 +6,10 @@ const SingleSpotReducer = (state = {}, action) => {
 
   switch(action.type){
     case RECEIVE_SINGLE_SPOT:
-      let spot = {[action.spot.id]: action.spot};
+      let spot = action.spot;
+      let spotDetail = {[spot.id]: {id: spot.id, host_id: spot.host_id, description: spot.description, reviews: spot.reviews}};
       console.log(spot);
-      return merge({}, state, spot);
+      return merge({}, spotDetail);
     default:
       return state;
   }

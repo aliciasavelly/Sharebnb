@@ -8,7 +8,7 @@ const RootReducer = combineReducers({
   session: SessionReducer,
   destinations: DestinationsReducer,
   spots: SpotsReducer,
-  spot: SingleSpotReducer
+  spotDetail: SingleSpotReducer
 });
 
 export default RootReducer;

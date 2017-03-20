@@ -70,7 +70,7 @@
 | "/login"                | "AuthFormContainer"    |
 | "/spots-search"         | "SpotsIndexContainer"  |
 | "/spots/:spotId"        | "SpotsShowContainer"   |
-| "/spots/:spotId/review" | "ReviewFormContainer" |
+| "/spots/:spotId/review" | "ReviewFormContainer"  |
 | "/new-listing"          | "SpotsCreateContainer" |
 | "/my-trips"             | "MyTripsContainer"     |
-| "/my-listings"          | "MyListingsContainer"
+| "/my-listings"          | "MyListingsContainer"  |
