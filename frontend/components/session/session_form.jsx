@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
 import SessionFormContainer from './session_form_container';
+import FacebookLogin from 'react-facebook-login';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.loginGuestUser = this.loginGuestUser.bind(this);
     this.firstNameInput = this.firstNameInput.bind(this);
+    this.handleFacebookSubmit = this.handleFacebookSubmit.bind(this);
   }
 
   componentDidUpdate() {
@@ -40,6 +42,12 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const user = Object.assign({}, this.state);
+    this.props.processForm(user);
+    this.props.clearErrors();
+  }
+
+  handleFacebookSubmit() {
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
     this.props.clearErrors();
@@ -118,6 +126,10 @@ class SessionForm extends React.Component {
     }
   }
 
+  responseFacebook(response) {
+    console.log(response);
+  }
+
   render() {
     let formType = this.props.formType;
     let title = (formType === "login") ? "Log In" : "Sign up";
@@ -140,6 +152,7 @@ class SessionForm extends React.Component {
             <form onSubmit={this.loginGuestUser}>
               <input className="button" type="submit" value="Log in with guest account" />
             </form>
+
           </div>
 
           <h4 className="small"><hr className="left" />or<hr className="right" /></h4>
