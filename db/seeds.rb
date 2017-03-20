@@ -330,24 +330,33 @@ spot7 = Spot.create!(
   lng: -122.530372
 )
 
-Spot.create!(
-  title:
+spot8 = Spot.create!(
+  title: "Beautiful view of the Golden Gate Bridge",
   destination_id: destination1.id,
-  price:
+  price: 145,
   image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879206/joseph-barrientos-17377-san-francisco_hu5lgj.jpg",
-  host_id:
-  description:
-  lat:
-  lng:
+  host_id: user5.id,
+  description: "Enjoy your stay near the Coastal Trail, with a great view of the Golden Gate Bridge! This will be
+                a lovely camping experience, and you'll still be quite close to the city. We'd love to have you.
+                We will provide a tent, but everything else will need to be provided by you. We'd be happy to give
+                you advice of what to do and see in this area.",
+  lat: 37.828822,
+  lng: -122.516011
 )
 
-Spot.create!(
-  title:
+spot9 = Spot.create!(
+  title: "Stay in a San Francisco Painted Lady home!",
   destination_id: destination1.id,
-  price:
-  image_url:
-  host_id:
-  description:
-  lat:
-  lng:
+  price: 226,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879204/jakob-owens-127176-san-francisco_ya5smu.jpg",
+  host_id: user6.id,
+  description: "The painted ladies are more beautiful in person than can be seen in a photo. This is quite
+                a unique experience! We'd love to have you! You'll be staying in our extra bedroom, with your
+                own bathroom. Please feel free to enjoy our other living spaces, including the kitchen. Travel
+                books are provided in your room. Nearby locations include Alamo Square Park, Golden Gate Park,
+                Japanese Tea Garden, Japantown, Haight-Ashbury. It is very easy to get around from this location
+                whether you use public transportation or taxi services. We hope you have a great stay! Long term
+                stays are welcome.",
+  lat: 37.778129,
+  lng: -122.435527
 )
