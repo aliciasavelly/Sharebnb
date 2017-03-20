@@ -18,27 +18,19 @@ class SpotsIndex extends React.Component {
       return(
         <div className="spots-index">
           <div className="spots-index-left">
-            <h1>hi</h1>
-            <h1>hi</h1>
-            <h1>hi</h1>
-            <h1>hi</h1>
-            <h1>hi</h1>
-            <h1>hi</h1>
-            <h1>hi</h1>
-            <h1>hi</h1>
-            <h1>hi</h1>
-            <h1>hi</h1>
-            <h1>hi</h1>
-            <h1>hi</h1>
-            <h1>hi</h1>
-            <h1>Spots: </h1>
+            <div className="spots-index-top">
+              <h1>Spots: </h1>
+            </div>
+
             {this.props.spots.map(spot => (
               <SpotIndexItem spot={spot} key={spot.id} />
             ))}
           </div>
           <div className="spots-index-right">
-            <img src="http://www.drodd.com/images15/maps10.jpg" />
+            <div id="map-container">
+              <img src="http://www.drodd.com/images15/maps10.jpg" />
 
+            </div>
           </div>
         </div>
       )

@@ -21,7 +21,7 @@ class SpotIndexItem extends React.Component {
            onClick={this.handleClick}>
         <div className="spot-index-item-detail">
           <img src={this.spot.image_url} />
-          <p>${this.spot.price}.00</p>
+          <p>${this.spot.price}</p>
           <p>{this.spot.title}</p>
         </div>
       </div>
