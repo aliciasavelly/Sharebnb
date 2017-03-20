@@ -6,8 +6,12 @@ const SpotsReducer = (state = {}, action) => {
 
   switch(action.type){
     case RECEIVE_SPOTS:
-      return action.spots;
+      // debugger;
+      let spots = action.spots;
+      return merge({}, state, spots);
     default:
       return state;
   }
 };
+
+export default SpotsReducer;

@@ -65,6 +65,19 @@ Sharebnb is a web application inspired by Airbnb using Ruby on Rails and React/R
 
 **Objective:** Users can create/edit/update their hosted spots. They can view these at their hosted spots page.
 
+### Checklist:
+
+- [x] Phase 1
+- [x] Phase 2
+- [x] Phase 3
+- [ ] Phase 4
+- [ ] Phase 5
+- [ ] Phase 6
+- [ ] Phase 7
+- [ ] Phase 8
+- [ ] Phase 9
+- [ ] Phase 10
+
 ### Bonus Features(TBD)
 
 - [ ] User/host profiles

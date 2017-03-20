@@ -18,7 +18,6 @@ class MainPage extends React.Component {
   renderDestinations() {
     // debugger;
 
-
     return(
         <div className="destinations-items">
           {this.props.destinations.map( (destination, idx) => (
@@ -42,13 +41,9 @@ class MainPage extends React.Component {
             <h3>Destinations</h3>
             {this.renderDestinations()}
           </div>
-
         </div>
-
       )
-
     } else {
-
       return(
         <div></div>
       )
