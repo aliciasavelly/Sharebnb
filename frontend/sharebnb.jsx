@@ -11,8 +11,9 @@ import { requestDestinations } from './actions/destination_actions';
 window.requestDestinations = requestDestinations;
 // import { fetchSpots } from './util/spot_api_util';
 // window.fetchSpots = fetchSpots;
-import { requestSpots } from './actions/spot_actions';
+import { requestSpots, requestSingleSpot } from './actions/spot_actions';
 window.requestSpots = requestSpots;
+window.requestSingleSpot = requestSingleSpot;
 // const windowFunctions = { requestLogin, requestLogout, requestSignup }
 // Object.assign(window, windowFunctions);
 

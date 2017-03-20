@@ -5,3 +5,10 @@ export const fetchSpots = () => (
     url: '/api/spots'
   })
 );
+
+export const fetchSingleSpot = (spotId) => (
+  $.ajax({
+    method: 'GET',
+    url: `api/spots/${spotId}`
+  })
+);

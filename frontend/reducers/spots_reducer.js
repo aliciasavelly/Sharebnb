@@ -1,4 +1,4 @@
-import { RECEIVE_SPOTS } from '../actions/spot_actions';
+import { RECEIVE_SPOTS, RECEIVE_SINGLE_SPOT } from '../actions/spot_actions';
 import merge from 'lodash/merge';
 
 const SpotsReducer = (state = {}, action) => {

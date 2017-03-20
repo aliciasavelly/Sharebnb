@@ -17,6 +17,27 @@ class Api::SpotsController < ApplicationController
     render :show
   end
 
+  def update
+    @spot = Spot.find_by_id(params[:id])
+
+    if @spot && @spot.update_attributes(spot_params)
+      render "api/spots/show"
+    else
+      render json: @spot.errors.full_messages, status: 422
+    end
+  end
+
+  def destroy
+    @spot = Spot.find_by_id(params[:id])
+
+    if @spot && @spot.host_id === current_user.id
+      @spot.destroy
+      render "api/spots/show"
+    else
+      render json: ['This is not a valid spot to destroy.']
+    end
+  end
+
   private
   def spots_params
     params.require(:spot).permit(
