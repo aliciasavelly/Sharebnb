@@ -21,12 +21,11 @@ class Api::SpotsController < ApplicationController
     # debugger
     @spot = Spot.find(params[:id])
     # debugger
-    @spot.update_attributes(spot_params)
-    # if @spot && @spot.update_attributes(spot_params) #&& @spot.host_id == current_user.id
+    if @spot && @spot.update_attributes(spot_params) && @spot.host_id == current_user.id
       render "api/spots/show"
-    # else
-      # render json: @spot.errors.full_messages, status: 422
-    # end
+    else
+      render json: @spot.errors.full_messages, status: 422
+    end
   end
 
   def destroy
