@@ -116,7 +116,7 @@
         color: #585858;
         cursor: pointer;
         margin-left: 20px;
-        padding-left: 10px;
+        padding: 11px 0 11px 10px;
       }
 
       .outer-round {
@@ -177,7 +177,11 @@
       }
 
       .nav-link {
-        padding: 15px 30px 15px 15px;
+        padding: 13px 120px 13px 15px;
+      }
+
+      .nav-link-show {
+        padding: 25px 40px 25px 0;
       }
     }
   }

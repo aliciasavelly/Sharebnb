@@ -60,9 +60,9 @@ class AppPage extends React.Component {
     } else {
       return (
       <div className="right">
-        <Link to="/login" className="nav-link">Log in</Link>
+        <Link to="/login" className="nav-link-show">Log in</Link>
           <br />
-        <Link to="/signup" className="nav-link">Sign up</Link>
+        <Link to="/signup" className="nav-link-show">Sign up</Link>
       </div>)
     }
   }

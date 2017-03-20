@@ -1,0 +1,25 @@
+.spots-index {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  // width: 100%;
+
+  .spots-index-left {
+    padding-top: 66px;
+    flex-wrap: wrap;
+    width: 60%;
+    display: flex;
+
+    img {
+      width: 20%;
+    }
+  }
+
+  .spots-index-right {
+    width: 40%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
