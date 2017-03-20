@@ -6,6 +6,7 @@ const SingleSpotReducer = (state = {}, action) => {
 
   switch(action.type){
     case RECEIVE_SINGLE_SPOT:
+      debugger;
       let spot = action.spot;
       let spotDetail = {[spot.id]: {id: spot.id, host_id: spot.host_id, description: spot.description, reviews: spot.reviews}};
       console.log(spot);

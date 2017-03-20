@@ -1,4 +1,4 @@
-import { RECEIVE_SPOTS, RECEIVE_SINGLE_SPOT } from '../actions/spot_actions';
+import { RECEIVE_SPOTS, DESTROY_SPOT } from '../actions/spot_actions';
 import merge from 'lodash/merge';
 
 const SpotsReducer = (state = {}, action) => {
@@ -10,6 +10,10 @@ const SpotsReducer = (state = {}, action) => {
       //TODO remove extras from here
       let spots = action.spots;
       return merge({}, state, spots);
+    case DESTROY_SPOT:
+      let nextState = merge({}, state);
+      delete nextState[action.spot.id];
+      return nextState;
     default:
       return state;
   }

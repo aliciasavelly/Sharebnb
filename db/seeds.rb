@@ -3,6 +3,7 @@
 
 Destination.delete_all
 User.delete_all
+Spot.delete_all
 
 user1 = User.create!(
   username: "aliciacodes",

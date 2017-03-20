@@ -11,9 +11,12 @@ import { requestDestinations } from './actions/destination_actions';
 window.requestDestinations = requestDestinations;
 // import { fetchSpots } from './util/spot_api_util';
 // window.fetchSpots = fetchSpots;
-import { requestSpots, requestSingleSpot } from './actions/spot_actions';
+import { requestSpots, requestSingleSpot, createSpot, updateSpot, deleteSpot } from './actions/spot_actions';
 window.requestSpots = requestSpots;
 window.requestSingleSpot = requestSingleSpot;
+window.createSpot = createSpot;
+window.updateSpot = updateSpot;
+window.deleteSpot = deleteSpot;
 // const windowFunctions = { requestLogin, requestLogout, requestSignup }
 // Object.assign(window, windowFunctions);
 
