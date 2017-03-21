@@ -219,7 +219,7 @@ spot1 = Spot.create!(
   title: "Tent under the stars!",
   destination_id: destination1.id,
   price: 113,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879217/sayan-nath-165552-san-francisco_uiourb.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_28/v1489879217/sayan-nath-165552-san-francisco_uiourb.jpg",
   host_id: user2.id,
   description: "Spend a night under the stars in a tent. You'll feel close to nature! It is an incredible
                 location to go camping. We will provide this tent to you and can put it together for an
