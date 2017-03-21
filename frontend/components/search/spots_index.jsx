@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
-import SpotsIndexContainer from './spots_index_container';
+// import SpotsIndexContainer from './spots_index_container';
 import SpotIndexItem from './spot_index_item';
 
 // class SpotsIndex extends React.Component {

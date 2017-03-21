@@ -7,9 +7,7 @@ const SpotsReducer = (state = {}, action) => {
   switch(action.type){
     case RECEIVE_SPOTS:
       // debugger;
-      //TODO remove extras from here
-      let spots = action.spots;
-      return merge({}, state, spots);
+      return action.spots;
     case DESTROY_SPOT:
       let nextState = merge({}, state);
       delete nextState[action.spot.id];

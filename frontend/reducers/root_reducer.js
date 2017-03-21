@@ -10,7 +10,7 @@ const RootReducer = combineReducers({
   destinations: DestinationsReducer,
   spots: SpotsReducer,
   spotDetail: SingleSpotReducer,
-  searchFilters: FiltersReducer
+  filters: FiltersReducer
 });
 
 export default RootReducer;

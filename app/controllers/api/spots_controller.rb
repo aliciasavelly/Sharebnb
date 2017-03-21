@@ -5,6 +5,7 @@ class Api::SpotsController < ApplicationController
     ##TODO
     # switch out once google maps set up
     @spots = (bounds ? Spot.in_bounds(bounds) : Spot.all)
+    render :index
     # @spots = Spot.all
   end
 

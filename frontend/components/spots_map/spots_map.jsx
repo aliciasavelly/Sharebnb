@@ -9,10 +9,12 @@ class SpotsMap extends React.Component {
       zoom: 12
     };
 
+    // debugger;
     // const map = this.e
-    // const map = this.refs.map;
-    this.map = new google.maps.Map(this.mapNode, _mapOptions);
+    const map = this.refs.map;
+    this.map = new google.maps.Map(map, _mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
+
     this._registerListeners();
     this.MarkerManager.updateMarkers(this.props.spots);
   }
@@ -34,7 +36,7 @@ class SpotsMap extends React.Component {
 
   render() {
     return(
-      <div id="map-container" ref={ map => this.mapNode = map }>
+      <div id="map-container" className="map" ref="map">Map
       </div>
     )
   }
