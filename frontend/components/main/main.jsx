@@ -9,10 +9,16 @@ class MainPage extends React.Component {
   constructor(props) {
     super(props);
     this.renderDestinations = this.renderDestinations.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentWillMount() {
     this.props.requestDestinations();
+  }
+
+  handleClick(e) {
+    e.preventDefault();
+    this.props.router.push('/spots-search');
   }
 
   renderDestinations() {
@@ -21,7 +27,7 @@ class MainPage extends React.Component {
     return(
         <div className="destinations-items">
           {this.props.destinations.map( (destination, idx) => (
-            <div className="cursor-responsive" key={`destination-${idx}`}>
+            <div className="cursor-responsive" key={`destination-${idx}`} onClick={this.handleClick}>
               <img className="city-image" src={destination.image_url} />
               <p className="city-name">{destination.city}</p>
             </div>
