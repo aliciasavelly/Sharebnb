@@ -4,8 +4,8 @@ class Api::SpotsController < ApplicationController
   def index
     ##TODO
     # switch out once google maps set up
-    # @spots = (bounds ? Spot.in_bounds(bounds) : Spot.all)
-    @spots = Spot.all
+    @spots = (bounds ? Spot.in_bounds(bounds) : Spot.all)
+    # @spots = Spot.all
   end
 
   def show
@@ -54,7 +54,7 @@ class Api::SpotsController < ApplicationController
 
 ##TODO
 #add this one once google maps set up
-  # def bounds
-  #   params[:bounds]
-  # end
+  def bounds
+    params[:bounds]
+  end
 end

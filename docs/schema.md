@@ -58,10 +58,10 @@
 
 ## search_filters
 
-| column name    | data type | details                        |
-| -----------    | --------- | ------------------------------ |
-| destination_id | integer   | not null, foreign key, indexed |
-| price_low      | integer   |                                |
-| price_high     | integer   |                                |
-| check_in       | string    |                                |
-| check_out      | string    |                                |
+| column name    | data type | details              |
+| -----------    | --------- | -------------------- |
+| destination_id | integer   | foreign key, indexed |
+| price_low      | integer   |                      |
+| price_high     | integer   |                      |
+| check_in       | string    |                      |
+| check_out      | string    |                      |

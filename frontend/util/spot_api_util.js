@@ -1,8 +1,8 @@
-//TODO add search params
-export const fetchSpots = () => (
+export const fetchSpots = data => (
   $.ajax({
     method: 'GET',
-    url: '/api/spots'
+    url: '/api/spots',
+    data
   })
 );
 

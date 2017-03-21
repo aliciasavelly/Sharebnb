@@ -7,7 +7,7 @@ import Slider from 'react-rangeslider';
 //TODO
 // import FilterForm from './filter_form';
 
-const Search = ({ spots, requestSpots }) => {
+const Search = ({ spots, requestSpots, updateFilter }) => {
   return (
   <div className="spots-index-container">
     <div className="spots-index-left">
@@ -20,7 +20,7 @@ const Search = ({ spots, requestSpots }) => {
 
     <div className="spots-index-right">
       <div className="fixed">
-        <SpotsMap spots={spots}/>
+        <SpotsMap spots={spots} updateFilter={ updateFilter } />
       </div>
     </div>
   </div>

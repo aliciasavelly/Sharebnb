@@ -26,8 +26,8 @@ export const updateFilter = (filter, value) => ({
   value
 });
 
-export const requestSpots = () => dispatch => (
-  APIUtil.fetchSpots().then(
+export const requestSpots = filters => dispatch => (
+  APIUtil.fetchSpots(filters).then(
     spots => dispatch(receiveSpots(spots))
   )
 );
