@@ -15,7 +15,9 @@ const Search = ({ spots, requestSpots }) => (
     </div>
 
     <div className="spots-index-right">
-      <SpotsMap />
+      <div className="fixed">
+        <SpotsMap />
+      </div>
     </div>
   </div>
 );

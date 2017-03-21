@@ -19,4 +19,4 @@ class SpotsMap extends React.Component {
   }
 }
 
-export default SpotsMap
+export default SpotsMap;

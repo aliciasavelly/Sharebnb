@@ -1,3 +1,9 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
 .spots-index-container {
   display: flex;
   flex-direction: row;
@@ -35,11 +41,18 @@
   .spots-index-right {
     width: 40%;
     display: flex;
+    position: relative;
 
-    #map-container {
+    .fixed {
+      position: fixed;
       width: 100%;
       height: 100%;
 
+      #map-container {
+        width: 100%;
+        height: calc(100% - 66px);
+      }
     }
+
   }
 }

@@ -234,7 +234,7 @@ spot2 = Spot.create!(
   title: "Beautiful villa with a pool",
   destination_id: destination1.id,
   price: 347,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879215/vita-vilcina-3217-san-francisco_sshrfn.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_61/v1489879215/vita-vilcina-3217-san-francisco_sshrfn.jpg",
   host_id: user3.id,
   description: "Stay with us in the beautiful Presidio Heights of San Francisco. This home can fit up to 10
                 people quite comfortably. You will enjoy our beautiful, heated pool. There is a beautiful kitchen
@@ -250,7 +250,7 @@ spot3 = Spot.create!(
   title: "View of Lombard Street in the heart of San Francisco",
   destination_id: destination1.id,
   price: 139,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879213/pedro-lastra-167351-san-francisco_dwcrmf.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_65/v1489879213/pedro-lastra-167351-san-francisco_dwcrmf.jpg",
   host_id: user1.id,
   description: "You will be conveniently located in the heart of San Fransisco, with a view of Lombard Street,
                 and easy access to Fisherman's Wharf, Ghirardelli Square, Coit Tower,  and Chinatown. We will
@@ -265,7 +265,7 @@ spot4 = Spot.create!(
   title: "Stunning views of the entire city at the top of Nob Hill",
   destination_id: destination1.id,
   price: 137,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879211/rezaul-karim-124516-san-francisco_etcx47.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_80/v1489879211/rezaul-karim-124516-san-francisco_etcx47.jpg",
   host_id: user1.id,
   description: "Nob Hill will provide a lot of nightlife, great restaurants, and wonderful views of the city. To
                 the north you will see the bay, and to the west you have a great view of the Bay Bridge. Walking up
@@ -284,7 +284,7 @@ spot5 = Spot.create!(
   title: "Relaxing porch space near the heart of the mission",
   destination_id: destination1.id,
   price: 39,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879211/mad-house-37992-san-francisco_ov2hx3.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_61/v1489879211/mad-house-37992-san-francisco_ov2hx3.jpg",
   host_id: user4.id,
   description: "We provide you a very comfortable couch on the porch. There is great weather here, so you'll
                 enjoy! There is great food in the mission that you can't miss! You will have full access to the
@@ -299,7 +299,7 @@ spot6 = Spot.create!(
   title: "Great view and spacious room near Twin Peaks",
   destination_id: destination1.id,
   price: 136,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879208/kevin-fernandez-37634-san-francisco_xfcszn.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_61/v1489879208/kevin-fernandez-37634-san-francisco_xfcszn.jpg",
   host_id: user1.id,
   description: "You will have full access to a kitchen and living room, which you will be sharing with other
                 guests. You'll have your own room, which is quite spacious. There is a couch to sleep on, and
@@ -319,7 +319,7 @@ spot7 = Spot.create!(
   title: "Private trailer for camping near the ocean",
   destination_id: destination1.id,
   price: 195,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879203/eugene-quek-111785-san-francisco_j1i4tu.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_61/v1489879203/eugene-quek-111785-san-francisco_j1i4tu.jpg",
   host_id: user5.id,
   description: "There is a small kitchen for your use. This space will be private for you. We provide, towels,
                 blankets, and other important necessities. We can provide more information if requested. This
@@ -335,7 +335,7 @@ spot8 = Spot.create!(
   title: "Beautiful view of the Golden Gate Bridge",
   destination_id: destination1.id,
   price: 145,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879206/joseph-barrientos-17377-san-francisco_hu5lgj.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_63/v1489879206/joseph-barrientos-17377-san-francisco_hu5lgj.jpg",
   host_id: user5.id,
   description: "Enjoy your stay near the Coastal Trail, with a great view of the Golden Gate Bridge! This will be
                 a lovely camping experience, and you'll still be quite close to the city. We'd love to have you.
@@ -349,7 +349,7 @@ spot9 = Spot.create!(
   title: "Stay in a San Francisco Painted Lady home!",
   destination_id: destination1.id,
   price: 226,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879204/jakob-owens-127176-san-francisco_ya5smu.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_59/v1489879204/jakob-owens-127176-san-francisco_ya5smu.jpg",
   host_id: user6.id,
   description: "The painted ladies are more beautiful in person than can be seen in a photo. This is quite
                 a unique experience! We'd love to have you! You'll be staying in our extra bedroom, with your
