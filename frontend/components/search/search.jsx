@@ -20,7 +20,7 @@ const Search = ({ spots, requestSpots }) => {
 
     <div className="spots-index-right">
       <div className="fixed">
-        <SpotsMap />
+        <SpotsMap spots={spots}/>
       </div>
     </div>
   </div>

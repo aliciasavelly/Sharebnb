@@ -2,8 +2,6 @@ import React from 'react';
 import { Link, withRouter, hashHistory} from 'react-router';
 import MarkerManager from '../../util/marker_manager';
 
-
-
 class SpotsMap extends React.Component {
   componentDidMount() {
     const _mapOptions = {
