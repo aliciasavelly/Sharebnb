@@ -5,7 +5,6 @@ import Slider from 'react-rangeslider';
 // import 'react-rangeslider/lib/index.css';
 
 //TODO
-// import SpotMap from './../spot_map/spot_map';
 // import FilterForm from './filter_form';
 
 const Search = ({ spots, requestSpots }) => {
