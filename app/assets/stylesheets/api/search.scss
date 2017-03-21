@@ -13,15 +13,23 @@ body, html {
 
   .spots-index-left {
     width: 60%;
+    // position: relative;
 
-    .spots_index-filters {
+    .spots-index-filters {
       width: 100%;
+      position: fixed;
+      background: white;
+      padding: 20px;
+
+      .slider {
+        width: 200px;
+      }
     }
 
     .spots-index {
       display: flex;
       flex-wrap: wrap;
-      padding: 20px;
+      padding: 50px 20px 20px 20px;
       width: 100%;
       box-sizing: border-box;
       justify-content: space-between;
