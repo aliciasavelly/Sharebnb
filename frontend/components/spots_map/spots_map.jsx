@@ -20,7 +20,7 @@ class SpotsMap extends React.Component {
     // debugger;
     // const map = this.e
     const map = this.refs.map;
-    this._mapOptions = {center: { lat: 37.777072, lng: -122.447774 },zoom: 12};
+    this._mapOptions = {center: { lat: 39.797586, lng: -96.943742 },zoom: 3};
     this.map = new google.maps.Map(map, this._mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
 
@@ -37,6 +37,8 @@ class SpotsMap extends React.Component {
       if(key.toLowerCase().includes(this.state.letters)) {
         this.map.setCenter(destinationsList[key].center);
         this.map.setZoom(destinationsList[key].zoom);
+      } else {
+        // this.map.setZoom(3);
       }
     });
     // debugger;

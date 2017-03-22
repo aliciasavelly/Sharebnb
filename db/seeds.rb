@@ -361,3 +361,14 @@ spot9 = Spot.create!(
   lat: 37.778129,
   lng: -122.435527
 )
+
+spot10 = Spot.create!(
+  title:
+  destination_id:
+  price:
+  image_url:
+  host_id:
+  description:
+  lat:
+  lng:
+)
