@@ -11,7 +11,6 @@ const destinationsList = {"Boston": {center: { lat: 42.357004, lng: -71.062309 }
 
 class SpotsMap extends React.Component {
   componentDidMount() {
-    // debugger;
     // const _mapOptions = {
     //   center: { lat: 37.777072, lng: -122.447774 },
     //   zoom: 12
@@ -32,6 +31,7 @@ class SpotsMap extends React.Component {
 
   componentDidUpdate(nextProps) {
     // debugger;
+    // console.log(nextProps);
     if (this.props.filters.letters !== nextProps.filters.letters) {
       this.state = { letters: this.props.filters.letters };
       Object.keys(destinationsList).forEach( key => {
@@ -66,4 +66,4 @@ class SpotsMap extends React.Component {
   }
 }
 
-export default SpotsMap;
+export default withRouter(SpotsMap);

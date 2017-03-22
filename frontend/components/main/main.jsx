@@ -8,6 +8,8 @@ import Slider from 'react-slick';
 class MainPage extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = { city: "" };
     this.renderDestinations = this.renderDestinations.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
@@ -19,6 +21,20 @@ class MainPage extends React.Component {
   handleClick(e) {
     e.preventDefault();
     this.props.router.push('/spots-search');
+
+    // debugger;
+
+    // return e => {
+    //   this.setState({
+    //     [field]: e.currentTarget.value
+    //   });
+    //   this.props.updateFilter("letters", e.currentTarget.value);
+      // debugger;
+      // this.props.router.push('/spots-search');
+      // debugger;
+    // };
+    // console.log(e.currentTarget);
+    // this.props.updateFilter("letters", "boston");
   }
 
   renderDestinations() {
@@ -27,8 +43,8 @@ class MainPage extends React.Component {
     return(
         <div className="destinations-items">
           {this.props.destinations.map( (destination, idx) => (
-            <div className="cursor-responsive" key={`destination-${idx}`} onClick={this.handleClick}>
-              <img className="city-image" src={destination.image_url} />
+            <div className="cursor-responsive" key={`destination-${idx}`} value={destination.city} onClick={this.handleClick} >
+              <img className="city-image" src={destination.image_url} value={destination.city} />
               <p className="city-name">{destination.city}</p>
             </div>
           ))}

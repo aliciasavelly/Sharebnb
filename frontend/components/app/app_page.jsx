@@ -17,6 +17,7 @@ class AppPage extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
     this.update = this.update.bind(this);
+    this.clearFilters = this.clearFilters.bind(this);
   }
 
   logoutUser() {
@@ -58,13 +59,18 @@ class AppPage extends React.Component {
 
   update(field) {
     // debugger;
-    // debugger;
     return e => {
       this.setState({
         [field]: e.currentTarget.value
       });
+      this.props.router.replace('/spots-search');
       this.props.updateFilter("letters", e.currentTarget.value);
     };
+  }
+
+  clearFilters() {
+    this.props.updateFilter("letters", "");
+    this.setState({ city: "" });
   }
 
 
@@ -72,7 +78,7 @@ class AppPage extends React.Component {
     // debugger;
     return(
       <div className="left">
-        <Link to='/main'>Sharebnb</Link>
+        <Link to='/main' onClick={this.clearFilters}>Sharebnb</Link>
         <div className="search-div">
           <form className="search-form" onSubmit={this.handleSearch}>
             <i className="fa fa-search" aria-hidden="true"></i>

@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import MainPage from './main';
 import { requestDestinations } from '../../actions/destination_actions';
 import { selectAllDestinations } from '../../reducers/selectors';
+import { updateFilter } from '../../actions/filter_actions';
 
 const mapStateToProps = state => ({
   loggedIn: !!state.session.currentUser,
@@ -11,7 +12,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return({
-    requestDestinations: () => dispatch(requestDestinations())
+    requestDestinations: () => dispatch(requestDestinations()),
+    updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
   });
 };
 
