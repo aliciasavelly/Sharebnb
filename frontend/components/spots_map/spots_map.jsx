@@ -30,6 +30,10 @@ class SpotsMap extends React.Component {
     this.MarkerManager.updateMarkers(this.props.spots);
   }
 
+  componentWillReceiveProps(nextProps) {
+    // debugger;
+  }
+
   componentDidUpdate() {
     // debugger;
     this.state = { letters: this.props.filters.letters };

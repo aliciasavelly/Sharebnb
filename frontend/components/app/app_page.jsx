@@ -58,6 +58,7 @@ class AppPage extends React.Component {
 
   update(field) {
     // debugger;
+    // debugger;
     return e => {
       this.setState({
         [field]: e.currentTarget.value
@@ -68,6 +69,7 @@ class AppPage extends React.Component {
 
 
   leftNav() {
+    // debugger;
     return(
       <div className="left">
         <Link to='/main'>Sharebnb</Link>
