@@ -376,117 +376,135 @@ spot10 = Spot.create!(
                 you! This is a private space, which you will not be sharing with other guests. We have a fully
                 stocked kitchen for your use, as well as a living room and a family room. There is an additional
                 pull out couch in the living room, which you are free to use. Please help yourself to the coffee
-                we have supplied."
+                we have supplied.",
   lat: 37.747402,
   lng: -122.484877
 )
 
 spot11 = Spot.create!(
-  title:
-  destination_id:
-  price:
-  image_url:
-  host_id:
-  description:
-  lat:
-  lng:
+  title: "Beautiful home with lemon trees in the mission",
+  destination_id: destination1.id,
+  price: 223,
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1490163950/brooke-cagle-39569-san-francisco_pf38bk.jpg",
+  host_id: user5.id,
+  description: "The Mission offers an immense number of activities to enjoy in San Francisco. We have many
+                suggestions! We'd love to help you out while you're in town! We live nearby so it'll be easy
+                for us to help you out with that. We suggest eating out at some of the local restaurants,
+                checking out Mission Dolores Park, and finding some murals (such as Balmy Alley). We have
+                a few lemon trees that make great lemonade! Please enjoy! You'll have access to the full home
+                including two bedrooms, with a full bed and a queen bed.",
+  lat: 37.758284,
+  lng: -122.416277
 )
 
 spot12 = Spot.create!(
-  title:
-  destination_id:
-  price:
-  image_url:
-  host_id:
-  description:
-  lat:
-  lng:
+  title: "Coder house near Embarcadero",
+  destination_id: destination1.id,
+  price: 32,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1490165498/beds-1132612_1280_gzqneh.jpg",
+  host_id: user7.id,
+  description: "Each room will be shared with up to 8 people. Many people who stay here are learning to code.
+                We gladly welcome long-term stays, as many people are staying here while attending coding bootcamps.
+                We provide bed sheets, but please bring your own towel. You can rent a towel from the front desk for
+                $3. Please bring a lock so that you can store your items safely in the bins we have provided. We have
+                several rooms, so if you would like a female-specific room, you can request this.",
+  lat: 37.799733,
+  lng: -122.404003
 )
 
 spot13 = Spot.create!(
-  title:
-  destination_id:
-  price:
-  image_url:
-  host_id:
-  description:
-  lat:
-  lng:
+  title: "Free breakfast at our lovely bed and breakfast",
+  destination_id: destination1.id,
+  price: 225,
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1490163952/joseph-gonzalez-192345_zcsdmi.jpg",
+  host_id: user7.id,
+  description: "We're located in a great location, where you'll have an easy time getting anywhere in the city.
+                We're near the bay, and Fisherman's Wharf. We offer a lovely selection of food for breakfast,
+                all included in your price. We pride ourselves in the amazing talent of our chefs. We also offer
+                other meals, which you can add to your package at an additional cost. Each room has its own,
+                fun theme! The concierge will be available 24/7 to help you out with whatever you may need.
+                We look forward to seeing you for your stay!",
+  lat: 37.802785,
+  lng: -122.412157
 )
 
 spot14 = Spot.create!(
-  title:
-  destination_id:
-  price:
-  image_url:
-  host_id:
-  description:
-  lat:
-  lng:
+  title: "Beautiful, spacious home in the Presidio",
+  destination_id: destination1.id,
+  price: 435,
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1490163952/nico-beard-136417_qofsda.jpg",
+  host_id: user3.id,
+  description: "We welcome you into our spacious home, with space for up to 12 people. The space is beautiful; it
+                is the perfect place to relax while you are on vacation. There is a heated pool in the back that
+                you will be able to use. Golden Gate Park and Lands End are nearby. There are many places to enjoy
+                in the Presidio. You will be only a short five minute drive to the Golden Gate Bridge, which is a
+                must see. We will provide a full breakfast in the morning, with coffee.",
+  lat: 37.787803,
+  lng: -122.486420
 )
 
-spot15 = Spot.create!(
-  title:
-  destination_id:
-  price:
-  image_url:
-  host_id:
-  description:
-  lat:
-  lng:
-)
-
-spot16 = Spot.create!(
-  title:
-  destination_id:
-  price:
-  image_url:
-  host_id:
-  description:
-  lat:
-  lng:
-)
-
-spot17 = Spot.create!(
-  title:
-  destination_id:
-  price:
-  image_url:
-  host_id:
-  description:
-  lat:
-  lng:
-)
-
-spot18 = Spot.create!(
-  title:
-  destination_id:
-  price:
-  image_url:
-  host_id:
-  description:
-  lat:
-  lng:
-)
-
-spot19 = Spot.create!(
-  title:
-  destination_id:
-  price:
-  image_url:
-  host_id:
-  description:
-  lat:
-  lng:
-)
-
-spot20 = Spot.create!(
-  title:
-  destination_id:
-  price:
-  image_url:
-  host_id:
-  description:
-  lat:
-  lng:
-)
+# spot15 = Spot.create!(
+#   title:
+#   destination_id: destination1.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot16 = Spot.create!(
+#   title:
+#   destination_id: destination1.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot17 = Spot.create!(
+#   title:
+#   destination_id: destination1.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot18 = Spot.create!(
+#   title:
+#   destination_id: destination1.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot19 = Spot.create!(
+#   title:
+#   destination_id: destination1.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot20 = Spot.create!(
+#   title:
+#   destination_id: destination1.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
