@@ -7,8 +7,7 @@ import Datetime from 'react-datetime';
 class AppPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { find: "",
-                   date: ""};
+    this.state = { city: "" };
 
     this.logoutUser = this.logoutUser.bind(this);
     this.leftNav = this.leftNav.bind(this);
@@ -17,6 +16,7 @@ class AppPage extends React.Component {
     this.handleSearch = this.handleSearch.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
+    this.update = this.update.bind(this);
   }
 
   logoutUser() {
@@ -56,6 +56,16 @@ class AppPage extends React.Component {
     // debugger;
   }
 
+  update(field) {
+    // debugger;
+    return e => {
+      this.setState({
+        [field]: e.currentTarget.value
+      });
+      this.props.updateFilter("letters", e.currentTarget.value);
+    };
+  }
+
 
   leftNav() {
     return(
@@ -66,9 +76,10 @@ class AppPage extends React.Component {
             <i className="fa fa-search" aria-hidden="true"></i>
 
             <input className="search-input"
-                   value={this.state.find}
+                   value={this.state.city}
                    placeholder="Where to?"
-                   onChange={this.handleChange} ></input>
+                   onChange={this.update("city")}
+                   type="text" ></input>
 
             <label className="first-label">
               <Datetime className="datetime"

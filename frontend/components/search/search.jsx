@@ -7,7 +7,7 @@ import SpotsMap from '../spots_map/spots_map';
 //TODO
 // import FilterForm from './filter_form';
 
-const Search = ({ spots, updateFilter }) => {
+const Search = ({ spots, updateFilter, filters }) => {
   return (
   <div className="spots-index-container">
     <div className="spots-index-left">
@@ -19,7 +19,7 @@ const Search = ({ spots, updateFilter }) => {
 
     <div className="spots-index-right">
       <div className="fixed">
-        <SpotsMap spots={spots} updateFilter={ updateFilter } />
+        <SpotsMap spots={spots} updateFilter={ updateFilter } filters={ filters } />
       </div>
     </div>
   </div>

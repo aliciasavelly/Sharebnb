@@ -7,7 +7,8 @@ import Search from './search';
 
 const mapStateToProps = state => ({
   spots: asArray(state),
-  destination: state.filters.destination
+  destination: state.filters.destination,
+  filters: state.filters
 });
 
 const mapDispatchToProps = dispatch => ({
