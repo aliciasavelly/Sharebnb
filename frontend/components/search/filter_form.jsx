@@ -6,21 +6,19 @@ const handlePriceFilters = (filter, updateFilter) => (
 
 const FilterForm = ({ minPrice, maxPrice, updateFilter }) => (
   <div className="spots-index-filters">
-    <form className="price-filters" onChange={handlePriceFilters()} >
-      <label>
-        Minimum Price
-        <input type="number"
-               value={minPrice}
-               onChange={handlePriceFilters("minPrice", updateFilter)} />
-      </label>
+    <label>
+      Minimum Price
+    </label>
+    <input type="number"
+      value={minPrice}
+      onChange={handlePriceFilters("minPrice", updateFilter)} />
 
-      <label>
-        Maximum Price
-        <input type="number"
-               value={maxPrice}
-               onChange={handlePriceFilters("maxPrice", updateFilter)} />
-      </label>
-    </form>
+    <label>
+      Maximum Price
+    </label>
+    <input type="number"
+      value={maxPrice}
+      onChange={handlePriceFilters("maxPrice", updateFilter)} />
   </div>
 )
 

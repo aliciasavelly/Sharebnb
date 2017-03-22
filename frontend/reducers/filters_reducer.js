@@ -4,7 +4,7 @@ import merge from 'lodash/merge';
 const _defaultFilters = Object.freeze({
   bounds: {},
   minPrice: 0,
-  maxPrice: 1000,
+  maxPrice: 1000
 });
 
 const FiltersReducer = (state = _defaultFilters, action) => {

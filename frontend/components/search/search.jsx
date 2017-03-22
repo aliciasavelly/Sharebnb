@@ -6,7 +6,6 @@ import FilterForm from './filter_form';
 // import 'react-rangeslider/lib/index.css';
 
 const Search = ({ spots, updateFilter, filters, minPrice, maxPrice }) => {
-
   return (
   <div className="spots-index-container">
     <div className="spots-index-left">
@@ -29,6 +28,8 @@ const Search = ({ spots, updateFilter, filters, minPrice, maxPrice }) => {
   </div>
   )
 };
+
+export default Search;
 
 // class Searchhh extends React.Component {
 //   constructor(props) {
@@ -92,5 +93,3 @@ const Search = ({ spots, updateFilter, filters, minPrice, maxPrice }) => {
 //     )
 //   }
 // };
-
-export default Search;
