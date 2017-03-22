@@ -363,6 +363,124 @@ spot9 = Spot.create!(
 )
 
 spot10 = Spot.create!(
+  title: "Spacious, clean home a short walk to the ocean",
+  destination_id: destination1.id,
+  price: 212,
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1490163953/rik-van-der-kroon-95384_pcxdf5.jpg",
+  host_id: user6.id,
+  description: "This space offers plenty of room, with three bedrooms, each with a queen bed. You won't be far
+                from the ocean, where there is a lovely beach to enjoy. If you are interested in other suggestions
+                of where to visit, we would be happy to help you with that. There are many sights to see in San
+                Francisco. You will not run out of things to do! You can take the L into the city, or the 28 bus
+                to the 38 bus into the city. It should take only 30 minutes to an hour. We look forward to seeing
+                you! This is a private space, which you will not be sharing with other guests. We have a fully
+                stocked kitchen for your use, as well as a living room and a family room. There is an additional
+                pull out couch in the living room, which you are free to use. Please help yourself to the coffee
+                we have supplied."
+  lat: 37.747402,
+  lng: -122.484877
+)
+
+spot11 = Spot.create!(
+  title:
+  destination_id:
+  price:
+  image_url:
+  host_id:
+  description:
+  lat:
+  lng:
+)
+
+spot12 = Spot.create!(
+  title:
+  destination_id:
+  price:
+  image_url:
+  host_id:
+  description:
+  lat:
+  lng:
+)
+
+spot13 = Spot.create!(
+  title:
+  destination_id:
+  price:
+  image_url:
+  host_id:
+  description:
+  lat:
+  lng:
+)
+
+spot14 = Spot.create!(
+  title:
+  destination_id:
+  price:
+  image_url:
+  host_id:
+  description:
+  lat:
+  lng:
+)
+
+spot15 = Spot.create!(
+  title:
+  destination_id:
+  price:
+  image_url:
+  host_id:
+  description:
+  lat:
+  lng:
+)
+
+spot16 = Spot.create!(
+  title:
+  destination_id:
+  price:
+  image_url:
+  host_id:
+  description:
+  lat:
+  lng:
+)
+
+spot17 = Spot.create!(
+  title:
+  destination_id:
+  price:
+  image_url:
+  host_id:
+  description:
+  lat:
+  lng:
+)
+
+spot18 = Spot.create!(
+  title:
+  destination_id:
+  price:
+  image_url:
+  host_id:
+  description:
+  lat:
+  lng:
+)
+
+spot19 = Spot.create!(
+  title:
+  destination_id:
+  price:
+  image_url:
+  host_id:
+  description:
+  lat:
+  lng:
+)
+
+spot20 = Spot.create!(
   title:
   destination_id:
   price:
