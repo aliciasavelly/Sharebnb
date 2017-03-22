@@ -6,7 +6,8 @@ import { asArray } from '../../reducers/selectors';
 import Search from './search';
 
 const mapStateToProps = state => ({
-  spots: asArray(state)
+  spots: asArray(state),
+  destination: state.filters.destination
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -4,6 +4,7 @@ import MarkerManager from '../../util/marker_manager';
 
 class SpotsMap extends React.Component {
   componentDidMount() {
+    // debugger;
     const _mapOptions = {
       center: { lat: 37.777072, lng: -122.447774 },
       zoom: 12

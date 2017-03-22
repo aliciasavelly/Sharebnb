@@ -17,6 +17,8 @@ window.requestSingleSpot = requestSingleSpot;
 window.createSpot = createSpot;
 window.updateSpot = updateSpot;
 window.deleteSpot = deleteSpot;
+import { fetchDestinations } from './util/destination_api_util';
+window.fetchDestinations = fetchDestinations;
 // const windowFunctions = { requestLogin, requestLogout, requestSignup }
 // Object.assign(window, windowFunctions);
 

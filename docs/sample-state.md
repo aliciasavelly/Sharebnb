@@ -64,7 +64,7 @@
     }
   },
   searchFilters: {
-    destination_id: 2,
+    destination: "San Francisco",
     price_low: 30,
     price_high: 120,
     check_in: "01/23/2017",

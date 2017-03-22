@@ -7,12 +7,16 @@ import Datetime from 'react-datetime';
 class AppPage extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { find: "",
+                   date: ""};
 
     this.logoutUser = this.logoutUser.bind(this);
     this.leftNav = this.leftNav.bind(this);
     this.rightNav = this.rightNav.bind(this);
     this.handleCloudinary = this.handleCloudinary.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleDateChange = this.handleDateChange.bind(this);
   }
 
   logoutUser() {
@@ -29,6 +33,74 @@ class AppPage extends React.Component {
         this.props.updateUser(this.props.currentUser.id, { image_url: results[0].secure_url });
       }
     });
+  }
+
+  handleChange(filter) {
+    // return (e) => {
+    //   e.preventDefault();
+    //   this.props.updateFilter(filter, 'San');
+    // }
+    // debugger;
+    // this.props.router.push('/spots-search');
+  }
+
+  handleSearch() {
+    e.preventDefault();
+
+  }
+
+  handleDateChange(e) {
+    this.setState({ filters: {check_in: e._d.toJSON().slice(0,10) }})
+
+    console.log("hello");
+    // debugger;
+  }
+
+
+  leftNav() {
+    return(
+      <div className="left">
+        <Link to='/main'>Sharebnb</Link>
+        <div className="search-div">
+          <form className="search-form" onSubmit={this.handleSearch}>
+            <i className="fa fa-search" aria-hidden="true"></i>
+
+            <input className="search-input"
+                   value={this.state.find}
+                   placeholder="Where to?"
+                   onChange={this.handleChange} ></input>
+
+            <label className="first-label">
+              <Datetime className="datetime"
+                defaultValue="Check In"
+                timeFormat={false}
+                onChange={this.handleDateChange}/>
+            </label>
+            <p></p>
+            <label className="second-label">
+              <Datetime className="datetime"
+                defaultValue="Check Out"
+                timeFormat={false}/>
+            </label>
+            <select className="search-input-guest">
+              <option value="1">1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5 guests</option>
+              <option value="6">6 guests</option>
+              <option value="7">7 guests</option>
+              <option value="8">8 guests</option>
+              <option value="9">9 guests</option>
+              <option value="10">10 guests</option>
+              <option value="11">11 guests</option>
+              <option value="12">12 guests</option>
+            </select>
+            <input type="submit" className="submit"/>
+          </form>
+        </div>
+      </div>
+    )
   }
 
   rightNav() {
@@ -65,54 +137,6 @@ class AppPage extends React.Component {
         <Link to="/signup" className="nav-link-show">Sign up</Link>
       </div>)
     }
-  }
-
-  leftNav() {
-    return(
-    <div className="left">
-      <Link to='/main'>Sharebnb</Link>
-        <div className="search-div">
-          <form className="search-form" onSubmit={this.handleSearch}>
-            <i className="fa fa-search" aria-hidden="true"></i>
-
-            <input className="search-input" type="text" placeholder="Where to?" />
-            <label className="first-label">
-              <Datetime className="datetime"
-                        defaultValue="Check In"
-                        timeFormat={false}/>
-            </label>
-            <p></p>
-            <label className="second-label">
-              <Datetime className="datetime"
-                        defaultValue="Check Out"
-                        timeFormat={false}/>
-            </label>
-            <select className="search-input-guest">
-              <option value="1">1 guest</option>
-              <option value="2">2 guests</option>
-              <option value="3">3 guests</option>
-              <option value="4">4 guests</option>
-              <option value="5">5 guests</option>
-              <option value="6">6 guests</option>
-              <option value="7">7 guests</option>
-              <option value="8">8 guests</option>
-              <option value="9">9 guests</option>
-              <option value="10">10 guests</option>
-              <option value="11">11 guests</option>
-              <option value="12">12 guests</option>
-            </select>
-            <input type="submit" className="submit"/>
-          </form>
-        </div>
-    </div>
-    )
-  }
-
-  handleSearch() {
-
-    // return(
-    //
-    // )
   }
 
   render() {
