@@ -4,7 +4,14 @@ class Api::SpotsController < ApplicationController
   def index
     ##TODO
     # switch out once google maps set up
-    @spots = (bounds ? Spot.in_bounds(bounds) : Spot.all)
+    spots = (bounds ? Spot.in_bounds(bounds) : Spot.all)
+
+    if (params[:minPrice] && params[:maxPrice])
+      spots = spots.where(price: price_range)
+    end
+
+    @spots = spots
+
     render :index
     # @spots = Spot.all
   end
@@ -40,6 +47,11 @@ class Api::SpotsController < ApplicationController
   end
 
   private
+
+  def price_range
+    (params[:minPrice]..params[:maxPrice])
+  end
+
   def spot_params
     params.require(:spot).permit(
       :title,
@@ -53,8 +65,6 @@ class Api::SpotsController < ApplicationController
     )
   end
 
-##TODO
-#add this one once google maps set up
   def bounds
     params[:bounds]
   end
