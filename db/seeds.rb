@@ -1,6 +1,3 @@
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 Destination.delete_all
 User.delete_all
 Spot.delete_all
@@ -188,7 +185,7 @@ destination2 = Destination.create!(
 )
 
 destination3 = Destination.create!(
-  city: "New York",
+  city: "New York City",
   image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_70/v1489778201/philipp-henzler-nyc-horizontal_ujgwcr.jpg",
   lat: 40.777878,
   lng: -73.937499
@@ -499,6 +496,84 @@ spot14 = Spot.create!(
 # )
 #
 # spot20 = Spot.create!(
+#   title:
+#   destination_id: destination1.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+
+spot21 = Spot.create!(
+  title: "Beautiful home near Millennium Park",
+  destination_id: destination5.id,
+  price: 111,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_60/v1489879198/christian-deknock-222409-chicago_tvqnf0.jpg",
+  host_id: user8.id,
+  description: "Chicago is an amazing city, and we look forward to hosting you here. We're very close to Millennium Park,
+                which is beautiful during all seasons. You'll have your own private room and bathroom. Please feel free
+                to share our kitchen with us. We'll provide coffee and a light breakfast each morning. We suggest that
+                while you're in the city you don't forget to grab some Chicago style pizza, and check out the bean! We look
+                forward to hosting you here. Please let us know if you have any questions. We will offer a discount if you
+                stay for a month or longer.",
+  lat: 41.883671,
+  lng: -87.627358
+)
+
+spot22 = Spot.create!(
+  title: "Sleep on our sailboat near the North End",
+  destination_id: destination1.id,
+  price: 114,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_62/v1489879199/bonnie-kittle-115760-boston_zz5ibf.jpg",
+  host_id: user11.id,
+  description: "It's quite the experience to spend a night on our small boat. You'll sleep under the stars. Hopefully
+                you'll be able to stay warm! We'll provide several blankets, and other supplies! We look forward to
+                your stay. Please come prepared to sail our boat without our assistance. Feel free to rent it out for
+                the day even if you don't want to spend the night here. We keep her near the North End, and you'll be able
+                to see the USS Constitution from here as well. We suggest that while you're here visiting the city, and
+                while you're not on our sailboat, you visit Charlestown and the North End. These are beautiful parts of town
+                that you will definitely enjoy. Don't forget to grab a cannoli! Please let us know if you have any questions
+                that we can help you with.",
+  lat: 42.370639,
+  lng: -71.051413
+)
+
+# spot23 = Spot.create!(
+#   title:
+#   destination_id: destination1.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot24 = Spot.create!(
+#   title:
+#   destination_id: destination1.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot25 = Spot.create!(
+#   title:
+#   destination_id: destination1.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot26 = Spot.create!(
 #   title:
 #   destination_id: destination1.id,
 #   price:
