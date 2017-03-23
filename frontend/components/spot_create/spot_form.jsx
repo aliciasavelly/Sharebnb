@@ -1,5 +1,4 @@
 import React from 'react';
-// import SpotCreateContainer from './spot_create_container';
 import FormSpotsMap from '../spots_map/form_spots_map';
 import { withRouter } from 'react-router';
 
@@ -38,8 +37,6 @@ class SpotForm extends React.Component {
   }
 
   updateDestination(e) {
-    // debugger;
-    // console.log(e.currentTarget.value);
     let destinationId = 1;
     this.props.destinations.forEach( destination => {
       if (destination.city === e.currentTarget.value) {
@@ -73,16 +70,11 @@ class SpotForm extends React.Component {
 
     this.updateCoords();
     const spot = Object.assign({}, this.state, this.coords);
-    // debugger
     this.props.createSpot( spot );
     this.navigateToListings();
-    debugger;
   }
 
   render() {
-    // this.props.requestDestinations();
-    // this.props.lat, this.props.lng
-    // debugger;
     const { title, description, price, image_url } = this.state;
     const { lat, lng } = this.coords;
 
