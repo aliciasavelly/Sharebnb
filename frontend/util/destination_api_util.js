@@ -1,4 +1,4 @@
-export const fetchDestinations = city => (
+export const fetchDestinations = () => (
   $.ajax({
     method: 'GET',
     url: '/api/destinations'

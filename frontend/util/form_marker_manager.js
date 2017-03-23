@@ -12,7 +12,9 @@ export default class FormMarkerManager {
       this.markers[i].setMap(null);
     }
     this.markers.length = 0;
-    this._createMarkerFromSpot(spot);
+    if (spot) {
+      this._createMarkerFromSpot(spot);
+    }
   }
 
   _createMarkerFromSpot(spot) {

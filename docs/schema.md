@@ -31,8 +31,8 @@
 | id              | integer   | not null, primary key          |
 | user_id         | integer   | not null, foreign key, indexed |
 | spot_id         | integer   | not null, foreign key, indexed |
-| check_in        | string    | not null                       |
-| check_out       | string    | not null                       |
+| check_in        | date      | not null                       |
+| check_out       | date      | not null                       |
 | num_guests      | integer   | not null                       |
 
 ## reviews

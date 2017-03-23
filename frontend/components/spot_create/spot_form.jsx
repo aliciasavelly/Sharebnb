@@ -23,6 +23,10 @@ class SpotForm extends React.Component {
 
   }
 
+  componentDidMount() {
+    this.props.requestDestinations();
+  }
+
   navigateToListings() {
     this.props.router.push("/my-listings");
   }
@@ -62,7 +66,7 @@ class SpotForm extends React.Component {
   render() {
     // this.props.requestDestinations();
     // this.props.lat, this.props.lng
-    // debugger;
+    debugger;
     const { title, description, price, image_url } = this.state;
     const { lat, lng } = this.coords;
 

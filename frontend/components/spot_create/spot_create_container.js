@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => {
       filters: state.filters,
       lat: ownProps.location.query.lat,
       lng: ownProps.location.query.lng,
-      destinations: selectAllDestinations(state.destinations)
+      destinations: selectAllDestinations(state)
     })
   // } else {
   //   return({
