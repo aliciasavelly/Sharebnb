@@ -20,7 +20,7 @@ class SpotForm extends React.Component {
     this.navigateToListings = this.navigateToListings.bind(this);
     this.handleCloudinary = this.handleCloudinary.bind(this);
     this.updateCoords = this.updateCoords.bind(this);
-
+    this.updateDestination = this.updateDestination.bind(this);
   }
 
   componentDidMount() {
@@ -35,6 +35,21 @@ class SpotForm extends React.Component {
     return e => this.setState({
       [property]: e.target.value
     });
+  }
+
+  updateDestination(e) {
+    // debugger;
+    // console.log(e.currentTarget.value);
+    let destinationId = 1;
+    this.props.destinations.forEach( destination => {
+      if (destination.city === e.currentTarget.value) {
+        destinationId = destination.id;
+      }
+    });
+    let field = "destination_id";
+    this.setState({
+      [field]: destinationId
+    })
   }
 
   updateCoords() {
@@ -61,12 +76,13 @@ class SpotForm extends React.Component {
     // debugger
     this.props.createSpot( spot );
     this.navigateToListings();
+    debugger;
   }
 
   render() {
     // this.props.requestDestinations();
     // this.props.lat, this.props.lng
-    debugger;
+    // debugger;
     const { title, description, price, image_url } = this.state;
     const { lat, lng } = this.coords;
 
@@ -98,6 +114,17 @@ class SpotForm extends React.Component {
                    type="number"
                    value={price}
                    onChange={this.update("price")} />
+
+            <label className="destination">City</label>
+            <select onChange={this.updateDestination}>
+              <option value="other">Other</option>
+              <option value="Boston">Boston</option>
+              <option value="San Francisco">San Francisco</option>
+              <option value="New York City">New York City</option>
+              <option value="Seattle">Seattle</option>
+              <option value="Chicago">Chicago</option>
+              <option value="Detroit">Detroit</option>
+            </select>
 
             <div className="image-button">
               <button
