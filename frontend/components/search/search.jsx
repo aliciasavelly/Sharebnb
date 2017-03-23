@@ -6,13 +6,11 @@ import FilterForm from './filter_form';
 // import 'react-rangeslider/lib/index.css';
 
 class Search extends React.Component {
-  // debugger;
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
-    // debugger;
     this.props.requestSpots();
   }
   // ({ spots, updateFilter, requestSpots, filters, minPrice, maxPrice }) =>
@@ -59,7 +57,6 @@ export default Search;
 //
 //   handlePriceFilters(filter) {
 //     // this.setState([filter]: )
-//     // debugger;
 //     return e => {
 //       this.setState({
 //         [filter]: e.currentTarget.value

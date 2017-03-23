@@ -8,28 +8,17 @@ import SpotDetail from './spot_detail';
 class SpotShow extends React.Component {
   constructor(props) {
     super(props);
-    // this.spot = this.props.spot;
   }
   // const spots = {
   //   [spotId]: spot
   // };
 
   // ({ spot, spotId, requestSingleSpot, requestSpots, children })
-
-  // requestSpots();
-  // debugger;
-  // debugger;
-  // console.log(children);
-  // console.log(spot.host);
   componentDidMount() {
-    // debugger;
     this.props.requestSingleSpot(this.props.params.spotId);
-    // this.props.fetchListing(this.props.params.listingId);
-
   }
 
   render () {
-    // debugger;
     if (this.props.spot) {
       return(
         <div className="spot-show">

@@ -41,7 +41,6 @@ class AppPage extends React.Component {
     //   e.preventDefault();
     //   this.props.updateFilter(filter, 'San');
     // }
-    // debugger;
     // this.props.router.push('/spots-search');
   }
 
@@ -52,13 +51,9 @@ class AppPage extends React.Component {
 
   handleDateChange(e) {
     this.setState({ filters: {check_in: e._d.toJSON().slice(0,10) }})
-
-    console.log("hello");
-    // debugger;
   }
 
   update(field) {
-    // debugger;
     return e => {
       this.setState({
         [field]: e.currentTarget.value
@@ -75,7 +70,6 @@ class AppPage extends React.Component {
 
 
   leftNav() {
-    // debugger;
     return(
       <div className="left">
         <Link to='/main' onClick={this.clearFilters}>Sharebnb</Link>

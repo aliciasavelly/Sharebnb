@@ -6,7 +6,6 @@ const SpotsReducer = (state = {}, action) => {
 
   switch(action.type){
     case RECEIVE_SPOTS:
-      // debugger;
       return action.spots;
     case DESTROY_SPOT:
       let nextState = merge({}, state);

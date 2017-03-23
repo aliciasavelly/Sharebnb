@@ -13,7 +13,6 @@ import SpotIndexItem from './spot_index_item';
 //   }
 //
 //   render() {
-//     // debugger;
 //     if (this.props.spots.length > 0) {
 //       return(
 //         <div className="spots-index">

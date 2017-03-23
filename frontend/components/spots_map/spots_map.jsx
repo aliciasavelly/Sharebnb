@@ -29,31 +29,11 @@ class SpotsMap extends React.Component {
         }
       }
     });
-    // debugger;
     this._registerListeners();
     this.MarkerManager.updateMarkers(this.props.spots);
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   // debugger;
-  //   if (nextProps.filters.letters) {
-  //     this.state = {letters: nextProps.filters.letters};
-  //     Object.keys(destinationsList).forEach( key => {
-  //       if(key.toLowerCase().includes(this.state.letters.toLowerCase())) {
-  //         this.map.setCenter(destinationsList[key].center);
-  //         this.map.setZoom(destinationsList[key].zoom);
-  //       } else {
-  //         // this.map.setZoom(3);
-  //       }
-  //     });
-  //     // debugger;
-  //     this.MarkerManager.updateMarkers(this.props.spots);
-  //   }
-  // }
-
   componentDidUpdate(nextProps) {
-    // debugger;
-    // console.log(nextProps);
     if (nextProps.filters.letters !== this.props.filters.letters) {
       this.state = { letters: nextProps.filters.letters };
       Object.keys(destinationsList).forEach( key => {

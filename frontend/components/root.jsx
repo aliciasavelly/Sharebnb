@@ -9,7 +9,7 @@ import SpotsIndexContainer from './search/spots_index_container';
 import SpotShowContainer from './spot_show/spot_show_container';
 // import SpotCreateContainer from './spot_create/spot_create_container';
 // import MyTripsContainer from './my_trips/my_trips_container';
-// import MyListingsContainer from './my_listings/my_listings/container';
+import MyListingsContainer from './my_listings/my_listings_container';
 
 const Root = ({ store }) => {
   const _redirectIfLoggedIn = (nextState, replace) => {
@@ -37,7 +37,7 @@ const Root = ({ store }) => {
           </Route>
           <Route path='/new-listing' component={ MainContainer } />
           <Route path='/my-trips' component={ MainContainer } />
-          <Route path='/my-listings' component={ MainContainer } />
+          <Route path='/my-listings' component={ MyListingsContainer } />
     </Router>
       </Router>
     </Provider>

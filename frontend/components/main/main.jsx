@@ -22,7 +22,6 @@ class MainPage extends React.Component {
     e.preventDefault();
     // this.props.router.push('/spots-search');
 
-    // debugger;
     // this.setState({
     //   [field]: e.currentTarget.value
     // });
@@ -32,7 +31,6 @@ class MainPage extends React.Component {
   }
 
   renderDestinations() {
-    // debugger;
 
     return(
       <div className="destinations-items" id="destinations-items">

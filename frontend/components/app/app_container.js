@@ -5,7 +5,6 @@ import { updateUser } from '../../actions/users_actions';
 import { updateFilter } from '../../actions/filter_actions';
 
 const mapStateToProps = state => {
-  // debugger;
   return(
   {
   loggedIn: !!state.session.currentUser,
