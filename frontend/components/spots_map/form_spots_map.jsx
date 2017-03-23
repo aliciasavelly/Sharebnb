@@ -18,7 +18,6 @@ class FormSpotsMap extends React.Component {
   }
 
   componentDidUpdate() {
-    debugger;
     this.FormMarkerManager.updateMarkers(this.coords);
   }
 

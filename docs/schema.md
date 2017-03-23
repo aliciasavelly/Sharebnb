@@ -16,7 +16,6 @@
 | -------------- | --------- | ------------------------------ |
 | id             | integer   | not null, primary key          |
 | title          | string    | not null                       |
-| destination_id | integer   | not null, foreign key, indexed |
 | price          | integer   | not null                       |
 | image_url      | string    |                                |
 | host_id        | integer   | not null, foreign key, indexed |
