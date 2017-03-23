@@ -31,7 +31,6 @@
 | id              | integer   | not null, primary key          |
 | user_id         | integer   | not null, foreign key, indexed |
 | spot_id         | integer   | not null, foreign key, indexed |
-| status          | string    | not null                       |
 | check_in        | string    | not null                       |
 | check_out       | string    | not null                       |
 | num_guests      | integer   | not null                       |
@@ -56,6 +55,7 @@
 | lat         | float     | not null              |
 | lng         | float     | not null              |
 
+<!--
 ## search_filters
 
 | column name    | data type | details              |
@@ -64,4 +64,4 @@
 | price_low      | integer   |                      |
 | price_high     | integer   |                      |
 | check_in       | string    |                      |
-| check_out      | string    |                      |
+| check_out      | string    |                      | -->

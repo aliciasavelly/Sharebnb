@@ -4,11 +4,14 @@ import { requestLogout } from '../../actions/session_actions';
 import { updateUser } from '../../actions/users_actions';
 import { updateFilter } from '../../actions/filter_actions';
 
-const mapStateToProps = state => ({
+const mapStateToProps = state => {
+  // debugger;
+  return(
+  {
   loggedIn: !!state.session.currentUser,
   currentUser: state.session.currentUser,
   filters: state.filters
-});
+})};
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return({

@@ -6,6 +6,7 @@ import MainContainer from './main/main_container';
 import SessionFormContainer from './session/session_form_container';
 import { clearErrors } from '../actions/session_actions';
 import SpotsIndexContainer from './search/spots_index_container';
+import SpotShowContainer from './spot_show/spot_show_container';
 
 const Root = ({ store }) => {
   const _redirectIfLoggedIn = (nextState, replace) => {
@@ -28,9 +29,8 @@ const Root = ({ store }) => {
           <Route path='/signup' component={ SessionFormContainer }
                                  onEnter={_redirectIfLoggedIn} />
           <Route path='/spots-search' component={ SpotsIndexContainer } />
-          <Route path='/spots/:spotId' component={ MainContainer } >
-            <Route path='review' component={ MainContainer }
-                                 onEnter={_redirectIfLoggedIn} />
+          <Route path='/spots/:spotId' component={ SpotShowContainer } >
+            <Route path='/reviews' component={ SpotShowContainer } />
           </Route>
     </Router>
       </Router>

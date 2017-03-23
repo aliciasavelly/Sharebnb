@@ -7,3 +7,7 @@ json.extract! spot, :id,
                     :description,
                     :lat,
                     :lng
+
+json.host do
+  json.partial! 'api/users/user', user: spot.host
+end

@@ -5,28 +5,41 @@ import FilterForm from './filter_form';
 // import Slider from 'react-rangeslider';
 // import 'react-rangeslider/lib/index.css';
 
-const Search = ({ spots, updateFilter, filters, minPrice, maxPrice }) => {
-  return (
-  <div className="spots-index-container">
-    <div className="spots-index-left">
-      <FilterForm
-          minPrice={ minPrice }
-          maxPrice={ maxPrice }
-          updateFilter={ updateFilter } />
-      <SpotsIndex
-          spots={ spots } />
-    </div>
+class Search extends React.Component {
+  // debugger;
+  constructor(props) {
+    super(props);
+  }
 
-    <div className="spots-index-right">
-      <div className="fixed">
-        <SpotsMap
-            spots={ spots }
-            updateFilter={ updateFilter }
-            filters={ filters } />
+  componentDidMount() {
+    // debugger;
+    this.props.requestSpots();
+  }
+  // ({ spots, updateFilter, requestSpots, filters, minPrice, maxPrice }) =>
+  render() {
+    return (
+      <div className="spots-index-container">
+        <div className="spots-index-left">
+          <FilterForm
+              minPrice={ this.props.minPrice }
+              maxPrice={ this.props.maxPrice }
+              updateFilter={ this.props.updateFilter } />
+          <SpotsIndex
+              spots={ this.props.spots } />
+        </div>
+
+        <div className="spots-index-right">
+          <div className="fixed">
+            <SpotsMap
+                spots={ this.props.spots }
+                updateFilter={ this.props.updateFilter }
+                filters={ this.props.filters }
+                requestSpots={ this.props.requestSpots } />
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  )
+    )
+  }
 };
 
 export default Search;

@@ -1,9 +1,9 @@
 import React from 'react';
 import AppContainer from './app/app_container';
 
-const App = ({ children }) => (
+const App = ({ children, params }) => (
   <div>
-    <AppContainer />
+    <AppContainer params={params}/>
     { children }
   </div>
 );

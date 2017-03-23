@@ -20,21 +20,15 @@ class MainPage extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    this.props.router.push('/spots-search');
+    // this.props.router.push('/spots-search');
 
     // debugger;
+    // this.setState({
+    //   [field]: e.currentTarget.value
+    // });
+    this.props.router.push('/spots-search');
+    this.props.updateFilter("letters", e.currentTarget.textContent);
 
-    // return e => {
-    //   this.setState({
-    //     [field]: e.currentTarget.value
-    //   });
-    //   this.props.updateFilter("letters", e.currentTarget.value);
-      // debugger;
-      // this.props.router.push('/spots-search');
-      // debugger;
-    // };
-    // console.log(e.currentTarget);
-    // this.props.updateFilter("letters", "boston");
   }
 
   renderDestinations() {

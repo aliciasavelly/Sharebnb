@@ -1,0 +1,30 @@
+.spot-show {
+  width: 100%;
+  height: 550px;
+
+  .spot-image-cover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .spot-image {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 550px;
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+  }
+}

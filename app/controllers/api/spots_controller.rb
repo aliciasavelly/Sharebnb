@@ -8,7 +8,7 @@ class Api::SpotsController < ApplicationController
       spots = spots.where(price: price_range)
     end
 
-    @spots = spots
+    @spots = spots.includes(:host)
 
     render :index
   end
