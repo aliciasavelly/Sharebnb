@@ -7,7 +7,7 @@ import SessionFormContainer from './session/session_form_container';
 import { clearErrors } from '../actions/session_actions';
 import SpotsIndexContainer from './search/spots_index_container';
 import SpotShowContainer from './spot_show/spot_show_container';
-// import SpotCreateContainer from './spot_create/spot_create_container';
+import SpotCreateContainer from './spot_create/spot_create_container';
 // import MyTripsContainer from './my_trips/my_trips_container';
 import MyListingsContainer from './my_listings/my_listings_container';
 
@@ -35,7 +35,7 @@ const Root = ({ store }) => {
           <Route path='/spots/:spotId' component={ SpotShowContainer } >
             <Route path='/reviews' component={ SpotShowContainer } />
           </Route>
-          <Route path='/new-listing' component={ MainContainer } />
+          <Route path='/new-listing' component={ SpotCreateContainer } />
           <Route path='/my-trips' component={ MainContainer } />
           <Route path='/my-listings' component={ MyListingsContainer } />
     </Router>
