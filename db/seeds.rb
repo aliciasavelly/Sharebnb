@@ -715,7 +715,7 @@ spot27 = Spot.create!(
 #   lng:
 # )
 #
-# spot28 = Spot.create!(
+# spot36 = Spot.create!(
 #   title:
 #   destination_id: destination4.id,
 #   price:
@@ -726,7 +726,7 @@ spot27 = Spot.create!(
 #   lng:
 # )
 #
-# spot28 = Spot.create!(
+# spot37 = Spot.create!(
 #   title:
 #   destination_id: destination4.id,
 #   price:
@@ -737,7 +737,7 @@ spot27 = Spot.create!(
 #   lng:
 # )
 #
-# spot28 = Spot.create!(
+# spot38 = Spot.create!(
 #   title:
 #   destination_id: destination4.id,
 #   price:
@@ -748,7 +748,7 @@ spot27 = Spot.create!(
 #   lng:
 # )
 #
-# spot28 = Spot.create!(
+# spot39 = Spot.create!(
 #   title:
 #   destination_id: destination5.id,
 #   price:
@@ -759,7 +759,7 @@ spot27 = Spot.create!(
 #   lng:
 # )
 #
-# spot28 = Spot.create!(
+# spot40 = Spot.create!(
 #   title:
 #   destination_id: destination5.id,
 #   price:
@@ -770,7 +770,7 @@ spot27 = Spot.create!(
 #   lng:
 # )
 #
-# spot28 = Spot.create!(
+# spot41 = Spot.create!(
 #   title:
 #   destination_id: destination5.id,
 #   price:
