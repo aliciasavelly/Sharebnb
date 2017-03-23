@@ -440,17 +440,21 @@ spot14 = Spot.create!(
   lng: -122.486420
 )
 
-# spot15 = Spot.create!(
-#   title:
-#   destination_id: destination1.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
+spot15 = Spot.create!(
+  title: "Okay-sized closet for one",
+  destination_id: destination1.id,
+  price: 27,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_60/v1489879203/hannah-morgan-39891-san-francisco_rxves2.jpg",
+  host_id: user2.id,
+  description: "My closet still has some clothing in it, but it also has a bed for you to use. You can feel free
+                to join us in the kitchen/living room areas. The closet is really small, but we're also not
+                charging much! We're sorry we don't have more space to share! We will have extra space in our
+                other closet for your luggage. There's plenty to enjoy in the area so you don't have to spend
+                your days in a closet! Hope to see you soon!",
+  lat: 37.751260,
+  lng: -122.480511
+)
+
 # spot16 = Spot.create!(
 #   title:
 #   destination_id: destination1.id,
@@ -524,7 +528,7 @@ spot21 = Spot.create!(
 
 spot22 = Spot.create!(
   title: "Sleep on our sailboat near the North End",
-  destination_id: destination1.id,
+  destination_id: destination2.id,
   price: 114,
   image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_62/v1489879199/bonnie-kittle-115760-boston_zz5ibf.jpg",
   host_id: user11.id,
@@ -540,9 +544,92 @@ spot22 = Spot.create!(
   lng: -71.051413
 )
 
-# spot23 = Spot.create!(
+spot23 = Spot.create!(
+  title: "Cozy home near Detroit",
+  destination_id: destination6.id,
+  price: 112,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_60/v1489879217/wesley-tingey-182281-detroit_krljmb.jpg",
+  host_id: user9.id,
+  description: "We welcome you to our lovely home, especially cozy during the winter! You will have access
+                to the full house, and will not be sharing your space with any other guests. There is a
+                fireplace you may feel free to use. In the winter, we have plenty of blankets to help you
+                stay warm. Within an hour drive, there are ski slopes to enjoy. We have a few sleds you
+                can use as well! There are plenty of activities in the summer, too! There is a lake nearby
+                which is super nice all year round. We would be happy to give you suggestions of what types
+                of activities you can enjoy the area. We also urge you to take a drive into Detroit. There
+                are great restaurants in the city, and local attractions! We will provide travel books, and
+                are excited to speak to you in person about what we suggest as well. Welcome!",
+  lat: 42.484168,
+  lng: -82.946780
+)
+
+spot24 = Spot.create!(
+  title: "Gorgeous castle in the country",
+  destination_id: destination6.id,
+  price: 758,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_61/v1489879213/rachel-davis-50329-detroit-neuschwanstein-castle-schwangau-germany_thvxd7.jpg",
+  host_id: user14.id,
+  description: "You'll be only a short 30 minute drive to Detroit, but you won't run out of places to explore
+                in this amazing castle. It is an exact replica of the Neuschwanstein Castle in Germany. There
+                are many guests staying in this castle, so we hope you meet plenty of new people from all over
+                the world! There will be staff present at all times to help you with whatever is needed. Each
+                room has two beds in it, and you can share a bathroom with a few other guests. Each room is a
+                little different, so with each new stay you will have a different experience. This stay
+                will be quite a unique one! There is a lot of nature to explore in the area. It is beautiful
+                here all times of the year. We hope to see you soon!",
+  lat: 42.485181,
+  lng: -83.029178
+)
+
+spot25 = Spot.create!(
+  title: "Shared apartment in the heart of Detroit",
+  destination_id: destination6.id,
+  price: 57,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_80/v1489879207/joshua-davis-172644-detroit_a3r0rp.jpg",
+  host_id: user13.id,
+  description: "It's easy to get around the city from our place. I live here with my wife. We are happy
+                to share our space with you! You will have a full bed in your private room, and are
+                welcome to share the rest of our place with us. We welcome long-term stays, but short-term
+                is good too. We can give you plenty of suggestions on what to enjoy in the area. Hope to
+                see you soon!",
+  lat: 42.351357,
+  lng: -83.078616
+)
+
+spot26 = Spot.create!(
+  title: "Private room in our family home",
+  destination_id: destination6.id,
+  price: 67,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_41/v1489879206/flo-pappert-201009-detroit_erx3mx.jpg",
+  host_id: user13.id,
+  description: "We look forward to meeting you! We love to meet new people! I live here with my husband and
+                our two children. We have a spare bedroom that you will be able to stay in, and your own
+                restroom. There are plenty of places to visit in the area, and we're happy to give you
+                plenty of suggestions. Our home is not accessible to any public transportation. Please
+                let us know if you have any questions! We look forward to welcoming you into our home!",
+  lat: 42.368608,
+  lng: -83.150027
+)
+
+spot27 = Spot.create!(
+  title: "Cabin at the lake",
+  destination_id: destination6.id,
+  price: 78,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_60/v1489879204/hannu-keski-hakuni-11194-detroit_wdqaui.jpg",
+  host_id: user10.id,
+  description: "This lake is great to enjoy! Our cabin is right on the lake, and we hope that you'll spend
+                some time on the lake! We have a small boat that you may use. We welcome long-term stays, but short-term
+                is good too. We can give you plenty of suggestions on what to enjoy in the area. Hope to
+                see you soon! We look forward to meeting you! We love to meet new people! Please
+                let us know if you have any questions! We look forward to welcoming you into our home! You'll have two
+                beds here, so it's a perfect place to come with your familiy or a group of friends.",
+  lat: 42.311221,
+  lng: -83.203045
+)
+
+# spot28 = Spot.create!(
 #   title:
-#   destination_id: destination1.id,
+#   destination_id: destination2.id,
 #   price:
 #   image_url:
 #   host_id:
@@ -551,9 +638,9 @@ spot22 = Spot.create!(
 #   lng:
 # )
 #
-# spot24 = Spot.create!(
+# spot29 = Spot.create!(
 #   title:
-#   destination_id: destination1.id,
+#   destination_id: destination2.id,
 #   price:
 #   image_url:
 #   host_id:
@@ -562,9 +649,9 @@ spot22 = Spot.create!(
 #   lng:
 # )
 #
-# spot25 = Spot.create!(
+# spot30 = Spot.create!(
 #   title:
-#   destination_id: destination1.id,
+#   destination_id: destination2.id,
 #   price:
 #   image_url:
 #   host_id:
@@ -573,7 +660,145 @@ spot22 = Spot.create!(
 #   lng:
 # )
 #
-# spot26 = Spot.create!(
+# spot31 = Spot.create!(
+#   title:
+#   destination_id: destination3.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot32 = Spot.create!(
+#   title:
+#   destination_id: destination3.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot33 = Spot.create!(
+#   title:
+#   destination_id: destination3.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot34 = Spot.create!(
+#   title:
+#   destination_id: destination3.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot35 = Spot.create!(
+#   title:
+#   destination_id: destination4.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot28 = Spot.create!(
+#   title:
+#   destination_id: destination4.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot28 = Spot.create!(
+#   title:
+#   destination_id: destination4.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot28 = Spot.create!(
+#   title:
+#   destination_id: destination4.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot28 = Spot.create!(
+#   title:
+#   destination_id: destination5.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot28 = Spot.create!(
+#   title:
+#   destination_id: destination5.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+# spot28 = Spot.create!(
+#   title:
+#   destination_id: destination5.id,
+#   price:
+#   image_url:
+#   host_id:
+#   description:
+#   lat:
+#   lng:
+# )
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# spot28 = Spot.create!(
 #   title:
 #   destination_id: destination1.id,
 #   price:
