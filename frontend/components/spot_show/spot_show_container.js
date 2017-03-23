@@ -6,7 +6,7 @@ import SpotShow from './spot_show';
 
 const mapStateToProps = (state, { params }) => {
   const spotId = parseInt(params.spotId);
-  const spot = selectSpot(state, spotId);
+  const spot = state.spotDetail;
   return {
     spotId,
     spot

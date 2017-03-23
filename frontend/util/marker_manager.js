@@ -5,10 +5,13 @@ export default class MarkerManager {
     this.markers = [];
 
     this._createMarkerFromSpot = this._createMarkerFromSpot.bind(this);
+    this._removeMarker = this._removeMarker.bind(this);
+    this._markersToRemove = this._markersToRemove.bind(this);
   }
 
   updateMarkers(spots) {
     this.spots = spots;
+    this._markersToRemove().forEach(this._removeMarker);
     this._spotsToAdd().forEach(this._createMarkerFromSpot);
   }
 
@@ -28,5 +31,16 @@ export default class MarkerManager {
     //marker.addListener('click', () => this.handleClick(spot));
     //
     this.markers.push(marker);
+  }
+
+  _markersToRemove() {
+    const spotIds = this.spots.map( spot => spot.id );
+    return this.markers.filter( marker => !spotIds.includes(marker.spotId) );
+  }
+
+  _removeMarker(marker) {
+    const idx = this.markers.indexOf( marker );
+    this.markers[idx].setMap(null);
+    this.markers.splice(idx, 1);
   }
 };

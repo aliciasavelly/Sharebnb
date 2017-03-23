@@ -62,15 +62,15 @@
 
 # Routes
 
-| Path                    | Component              |
-| ----------------------- | ---------------------- |
-| "/"                     | "App"                  |
-| "/main"                 | "MainContainer"        |
-| "/signup"               | "AuthFormContainer"    |
-| "/login"                | "AuthFormContainer"    |
-| "/spots-search"         | "SpotsIndexContainer"  |
-| "/spots/:spotId"        | "SpotsShowContainer"   |
-| "/spots/:spotId/review" | "ReviewFormContainer"  |
-| "/new-listing"          | "SpotsCreateContainer" |
-| "/my-trips"             | "MyTripsContainer"     |
-| "/my-listings"          | "MyListingsContainer"  |
+| Path                     | Component              |
+| ------------------------ | ---------------------- |
+| "/"                      | "App"                  |
+| "/main"                  | "MainContainer"        |
+| "/login"                 | "SessionFormContainer" |
+| "/signup"                | "SessionFormContainer" |
+| "/spots-search"          | "SpotsIndexContainer"  |
+| "/spots/:spotId"         | "SpotShowContainer"    |
+| "/spots/:spotId/reviews" | "ReviewFormContainer"  |
+| "/new-listing"           | "SpotCreateContainer"  |
+| "/my-trips"              | "MyTripsContainer"     |
+| "/my-listings"           | "MyListingsContainer"  |

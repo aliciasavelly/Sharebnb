@@ -8,7 +8,7 @@ import SpotDetail from './spot_detail';
 class SpotShow extends React.Component {
   constructor(props) {
     super(props);
-    this.spot = this.props.spot;
+    // this.spot = this.props.spot;
   }
   // const spots = {
   //   [spotId]: spot
@@ -22,25 +22,25 @@ class SpotShow extends React.Component {
   // console.log(children);
   // console.log(spot.host);
   componentDidMount() {
-
-    debugger;
+    // debugger;
     this.props.requestSingleSpot(this.props.params.spotId);
     // this.props.fetchListing(this.props.params.listingId);
 
   }
 
   render () {
-    if (this.spot) {
+    // debugger;
+    if (this.props.spot) {
       return(
         <div className="spot-show">
           <div className="spot-image-cover">
             <div className="spot-image">
-              <img src={this.spot.image_url} />
+              <img src={this.props.spot.image_url} />
             </div>
           </div>
 
           <div id="spot-show-detail">
-            <SpotDetail spot={ this.spot } />
+            <SpotDetail spot={ this.props.spot } />
           </div>
         </div>
       )
