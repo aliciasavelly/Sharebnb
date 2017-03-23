@@ -18,8 +18,10 @@ class SpotsMap extends React.Component {
     this.map = new google.maps.Map(map, this._mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
 
+    // debugger;
+    // if (this.props.filters.letters) {
     this.state = { letters: this.props.filters.letters };
-    console.log(this.state);
+    // }
     Object.keys(destinationsList).forEach( key => {
       if (this.state.letters){
         if(key.toLowerCase().includes(this.state.letters.toLowerCase())) {
