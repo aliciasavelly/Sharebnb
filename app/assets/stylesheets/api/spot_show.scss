@@ -27,4 +27,18 @@
     }
 
   }
+
+  .host-image {
+    width: 100%;
+  }
+
+  .spot-show-detail {
+    .spot-detail {
+      .overview {
+        img .host-image {
+          width: 100px;
+        }
+      }
+    }
+  }
 }

@@ -15,6 +15,7 @@ class Api::SpotsController < ApplicationController
 
   def show
     @spot = Spot.find(params[:id])
+    # @spot = spot.includes(:host)
   end
 
   def create

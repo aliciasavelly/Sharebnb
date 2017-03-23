@@ -1,31 +1,55 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { withRouter, hashHistory, Link } from 'react-router';
+import SpotDetail from './spot_detail';
+// import ReviewButton from './review_button';
 
 //TODO
 //add children here?
-const SpotShow = ({ spot, spotId, requestSpot, requestSpots, children }) => {
-  const spots = {
-    [spotId]: spot
-  };
+class SpotShow extends React.Component {
+  constructor(props) {
+    super(props);
+    this.spot = this.props.spot;
+  }
+  // const spots = {
+  //   [spotId]: spot
+  // };
 
-  requestSpots();
+  // ({ spot, spotId, requestSingleSpot, requestSpots, children })
+
+  // requestSpots();
   // debugger;
   // debugger;
   // console.log(children);
   // console.log(spot.host);
+  componentDidMount() {
 
-  return(
-    <div className="spot-show">
-      <div className="spot-image-cover">
-        <div className="spot-image">
-          <img src={spot.image_url} />
+    debugger;
+    this.props.requestSingleSpot(this.props.params.spotId);
+    // this.props.fetchListing(this.props.params.listingId);
+
+  }
+
+  render () {
+    if (this.spot) {
+      return(
+        <div className="spot-show">
+          <div className="spot-image-cover">
+            <div className="spot-image">
+              <img src={this.spot.image_url} />
+            </div>
+          </div>
+
+          <div id="spot-show-detail">
+            <SpotDetail spot={ this.spot } />
+          </div>
         </div>
-      </div>
-
-      <div id="overview">
-      </div>
-    </div>
-  )
+      )
+    } else {
+      return(
+        <div></div>
+      )
+    }
+  }
 };
 
 export default SpotShow;

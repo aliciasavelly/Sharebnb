@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { requestSpot } from '../../actions/spot_actions';
+import { requestSingleSpot } from '../../actions/spot_actions';
 import { selectSpot } from '../../reducers/selectors';
 
 import SpotShow from './spot_show';
@@ -14,7 +14,7 @@ const mapStateToProps = (state, { params }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  requestSpot: id => dispatch(requestSpot(id)),
+  requestSingleSpot: id => dispatch(requestSingleSpot(id)),
   requestSpots: () => dispatch(requestSpots())
 });
 
