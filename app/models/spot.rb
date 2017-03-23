@@ -6,10 +6,10 @@ class Spot < ApplicationRecord
     foreign_key: :host_id,
     class_name: :User
 
-  belongs_to :destination,
-    primary_key: :id,
-    foreign_key: :destination_id,
-    class_name: :Destination
+  # belongs_to :destination,
+  #   primary_key: :id,
+  #   foreign_key: :destination_id,
+  #   class_name: :Destination
 
   # has_many :trips,
   #   primary_key: :id,

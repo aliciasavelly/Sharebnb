@@ -18,6 +18,7 @@
 | title          | string    | not null                       |
 | price          | integer   | not null                       |
 | image_url      | string    |                                |
+| destination_id | integer   | not null, foreign key, index   |
 | host_id        | integer   | not null, foreign key, indexed |
 | description    | text      |                                |
 | lat            | float     | not null                       |

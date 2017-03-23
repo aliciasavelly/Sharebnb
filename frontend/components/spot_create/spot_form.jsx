@@ -6,19 +6,21 @@ import { withRouter } from 'react-router';
 class SpotForm extends React.Component {
   constructor(props) {
     super(props);
-    this.coords = {lat: 82, lng: -122, destination_id: 1};
+    this.coords = {lat: 82, lng: -122};
     this.state = {
       title: "",
       price: 0,
       image_url: "",
       description: "",
-      host_id: this.props.currentUser.id
+      host_id: this.props.currentUser.id,
+      destination_id: 1
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToListings = this.navigateToListings.bind(this);
     this.handleCloudinary = this.handleCloudinary.bind(this);
     this.updateCoords = this.updateCoords.bind(this);
+
   }
 
   navigateToListings() {
@@ -50,15 +52,17 @@ class SpotForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-
+    this.updateCoords();
     const spot = Object.assign({}, this.state, this.coords);
-    debugger
+    // debugger
     this.props.createSpot( spot );
     this.navigateToListings();
   }
 
   render() {
-    // debugger; this.props.lat, this.props.lng
+    // this.props.requestDestinations();
+    // this.props.lat, this.props.lng
+    // debugger;
     const { title, description, price, image_url } = this.state;
     const { lat, lng } = this.coords;
 
@@ -69,7 +73,7 @@ class SpotForm extends React.Component {
           <h2 className="new-spot-header">Hi, {this.props.currentUser.first_name}! Let's get you ready to become a host.</h2>
           <h3 className="new-spot-question">Where's your place located?</h3>
           <div className="map-container">
-            <FormSpotsMap onChange={this.updateCoords}/>
+            <FormSpotsMap />
           </div>
 
           <form onSubmit={this.handleSubmit}>
