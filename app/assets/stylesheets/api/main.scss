@@ -1,13 +1,21 @@
 .outer-main-div {
   padding-top: 60px;
   margin: 0 auto;
+  // display: flex;
+  width: 100%;
+  // flex-wrap: wrap;
+  // align-self: center;
+  // background: blue;
 
   .top-title {
     font-size: 50px;
     font-weight: lighter;
-    padding: 20px;
-    margin: 20px;
+    padding: 20px 20px 20px 0;
+    margin: 20px 20px 20px 5px;
     letter-spacing: 2px;
+    width: 100%;
+    text-align: center;
+
 
     strong {
       font-weight: normal;
@@ -18,10 +26,10 @@
 
   .destinations-index {
     // position: relative;
-    // display: flex;
-    // align-items: center;
-    width: 100%;
-    padding: 30px 0 30px 70px;
+    display: flex;
+    justify-content: center;
+    // width: 100%;
+    // padding: 30px 0 30px 70px;
 
     h3 {
       font-size: 19px;
@@ -35,8 +43,9 @@
 
     .destinations-items {
       display: flex;
+      // flex-wrap: wrap;
       // justify-content: center;
-      width: 200px;
+      width: 100%;
       // padding: 30px;
 
       .cursor-responsive {
@@ -53,7 +62,6 @@
           text-align: left;
         }
       }
-
     }
 
     img {
@@ -65,7 +73,64 @@
       background-size: contain;
       border-radius: 2px;
     }
+  }
 
+    // @media (max-width: 1300px) {
+      .destinations-index {
+        width: 830px;
+        display: flex;
+        align-content: center;
+        h2 {
+          width: 100%;
+          align-self: center;
+        }
+      }
+      .destinations-index-outer {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      #destinations-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 1050px;
+        // padding: 30px;
 
+        .cursor-responsive {
+          cursor: pointer;
+        }
+
+        div {
+          margin: 10px;
+
+          p {
+            font-weight: 600;
+            font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+            font-size: 15px;
+            text-align: left;
+          }
+        }
+      }
+    // }
+  @media (max-width: 850px) {
+    .destinations-index {
+      // background: blue;
+
+      #destinations-items {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        width: 500px;
+          .cursor-responsive {
+            // width: 100%;
+            img {
+              width: 500px;
+              height: 300px;
+            }
+          }
+      }
+    }
   }
 }

@@ -52,7 +52,7 @@ class SpotsMap extends React.Component {
   // }
 
   componentDidUpdate(nextProps) {
-    debugger;
+    // debugger;
     // console.log(nextProps);
     if (nextProps.filters.letters) {
       this.state = { letters: nextProps.filters.letters };

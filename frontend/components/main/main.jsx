@@ -35,14 +35,14 @@ class MainPage extends React.Component {
     // debugger;
 
     return(
-        <div className="destinations-items">
-          {this.props.destinations.map( (destination, idx) => (
-            <div className="cursor-responsive" key={`destination-${idx}`} value={destination.city} onClick={this.handleClick} >
-              <img className="city-image" src={destination.image_url} value={destination.city} />
-              <p className="city-name">{destination.city}</p>
-            </div>
-          ))}
-        </div>
+      <div className="destinations-items" id="destinations-items">
+        {this.props.destinations.map( (destination, idx) => (
+          <div className="cursor-responsive" key={`destination-${idx}`} value={destination.city} onClick={this.handleClick} >
+            <img className="city-image" src={destination.image_url} value={destination.city} />
+            <p className="city-name">{destination.city}</p>
+          </div>
+        ))}
+      </div>
 
 
     )
@@ -53,9 +53,10 @@ class MainPage extends React.Component {
       return(
         <div className="outer-main-div">
           <p className="top-title"><strong>Where to?</strong> Start your next adventure on Sharebnb.</p>
-          <div className="destinations-index">
-            <h3>Destinations</h3>
-            {this.renderDestinations()}
+          <div className="destinations-index-outer">
+            <div className="destinations-index">
+              {this.renderDestinations()}
+            </div>
           </div>
         </div>
       )

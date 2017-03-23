@@ -170,18 +170,18 @@ user24 = User.create!(
   image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876498/william-stitt-162611-woman_xllngf.jpg"
 )
 
-destination1 = Destination.create!(
-  city: "San Francisco",
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_59/v1489777250/andrew-ruiz-sf-horizontal_fdvnpl.jpg",
-  lat: 37.792081,
-  lng: -122.419413
-)
-
 destination2 = Destination.create!(
   city: "Boston",
   image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_56/v1489776355/boston_back_bay_horizontal_wbxzij.jpg",
   lat: 42.357004,
   lng: -71.062309
+)
+
+destination1 = Destination.create!(
+city: "San Francisco",
+image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_59/v1489777250/andrew-ruiz-sf-horizontal_fdvnpl.jpg",
+lat: 37.792081,
+lng: -122.419413
 )
 
 destination3 = Destination.create!(
