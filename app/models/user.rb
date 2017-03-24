@@ -41,6 +41,10 @@ class User < ApplicationRecord
     nil
   end
 
+  def own_spot?(spot)
+    spot.user_id == self.id
+  end
+
   private
   def ensure_session_token
     self.session_token ||= User.generate_session_token
