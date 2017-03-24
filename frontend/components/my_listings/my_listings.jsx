@@ -10,21 +10,15 @@ class MyListings extends React.Component {
     this.renderListings = this.renderListings.bind(this);
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   debugger;
-  //
-  // }
   componentWillMount() {
     this.props.requestListings();
   }
 
   componentWillUpdate(nextProps) {
-    // debugger;
     this.props.requestListings();
   }
 
   renderListings() {
-    // debugger;
     return(
       <div className="listings-index">
       {this.props.listings.map( (spot, idx) => (

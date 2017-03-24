@@ -9,14 +9,7 @@ class MyTrips extends React.Component {
     this.renderTrips = this.renderTrips.bind(this);
   }
 
-  // componentWillMount() {
-  //   debugger;
-  //   this.props.requestTrips();
-  //   this.props.requestSpots();
-  // }
-
   componentDidMount() {
-    // debugger;
     this.props.requestTrips();
     this.props.requestSpots();
   }
@@ -32,8 +25,6 @@ class MyTrips extends React.Component {
   }
 
   render() {
-
-    // debugger;
     return(
       <div className="my-trips">
         <h1>Trips</h1>

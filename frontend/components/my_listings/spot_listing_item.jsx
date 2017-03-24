@@ -5,16 +5,10 @@ class SpotListingItem extends React.Component {
   constructor(props) {
     super(props);
 
-    // this.state = { hosted_spots: this.props.spots };
-
     this.handleClick = this.handleClick.bind(this);
     this.deleteSpot = this.deleteSpot.bind(this);
     this.updateSpot = this.updateSpot.bind(this);
   }
-
-  // shouldComponentUpdate() {
-  //
-  // }
 
   handleClick() {
     const spotId = this.props.spot.id;
@@ -22,20 +16,11 @@ class SpotListingItem extends React.Component {
   }
 
   updateSpot() {
-    // debugger;
     this.props.router.push(`/edit-listing/${this.props.spot.id}`);
-    // this.props.requestSingleSpot(this.props.spot.id);
   }
 
   deleteSpot() {
-    // debugger;
     this.props.deleteSpot(this.props.spot.id);
-    // this.props.requestListings();
-    // this.setState({
-    //   [hosted_spots]:
-    // })
-    // this.props.router.push('/my-page');
-    // this.props.router.push('/my-listings');
   }
 
   render() {

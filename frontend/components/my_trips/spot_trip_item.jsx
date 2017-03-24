@@ -22,16 +22,12 @@ class SpotTripItem extends React.Component {
   }
 
   render() {
-    // debugger;
-    // console.log(this.props.spots[0]);
-    // console.log(this.currentSpot.id);
     this.props.spots.forEach( spot => {
       if (spot.id === this.props.trip.spot_id) {
         this.currentSpot = spot;
       }
     })
 
-    // {this.props.trip.spot_id}
     if (this.currentSpot.image_url) {
       return(
         <div className="trip-item-outer">

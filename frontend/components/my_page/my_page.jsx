@@ -12,7 +12,6 @@ class MyPage extends React.Component {
   render() {
     return(
       <div className="my-page">
-        <div>filler</div><div>filler</div><div>filler</div><div>filler</div><div>filler</div><div>filler</div>
         <h1>User page</h1>
         <Link to="/my-listings">View your listings</Link>
       </div>
