@@ -12,7 +12,7 @@ The database stores information for several different cities, referred to as des
 
 ### Search
 
-Each page includes the navigation bar, which redirects users to the search page. Here, they can view all of the spots, filtered by the bounds of the map and by price. The search page design was inspired by Airbnb's clean design.
+Each page includes the navigation bar, which redirects users to the search page. Here, they can view all of the spots, filtered by the bounds of the map and by price. User search information is maintained through the FiltersReducer which updates ```filters``` portion of the store's state whenever a user makes a change to the search (such as when typing in the navigation bar). The search page design was inspired by Airbnb's clean design.
 
 ![image of spots search](docs/wireframes/search-page.png)
 
@@ -26,7 +26,7 @@ Users are able to create new spots, which will then appear for all users on the 
 
 ### Listings
 
-As users create new spots, these spots are added to their Listings page (accessed by clicking ```Host``` in the navigation bar). Users can update and delete their listings on this page. These spots are also added to the general search, for other users to search through and book.
+As users create new spots, these spots are added to their Listings page (accessed by clicking ```Host``` in the navigation bar). Users can update and delete their listings on this page. These spots are also added to the general search, for other users to search through and book. Users can also access the page to create new listings on this page.
 
 ![image of listings page](docs/wireframes/listings.png)
 
