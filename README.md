@@ -1,24 +1,9 @@
-# README
+# Sharebnb
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Sharebnb live](https://sharebnb-aa.herokuapp.com/)
 
-Things you may want to cover:
+Sharebnb is a web application inspired by Airbnb. It utilizes Ruby on Rails, a PostgreSQL database, and React.js with Redux as its frontend architectural framework.
 
-* Ruby version
+## Features & Implementation
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![image of notebook index](wireframes/create-account.png)
