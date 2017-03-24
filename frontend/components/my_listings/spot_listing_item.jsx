@@ -52,8 +52,6 @@ class SpotListingItem extends React.Component {
                   className="delete-button">
                   Delete this listing
           </button>
-        </div>
-        <div className="delete-button-holder">
           <button onClick={this.updateSpot}
                   className="delete-button">
                   Update this listing
