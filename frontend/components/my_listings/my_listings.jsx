@@ -10,6 +10,11 @@ class MyListings extends React.Component {
     this.renderListings = this.renderListings.bind(this);
   }
 
+  // componentWillReceiveProps(nextProps) {
+  //   debugger;
+  //
+  // }
+
   renderListings() {
     return(
       <div className="listings-index">

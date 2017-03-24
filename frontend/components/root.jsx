@@ -10,6 +10,7 @@ import SpotShowContainer from './spot_show/spot_show_container';
 import SpotCreateContainer from './spot_create/spot_create_container';
 // import MyTripsContainer from './my_trips/my_trips_container';
 import MyListingsContainer from './my_listings/my_listings_container';
+import MyPageContainer from './my_page/my_page_container';
 
 const Root = ({ store }) => {
   const _redirectIfLoggedIn = (nextState, replace) => {
@@ -47,6 +48,8 @@ const Root = ({ store }) => {
                                      onEnter={_redirectIfLoggedOut} />
           <Route path='/edit-listing' component={ SpotCreateContainer }
                                       onEnter={_redirectIfLoggedOut} />
+          <Route path='/my-page' component={ MyPageContainer }
+                                 onEnter={_redirectIfLoggedOut} />
           <Route path='/my-trips' component={ MainContainer }
                                   onEnter={_redirectIfLoggedOut} />
           <Route path='/my-listings' component={ MyListingsContainer }
