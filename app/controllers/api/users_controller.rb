@@ -5,6 +5,12 @@ class Api::UsersController < ApplicationController
     render :show
   end
 
+  def hosted_spots
+    # debugger
+    @hosted_spots = current_user.hosted_spots
+    render :hosted_spots
+  end
+
   def create
     @user = User.new(user_params)
 
