@@ -14,7 +14,7 @@ class MyListings extends React.Component {
     return(
       <div className="listings-index">
       {this.props.currentUser.hosted_spots.map( spot => (
-        <SpotListingItem deleteSpot={ deleteSpot } spot={ spot } key={ spot.id } />
+        <SpotListingItem deleteSpot={ this.props.deleteSpot } spot={ spot } key={ spot.id } />
       ))}
     </div>
     )
@@ -25,10 +25,10 @@ class MyListings extends React.Component {
       <div className="my-listings">
         <div>filler</div><div>filler</div><div>filler</div><div>filler</div><div>filler</div><div>filler</div>
         <h1>Listings</h1>
+        <Link to="/new-listing">Add New Listings</Link>
 
         {this.renderListings()}
 
-        <Link to="/new-listing">Add New Listings</Link>
       </div>
 
     )
