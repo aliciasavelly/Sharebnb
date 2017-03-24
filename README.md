@@ -6,4 +6,4 @@ Sharebnb is a web application inspired by Airbnb. It utilizes Ruby on Rails, a P
 
 ## Features & Implementation
 
-![image of notebook index](wireframes/create-account.png)
+![image of notebook index](docs/wireframes/create-account.png)
