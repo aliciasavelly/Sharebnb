@@ -37,9 +37,8 @@ class MyListings extends React.Component {
   render() {
     return(
       <div className="my-listings">
-        <div>filler</div><div>filler</div><div>filler</div><div>filler</div><div>filler</div><div>filler</div>
         <h1>Listings</h1>
-        <Link to="/new-listing">Add New Listings</Link>
+        <Link to="/new-listing" className="button">Add New Listings</Link>
 
         {this.renderListings()}
 
