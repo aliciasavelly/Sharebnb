@@ -80,15 +80,12 @@ class SpotForm extends React.Component {
 
     return(
       <div className="spot-form-container">
-        <h2>filler</h2><h2>filler</h2><h2>filler</h2><h2>filler</h2><h2>filler</h2><h2>filler</h2><h2>filler</h2>
+        <div className="header">
+          <h2 className="new-spot-header">Hi, {this.props.currentUser.first_name}! Let's get you ready to </h2><h2 className="green">become a host.</h2>
+        </div>
         <div className="new-spot-form">
-          <h2 className="new-spot-header">Hi, {this.props.currentUser.first_name}! Let's get you ready to become a host.</h2>
-          <h3 className="new-spot-question">Where's your place located?</h3>
-          <div className="map-container">
-            <FormSpotsMap />
-          </div>
 
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit} className="form">
             <label className="title">Title</label>
             <input className="title-field"
                    type="text"
@@ -132,16 +129,25 @@ class SpotForm extends React.Component {
             </div>
           </form>
 
-          <div className="listings-button-holder">
-            <button
-                onClick={this.navigateToListings}
-                className="listings-button">
-                Back to your listings
-            </button>
+          <div className="map-holder">
+            <h3 className="new-spot-question">Where's your place located?</h3>
+            <div className="map-container">
+              <FormSpotsMap />
+            </div>
           </div>
         </div>
 
-        <img src={image_url} />
+        <div className="listings-button-holder">
+          <button
+              onClick={this.navigateToListings}
+              className="listings-button">
+              Back to your listings
+          </button>
+        </div>
+
+        <div className="image">
+          <img src={image_url} />
+        </div>
       </div>
     )
   }
