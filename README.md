@@ -10,21 +10,29 @@ Sharebnb is a web application inspired by Airbnb. It utilizes Ruby on Rails, a P
 
 The database stores information for several different cities, referred to as destinations. One can determine the name of the city that a spot is in, by checking the ```destination_id```. The main page of Sharebnb shows a collection of the destinations, which users can click on to access the search.
 
-### Spots
-
-Spots references all of the homes in the database that users have created, which other users may book. In the database, spots are stored in a table, which contains columns for ```title```, ```description```, ```price```, ```image_url```, ```destination_id```, ```host_id```, ```lat``` (latitude), and ```lng``` (longitude).
-
 ### Search
 
 Each page includes the navigation bar, which redirects users to the search page. Here, they can view all of the spots, filtered by the bounds of the map and by price. The search page design was inspired by Airbnb's clean design.
 
 ![image of spots search](docs/wireframes/search-page.png)
 
+Much of the search page is taken up by the map, created with the Google Maps API. The rest of the page includes the spots (bookable homes) index. Users are able to click on spots to view their pages. As users move around the map and change the price filter, the spots index changes to show only the searched for spots.
+
+### Spots
+
+Spots refers to all of the homes in the database that users have created, which other users may book. In the database, spots are stored in a table, which contains columns for ```title```, ```description```, ```price```, ```image_url```, ```destination_id```, ```host_id```, ```lat``` (latitude), and ```lng``` (longitude).
+
+Users are able to create new spots, which will then appear for all users on the search page. This page also includes a map, so that spots can be created dynamically, without users having to enter latitude and longitude information.
+
+### Listings
+
+As users create new spots, these spots are added to their Listings page (accessed by clicking ```Host``` in the navigation bar). Users can update and delete their listings on this page. These spots are also added to the general search, for other users to search through and book.
+
+![image of listings page](docs/wireframes/listings.png)
+
 ### Bookings
 
-
-<!-- ![image of notebook index](docs/wireframes/create-account.png) -->
-
+Bookings are kept track of in the database through a trips table, including columns for ```user_id```, ```spot_id```, ```check_in```, ```check_out```, and ```num_guests```. Backend associations are made to keep track all of a user's trips. Users may view these bookings by clicking on Trips in the navigation bar.
 
 ## Future Directions
 
