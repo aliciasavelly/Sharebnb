@@ -28,11 +28,27 @@ class SpotTripItem extends React.Component {
 
     // {this.props.trip.spot_id}
     return(
-      <div className="trip-index-item" onClick={this.handleClick}>
-        <img src={this.currentSpot.image_url} />
-        {this.currentSpot.title}
-        {this.currentSpot.price}
+      <div className="trip-item-outer">
+        <div className="trip-index-item" onClick={this.handleClick}>
+          <div className="image-container">
+            <img src={this.currentSpot.image_url} />
+          </div>
+          <div className="item-details">
+            <h1>{this.currentSpot.title}</h1>
+            <p>${this.currentSpot.price}</p>
+            <div className="dates-container">
+              <div className="dates">
+                <p>Check in: </p>
+                {this.props.trip.check_in}
+              </div>
+              <div className="dates">
+                <p>Check out: </p>
+                {this.props.trip.check_out}
+              </div>
+            </div>
+          </div>
 
+        </div>
       </div>
     )
   }

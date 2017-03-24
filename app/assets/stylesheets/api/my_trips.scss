@@ -1,20 +1,62 @@
 .my-trips {
   padding: 106px 60px 60px 60px;
+  color: #484848;
 
   h1 {
     font-size: 24px;
     color: #484848;
     font-weight: bold;
+    margin-left: 20px;
+  }
+
+  p {
+    margin-left: 20px;
   }
 
   .trips-index {
 
-    .trip-index-item {
+    .trip-item-outer {
+      display: flex;
+      border: 1px solid #dce0e0;
+      padding: 20px;
+      margin: 20px 0 20px 0;
+      display: flex;
+      flex-direction: row;
 
-      img {
-        width: 100px;
+      .trip-index-item {
+        display: flex;
+
+        .item-details {
+          display: flex;
+          flex-direction: column;
+        }
+
+      .image-container {
+        width: 200px;
+        height: 140px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
       }
 
+        img {
+          width: 200px;
+        }
+
+        .dates-container {
+          margin-top: 12px;
+          // margin-left: 10px;
+        }
+
+        .dates {
+          display: flex;
+
+          p {
+            padding-right: 9px;
+          }
+        }
+
+      }
     }
   }
 }
