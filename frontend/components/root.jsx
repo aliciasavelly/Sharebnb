@@ -48,8 +48,6 @@ const Root = ({ store }) => {
                                      onEnter={_redirectIfLoggedOut} />
           <Route path='/edit-listing' component={ SpotCreateContainer }
                                       onEnter={_redirectIfLoggedOut} />
-          <Route path='/my-page' component={ MyPageContainer }
-                                 onEnter={_redirectIfLoggedOut} />
           <Route path='/my-trips' component={ MainContainer }
                                   onEnter={_redirectIfLoggedOut} />
           <Route path='/my-listings' component={ MyListingsContainer }
