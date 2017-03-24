@@ -1,5 +1,5 @@
 import React from 'react';
-import FormSpotsMap from '../spots_map/form_spots_map';
+import FormUpdateSpotsMap from '../spots_map/form_update_spots_map';
 import { withRouter } from 'react-router';
 
 class SpotUpdateForm extends React.Component {
@@ -8,8 +8,8 @@ class SpotUpdateForm extends React.Component {
 
     this.spot = "";
     this.props.hosted_spots.forEach( spot => {
-      console.log(spot.id);
-      console.log(this.props.url_id);
+      // console.log(spot.id);
+      // console.log(this.props.url_id);
       if(spot.id === parseInt(this.props.url_id)) {
         this.spot = spot;
       }
@@ -21,7 +21,7 @@ class SpotUpdateForm extends React.Component {
       price: this.spot.price,
       image_url: this.spot.image_url,
       description: this.spot.description,
-      destination_id: 1
+      destination_id: this.spot.destination_id
     };
 
     // debugger;
@@ -29,7 +29,7 @@ class SpotUpdateForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToListings = this.navigateToListings.bind(this);
     this.handleCloudinary = this.handleCloudinary.bind(this);
-    this.updateCoords = this.updateCoords.bind(this);
+    // this.updateCoords = this.updateCoords.bind(this);
     this.updateDestination = this.updateDestination.bind(this);
   }
 
@@ -60,9 +60,10 @@ class SpotUpdateForm extends React.Component {
     })
   }
 
-  updateCoords() {
-    this.coords = {lat: this.props.lat, lng: this.props.lng};
-  }
+  // updateCoords() {
+  //   // debugger;
+  //   this.coords = {lat: this.props.lat, lng: this.props.lng};
+  // }
 
   handleCloudinary(e) {
     e.preventDefault();
@@ -78,10 +79,12 @@ class SpotUpdateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    // debugger;
 
-    this.updateCoords();
+    // this.updateCoords();
     const spot = Object.assign({}, this.state, this.coords);
-    this.props.updateSpot( spot );
+debugger;
+    this.props.updateSpot( this.spot.id, spot );
     this.navigateToListings();
   }
 
@@ -93,7 +96,7 @@ class SpotUpdateForm extends React.Component {
     return(
       <div className="spot-form-container">
         <div className="header">
-          <h2 className="new-spot-header">Hi, {this.props.currentUser.first_name}! Let's get you ready to </h2><h2 className="green">become a host.</h2>
+          <h2 className="new-spot-header">Hi, {this.props.currentUser.first_name}! Let's </h2><h2 className="green">update your listing.</h2>
         </div>
         <div className="new-spot-form">
 
@@ -116,18 +119,6 @@ class SpotUpdateForm extends React.Component {
                    value={price}
                    onChange={this.update("price")} />
 
-            <label className="destination">City</label>
-            <select onChange={this.updateDestination} defaultValue="select">
-              <option value="select" disabled>Select city</option>
-              <option value="other">Other</option>
-              <option value="Boston">Boston</option>
-              <option value="San Francisco">San Francisco</option>
-              <option value="New York City">New York City</option>
-              <option value="Seattle">Seattle</option>
-              <option value="Chicago">Chicago</option>
-              <option value="Detroit">Detroit</option>
-            </select>
-
             <div className="image-container">
               <div className="image-button" onClick={this.handleCloudinary}>
                 <button
@@ -142,17 +133,10 @@ class SpotUpdateForm extends React.Component {
               </div>
             </div>
 
-            <div className="submit-button">
+            <div id="update-button" className="submit-button">
               <input type="submit" value="Update listing" className="new-spot-button" />
             </div>
           </form>
-
-          <div className="map-holder">
-            <h3 className="new-spot-question">Where's your place located?</h3>
-            <div className="map-container">
-              <FormSpotsMap />
-            </div>
-          </div>
         </div>
 
         <div className="listings-button-holder">
