@@ -16,6 +16,7 @@ class SpotShow extends React.Component {
   // ({ spot, spotId, requestSingleSpot, requestSpots, children })
   componentDidMount() {
     this.props.requestSingleSpot(this.props.params.spotId);
+    this.props.requestDestinations();
   }
 
   render () {
@@ -29,7 +30,7 @@ class SpotShow extends React.Component {
           </div>
 
           <div id="spot-show-detail">
-            <SpotDetail spot={ this.props.spot } />
+            <SpotDetail destinations={ this.props.destinations } spot={ this.props.spot } />
           </div>
         </div>
       )

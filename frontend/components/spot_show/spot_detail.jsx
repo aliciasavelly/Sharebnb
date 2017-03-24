@@ -8,12 +8,14 @@ import { withRouter, hashHistory, Link } from 'react-router';
 //   ))
 // );
 
-const SpotDetail = ({ spot }) => {
+const SpotDetail = ({ spot, destinations }) => {
   if (spot.host) {
     return(
       <div className="spot-detail">
         <div className="overview">
-          <img className="host-image" src={spot.host.image_url} />
+          <div className="round">
+            <img className="host-image" id="host-image" src={spot.host.image_url} />
+          </div>
           <h2>{spot.title}</h2>
         </div>
 

@@ -18,6 +18,8 @@ class AppPage extends React.Component {
     this.handleDateChange = this.handleDateChange.bind(this);
     this.update = this.update.bind(this);
     this.clearFilters = this.clearFilters.bind(this);
+    this.goToHost = this.goToHost.bind(this);
+    this.goToTrips = this.goToTrips.bind(this);
   }
 
   logoutUser() {
@@ -116,13 +118,21 @@ class AppPage extends React.Component {
     )
   }
 
+  goToHost() {
+    this.props.router.push('/my-listings');
+  }
+
+  goToTrips() {
+    this.props.router.push('/my-trips');
+  }
+
   rightNav() {
     if (this.props.loggedIn) {
       return (
       <div className="right">
 
-        <h3 className="nav-redirect">Host</h3>
-        <h3 className="nav-redirect">Trips</h3>
+        <h3 className="nav-redirect" onClick={this.goToHost}>Host</h3>
+        <h3 className="nav-redirect" onClick={this.goToTrips}>Trips</h3>
         <div className="outer-round">
           <div className="round">
             <img className="index-image" src={this.props.currentUser.image_url} />

@@ -21,11 +21,13 @@ class SpotListingItem extends React.Component {
   }
 
   deleteSpot() {
+    // debugger;
     this.props.deleteSpot(this.props.spot.id);
+    // this.props.requestListings();
     // this.setState({
     //   [hosted_spots]:
     // })
-    this.props.router.push('/my-page');
+    // this.props.router.push('/my-page');
     // this.props.router.push('/my-listings');
   }
 

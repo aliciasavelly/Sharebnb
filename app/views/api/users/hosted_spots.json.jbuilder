@@ -1,5 +1,6 @@
 @hosted_spots.each do |spot|
   json.set! spot.id do
+    json.id spot.id
     json.title spot.title
     json.destination_id spot.destination_id
     json.price spot.price

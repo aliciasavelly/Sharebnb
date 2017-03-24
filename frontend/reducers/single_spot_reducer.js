@@ -8,7 +8,7 @@ const SingleSpotReducer = (state = {}, action) => {
     case RECEIVE_SINGLE_SPOT:
       // debugger;
       let spot = action.spot;
-      return merge({}, state, { spot });
+      return merge({}, state, spot);
     default:
       return state;
   }

@@ -14,12 +14,21 @@ class MyListings extends React.Component {
   //   debugger;
   //
   // }
+  componentWillMount() {
+    this.props.requestListings();
+  }
+
+  componentWillUpdate(nextProps) {
+    // debugger;
+    this.props.requestListings();
+  }
 
   renderListings() {
+    // debugger;
     return(
       <div className="listings-index">
-      {this.props.currentUser.hosted_spots.map( spot => (
-        <SpotListingItem deleteSpot={ this.props.deleteSpot } spot={ spot } key={ spot.id } />
+      {this.props.listings.map( (spot, idx) => (
+        <SpotListingItem requestListings={ requestListings } deleteSpot={ this.props.deleteSpot } spot={ spot } key={`listings-${idx}`} />
       ))}
     </div>
     )
