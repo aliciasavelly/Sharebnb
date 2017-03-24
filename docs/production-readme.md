@@ -8,7 +8,9 @@ Sharebnb is a web application inspired by Airbnb. It utilizes Ruby on Rails, a P
 
 ### Destinations
 
-The database stores information for several different cities, referred to as destinations. One can determine the name of the city that a spot is in, by checking the ```destination_id```. The main page of Sharebnb shows a collection of the destinations, which users can click on to access the search.
+The database stores information for several different cities, referred to as destinations. One can determine the name of the city that a spot is in, by checking the ```destination_id```. The main page of Sharebnb shows a collection of the destinations, which users can click on to access the search. Airbnb's clean design was the inspiration for this page.
+
+![image of main page](docs/screenshots/main-page.png)
 
 ### Search
 
@@ -18,7 +20,37 @@ Each page includes the navigation bar, which redirects users to the search page.
 
 Much of the search page is taken up by the map, created with the Google Maps API. The rest of the page includes the spots (bookable homes) index. Users are able to click on spots to view their pages. As users move around the map and change the price filter, the spots index changes to show only the searched for spots.
 
+
 It was challenging to determine the best way to search based on location. Initially I had planned on keeping track of the ```destination_id``` for spots in order to search efficiently. While I was planning the search feature out in more detail, I realized that due to the implementation of a map, this may not be necessary. I was able to keep track of the letters users search for in the navigation bar, which in turn adjusts the map. The spots index is further narrowed down based on the positioning of the map.
+
+As users type in letters, the map checks to see if what the user has typed is different from the letters in the filter portion of the state. The map then sets the map center and the zoom based on whether or not one of the destinations matches the user's search.
+
+```javascript
+{ filters:
+  bounds: {
+    northEast: {
+      lat: 37.80257566252045,
+      lng: -122.35267359716795
+    },
+    southWest: {
+      lat: 37.75155953599878,
+      lng: -122.54287440283201
+    }
+  },
+  letters: "san fran"
+}
+```
+
+```javascript
+this.state = { letters: nextProps.filters.letters };
+Object.keys(destinationsList).forEach( key => {
+  if(key.toLowerCase().includes(this.state.letters.toLowerCase())) {
+    this.map.setCenter(destinationsList[key].center);
+    this.map.setZoom(destinationsList[key].zoom);
+  }
+});
+this.MarkerManager.updateMarkers(this.props.spots);
+```
 
 ### Spots
 

@@ -11,11 +11,15 @@ class SpotShow extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      user_id: this.props.currentUser.id,
-      check_in: "",
-      check_out: "",
-      num_guests: 1
+    if (this.props.currentUser)
+      this.state = {
+        user_id: this.props.currentUser.id,
+        check_in: "",
+        check_out: "",
+        num_guests: 1
+      }
+    else {
+
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -61,7 +65,7 @@ class SpotShow extends React.Component {
   }
 
   render () {
-    if (this.props.spot) {
+    if (this.props.spot && this.props.currentUser) {
       return(
         <div className="spot-show">
           <div className="spot-image-cover">
@@ -114,6 +118,20 @@ class SpotShow extends React.Component {
                 </div>
               </form>
             </div>
+          </div>
+        </div>
+      )
+    } else if (this.props.spot) {
+      return(
+        <div className="spot-show">
+          <div className="spot-image-cover">
+            <div className="spot-image">
+              <img src={this.props.spot.image_url} />
+            </div>
+          </div>
+
+          <div id="spot-show-detail">
+            <SpotDetail destinations={ this.props.destinations } spot={ this.props.spot } />
           </div>
         </div>
       )

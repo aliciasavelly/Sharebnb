@@ -515,7 +515,7 @@ spot21 = Spot.create!(
   title: "Beautiful home near Millennium Park",
   destination_id: destination5.id,
   price: 111,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_60/v1489879198/christian-deknock-222409-chicago_tvqnf0.jpg",
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_54/v1490396046/christian-deknock-222409-chicago_tvqnf0.jpg",
   host_id: user8.id,
   description: "Chicago is an amazing city, and we look forward to hosting you here. We're very close to Millennium Park,
                 which is beautiful during all seasons. You'll have your own private room and bathroom. Please feel free
