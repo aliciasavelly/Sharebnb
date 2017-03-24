@@ -36,7 +36,8 @@ As users create new spots, these spots are added to their Listings page (accesse
 
 Bookings are kept track of in the database through a trips table, including columns for ```user_id```, ```spot_id```, ```check_in```, ```check_out```, and ```num_guests```. Backend associations are made to keep track all of a user's trips. Users may view these bookings by clicking on Trips in the navigation bar. Here, they are able to delete any of their bookings.
 
-## 
+##
+##
 ## Future Directions
 
 I plan on continuing work on this project. Below is an outline of the features I plan on implementing.
