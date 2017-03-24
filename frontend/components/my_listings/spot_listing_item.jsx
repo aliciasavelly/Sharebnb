@@ -51,8 +51,8 @@ class SpotListingItem extends React.Component {
           </div>
 
           <div className="spot-listing-item-detail">
-            <p>{price}</p>
             <h3>{title}</h3>
+            <p>${price}</p>
           </div>
         </div>
         <div className="delete-button-holder">

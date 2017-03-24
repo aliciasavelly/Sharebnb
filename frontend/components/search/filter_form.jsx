@@ -39,19 +39,28 @@ class FilterForm extends React.Component {
   render() {
     return(
       <div className="spots-index-filters">
-        <label>
-          Minimum Price
-        </label>
-        <input type="number"
-          value={this.props.minPrice}
-          onChange={this.handlePriceFilters("minPrice")} />
+        <div className="filters">
+          <div className="single-filter one">
+            <label>
+              Minimum Price
+            </label>
+            <input className="first-input"
+                   type="number"
+                   value={this.props.minPrice}
+                   onChange={this.handlePriceFilters("minPrice")} />
+          </div>
 
-        <label>
-          Maximum Price
-        </label>
-        <input type="number"
-          value={this.props.maxPrice}
-          onChange={this.handlePriceFilters("maxPrice")} />
+          <div className="single-filter two">
+            <label>
+              Maximum Price
+            </label>
+            <input className="second-input"
+                    type="number"
+                    value={this.props.maxPrice}
+                    onChange={this.handlePriceFilters("maxPrice")} />
+          </div>
+
+        </div>
       </div>
     )
   }

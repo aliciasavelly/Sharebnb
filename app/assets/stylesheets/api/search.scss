@@ -24,10 +24,65 @@ body, html {
       // position: absolute;
       background: white;
       padding: 20px;
+      // border: 1px solid black;
+      // border-bottom: 1px solid #DBDBDB;
+      // border-left: 1px solid #DBDBDB;
 
       // .slider {
       //   width: 200px;
       // }
+      .filters {
+        // border: 1px solid #DBDBDB;
+        display: flex;
+        justify-content: center;
+        color: #767676;
+
+        label {
+          // border: 1px solid #DBDBDB;
+          padding: 5px;
+          color: rgba(72, 72, 72, 0.81);
+        }
+
+        input {
+          width: 60px;
+          padding: 5px;
+          color: #afafaf;
+        }
+
+        .first-input {
+
+          // -webkit-border-top-left-radius: 2px;
+          // -webkit-border-bottom-left-radius: 2px;
+
+          // border: 1px solid #DBDBDB;
+        }
+
+        .second-input {
+          // -webkit-border-top-left-radius: 2px;
+          // -webkit-border-bottom-left-radius: 2px;
+        }
+
+        .single-filter {
+          // padding: 10px;
+
+        }
+
+        .one {
+          border: 1px solid #DBDBDB;
+          -webkit-border-top-left-radius: 4px;
+          -webkit-border-bottom-left-radius: 4px;
+          // background: blue;
+        }
+
+        .two {
+          border-top: 1px solid #DBDBDB;
+          border-right: 1px solid #DBDBDB;
+          border-bottom: 1px solid #DBDBDB;
+          -webkit-border-bottom-right-radius: 4px;
+          -webkit-border-top-right-radius: 4px;
+          // background: green;
+        }
+      }
     }
 
     .spots-index {
