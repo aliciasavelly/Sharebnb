@@ -18,6 +18,8 @@ Each page includes the navigation bar, which redirects users to the search page.
 
 Much of the search page is taken up by the map, created with the Google Maps API. The rest of the page includes the spots (bookable homes) index. Users are able to click on spots to view their pages. As users move around the map and change the price filter, the spots index changes to show only the searched for spots.
 
+It was challenging to determine the best way to search based on location. Initially I had planned on keeping track of the ```destination_id``` for spots in order to search efficiently. While I was planning the search feature out in more detail, I realized that due to the implementation of a map, this may not be necessary. I was able to keep track of the letters users search for in the navigation bar, which in turn adjusts the map. The spots index is further narrowed down based on the positioning of the map.
+
 ### Spots
 
 Spots refers to all of the homes in the database that users have created, which other users may book. In the database, spots are stored in a table, which contains columns for ```title```, ```description```, ```price```, ```image_url```, ```destination_id```, ```host_id```, ```lat``` (latitude), and ```lng``` (longitude).
@@ -26,13 +28,13 @@ Users are able to create new spots, which will then appear for all users on the 
 
 ### Listings
 
-As users create new spots, these spots are added to their Listings page (accessed by clicking ```Host``` in the navigation bar). Users can update and delete their listings on this page. These spots are also added to the general search, for other users to search through and book. Users can also access the page to create new listings on this page.
+As users create new spots, these spots are added to their Listings page (accessed by clicking ```Host``` in the navigation bar). Users can update and delete their listings on this page. These spots are also added to the general search, for other users to search through and book. Users can also access the page to create new listings on this page. Backend associations are made to keep track of which spots the current user has made.
 
 ![image of listings page](docs/wireframes/listings.png)
 
 ### Bookings
 
-Bookings are kept track of in the database through a trips table, including columns for ```user_id```, ```spot_id```, ```check_in```, ```check_out```, and ```num_guests```. Backend associations are made to keep track all of a user's trips. Users may view these bookings by clicking on Trips in the navigation bar.
+Bookings are kept track of in the database through a trips table, including columns for ```user_id```, ```spot_id```, ```check_in```, ```check_out```, and ```num_guests```. Backend associations are made to keep track all of a user's trips. Users may view these bookings by clicking on Trips in the navigation bar. Here, they are able to delete any of their bookings.
 
 ## Future Directions
 
