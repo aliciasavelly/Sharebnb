@@ -15,6 +15,8 @@ import { requestTrips } from './actions/trip_actions';
 window.requestTrips = requestTrips;
 import { requestListings } from './actions/listings_actions';
 window.requestListings = requestListings;
+import { createTrip } from './actions/trip_actions';
+window.createTrip = createTrip;
 // import { fetchDestinations } from './util/destinations_api_util';
 import { fetchSpots, fetchSingleSpot } from './util/spot_api_util';
 import { fetchHostedSpots } from './util/listings_api_util';
