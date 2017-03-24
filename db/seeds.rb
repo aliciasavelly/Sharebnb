@@ -661,17 +661,19 @@ spot27 = Spot.create!(
 #   lng:
 # )
 #
-# spot31 = Spot.create!(
-#   title:
-#   destination_id: destination3.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
+spot31 = Spot.create!(
+  title: "Fun place in Brooklyn",
+  destination_id: destination3.id,
+  price: 122,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_57/v1489879202/gabriel-beaudry-93843-new-york_bmhz6e.jpg",
+  host_id: user15.id,
+  description: "This is a great place to stay! You'll love spending time in the city! I never run
+                out of things to do. I'd be happy to give you some advice. You'll have a private room
+                and share a bathroom with me. I look forward to meeting you!",
+  lat: 40.685264,
+  lng: -73.946382
+)
+
 # spot32 = Spot.create!(
 #   title:
 #   destination_id: destination3.id,
@@ -704,17 +706,19 @@ spot27 = Spot.create!(
 #   lat:
 #   lng:
 # )
-#
-# spot35 = Spot.create!(
-#   title:
-#   destination_id: destination4.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
+
+spot35 = Spot.create!(
+  title: "Tent with a great view",
+  destination_id: destination4.id,
+  price: 67,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_60/v1489879215/wilson-ye-201705-seattle_o8r8hs.jpg",
+  host_id: user16.id,
+  description: "It's not much, but I love it! Camping in this area is an amazing experience. You're
+                not too far from the city, and there are great hikes around here. I look forward
+                to welcoming you to Seattle!",
+  lat: 47.556871,
+  lng: -122.142968
+)
 #
 # spot36 = Spot.create!(
 #   title:

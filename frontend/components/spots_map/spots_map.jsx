@@ -7,7 +7,7 @@ const destinationsList = {"Boston": {center: { lat: 42.357004, lng: -71.062309 }
                           "Detroit": {center: { lat: 42.336985, lng: -83.054480 }, zoom: 10},
                           "New York City": {center: { lat: 40.777878, lng: -73.937499 }, zoom: 12},
                           "San Francisco": {center: { lat: 37.777072, lng: -122.447774 }, zoom: 12},
-                          "Seattle": {center: { lat: 47.598559, lng: -122.326300 }, zoom: 12}}
+                          "Seattle": {center: { lat: 47.598559, lng: -122.326300 }, zoom: 10}}
 
 class SpotsMap extends React.Component {
 
