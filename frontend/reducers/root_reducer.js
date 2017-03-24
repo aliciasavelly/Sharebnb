@@ -5,6 +5,7 @@ import SpotsReducer from './spots_reducer';
 import SingleSpotReducer from './single_spot_reducer';
 import FiltersReducer from './filters_reducer';
 import ListingsReducer from './listings_reducer';
+import TripsReducer from './trips_reducer'
 
 const RootReducer = combineReducers({
   session: SessionReducer,
@@ -12,7 +13,8 @@ const RootReducer = combineReducers({
   spots: SpotsReducer,
   spotDetail: SingleSpotReducer,
   filters: FiltersReducer,
-  listings: ListingsReducer
+  listings: ListingsReducer,
+  trips: TripsReducer
 });
 
 export default RootReducer;
