@@ -81,13 +81,73 @@
     }
   }
 
-  // .spot-show-detail {
-  //   .spot-detail {
-  //     .overview {
-  //       #host-image {
-  //         width: 100px;
-  //       }
-  //     }
-  //   }
-  // }
+  .booking-section {
+    margin: 20px 60px 200px 60px;
+    border: 1px solid #cccece;
+    border-radius: 4px;
+    width: 610px;
+    color: #484848;
+    // color: blue;
+    // display: flex;
+    // align-items: center;
+
+    p {
+      margin: 20px 0 10px 30px;
+    }
+
+    .bookings-form {
+      margin-left: 30px;
+
+      form {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin: 0 0 20px 0;
+
+        .dates {
+          display: flex;
+
+          .check-in-out {
+            border: 1px solid #cccece;
+            margin-right: 10px;
+            padding: 5px 0 5px 15px;
+            height: 20px;
+            border-radius: 4px;
+          }
+
+          .check-in-out:first-of-type {
+            // background: blue;
+          }
+
+        }
+
+        select {
+          margin-right: 10px;
+          border-color: #cccece;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          height: 32px;
+          padding: 0 5px 0 10px;
+        }
+
+        #special {
+          box-sizing: border-box;
+          cursor: pointer;
+          text-align: center;
+          border-radius: 4px;
+          background: #1D9C73;
+          border-color: #1D9C73;
+          color: #fff7f8;
+          width: 80px;
+          height: 40px;
+          // margin: 25px 0 0 0;
+          padding: 10px;
+          font-weight: 300;
+          letter-spacing: 1.5px;
+        }
+      }
+
+    }
+  }
 }

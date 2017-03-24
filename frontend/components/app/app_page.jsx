@@ -14,7 +14,6 @@ class AppPage extends React.Component {
     this.rightNav = this.rightNav.bind(this);
     this.handleCloudinary = this.handleCloudinary.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
-    this.handleChange = this.handleChange.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
     this.update = this.update.bind(this);
     this.clearFilters = this.clearFilters.bind(this);
@@ -36,14 +35,6 @@ class AppPage extends React.Component {
         this.props.updateUser(this.props.currentUser.id, { image_url: results[0].secure_url });
       }
     });
-  }
-
-  handleChange(filter) {
-    // return (e) => {
-    //   e.preventDefault();
-    //   this.props.updateFilter(filter, 'San');
-    // }
-    // this.props.router.push('/spots-search');
   }
 
   handleSearch() {

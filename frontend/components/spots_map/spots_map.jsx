@@ -36,17 +36,19 @@ class SpotsMap extends React.Component {
   }
 
   componentDidUpdate(nextProps) {
-    if (nextProps.filters.letters !== this.props.filters.letters) {
-      this.state = { letters: nextProps.filters.letters };
-      Object.keys(destinationsList).forEach( key => {
-        if(key.toLowerCase().includes(this.state.letters.toLowerCase())) {
-          this.map.setCenter(destinationsList[key].center);
-          this.map.setZoom(destinationsList[key].zoom);
-        } else {
-          // this.map.setZoom(3);
-        }
-      });
-      this.MarkerManager.updateMarkers(this.props.spots);
+    if(nextProps.filters.letters) {
+      if (nextProps.filters.letters !== this.props.filters.letters) {
+        this.state = { letters: nextProps.filters.letters };
+        Object.keys(destinationsList).forEach( key => {
+          if(key.toLowerCase().includes(this.state.letters.toLowerCase())) {
+            this.map.setCenter(destinationsList[key].center);
+            this.map.setZoom(destinationsList[key].zoom);
+          } else {
+            // this.map.setZoom(3);
+          }
+        });
+        this.MarkerManager.updateMarkers(this.props.spots);
+      }
     }
     this.MarkerManager.updateMarkers(this.props.spots);
   }
