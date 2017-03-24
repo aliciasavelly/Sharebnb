@@ -21,6 +21,14 @@ const Root = ({ store }) => {
     }
   }
 
+  const _redirectIfLoggedOut = (nextState, replace) => {
+    const currentUser = store.getState().session.currentUser;
+
+    if (currentUser === null) {
+      replace('/main');
+    }
+  }
+
   return(
     <Provider store={ store }>
       <Router history={ hashHistory }>
@@ -30,14 +38,19 @@ const Root = ({ store }) => {
           <Route path='/login' component={ SessionFormContainer }
                                onEnter={_redirectIfLoggedIn} />
           <Route path='/signup' component={ SessionFormContainer }
-                                 onEnter={_redirectIfLoggedIn} />
+                                onEnter={_redirectIfLoggedIn} />
           <Route path='/spots-search' component={ SpotsIndexContainer } />
           <Route path='/spots/:spotId' component={ SpotShowContainer } >
             <Route path='/reviews' component={ SpotShowContainer } />
           </Route>
-          <Route path='/new-listing' component={ SpotCreateContainer } />
-          <Route path='/my-trips' component={ MainContainer } />
-          <Route path='/my-listings' component={ MyListingsContainer } />
+          <Route path='/new-listing' component={ SpotCreateContainer }
+                                     onEnter={_redirectIfLoggedOut} />
+          <Route path='/edit-listing' component={ SpotCreateContainer }
+                                      onEnter={_redirectIfLoggedOut} />
+          <Route path='/my-trips' component={ MainContainer }
+                                  onEnter={_redirectIfLoggedOut} />
+          <Route path='/my-listings' component={ MyListingsContainer }
+                                     onEnter={_redirectIfLoggedOut}  />
     </Router>
       </Router>
     </Provider>

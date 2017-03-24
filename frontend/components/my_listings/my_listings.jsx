@@ -14,7 +14,7 @@ class MyListings extends React.Component {
     return(
       <div className="listings-index">
       {this.props.currentUser.hosted_spots.map( spot => (
-        <SpotListingItem spot={ spot } key={ spot.id } />
+        <SpotListingItem deleteSpot={ deleteSpot } spot={ spot } key={ spot.id } />
       ))}
     </div>
     )

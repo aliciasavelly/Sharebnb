@@ -72,5 +72,6 @@
 | "/spots/:spotId"         | "SpotShowContainer"    |
 | "/spots/:spotId/reviews" | "ReviewFormContainer"  |
 | "/new-listing"           | "SpotCreateContainer"  |
+| "/edit-listing"          | "SpotCreateContainer"  |
 | "/my-trips"              | "MyTripsContainer"     |
 | "/my-listings"           | "MyListingsContainer"  |
