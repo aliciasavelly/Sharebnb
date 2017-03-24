@@ -6,7 +6,15 @@ Sharebnb is a web application inspired by Airbnb. It utilizes Ruby on Rails, a P
 
 ## Features & Implementation
 
+### Destinations
+
+The database stores information for several different cities, referred to as destinations. One can determine the name of the city that a spot is in, by checking the ```destination_id```. The main page of Sharebnb shows a collection of the destinations, which users can click on to access the search. The main page was inspired by Airbnb's clean design.
+
+![image of main page](docs/wireframes/main.png)
+
 ### Spots
+
+Spots references all of the homes in the database that users have created, which other users may book. In the database, spots are stored in a table, which contains columns for ```title```, ```description```, ```price```, ```image_url```, ```destination_id```, ```host_id```, ```lat``` (latitude), and ```lng``` (longitude).
 
 ### Search
 
