@@ -8,6 +8,11 @@ class User < ApplicationRecord
     foreign_key: :host_id,
     class_name: :Spot
 
+  has_many :trips,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Trip
+
   after_initialize :ensure_session_token
   attr_reader :password
 

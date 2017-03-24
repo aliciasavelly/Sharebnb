@@ -1,6 +1,7 @@
 Destination.delete_all
 User.delete_all
 Spot.delete_all
+Trip.delete_all
 
 user1 = User.create!(
   username: "aliciacodes",
@@ -808,3 +809,51 @@ spot27 = Spot.create!(
 #   lat:
 #   lng:
 # )
+
+trip1 = Trip.create!(
+  user_id: user1.id,
+  spot_id: spot1.id,
+  check_in: "2017/03/03",
+  check_out: "2017/03/07",
+  num_guests: 2
+)
+
+trip2 = Trip.create!(
+  user_id: user1.id,
+  spot_id: spot2.id,
+  check_in: "2017/05/07",
+  check_out: "2017/05/19",
+  num_guests: 2
+)
+
+trip3 = Trip.create!(
+  user_id: user1.id,
+  spot_id: spot7.id,
+  check_in: "2017/06/07",
+  check_out: "2017/06/19",
+  num_guests: 2
+)
+
+trip4 = Trip.create!(
+  user_id: user1.id,
+  spot_id: spot21.id,
+  check_in: "2017/06/21",
+  check_out: "2017/06/28",
+  num_guests: 3
+)
+
+trip5 = Trip.create!(
+  user_id: user1.id,
+  spot_id: spot22.id,
+  check_in: "2017/07/07",
+  check_out: "2017/07/12",
+  num_guests: 2
+)
+
+trip6 = Trip.create!(
+  user_id: user1.id,
+  spot_id: spot23.id,
+  check_in: "2017/07/19",
+  check_out: "2017/07/29",
+  num_guests: 1
+)
