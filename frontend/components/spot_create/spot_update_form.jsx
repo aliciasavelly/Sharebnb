@@ -5,14 +5,23 @@ import { withRouter } from 'react-router';
 class SpotUpdateForm extends React.Component {
   constructor(props) {
     super(props);
-    this.coords = {lat: this.props.spot.lat, lng: this.props.spot.lng};
+
+    this.spot = "";
+    this.props.hosted_spots.forEach( spot => {
+      console.log(spot.id);
+      console.log(this.props.url_id);
+      if(spot.id === parseInt(this.props.url_id)) {
+        this.spot = spot;
+      }
+    })
+    // debugger
+    this.coords = {lat: this.spot.lat, lng: this.spot.lng};
     this.state = {
-      title: this.props.spot.title,
-      price: this.props.spot.price,
-      image_url: this.props.spot.image_url,
-      description: this.props.spot.description,
-      host_id: this.props.currentUser.id,
-      destination_id: this.props.spot.destination_id
+      title: this.spot.title,
+      price: this.spot.price,
+      image_url: this.spot.image_url,
+      description: this.spot.description,
+      destination_id: 1
     };
 
     // debugger;
@@ -72,12 +81,12 @@ class SpotUpdateForm extends React.Component {
 
     this.updateCoords();
     const spot = Object.assign({}, this.state, this.coords);
-    this.props.createSpot( spot );
+    this.props.updateSpot( spot );
     this.navigateToListings();
   }
 
   render() {
-    debugger;
+    // debugger;
     const { title, description, price, image_url } = this.state;
     const { lat, lng } = this.coords;
 
@@ -134,7 +143,7 @@ class SpotUpdateForm extends React.Component {
             </div>
 
             <div className="submit-button">
-              <input type="submit" value="Create listing" className="new-spot-button" />
+              <input type="submit" value="Update listing" className="new-spot-button" />
             </div>
           </form>
 

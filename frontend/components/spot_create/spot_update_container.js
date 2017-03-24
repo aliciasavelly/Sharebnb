@@ -6,7 +6,7 @@ import { requestDestinations } from '../../actions/destination_actions';
 import { selectAllDestinations } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger;
+  // debugger;
   return({
     loggedIn: !!state.session.currentUser,
     currentUser: state.session.currentUser,
@@ -14,7 +14,9 @@ const mapStateToProps = (state, ownProps) => {
     lat: ownProps.location.query.lat,
     lng: ownProps.location.query.lng,
     destinations: selectAllDestinations(state),
-    spot: state.spots[ownProps.location.pathname.slice(14)]
+    hosted_spots: state.session.currentUser.hosted_spots,
+    url_id: ownProps.location.pathname.slice(14)
+    // spot: state.spots[ownProps.location.pathname.slice(14)]
   })
 };
 
