@@ -116,12 +116,18 @@ class SpotForm extends React.Component {
               <option value="Detroit">Detroit</option>
             </select>
 
-            <div className="image-button">
-              <button
+            <div className="image-container">
+              <div className="image-button" onClick={this.handleCloudinary}>
+                <button
                   onClick={this.handleCloudinary}
                   className="spot-image-button" >
                   Add image
-              </button>
+                </button>
+              </div>
+
+              <div className="image">
+                <img src={image_url} />
+              </div>
             </div>
 
             <div className="submit-button">
@@ -145,9 +151,6 @@ class SpotForm extends React.Component {
           </button>
         </div>
 
-        <div className="image">
-          <img src={image_url} />
-        </div>
       </div>
     )
   }

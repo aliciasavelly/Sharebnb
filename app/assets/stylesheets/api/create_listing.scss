@@ -1,14 +1,16 @@
 .spot-form-container {
   padding: 110px 60px 60px 60px;
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #484848;
 
   .header {
     display: flex;
+    justify-content: center;
     font-size: 24px;
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
     h2 {
-
+      padding-bottom: 20px;
     }
 
     .green {
@@ -21,19 +23,102 @@
   .new-spot-form {
     display: flex;
     flex-direction: row;
-
+    justify-content: center;
 
     .form {
       display: flex;
       flex-direction: column;
       width: 400px;
 
+      .submit-button {
+
+        input {
+          box-sizing: border-box;
+          cursor: pointer;
+          text-align: center;
+          border-radius: 4px;
+          background: #1D9C73;
+          border-color: #1D9C73;
+          color: #fff7f8;
+          width: 131px;
+          height: 45px;
+          padding: 12px;
+          font-weight: 300;
+          letter-spacing: 1.5px;
+        }
+
+        input:hover {
+          background: #38A783;
+        }
+      }
+
       label {
         font-size: 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
       }
 
       input, textarea {
-        border: 1px solid black;
+        border: 1px solid #DBDBDB;
+        border-radius: 3px;
+        padding: 7px;
+      }
+
+      select {
+        border: 1px solid #DBDBDB;
+        padding: 15px;
+        background: white;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 6px 7px 6px 7px;
+      }
+
+      option {
+        padding: 15px;
+      }
+
+      .price-field {
+        padding: 5px;
+      }
+
+      .image-container {
+        display: flex;
+        margin: 20px 0 20px 0;
+        // flex-direction: row;
+        align-items: center;
+
+
+        .image-button {
+          box-sizing: border-box;
+          cursor: pointer;
+          text-align: center;
+          border-radius: 4px;
+          background: #1D9C73;
+          border-color: #1D9C73;
+          color: #fff7f8;
+          width: 110px;
+          height: 45px;
+          padding: 12px;
+          font-weight: 300;
+          letter-spacing: 1.5px;
+
+          button {
+            cursor: pointer;
+          }
+        }
+
+        .image-button:hover {
+          background: #38A783;
+        }
+
+        .image {
+          width: 150px;
+          margin-left: 20px;
+          img {
+            width: 100%;
+          }
+        }
       }
     }
 
@@ -41,12 +126,13 @@
       margin-top: 0;
       padding-top: 0;
       font-size: 20px;
+      color: #484848;
     }
 
     .map-holder {
       display: flex;
       flex-direction: column;
-      margin: 20px;
+      margin: 10px 20px 20px 20px;
 
       .map-container {
         width: 400px;
@@ -58,12 +144,30 @@
       }
     }
 
-    .listings-button-holder {
-
-    }
   }
+  .listings-button-holder {
+    display: flex;
+    justify-content: flex-end;
+    margin: 40px;
 
-  .image {
-    width: 150px;
+    .listings-button {
+      box-sizing: border-box;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 4px;
+      background: #1D9C73;
+      border-color: #1D9C73;
+      color: #fff7f8;
+      width: 200px;
+      height: 45px;
+      padding: 12px;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+      margin: 20px 0 20px 0;
+
+      button {
+        cursor: pointer;
+      }
+    }
   }
 }
