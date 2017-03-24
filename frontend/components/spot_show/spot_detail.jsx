@@ -16,14 +16,15 @@ const SpotDetail = ({ spot, destinations }) => {
           <div className="round">
             <img className="host-image" id="host-image" src={spot.host.image_url} />
           </div>
-          <h2>{spot.title}</h2>
+          <div className="detail">
+            <h2>{spot.title}</h2>
+            <p>${spot.price}</p>
+          </div>
         </div>
 
         <div className="about-this-listing">
           <h2>About this listing</h2>
           <p>{spot.description}</p>
-          <h3>Price</h3>
-          <p>{spot.price}</p>
         </div>
       </div>
     )

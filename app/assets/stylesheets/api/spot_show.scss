@@ -34,12 +34,22 @@
     display: flex;
     padding: 40px 30px 30px 60px;
 
+    .detail {
+      display: flex;
+      flex-direction: column;
+    }
+
     h2 {
-      padding: 20px;
+      padding: 20px 0 10px 20px;
       font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
       font-size: 20px;
       color: #484848;
       font-weight: normal;
+    }
+
+    p {
+      color: #484848;
+      padding: 0 0 0 20px;
     }
   }
 
@@ -50,15 +60,24 @@
     overflow: hidden;
 
     #host-image {
-      width: 90px;
+      width: 115px;
     }
   }
 
   .about-this-listing {
-    padding: 0 0 30px 30px;
+    padding: 0 0 30px 60px;
 
     h2 {
       padding-bottom: 10px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    p {
+      font-size: 12px;
+      color: #484848;
+      font-weight: 300px;
+      width: 550px;
     }
   }
 
