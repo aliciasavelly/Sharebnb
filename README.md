@@ -16,6 +16,7 @@ The database stores information for several different cities, referred to as des
 
 Each page includes the navigation bar, which redirects users to the search page. Here, they can view all of the spots, filtered by the bounds of the map and by price. User search information is maintained through the FiltersReducer which updates ```filters``` portion of the store's state whenever a user makes a change to the search (such as when typing in the navigation bar). The search page design was inspired by Airbnb's clean design.
 
+
 ![image of spots search](docs/wireframes/search-page.png)
 
 Much of the search page is taken up by the map, created with the Google Maps API. The rest of the page includes the spots (bookable homes) index. Users are able to click on spots to view their pages. As users move around the map and change the price filter, the spots index changes to show only the searched for spots.
