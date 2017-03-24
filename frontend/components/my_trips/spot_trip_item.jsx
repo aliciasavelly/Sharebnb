@@ -27,30 +27,40 @@ class SpotTripItem extends React.Component {
     })
 
     // {this.props.trip.spot_id}
-    return(
-      <div className="trip-item-outer">
-        <div className="trip-index-item" onClick={this.handleClick}>
-          <div className="image-container">
-            <img src={this.currentSpot.image_url} />
-          </div>
-          <div className="item-details">
-            <h1>{this.currentSpot.title}</h1>
-            <p>${this.currentSpot.price}</p>
-            <div className="dates-container">
-              <div className="dates">
-                <p>Check in: </p>
-                {this.props.trip.check_in}
+    if (this.currentSpot.image_url) {
+      return(
+        <div className="trip-item-outer">
+          <div className="trip-index-item" onClick={this.handleClick}>
+            <div className="image-container">
+              <img src={this.currentSpot.image_url} />
+            </div>
+            <div className="item-details">
+              <h1>{this.currentSpot.title}</h1>
+              <p>${this.currentSpot.price}</p>
+              <div className="dates-container">
+                <div className="dates">
+                  <p>Check in: </p>
+                  {this.props.trip.check_in}
+                </div>
+                <div className="dates">
+                  <p>Check out: </p>
+                  {this.props.trip.check_out}
+                </div>
               </div>
-              <div className="dates">
-                <p>Check out: </p>
-                {this.props.trip.check_out}
+
+              <div id="round">
+                <img className="host-image" id="host-image" src={this.currentSpot.host.image_url} />
               </div>
             </div>
-          </div>
 
+          </div>
         </div>
-      </div>
-    )
+      )
+    } else {
+      return(
+        <div></div>
+      )
+    }
   }
 }
 

@@ -1,16 +1,17 @@
 .my-trips {
-  padding: 106px 60px 60px 60px;
+  padding: 96px 60px 60px 60px;
   color: #484848;
 
   h1 {
     font-size: 24px;
     color: #484848;
     font-weight: bold;
-    margin-left: 20px;
+    margin-left: 40px;
+    margin-top: 10px;
   }
 
   p {
-    margin-left: 20px;
+    margin-left: 40px;
   }
 
   .trips-index {
@@ -29,6 +30,31 @@
         .item-details {
           display: flex;
           flex-direction: column;
+          position: relative;
+
+          #round {
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            justify-content: center;
+            // margin: 10px;
+            position: absolute;
+            top: 40px;
+            left: -30px;
+
+            #host-image {
+              width: 90px;
+              // height: 80px;
+            }
+              // img {
+              //   // width: 90px;
+              //   // height: 80px;
+              // }
+            // }
+          }
         }
 
       .image-container {
