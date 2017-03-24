@@ -1,4 +1,4 @@
-class Api::TripsController < ApplicationController
+  class Api::TripsController < ApplicationController
   def index
     @trips = Trip.where(user_id: current_user.id)
   end
@@ -6,6 +6,15 @@ class Api::TripsController < ApplicationController
   def create
     @trip = Trip.create!(trip_paramas)
     render :show
+  end
+
+  def destroy
+    @trip = Trip.find_by_id(params[:id])
+
+    if @trip
+      @trip.destroy
+      render "api/trips/show"
+    end
   end
 
   private

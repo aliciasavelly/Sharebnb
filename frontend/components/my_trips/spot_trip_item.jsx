@@ -6,6 +6,7 @@ class SpotTripItem extends React.Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.currentSpot = "";
+    this.deleteTrip = this.deleteTrip.bind(this);
   }
 
   componentWillReceiveProps() {
@@ -14,6 +15,10 @@ class SpotTripItem extends React.Component {
 
   handleClick() {
     this.props.router.push(`spots/${this.props.trip.spot_id}`)
+  }
+
+  deleteTrip() {
+    this.props.deleteTrip(this.props.trip.id);
   }
 
   render() {
@@ -52,7 +57,12 @@ class SpotTripItem extends React.Component {
                 <img className="host-image" id="host-image" src={this.currentSpot.host.image_url} />
               </div>
             </div>
-
+          </div>
+          <div className="delete-button-holder">
+            <button onClick={this.deleteTrip}
+              className="delete-button">
+              Cancel booking
+            </button>
           </div>
         </div>
       )

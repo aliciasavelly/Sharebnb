@@ -12,3 +12,10 @@ export const createTrip = trip => (
     data: { trip }
   })
 );
+
+export const deleteTrip = tripId => (
+  $.ajax({
+    method: 'DELETE',
+    url: `api/trips/${tripId}`
+  })
+);

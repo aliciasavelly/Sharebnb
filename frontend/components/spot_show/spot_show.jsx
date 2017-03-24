@@ -44,13 +44,13 @@ class SpotShow extends React.Component {
     e.preventDefault();
     let spot = { spot_id: this.props.spot.id }
     const booking = Object.assign({}, this.state, spot)
-    this.props.createTrip( booking );
-    this.navigateToTrips();
+    this.props.createTrip( booking ).then(hashHistory.push("/my-trips"));
+    // this.navigateToTrips();
   }
 
-  navigateToTrips() {
-    this.props.router.push("/my-trips");
-  }
+  // navigateToTrips() {
+  //   hashHistory.push("/my-trips");
+  // }
 
   handleCheckInDateChange(e) {
     this.state.check_in = e._d.toJSON().slice(0,10)

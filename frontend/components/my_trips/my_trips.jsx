@@ -9,7 +9,14 @@ class MyTrips extends React.Component {
     this.renderTrips = this.renderTrips.bind(this);
   }
 
-  componentWillMount() {
+  // componentWillMount() {
+  //   debugger;
+  //   this.props.requestTrips();
+  //   this.props.requestSpots();
+  // }
+
+  componentDidMount() {
+    // debugger;
     this.props.requestTrips();
     this.props.requestSpots();
   }
@@ -18,13 +25,15 @@ class MyTrips extends React.Component {
     return(
       <div className="trips-index">
         {this.props.trips.map( (trip, idx) => (
-          <SpotTripItem requestSpots={ requestSpots } spots={ this.props.spots } trip={ trip } key={`trips-${idx}`} />
+          <SpotTripItem deleteTrip={ this.props.deleteTrip } requestSpots={ requestSpots } spots={ this.props.spots } trip={ trip } key={`trips-${idx}`} />
         ))}
       </div>
     )
   }
 
   render() {
+
+    // debugger;
     return(
       <div className="my-trips">
         <h1>Trips</h1>
