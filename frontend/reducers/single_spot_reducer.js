@@ -6,7 +6,7 @@ const SingleSpotReducer = (state = {}, action) => {
 
   switch(action.type){
     case RECEIVE_SINGLE_SPOT:
-      // debugger;
+      debugger;
       let spot = action.spot;
       return merge({}, state, spot);
     default:

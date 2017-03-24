@@ -8,6 +8,7 @@ import { clearErrors } from '../actions/session_actions';
 import SpotsIndexContainer from './search/spots_index_container';
 import SpotShowContainer from './spot_show/spot_show_container';
 import SpotCreateContainer from './spot_create/spot_create_container';
+import SpotUpdateContainer from './spot_create/spot_update_container';
 // import MyTripsContainer from './my_trips/my_trips_container';
 import MyListingsContainer from './my_listings/my_listings_container';
 import MyPageContainer from './my_page/my_page_container';
@@ -46,7 +47,7 @@ const Root = ({ store }) => {
           </Route>
           <Route path='/new-listing' component={ SpotCreateContainer }
                                      onEnter={_redirectIfLoggedOut} />
-          <Route path='/edit-listing' component={ SpotCreateContainer }
+          <Route path='/edit-listing/:spotId' component={ SpotUpdateContainer }
                                       onEnter={_redirectIfLoggedOut} />
           <Route path='/my-trips' component={ MainContainer }
                                   onEnter={_redirectIfLoggedOut} />

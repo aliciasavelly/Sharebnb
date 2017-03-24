@@ -9,6 +9,7 @@ class SpotListingItem extends React.Component {
 
     this.handleClick = this.handleClick.bind(this);
     this.deleteSpot = this.deleteSpot.bind(this);
+    this.updateSpot = this.updateSpot.bind(this);
   }
 
   // shouldComponentUpdate() {
@@ -18,6 +19,12 @@ class SpotListingItem extends React.Component {
   handleClick() {
     const spotId = this.props.spot.id;
     this.props.router.push(`spots/${spotId}`)
+  }
+
+  updateSpot() {
+    // debugger;
+    this.props.router.push(`/edit-listing/${this.props.spot.id}`);
+    // this.props.requestSingleSpot(this.props.spot.id);
   }
 
   deleteSpot() {
@@ -59,6 +66,12 @@ class SpotListingItem extends React.Component {
           <button onClick={this.deleteSpot}
                   className="delete-button">
                   Delete this listing
+          </button>
+        </div>
+        <div className="delete-button-holder">
+          <button onClick={this.updateSpot}
+                  className="delete-button">
+                  Update this listing
           </button>
         </div>
       </div>

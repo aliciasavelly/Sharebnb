@@ -28,7 +28,7 @@ class MyListings extends React.Component {
     return(
       <div className="listings-index">
       {this.props.listings.map( (spot, idx) => (
-        <SpotListingItem requestListings={ requestListings } deleteSpot={ this.props.deleteSpot } spot={ spot } key={`listings-${idx}`} />
+        <SpotListingItem requestSingleSpot={ requestSingleSpot } requestListings={ requestListings } deleteSpot={ this.props.deleteSpot } spot={ spot } key={`listings-${idx}`} />
       ))}
     </div>
     )
