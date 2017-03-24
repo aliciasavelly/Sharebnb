@@ -10,3 +10,5 @@ export const selectSpot = ({ spots }, id) => {
 };
 
 export const selectAllListings = ({ listings }) => values(listings);
+
+export const selectAllTrips = ({ trips }) => values(trips);

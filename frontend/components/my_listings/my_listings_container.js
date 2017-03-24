@@ -7,8 +7,7 @@ import { selectAllListings } from '../../reducers/selectors';
 const mapStateToProps = state => ({
   loggedIn: !!state.session.currentUser,
   currentUser: state.session.currentUser,
-  listings: selectAllListings(state),
-  listingsss: state.listings
+  listings: selectAllListings(state)
 });
 
 const mapDispatchToProps = dispatch => ({

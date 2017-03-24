@@ -11,7 +11,8 @@ import SpotCreateContainer from './spot_create/spot_create_container';
 import SpotUpdateContainer from './spot_create/spot_update_container';
 // import MyTripsContainer from './my_trips/my_trips_container';
 import MyListingsContainer from './my_listings/my_listings_container';
-import MyPageContainer from './my_page/my_page_container';
+// import MyPageContainer from './my_page/my_page_container';
+import MyTripsContainer from './my_trips/my_trips_container';
 
 const Root = ({ store }) => {
   const _redirectIfLoggedIn = (nextState, replace) => {
@@ -49,7 +50,7 @@ const Root = ({ store }) => {
                                      onEnter={_redirectIfLoggedOut} />
           <Route path='/edit-listing/:spotId' component={ SpotUpdateContainer }
                                       onEnter={_redirectIfLoggedOut} />
-          <Route path='/my-trips' component={ MainContainer }
+          <Route path='/my-trips' component={ MyTripsContainer }
                                   onEnter={_redirectIfLoggedOut} />
           <Route path='/my-listings' component={ MyListingsContainer }
                                      onEnter={_redirectIfLoggedOut}  />
