@@ -1,7 +1,12 @@
 class Api::UsersController < ApplicationController
+  def show
+    user = User.find_by_id(params[:id])
+    @user = user.includes(:hosted_spots)
+    render :show
+  end
+
   def create
     @user = User.new(user_params)
-    # @user = user.includes(:)
 
     if @user.save
       login(@user)

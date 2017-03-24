@@ -108,7 +108,8 @@ class SpotForm extends React.Component {
                    onChange={this.update("price")} />
 
             <label className="destination">City</label>
-            <select onChange={this.updateDestination}>
+            <select onChange={this.updateDestination} defaultValue="select">
+              <option value="select" disabled>Select city</option>
               <option value="other">Other</option>
               <option value="Boston">Boston</option>
               <option value="San Francisco">San Francisco</option>
