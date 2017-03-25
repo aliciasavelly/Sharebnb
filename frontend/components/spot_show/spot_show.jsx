@@ -46,8 +46,10 @@ class SpotShow extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let spot = { spot_id: this.props.spot.id }
-    const booking = Object.assign({}, this.state, spot)
+    debugger;
+    let spot = { spot_id: this.props.spot.id };
+    const booking = Object.assign({}, this.state, spot);
+    debugger;
     this.props.createTrip( booking ).then(hashHistory.push("/my-trips"));
     // this.navigateToTrips();
   }

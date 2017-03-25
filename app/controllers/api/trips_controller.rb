@@ -6,7 +6,7 @@
   def create
     spot = Spot.find_by_id(trip_paramas[:spot_id])
 
-    if spot.user_id != current_user.id
+    if spot.host_id != current_user.id
       @trip = Trip.create!(trip_paramas)
       render :show
     end
