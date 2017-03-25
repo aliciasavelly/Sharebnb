@@ -818,17 +818,26 @@ spot39 = Spot.create!(
   lng: todo
 )
 
-# spot40 = Spot.create!(
-#   title:
-#   destination_id: destination5.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
+spot40 = Spot.create!(
+  title: "Private home just outside of Chicago",
+  destination_id: destination5.id,
+  price: 167,
+  image_url: pic with big yellow house in snow todo nathan-walker
+  host_id: user19.id,
+  description: "Our favourite time here is winter, and as you can see from our photo, this house is
+                beautiful once it snows! It's a great area, with a large yard. There are plenty of
+                outdoor activities to do. It's beautiful in the winter, as well as the summer. There
+                is a small lake nearby which you can swim in if you like. We're not far at all from
+                Chicago, so you can enjoy the city as well. It's the perfect place to get away from
+                the hustle and bustle of a city, but not be too far from town when you want to explore
+                the city! We can give you plenty more details about what types of things you can do in
+                the area. You'll be renting the entire home, which you will have to yourselves. I live
+                nearby, so if you need anything, it'll be easy for us to help out. We look forward to
+                seeing you soon!",
+  lat:
+  lng:
+)
+
 # spot41 = Spot.create!(
 #   title:
 #   destination_id: destination5.id,
@@ -839,7 +848,7 @@ spot39 = Spot.create!(
 #   lat:
 #   lng:
 # )
-#
+
 #
 #
 #
