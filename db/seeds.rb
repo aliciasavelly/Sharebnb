@@ -699,34 +699,51 @@ spot31 = Spot.create!(
 )
 
 spot32 = Spot.create!(
-  title:
+  title: "Room above a diner (free breakfast)",
   destination_id: destination3.id,
-  price:
-  image_url:
-  host_id:
-  description:
+  price: 189,
+  image_url: image with breakfast weird looking bagel thing? with pink flowers todo
+  host_id: user12.id,
+  description: "We provide you a private room, and a bathroom you'll share with other guests. You
+                will be staying above our diner, which will provide you with a lovely free breakfast.
+                Other meals are available if you would like to eat at different times, and you have a
+                50% discount as our guest. This room feels like a home, with the amenities of a hotel.
+                There are many activities to enjoy in the city. You'll never run out of things to do.
+                I'd be happy to give you some advice on where to visit. We don't welcome long term stays
+                past 14 nights. You will have easy access to public transportation here. New York is a
+                great place to be and we know you'll love your time here! Be sure to see some broadway
+                shows!",
   lat:
   lng:
 )
 
 spot33 = Spot.create!(
-  title:
+  title: "Cozy shared room in Manhattan",
   destination_id: destination3.id,
-  price:
-  image_url:
-  host_id:
-  description:
+  price: 122,
+  image_url: pink couch low angle todo
+  host_id: user14.id,
+  description: "This is a shared room with one other guest, and includes a full bed (not bunk beds). You'll
+                share a bathroom with your roommate and with two other people sharing one of the other rooms.
+                There's plenty of space! You're in the middle of Manhattan, so you are close to many of the best
+                tourist attractions. New York is a great place to be and we know you'll love your time here! Be
+                sure to see some broadway shows!"
   lat:
   lng:
 )
 
 spot34 = Spot.create!(
-  title:
+  title: "Shared room with large community area and a kitchen (hostel style)",
   destination_id: destination3.id,
-  price:
-  image_url:
-  host_id:
-  description:
+  price: 67,
+  image_url: pic with three yellow lights on top and tables and chairs todo sophia
+  host_id: user20.id,
+  description: "You're in Astoria, which is a beautiful area, and easy to get to the city from, so you are only
+                a short ride away from many of the best tourist attractions. New York is a great place to be
+                and we know you'll love your time here! Be sure to see some broadway shows and check out central
+                park! You'll share a large room with no more than three other people. We are happy to provide you
+                with suggestions of what to enjoy around the city. We look forward to meeting you and helping you
+                have a great visit to NYC!",
   lat:
   lng:
 )
@@ -744,18 +761,26 @@ spot35 = Spot.create!(
   lat: 47.556871,
   lng: -122.142968
 )
-#
-# spot36 = Spot.create!(
-#   title:
-#   destination_id: destination4.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
+
+spot36 = Spot.create!(
+  title: "Beautiful hall fit for a party",
+  destination_id: destination4.id,
+  price: 202,
+  image_url: image of ice cream big place todo
+  host_id: user21.id,
+  description: "We offer both rooms to stay the night in, and a giant hall that is a perfect place
+                to have a beautiful get together with family/friends/business partners or whatever
+                you like! We will have a full catering staff if you'd like to use them (at an extra)
+                cost. The hall is absolutely beautiful as you can see in the provided image. We would
+                be happy to give you a tour ahead of time if you'd like. We can decorate for you (at
+                an extra cost). If you'd like just a room, and not the hall, it is at a discount. Contact
+                us to find out more. There's plenty to do in the city nearby, if you're planning on
+                visiting the area. We love to give people advice of what to see. We look forward to
+                seeing you and helping you throw a great event!",
+  lat: todo
+  lng: todo
+)
+
 # spot37 = Spot.create!(
 #   title:
 #   destination_id: destination4.id,
@@ -777,18 +802,22 @@ spot35 = Spot.create!(
 #   lat:
 #   lng:
 # )
-#
-# spot39 = Spot.create!(
-#   title:
-#   destination_id: destination5.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
+
+spot39 = Spot.create!(
+  title: "Cozy home with Darcy the cat!",
+  destination_id: destination5.id,
+  price: 97,
+  image_url: kitty picture todo
+  host_id: user19.id,
+  description: "We love Darcy the cat and we know you will too. He's a sweetie. He's really friendly
+                so I'm sure he'll want to spend time with you. If you love friendly kitties, this is
+                the place for you! We'll be happy to give you advice for what to do in Chicago. It's a
+                great city! There's plenty to do, and we are quite close to public transportation. You'll
+                be sharing a bathroom with us, but have a private room. We can't wait to see you!"
+  lat: todo
+  lng: todo
+)
+
 # spot40 = Spot.create!(
 #   title:
 #   destination_id: destination5.id,
