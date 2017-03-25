@@ -64,7 +64,7 @@ class AppPage extends React.Component {
 
   leftNav() {
     return(
-      <div className="left">
+      <div id="left" className="left">
         <Link to='/main' onClick={this.clearFilters}>Sharebnb</Link>
         <div className="search-div">
           <form className="search-form" onSubmit={this.handleSearch}>

@@ -569,7 +569,7 @@ spot24 = Spot.create!(
   destination_id: destination6.id,
   price: 758,
   image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_61/v1489879213/rachel-davis-50329-detroit-neuschwanstein-castle-schwangau-germany_thvxd7.jpg",
-  host_id: user14.id,
+  host_id: user15.id,
   description: "You'll be only a short 30 minute drive to Detroit, but you won't run out of places to explore
                 in this amazing castle. It is an exact replica of the Neuschwanstein Castle in Germany. There
                 are many guests staying in this castle, so we hope you meet plenty of new people from all over
@@ -628,39 +628,61 @@ spot27 = Spot.create!(
   lng: -83.203045
 )
 
-# spot28 = Spot.create!(
-#   title:
-#   destination_id: destination2.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
-# spot29 = Spot.create!(
-#   title:
-#   destination_id: destination2.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
-# spot30 = Spot.create!(
-#   title:
-#   destination_id: destination2.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
+spot28 = Spot.create!(
+  title: "Stay the night at the Boston Public Library!",
+  destination_id: destination2.id,
+  price: 357,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_58/v1489879361/sanwal-deen-94584-boston_c2dobc.jpg",
+  host_id: user17.id,
+  description: "The Boston Public Library prides itself in its openness to world travelers who want a unique
+                experience in the city. You may stay the night in the library, but be sure to be careful with
+                the books! We set up a few beds in a side room for your comfort. The public restrooms will be
+                used, and there is not a shower available. We have only limited amenities available, so feel
+                free to give us a call to ask if we have something you may end up needing. We suggest you
+                bring anything you may need, such as toothpaste, etc. There are a ton of activities to do in
+                the city. People find many free events around the city, often in this area (Copley). Other
+                events are often given from the National Parks Service. We have a lot of information to provide
+                to you about activities to participate. We will also have the full library calendar for you. This
+                is quite a unique experience! We welcome you to our beautiful library and can't wait to show you
+                what our library has to offer!",
+  lat: 42.349620,
+  lng: -71.077520
+)
+
+spot29 = Spot.create!(
+  title: "Beautiful brownstone in the Back Bay near Kenmore Square",
+  destination_id: destination2.id,
+  price: 187,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_58/v1489879205/jace-grandinetti-93036-boston_w1nybh.jpg",
+  host_id: user18.id,
+  description: "We welcome you into our historical brownstone. You'll have a private bedroom, with one queen
+                sized bed. You will also have a private bathroom. We have a large kitchen and other living
+                spaces that you should feel free to use. We will provide you with a small breakfast and coffee
+                each morning. There are many places to visit around the city. Public transportation is very
+                accessible. We are only 40 minutes on public transportation to the airport, and a 10-20 minute
+                drive. Your room will have many travel books, and we can also provide you with suggestions if
+                you desire. If you would like a long term stay, please let us know. We accept long term stays
+                no longer than three months.",
+  lat: 42.350619,
+  lng: -71.087455
+)
+
+spot30 = Spot.create!(
+  title: "Full home in Somerville",
+  destination_id: destination2.id,
+  price: 133,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_62/v1489879207/joshua-ness-109299-boston_vhzugb.jpg",
+  host_id: user18.id,
+  description: "You'll have the house to yourself, with two queen sized beds and a pullout bed in the living room.
+                We have a large kitchen and other living spaces that you'll be able to enjoy. There are many places
+                to visit around the city. Public transportation is very accessible. We are only 40 minutes on
+                public transportation to the airport, and a 10-20 minute drive. We have many travel books, and we
+                can also provide you with suggestions if you desire. If you would like a long term stay, please let
+                us know. We accept long term stays. We suggest checking out Union Square Donuts!",
+  lat: 42.377140,
+  lng: -71.092247
+)
+
 spot31 = Spot.create!(
   title: "Fun place in Brooklyn",
   destination_id: destination3.id,
@@ -668,44 +690,46 @@ spot31 = Spot.create!(
   image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_57/v1489879202/gabriel-beaudry-93843-new-york_bmhz6e.jpg",
   host_id: user15.id,
   description: "This is a great place to stay! You'll love spending time in the city! I never run
-                out of things to do. I'd be happy to give you some advice. You'll have a private room
-                and share a bathroom with me. I look forward to meeting you!",
+                out of things to do. I'd be happy to give you some advice on where to visit. You'll
+                have a private room and share a bathroom with me. I look forward to meeting you!
+                Please let me know if you have any questions or concerns for your stay. I welcome
+                long term stays.",
   lat: 40.685264,
   lng: -73.946382
 )
 
-# spot32 = Spot.create!(
-#   title:
-#   destination_id: destination3.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
-# spot33 = Spot.create!(
-#   title:
-#   destination_id: destination3.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
-# spot34 = Spot.create!(
-#   title:
-#   destination_id: destination3.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
+spot32 = Spot.create!(
+  title:
+  destination_id: destination3.id,
+  price:
+  image_url:
+  host_id:
+  description:
+  lat:
+  lng:
+)
+
+spot33 = Spot.create!(
+  title:
+  destination_id: destination3.id,
+  price:
+  image_url:
+  host_id:
+  description:
+  lat:
+  lng:
+)
+
+spot34 = Spot.create!(
+  title:
+  destination_id: destination3.id,
+  price:
+  image_url:
+  host_id:
+  description:
+  lat:
+  lng:
+)
 
 spot35 = Spot.create!(
   title: "Tent with a great view",
@@ -715,7 +739,8 @@ spot35 = Spot.create!(
   host_id: user16.id,
   description: "It's not much, but I love it! Camping in this area is an amazing experience. You're
                 not too far from the city, and there are great hikes around here. I look forward
-                to welcoming you to Seattle!",
+                to welcoming you to Seattle! I'll provide to you a tent, blankets, flashlights, and
+                a few other items. When you book, we can talk about this further.",
   lat: 47.556871,
   lng: -122.142968
 )

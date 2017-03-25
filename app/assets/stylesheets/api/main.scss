@@ -1,11 +1,7 @@
 .outer-main-div {
   padding-top: 60px;
   margin: 0 auto;
-  // display: flex;
   width: 100%;
-  // flex-wrap: wrap;
-  // align-self: center;
-  // background: blue;
 
   .top-title {
     font-size: 50px;
@@ -16,7 +12,6 @@
     width: 100%;
     text-align: center;
 
-
     strong {
       font-weight: normal;
       color: #1D9C73;
@@ -25,16 +20,12 @@
   }
 
   .destinations-index {
-    // position: relative;
     display: flex;
     justify-content: center;
-    // width: 100%;
-    // padding: 30px 0 30px 70px;
 
     h3 {
       font-size: 19px;
       color: #484848;
-      // margin-bottom: 24px;
       font-weight: normal;
       padding: 0 0 0 10px;
       margin: 0 0 10px 0;
@@ -43,10 +34,7 @@
 
     .destinations-items {
       display: flex;
-      // flex-wrap: wrap;
-      // justify-content: center;
       width: 100%;
-      // padding: 30px;
 
       .cursor-responsive {
         cursor: pointer;
@@ -75,47 +63,47 @@
     }
   }
 
-    // @media (max-width: 1300px) {
-      .destinations-index {
-        width: 830px;
-        display: flex;
-        align-content: center;
-        h2 {
-          width: 100%;
-          align-self: center;
-        }
-      }
-      .destinations-index-outer {
-        display: flex;
-        align-content: center;
-        justify-content: center;
-      }
-      #destinations-items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 1050px;
-        // padding: 30px;
+  .destinations-index {
+    width: 830px;
+    display: flex;
+    align-content: center;
 
-        .cursor-responsive {
-          cursor: pointer;
-        }
+    h2 {
+      width: 100%;
+      align-self: center;
+    }
+  }
 
-        div {
-          margin: 10px;
+  .destinations-index-outer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
 
-          p {
-            font-weight: 600;
-            font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
-            font-size: 15px;
-            text-align: left;
-          }
-        }
+  #destinations-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1050px;
+
+    .cursor-responsive {
+      cursor: pointer;
+    }
+
+    div {
+      margin: 10px;
+
+      p {
+        font-weight: 600;
+        font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+        font-size: 15px;
+        text-align: left;
       }
-    // }
+    }
+  }
+
   @media (max-width: 850px) {
     .destinations-index {
-      // background: blue;
 
       #destinations-items {
         display: flex;
@@ -123,13 +111,14 @@
         align-content: center;
         justify-content: center;
         width: 500px;
-          .cursor-responsive {
-            // width: 100%;
-            img {
-              width: 500px;
-              height: 300px;
-            }
+
+        .cursor-responsive {
+
+          img {
+            width: 500px;
+            height: 300px;
           }
+        }
       }
     }
   }

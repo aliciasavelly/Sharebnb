@@ -31,11 +31,7 @@ class FormUpdateSpotsMap extends React.Component {
   }
 
   _handleClick(coords) {
-    // debugger;
-    // this.props.router.push({
-    //   pathname: "/edit-listing",
-    //   query: coords
-    // });
+    
   }
 
   render() {

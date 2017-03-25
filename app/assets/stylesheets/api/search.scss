@@ -14,31 +14,20 @@ body, html {
   .spots-index-left {
     width: 60%;
     position: relative;
-    // border: 1px solid green;
 
     .spots-index-filters {
       z-index: 1;
-      // border: 1px solid blue;
       width: inherit;
       position: fixed;
-      // position: absolute;
       background: white;
       padding: 20px;
-      // border: 1px solid black;
-      // border-bottom: 1px solid #DBDBDB;
-      // border-left: 1px solid #DBDBDB;
 
-      // .slider {
-      //   width: 200px;
-      // }
       .filters {
-        // border: 1px solid #DBDBDB;
         display: flex;
         justify-content: center;
         color: #767676;
 
         label {
-          // border: 1px solid #DBDBDB;
           padding: 5px;
           color: rgba(72, 72, 72, 0.81);
         }
@@ -49,29 +38,10 @@ body, html {
           color: #afafaf;
         }
 
-        .first-input {
-
-          // -webkit-border-top-left-radius: 2px;
-          // -webkit-border-bottom-left-radius: 2px;
-
-          // border: 1px solid #DBDBDB;
-        }
-
-        .second-input {
-          // -webkit-border-top-left-radius: 2px;
-          // -webkit-border-bottom-left-radius: 2px;
-        }
-
-        .single-filter {
-          // padding: 10px;
-
-        }
-
         .one {
           border: 1px solid #DBDBDB;
           -webkit-border-top-left-radius: 4px;
           -webkit-border-bottom-left-radius: 4px;
-          // background: blue;
         }
 
         .two {
@@ -80,7 +50,6 @@ body, html {
           border-bottom: 1px solid #DBDBDB;
           -webkit-border-bottom-right-radius: 4px;
           -webkit-border-top-right-radius: 4px;
-          // background: green;
         }
       }
     }
@@ -97,12 +66,7 @@ body, html {
       .spot-index-item {
         width: 48.5%;
         margin: 20px 0 20px 0;
-
-        // height: 48%;
-
-        // padding: 10px;
         cursor: pointer;
-        // box-sizing: border-box;
 
         .img-container {
           width: 100%;
@@ -112,12 +76,7 @@ body, html {
 
           img {
             width: 100%;
-            // background-size: cover;
-            // background-repeat: no-repeat;
-            // background-position: 50% 50%;
-            // object-fit: cover;
           }
-
         }
 
         .spot-index-item-detail {
@@ -137,7 +96,6 @@ body, html {
   }
 
   .spots-index-right {
-    // width: 40%;
     display: flex;
     position: relative;
 
@@ -151,6 +109,5 @@ body, html {
         height: 100%;
       }
     }
-
   }
 }

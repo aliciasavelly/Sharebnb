@@ -16,7 +16,6 @@
     .green {
       padding-left: 4px;
       color: #1D9C73;
-      // font-weight: 500;
     }
   }
 
@@ -85,7 +84,6 @@
       .image-container {
         display: flex;
         margin: 20px 0 20px 0;
-        // flex-direction: row;
         align-items: center;
 
 
@@ -143,8 +141,8 @@
         }
       }
     }
-
   }
+
   .listings-button-holder {
     display: flex;
     justify-content: flex-end;
@@ -171,9 +169,3 @@
     }
   }
 }
-//
-// #update-button {
-//   // background: blue;
-//   display: flex;
-//   align-content: center;
-// }

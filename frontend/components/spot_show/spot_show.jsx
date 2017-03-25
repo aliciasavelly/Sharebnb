@@ -46,17 +46,11 @@ class SpotShow extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger;
+
     let spot = { spot_id: this.props.spot.id };
     const booking = Object.assign({}, this.state, spot);
-    debugger;
     this.props.createTrip( booking ).then(hashHistory.push("/my-trips"));
-    // this.navigateToTrips();
   }
-
-  // navigateToTrips() {
-  //   hashHistory.push("/my-trips");
-  // }
 
   handleCheckInDateChange(e) {
     this.state.check_in = e._d.toJSON().slice(0,10)

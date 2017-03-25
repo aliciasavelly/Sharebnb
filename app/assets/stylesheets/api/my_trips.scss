@@ -40,30 +40,23 @@
             background-size: cover;
             background-position: center;
             justify-content: center;
-            // margin: 10px;
             position: absolute;
             top: 40px;
             left: -30px;
 
             #host-image {
               width: 90px;
-              // height: 80px;
             }
-              // img {
-              //   // width: 90px;
-              //   // height: 80px;
-              // }
-            // }
           }
         }
 
-      .image-container {
-        width: 200px;
-        height: 140px;
-        overflow: hidden;
-        background-size: cover;
-        background-position: center;
-      }
+        .image-container {
+          width: 200px;
+          height: 140px;
+          overflow: hidden;
+          background-size: cover;
+          background-position: center;
+        }
 
         img {
           width: 200px;
@@ -71,7 +64,6 @@
 
         .dates-container {
           margin-top: 12px;
-          // margin-left: 10px;
         }
 
         .dates {
@@ -81,7 +73,6 @@
             padding-right: 9px;
           }
         }
-
       }
     }
   }

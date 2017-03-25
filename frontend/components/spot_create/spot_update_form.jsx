@@ -8,13 +8,11 @@ class SpotUpdateForm extends React.Component {
 
     this.spot = "";
     this.props.hosted_spots.forEach( spot => {
-      // console.log(spot.id);
-      // console.log(this.props.url_id);
       if(spot.id === parseInt(this.props.url_id)) {
         this.spot = spot;
       }
     })
-    // debugger
+
     this.coords = {lat: this.spot.lat, lng: this.spot.lng};
     this.state = {
       title: this.spot.title,
@@ -24,12 +22,9 @@ class SpotUpdateForm extends React.Component {
       destination_id: this.spot.destination_id
     };
 
-    // debugger;
-
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToListings = this.navigateToListings.bind(this);
     this.handleCloudinary = this.handleCloudinary.bind(this);
-    // this.updateCoords = this.updateCoords.bind(this);
     this.updateDestination = this.updateDestination.bind(this);
   }
 
@@ -60,11 +55,6 @@ class SpotUpdateForm extends React.Component {
     })
   }
 
-  // updateCoords() {
-  //   // debugger;
-  //   this.coords = {lat: this.props.lat, lng: this.props.lng};
-  // }
-
   handleCloudinary(e) {
     e.preventDefault();
 
@@ -79,17 +69,13 @@ class SpotUpdateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // debugger;
 
-    // this.updateCoords();
     const spot = Object.assign({}, this.state, this.coords);
-debugger;
     this.props.updateSpot( this.spot.id, spot );
     this.navigateToListings();
   }
 
   render() {
-    // debugger;
     const { title, description, price, image_url } = this.state;
     const { lat, lng } = this.coords;
 
