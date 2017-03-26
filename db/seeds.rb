@@ -456,17 +456,24 @@ spot15 = Spot.create!(
   lng: -122.480511
 )
 
-# spot16 = Spot.create!(
-#   title:
-#   destination_id: destination1.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
+spot16 = Spot.create!(
+  title: "Beautiful home with a pool",
+  destination_id: destination1.id,
+  price: 209,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_80/v1490163951/jason-briscoe-152939_uixaq4.jpg",
+  host_id: user22.id,
+  description: "We look forward to having you here to stay. This home is very spacious, so you will be
+                able to have many guests. We limit stays to four weeks because we love meeting new visitors
+                who are traveling! You'll have access to the entire home, which has four bedrooms. We hope
+                you have a great stay and are able to enjoy the city! This is a beautiful property, and very
+                spacious. The pool is heated, so you can enjoy it year round! We live nearby so if you need
+                any help with anything, we will be able to help you easily. We have plenty advice on activities
+                to enjoy around the city, so when you book, we can talk further! We look forward to meeting you
+                soon!",
+  lat: 37.776677,
+  lng: -122.478115
+)
+
 # spot17 = Spot.create!(
 #   title:
 #   destination_id: destination1.id,
@@ -649,6 +656,22 @@ spot28 = Spot.create!(
   lng: -71.077520
 )
 
+spot42 = Spot.create!(
+  title: "Puppy paradise",
+  destination_id: destination2.id,
+  price: 475,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1490505631/seeley-paapa_iamxgl.jpg",
+  host_id: user1.id,
+  description: "If you want a nice, quiet getaway and some undisturbed peace and quiet during your vacation, this is NOT
+                the listing for you. But if you're looking for unconditional love from an overly energetic pup, this might
+                be your perfect stay! You can share a queen bed with a beautiful 75-pound dog, and take unlimited car
+                rides and walks with him. Located in the heart of Brighton, there are plenty of cafes and bars within a
+                ten minute walk. Feel free to take your new four-legged best friend to explore the dog-friendly treasures
+                of this Bostonian suburb.",
+  lat: 42.350664,
+  lng: -71.162657
+)
+
 spot29 = Spot.create!(
   title: "Beautiful brownstone in the Back Bay near Kenmore Square",
   destination_id: destination2.id,
@@ -702,7 +725,7 @@ spot32 = Spot.create!(
   title: "Room above a diner (free breakfast)",
   destination_id: destination3.id,
   price: 189,
-  image_url: image with breakfast weird looking bagel thing? with pink flowers todo
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_80/v1490163954/zhifei-zhou-28092_ethdfr.jpg",
   host_id: user12.id,
   description: "We provide you a private room, and a bathroom you'll share with other guests. You
                 will be staying above our diner, which will provide you with a lovely free breakfast.
@@ -713,30 +736,30 @@ spot32 = Spot.create!(
                 past 14 nights. You will have easy access to public transportation here. New York is a
                 great place to be and we know you'll love your time here! Be sure to see some broadway
                 shows!",
-  lat:
-  lng:
+  lat: 40.750582,
+  lng: -73.927225
 )
 
 spot33 = Spot.create!(
   title: "Cozy shared room in Manhattan",
   destination_id: destination3.id,
   price: 122,
-  image_url: pink couch low angle todo
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_81/v1490163954/sophia-baboolal-86214_mykwrc.jpg",
   host_id: user14.id,
   description: "This is a shared room with one other guest, and includes a full bed (not bunk beds). You'll
                 share a bathroom with your roommate and with two other people sharing one of the other rooms.
                 There's plenty of space! You're in the middle of Manhattan, so you are close to many of the best
                 tourist attractions. New York is a great place to be and we know you'll love your time here! Be
-                sure to see some broadway shows!"
-  lat:
-  lng:
+                sure to see some broadway shows!",
+  lat: 40.720014,
+  lng: -74.000696
 )
 
 spot34 = Spot.create!(
   title: "Shared room with large community area and a kitchen (hostel style)",
   destination_id: destination3.id,
   price: 67,
-  image_url: pic with three yellow lights on top and tables and chairs todo sophia
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_80/v1490163952/jungwoo-hong-112133_rknkbz.jpg",
   host_id: user20.id,
   description: "You're in Astoria, which is a beautiful area, and easy to get to the city from, so you are only
                 a short ride away from many of the best tourist attractions. New York is a great place to be
@@ -744,8 +767,8 @@ spot34 = Spot.create!(
                 park! You'll share a large room with no more than three other people. We are happy to provide you
                 with suggestions of what to enjoy around the city. We look forward to meeting you and helping you
                 have a great visit to NYC!",
-  lat:
-  lng:
+  lat: 40.767095,
+  lng: -73.929113
 )
 
 spot35 = Spot.create!(
@@ -766,7 +789,7 @@ spot36 = Spot.create!(
   title: "Beautiful hall fit for a party",
   destination_id: destination4.id,
   price: 202,
-  image_url: image of ice cream big place todo
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_80/v1490163954/sweet-ice-cream-photography-89501_hfners.jpg",
   host_id: user21.id,
   description: "We offer both rooms to stay the night in, and a giant hall that is a perfect place
                 to have a beautiful get together with family/friends/business partners or whatever
@@ -777,8 +800,8 @@ spot36 = Spot.create!(
                 us to find out more. There's plenty to do in the city nearby, if you're planning on
                 visiting the area. We love to give people advice of what to see. We look forward to
                 seeing you and helping you throw a great event!",
-  lat: todo
-  lng: todo
+  lat: 47.614300,
+  lng: -122.321153
 )
 
 # spot37 = Spot.create!(
@@ -807,22 +830,22 @@ spot39 = Spot.create!(
   title: "Cozy home with Darcy the cat!",
   destination_id: destination5.id,
   price: 97,
-  image_url: kitty picture todo
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_59/v1489879201/daria-nepriakhina-99254-chicago_vpsrrs.jpg",
   host_id: user19.id,
   description: "We love Darcy the cat and we know you will too. He's a sweetie. He's really friendly
                 so I'm sure he'll want to spend time with you. If you love friendly kitties, this is
                 the place for you! We'll be happy to give you advice for what to do in Chicago. It's a
                 great city! There's plenty to do, and we are quite close to public transportation. You'll
-                be sharing a bathroom with us, but have a private room. We can't wait to see you!"
-  lat: todo
-  lng: todo
+                be sharing a bathroom with us, but have a private room. We can't wait to see you!",
+  lat: 41.900634,
+  lng: -87.641389
 )
 
 spot40 = Spot.create!(
   title: "Private home just outside of Chicago",
   destination_id: destination5.id,
   price: 167,
-  image_url: pic with big yellow house in snow todo nathan-walker
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_46/v1490500415/nathan-walker-57244_jodzje.jpg",
   host_id: user19.id,
   description: "Our favourite time here is winter, and as you can see from our photo, this house is
                 beautiful once it snows! It's a great area, with a large yard. There are plenty of
@@ -834,48 +857,22 @@ spot40 = Spot.create!(
                 the area. You'll be renting the entire home, which you will have to yourselves. I live
                 nearby, so if you need anything, it'll be easy for us to help out. We look forward to
                 seeing you soon!",
-  lat:
-  lng:
+  lat: 41.863890,
+  lng: -87.710396
 )
 
-# spot41 = Spot.create!(
-#   title:
-#   destination_id: destination5.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-# spot28 = Spot.create!(
-#   title:
-#   destination_id: destination1.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
+spot41 = Spot.create!(
+  title: "Bright, cozy home near Seattle",
+  destination_id: destination4.id,
+  price: 112,
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_80/v1490163951/james-garcia-88107_dw4w1n.jpg",
+  host_id: user23.id,
+  description: "We look forward to seeing you for your stay. We have plenty of outdoor space you can enjoy. There
+                are also several places that you are able to hike nearby. We highly suggest you take advantage of that!
+                You'll have the whole home to yourself. Please let us know if you have any questions.",
+  lat: 47.724349,
+  lng: -122.305703
+)
 
 trip1 = Trip.create!(
   user_id: user1.id,

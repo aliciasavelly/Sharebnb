@@ -13,19 +13,3 @@ json.hosted_spots do
     json.lng spot.lng
   end
 end
-
-
-
-# json.hosted_spots do
-#   json.partial! 'api/spots/index', hosted_spots: user.hosted_spots
-# json.hosted_spots user.hosted_spots.pluck()
-#
-# json.hosted_spots do
-#   json.partial! 'spot', collection: user.hosted_spots, as: :spot
-# end
-
-# json.array! user.hosted_spots, partial: 'api/users/spot1', as: :hosted_spot
-# json.partial! 'spot', formats: :json, hosted_spots: user.hosted_spots
-# json.partial! 'api/spots/spot', locals: { hosted_spots: user.hosted_spots }
-
-# json.hosted_spots user.hosted_spots, partial: 'api/spots/spot', as: :spots

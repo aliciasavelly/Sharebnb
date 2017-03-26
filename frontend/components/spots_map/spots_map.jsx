@@ -2,8 +2,8 @@ import React from 'react';
 import { Link, withRouter, hashHistory} from 'react-router';
 import MarkerManager from '../../util/marker_manager';
 
-const destinationsList = {"Boston": {center: { lat: 42.357004, lng: -71.062309 }, zoom: 12},
-                          "Chicago": {center: { lat: 41.883979, lng: -87.634669 }, zoom: 12},
+const destinationsList = {"Boston": {center: { lat: 42.357004, lng: -71.062309 }, zoom: 11},
+                          "Chicago": {center: { lat: 41.883979, lng: -87.634669 }, zoom: 11},
                           "Detroit": {center: { lat: 42.336985, lng: -83.054480 }, zoom: 10},
                           "New York City": {center: { lat: 40.777878, lng: -73.937499 }, zoom: 10},
                           "San Francisco": {center: { lat: 37.777072, lng: -122.447774 }, zoom: 12},
