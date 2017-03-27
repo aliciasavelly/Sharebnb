@@ -71,12 +71,12 @@ Sharebnb is a web application inspired by Airbnb using Ruby on Rails and React/R
 - [x] Phase 2
 - [x] Phase 3
 - [x] Phase 4
-- [ ] Phase 5
+- [x] Phase 5
 - [x] Phase 6
 - [ ] Phase 7
-- [ ] Phase 8
+- [x] Phase 8
 - [ ] Phase 9
-- [ ] Phase 10
+- [x] Phase 10
 
 ### Bonus Features(TBD)
 
