@@ -10,15 +10,6 @@ const _defaultFilters = Object.freeze({
 const FiltersReducer = (state = _defaultFilters, action) => {
   Object.freeze(state);
 
-  // switch(action.type) {
-  //   case UPDATE_FILTER:
-  //     const newFilter = {
-  //       [action.filter]: action.value
-  //     };
-  //     return merge({}, state, newFilter);
-  //   default:
-  //     return state;
-  // }
   if (action.type === UPDATE_FILTER) {
     const newFilter = {
       [action.filter]: action.value

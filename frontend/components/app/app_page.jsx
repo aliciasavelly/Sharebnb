@@ -13,7 +13,6 @@ class AppPage extends React.Component {
     this.leftNav = this.leftNav.bind(this);
     this.rightNav = this.rightNav.bind(this);
     this.handleCloudinary = this.handleCloudinary.bind(this);
-    this.handleSearch = this.handleSearch.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
     this.update = this.update.bind(this);
     this.clearFilters = this.clearFilters.bind(this);
@@ -35,11 +34,6 @@ class AppPage extends React.Component {
         this.props.updateUser(this.props.currentUser.id, { image_url: results[0].secure_url });
       }
     });
-  }
-
-  handleSearch() {
-    e.preventDefault();
-
   }
 
   handleDateChange(e) {
@@ -67,7 +61,7 @@ class AppPage extends React.Component {
       <div id="left" className="left">
         <Link to='/main' onClick={this.clearFilters}>Sharebnb</Link>
         <div className="search-div">
-          <form className="search-form" onSubmit={this.handleSearch}>
+          <form className="search-form" >
             <i className="fa fa-search" aria-hidden="true"></i>
 
             <input className="search-input"
@@ -102,7 +96,6 @@ class AppPage extends React.Component {
               <option value="11">11 guests</option>
               <option value="12">12 guests</option>
             </select>
-            <input type="submit" className="submit"/>
           </form>
         </div>
       </div>

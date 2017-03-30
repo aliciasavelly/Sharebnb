@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 // import { requestSpots } from '../../actions/spot_actions';
 import { updateFilter } from '../../actions/filter_actions';
 import { requestSpots } from '../../actions/spot_actions';
-import { asArray } from '../../reducers/selectors';
+import { selectAllSpots } from '../../reducers/selectors';
 import Search from './search';
 
 const mapStateToProps = state => ({
-  spots: asArray(state),
+  spots: selectAllSpots(state),
   destination: state.filters.destination,
   filters: state.filters,
   minPrice: state.filters.minPrice,

@@ -1,7 +1,6 @@
 class Api::DestinationsController < ApplicationController
   def index
     @destinations = Destination.all
-    # @destinations = Destination.where("city LIKE ?", "#{filter_params[:letters].capitalize}")
   end
 
   def search
