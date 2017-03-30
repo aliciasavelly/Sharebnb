@@ -201,7 +201,7 @@ destination4 = Destination.create!(
 
 destination5 = Destination.create!(
   city: "Chicago",
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_64/v1489778951/oxecvx6ql3epkhjtm7qo.jpg",
+  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_32/v1489778951/oxecvx6ql3epkhjtm7qo.jpg",
   lat: 41.883979,
   lng: -87.634669
 )
