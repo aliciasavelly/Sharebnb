@@ -126,9 +126,9 @@ class SessionForm extends React.Component {
     }
   }
 
-  responseFacebook(response) {
-    console.log(response);
-  }
+  // responseFacebook(response) {
+  //   console.log(response);
+  // }
 
   render() {
     let formType = this.props.formType;
