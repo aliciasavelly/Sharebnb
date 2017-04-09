@@ -10,7 +10,7 @@ gem "paperclip", '~> 5.0.0'
 gem 'cloudinary'
 gem 'figaro'
 # Allows us to view Heroku logs and wil precompile our assets
-gem 'rails_12factor'
+# gem 'rails_12factor' don't need this if running rails 5
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use postgresql as the database for Active Record
