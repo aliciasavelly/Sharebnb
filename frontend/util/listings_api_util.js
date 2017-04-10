@@ -3,4 +3,4 @@ export const fetchHostedSpots = () => (
     method: 'GET',
     url: 'api/hosted_spots/users'
   })
-)
+);
