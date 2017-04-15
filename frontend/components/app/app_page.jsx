@@ -55,7 +55,6 @@ class AppPage extends React.Component {
     this.setState({ city: "" });
   }
 
-
   leftNav() {
     return(
       <div id="left" className="left">

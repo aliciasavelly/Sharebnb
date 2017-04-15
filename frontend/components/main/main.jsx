@@ -20,18 +20,11 @@ class MainPage extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    // this.props.router.push('/spots-search');
-
-    // this.setState({
-    //   [field]: e.currentTarget.value
-    // });
     this.props.router.push('/spots-search');
     this.props.updateFilter("letters", e.currentTarget.textContent);
-
   }
 
   renderDestinations() {
-
     return(
       <div className="destinations-items" id="destinations-items">
         {this.props.destinations.map( (destination, idx) => (
@@ -41,8 +34,6 @@ class MainPage extends React.Component {
           </div>
         ))}
       </div>
-
-
     )
   }
 

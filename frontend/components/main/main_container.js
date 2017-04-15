@@ -10,12 +10,10 @@ const mapStateToProps = state => ({
   destinations: selectAllDestinations(state)
 });
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return({
+const mapDispatchToProps = (dispatch, ownProps) => ({
     requestDestinations: () => dispatch(requestDestinations()),
     updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
-  });
-};
+});
 
 export default connect(
   mapStateToProps,

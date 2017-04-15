@@ -6,7 +6,7 @@ import SpotListingItem from './spot_listing_item';
 class MyListings extends React.Component {
   constructor(props) {
     super(props);
-
+    
     this.renderListings = this.renderListings.bind(this);
   }
 
@@ -33,11 +33,8 @@ class MyListings extends React.Component {
       <div className="my-listings">
         <h1>Listings</h1>
         <Link to="/new-listing" className="button">Add New Listings</Link>
-
         {this.renderListings()}
-
       </div>
-
     )
   }
 }
