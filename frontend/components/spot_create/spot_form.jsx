@@ -5,6 +5,7 @@ import { withRouter } from 'react-router';
 class SpotForm extends React.Component {
   constructor(props) {
     super(props);
+
     this.coords = {lat: 82, lng: -122};
     this.state = {
       title: "",
@@ -150,7 +151,6 @@ class SpotForm extends React.Component {
               Back to your listings
           </button>
         </div>
-
       </div>
     )
   }

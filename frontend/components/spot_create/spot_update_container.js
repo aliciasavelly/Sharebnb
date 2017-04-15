@@ -5,8 +5,7 @@ import { updateFilter } from '../../actions/filter_actions';
 import { requestDestinations } from '../../actions/destination_actions';
 import { selectAllDestinations } from '../../reducers/selectors';
 
-const mapStateToProps = (state, ownProps) => {
-  return({
+const mapStateToProps = (state, ownProps) => ({
     loggedIn: !!state.session.currentUser,
     currentUser: state.session.currentUser,
     filters: state.filters,
@@ -15,8 +14,7 @@ const mapStateToProps = (state, ownProps) => {
     destinations: selectAllDestinations(state),
     hosted_spots: state.session.currentUser.hosted_spots,
     url_id: ownProps.location.pathname.slice(14)
-  })
-};
+});
 
 const mapDispatchToProps = dispatch => ({
   createSpot: (spot) => dispatch(createSpot(spot)),

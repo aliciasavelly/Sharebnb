@@ -21,17 +21,11 @@ class FormUpdateSpotsMap extends React.Component {
     this.FormMarkerManager.updateMarkers(this.coords);
   }
 
-
   _registerListeners() {
     google.maps.event.addListener(this.map, 'click', event => {
       const coords = _getCoordsObj(event.latLng);
       this.coords = coords;
-      this._handleClick(coords);
     });
-  }
-
-  _handleClick(coords) {
-    
   }
 
   render() {

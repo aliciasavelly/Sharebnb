@@ -12,7 +12,6 @@ const destinationsList = {"Boston": {center: { lat: 42.357004, lng: -71.062309 }
 class SpotsMap extends React.Component {
 
   componentDidMount() {
-    // requestSpots();
     const map = this.refs.map;
     this._mapOptions = {center: { lat: 39.797586, lng: -96.943742 },zoom: 3};
     this.map = new google.maps.Map(map, this._mapOptions);

@@ -49,6 +49,7 @@ class SpotUpdateForm extends React.Component {
         destinationId = destination.id;
       }
     });
+
     let field = "destination_id";
     this.setState({
       [field]: destinationId
@@ -132,7 +133,6 @@ class SpotUpdateForm extends React.Component {
               Back to your listings
           </button>
         </div>
-
       </div>
     )
   }

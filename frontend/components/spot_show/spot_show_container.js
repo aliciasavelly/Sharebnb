@@ -4,12 +4,12 @@ import { selectSpot } from '../../reducers/selectors';
 import { requestDestinations } from '../../actions/destination_actions';
 import { selectAllDestinations } from '../../reducers/selectors';
 import { createTrip } from '../../actions/trip_actions';
-
 import SpotShow from './spot_show';
 
 const mapStateToProps = (state, { params }) => {
   const spotId = parseInt(params.spotId);
   const spot = state.spotDetail;
+  
   return {
     spotId,
     spot,

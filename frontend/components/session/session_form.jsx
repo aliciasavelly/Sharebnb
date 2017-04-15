@@ -147,7 +147,6 @@ class SessionForm extends React.Component {
 
               <div className="first-name-input">
                 {this.firstNameInput()}
-
               </div>
 
               <div className="password-input">

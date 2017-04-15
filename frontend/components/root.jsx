@@ -58,6 +58,4 @@ const Root = ({ store }) => {
   )
 };
 
-
-
 export default Root;

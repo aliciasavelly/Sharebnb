@@ -19,18 +19,14 @@ class SpotShow extends React.Component {
         num_guests: 1
       }
     else {
-
+      // TODO what goes here?
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCheckInDateChange = this.handleCheckInDateChange.bind(this);
     this.handleCheckOutDateChange = this.handleCheckOutDateChange.bind(this);
   }
-  // const spots = {
-  //   [spotId]: spot
-  // };
 
-  // ({ spot, spotId, requestSingleSpot, requestSpots, children })
   componentDidMount() {
     this.props.requestSingleSpot(this.props.params.spotId);
     this.props.requestDestinations();
