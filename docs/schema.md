@@ -54,14 +54,3 @@
 | image_url   | string    | not null              |
 | lat         | float     | not null              |
 | lng         | float     | not null              |
-
-<!--
-## search_filters
-
-| column name    | data type | details              |
-| -----------    | --------- | -------------------- |
-| destination_id | integer   | foreign key, indexed |
-| price_low      | integer   |                      |
-| price_high     | integer   |                      |
-| check_in       | string    |                      |
-| check_out      | string    |                      | -->
