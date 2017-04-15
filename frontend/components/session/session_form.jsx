@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
 import SessionFormContainer from './session_form_container';
-import FacebookLogin from 'react-facebook-login';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -16,23 +15,11 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.loginGuestUser = this.loginGuestUser.bind(this);
     this.firstNameInput = this.firstNameInput.bind(this);
-    this.handleFacebookSubmit = this.handleFacebookSubmit.bind(this);
   }
 
   componentDidUpdate() {
     this.redirectIfLoggedIn();
-    // if (this.props.formType !== newProps.formType) {
-    // this.props.removeErrors();
-    // }
   }
-
-  // componentWillMount() {
-  //   this.props.clearErrors;
-  // }
-
-  // componentWillReceiveProps(newProps) {
-  //
-  // }
 
   redirectIfLoggedIn() {
     if(this.props.loggedIn) {
@@ -42,12 +29,6 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.processForm(user);
-    this.props.clearErrors();
-  }
-
-  handleFacebookSubmit() {
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
     this.props.clearErrors();
@@ -125,10 +106,6 @@ class SessionForm extends React.Component {
       )
     }
   }
-
-  // responseFacebook(response) {
-  //   console.log(response);
-  // }
 
   render() {
     let formType = this.props.formType;

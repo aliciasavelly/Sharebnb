@@ -4,6 +4,7 @@ import { Link, withRouter, hashHistory } from 'react-router';
 class SpotTripItem extends React.Component {
   constructor(props) {
     super(props);
+
     this.handleClick = this.handleClick.bind(this);
     this.currentSpot = "";
     this.deleteTrip = this.deleteTrip.bind(this);
@@ -69,6 +70,5 @@ class SpotTripItem extends React.Component {
     }
   }
 }
-
 
 export default withRouter(SpotTripItem);

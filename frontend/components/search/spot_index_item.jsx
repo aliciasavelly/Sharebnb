@@ -4,8 +4,8 @@ import { Link, withRouter, hashHistory } from 'react-router';
 class SpotIndexItem extends React.Component {
   constructor(props) {
     super(props);
+    
     this.handleClick = this.handleClick.bind(this);
-    // this.spot = this.props.spot;
   }
 
   handleClick() {

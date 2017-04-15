@@ -1,6 +1,4 @@
 import { connect } from 'react-redux';
-// import SpotsIndex from './spots_index';
-// import { requestSpots } from '../../actions/spot_actions';
 import { updateFilter } from '../../actions/filter_actions';
 import { requestSpots } from '../../actions/spot_actions';
 import { selectAllSpots } from '../../reducers/selectors';
