@@ -12,7 +12,6 @@ class MyListings extends React.Component {
   }
 
   componentDidMount() {
-    // debugger
     this.props.requestListings();
   }
 
@@ -24,6 +23,7 @@ class MyListings extends React.Component {
   }
 
   renderListings() {
+    // debugger
     return(
       <div className="listings-index">
       {this.props.listings.map( (spot, idx) => (

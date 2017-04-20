@@ -11,7 +11,8 @@ const mapStateToProps = (state, ownProps) => ({
     filters: state.filters,
     lat: ownProps.location.query.lat,
     lng: ownProps.location.query.lng,
-    destinations: selectAllDestinations(state)
+    destinations: selectAllDestinations(state),
+    spotDetail: state.spotDetail
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -19,7 +20,8 @@ const mapDispatchToProps = dispatch => ({
   updateSpot: (spotId, data) => dispatch(updateSpot(spotId, data)),
   deleteSpot: (spotId) => dispatch(deleteSpot(spotId)),
   updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
-  requestDestinations: () => dispatch(requestDestinations())
+  requestDestinations: () => dispatch(requestDestinations()),
+  
 });
 
 export default connect(

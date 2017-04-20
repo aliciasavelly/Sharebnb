@@ -3,11 +3,13 @@ import MyListings from './my_listings';
 import { createSpot, updateSpot, deleteSpot, requestSingleSpot } from '../../actions/spot_actions';
 import { requestListings } from '../../actions/listings_actions';
 import { selectAllListings } from '../../reducers/selectors';
+// import { selectSpot } from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
   loggedIn: !!state.session.currentUser,
   currentUser: state.session.currentUser,
-  listings: selectAllListings(state)
+  listings: selectAllListings(state),
+  spotDetail: state.spotDetail
 });
 
 const mapDispatchToProps = dispatch => ({

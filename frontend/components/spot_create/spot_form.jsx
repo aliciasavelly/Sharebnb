@@ -13,7 +13,8 @@ class SpotForm extends React.Component {
       image_url: "",
       description: "",
       host_id: this.props.currentUser.id,
-      destination_id: 1
+      destination_id: 1,
+      errors: []
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,6 +22,7 @@ class SpotForm extends React.Component {
     this.handleCloudinary = this.handleCloudinary.bind(this);
     this.updateCoords = this.updateCoords.bind(this);
     this.updateDestination = this.updateDestination.bind(this);
+    this.renderImage = this.renderImage.bind(this);
   }
 
   componentDidMount() {
@@ -72,7 +74,43 @@ class SpotForm extends React.Component {
     this.updateCoords();
     const spot = Object.assign({}, this.state, this.coords);
     this.props.createSpot( spot );
-    this.navigateToListings();
+    // debugger
+    if (this.props.spotDetail.errors.length == 0) {
+      this.navigateToListings();
+    } else {
+      this.setState({ errors: this.props.spotDetail.errors })
+    }
+  }
+
+  renderErrors() {
+    let errors = this.state.errors;
+    if (errors.length > 0) {
+      return(
+        <ul className="spot-errors">
+          {errors.map( (error, idx) => (
+            <li key={`spot-error-${idx}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      )
+    } else {
+      return(
+        <div></div>
+      )
+    }
+  }
+
+  renderImage() {
+    if (this.state.image_url.length > 0) {
+      return(
+        <img src={this.state.image_url} />
+      )
+    } else {
+      return(
+        <div></div>
+      )
+    }
   }
 
   render() {
@@ -127,7 +165,7 @@ class SpotForm extends React.Component {
               </div>
 
               <div className="image">
-                <img src={image_url} />
+                {this.renderImage()}
               </div>
             </div>
 
@@ -135,6 +173,8 @@ class SpotForm extends React.Component {
               <input type="submit" value="Create listing" className="new-spot-button" />
             </div>
           </form>
+
+          {this.renderErrors()}
 
           <div className="map-holder">
             <h3 className="new-spot-question">Where's your place located?</h3>

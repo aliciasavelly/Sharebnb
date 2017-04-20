@@ -32,6 +32,10 @@ export const receiveSpotErrors = (errors) => ({
   errors
 });
 
+export const clearSpotErrors = () => ({
+  type: CLEAR_SPOT_ERRORS
+});
+
 export const requestSpots = filters => dispatch => (
   APIUtil.fetchSpots(filters).then(
     spots => dispatch(receiveSpots(spots))
