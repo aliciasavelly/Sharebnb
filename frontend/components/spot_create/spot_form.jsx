@@ -27,7 +27,18 @@ class SpotForm extends React.Component {
 
   componentDidMount() {
     this.props.requestDestinations();
+    // debugger
   }
+
+  // componentWillUpdate(nextProps) {
+  //   // debugger
+  //   if (nextProps.spotDetail.errors.length > 0) {
+  //     this.setState({ errors: this.props.spotDetail.errors })
+  //   }
+  //   // else {
+  //     // this.navigateToListings();
+  //   // }
+  // }
 
   navigateToListings() {
     this.props.router.push("/my-listings");
@@ -75,11 +86,11 @@ class SpotForm extends React.Component {
     const spot = Object.assign({}, this.state, this.coords);
     this.props.createSpot( spot );
     // debugger
-    if (this.props.spotDetail.errors.length == 0) {
-      this.navigateToListings();
-    } else {
-      this.setState({ errors: this.props.spotDetail.errors })
-    }
+    // if (this.props.spotDetail.errors.length == 0) {
+    //   // this.navigateToListings();
+    // } else {
+    //   this.setState({ errors: this.props.spotDetail.errors })
+    // }
   }
 
   renderErrors() {
