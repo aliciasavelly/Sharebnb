@@ -6,16 +6,21 @@ import SpotListingItem from './spot_listing_item';
 class MyListings extends React.Component {
   constructor(props) {
     super(props);
-    
+    this.count = 0;
+
     this.renderListings = this.renderListings.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
+    // debugger
     this.props.requestListings();
   }
 
   componentWillUpdate(nextProps) {
-    this.props.requestListings();
+    if (this.props.listings != nextProps.listings && this.count == 0) {
+      this.count += 1;
+      this.props.requestListings();
+    }
   }
 
   renderListings() {
