@@ -4,6 +4,7 @@ export const RECEIVE_SPOTS = "RECEIVE_SPOTS";
 export const RECEIVE_SINGLE_SPOT = "RECEIVE_SINGLE_SPOT";
 export const DESTROY_SPOT = "DESTROY_SPOT";
 export const UPDATE_FILTER = "UPDATE_FILTER";
+export const RECEIVE_SPOT_ERRORS = "RECEIVE_SPOT_ERRORS";
 
 export const receiveSpots = spots => ({
   type: RECEIVE_SPOTS,
@@ -26,6 +27,11 @@ export const updateFilter = (filter, value) => ({
   value
 });
 
+export const receiveSpotErrors = (errors) => ({
+  type: RECEIVE_SPOT_ERRORS,
+  errors
+});
+
 export const requestSpots = filters => dispatch => (
   APIUtil.fetchSpots(filters).then(
     spots => dispatch(receiveSpots(spots))
@@ -41,6 +47,8 @@ export const requestSingleSpot = (spotId) => dispatch => (
 export const createSpot = spot => dispatch => (
   APIUtil.createSpot(spot).then(
     spot => dispatch(receiveSingleSpot(spot))
+  ).fail(
+    error => dispatch(receiveSpotErrors(error.responseJSON))
   )
 );
 
