@@ -1,3 +1,18 @@
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #AEA9A9;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #AEA9A9;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #AEA9A9;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #AEA9A9;
+}
+
 .main {
   .navbar {
     display: flex;
@@ -29,7 +44,7 @@
           color: #AEA9A9;
           cursor: default;
           left: 30px;
-          top: 11px;
+          top: 15px;
         }
 
         .search-div {
@@ -49,10 +64,11 @@
           .search-input {
             font-size: 14px;
             color: #767676;
+            // color: #AEA9A9;
             border-top: 1px solid #DBDBDB;
             border-bottom: 1px solid #DBDBDB;
             border-left: 1px solid #DBDBDB;
-            padding-left: 35px;
+            padding: 13.5px 0 13.5px 35px;
             -webkit-border-top-left-radius: 2px;
             -webkit-border-bottom-left-radius: 2px;
             -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
@@ -61,7 +77,8 @@
           label {
             font-size: 14px;
             color: #AEA9A9;
-            padding: 5px 0 0 5px;
+            // padding: 5px 0 0 5px;
+            padding: 13.5px 0 13.5px 5px;
             border-top: 1px solid #DBDBDB;
             border-bottom: 1px solid #DBDBDB;
             border-left: 1px solid #DBDBDB;
