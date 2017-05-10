@@ -43,14 +43,31 @@ describe('Reducers', () => {
       });
     });
 
-    // describe('handling the DESTROY_SPOT action', () => {
-    //   let action,
-    //       testListing;
-    //
-    //   beforeEach( () => {
-    //     testListing = { }
-    //   });
-    // });
+    describe('handling the DESTROY_SPOT action', () => {
+      let action,
+          testListing;
+
+      beforeEach( () => {
+        testListing = { id: 1, description: "Description Test", destination_id: 3, price: 120 };
+        action = {
+          type: 'DESTROY_SPOT',
+          spot: testListing
+        };
+      });
+
+      it('should remove the correct spot from the state', () => {
+        let state = ListingsReducer({ 1: testListing }, action);
+        expect(typeof state[1]).toEqual('undefined');
+      });
+
+      it('should not affect the other listings in the state', () => {
+        let oldState = { 1: testListing, 2: 'oldState' };
+        // expect(state[1]).toEqual(testListing);
+        let state = ListingsReducer(oldState, action);
+        expect(state[2]).toEqual('oldState');
+        expect(typeof state[1]).toEqual('undefined');
+      });
+    });
   });
 
   describe('RootReducer', () => {
