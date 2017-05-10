@@ -62,7 +62,6 @@ describe('Reducers', () => {
 
       it('should not affect the other listings in the state', () => {
         let oldState = { 1: testListing, 2: 'oldState' };
-        // expect(state[1]).toEqual(testListing);
         let state = ListingsReducer(oldState, action);
         expect(state[2]).toEqual('oldState');
         expect(typeof state[1]).toEqual('undefined');
