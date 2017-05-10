@@ -53,5 +53,11 @@
     "babel-jest": "^20.0.0",
     "jest": "^20.0.0",
     "regenerator-runtime": "^0.10.5"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
   }
 }
