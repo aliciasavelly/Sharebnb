@@ -7,6 +7,7 @@ const ListingsReducer = (state = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_LISTINGS:
+    debugger;
       return merge({}, state, action.listings);
     case DESTROY_SPOT:
       let nextState = merge({}, state);

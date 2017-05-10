@@ -31,10 +31,45 @@ describe('Reducers', () => {
         };
       });
 
-      it('should replace the state with the action\'s posts', () => {
+      it('should replace the state with the action\'s listings', () => {
         const state = ListingsReducer(undefined, action);
         expect(state).toEqual(testListings);
       });
+
+      it('should not modify the old state', () => {
+        let oldState = { 1: 'oldState' };
+        ListingsReducer(oldState, action);
+        expect(oldState).toEqual({ 1: 'oldState' });
+      });
     });
+
+    // describe('handling the DESTROY_SPOT action', () => {
+    //   let action,
+    //       testListing;
+    //
+    //   beforeEach( () => {
+    //     testListing = { }
+    //   });
+    // });
   });
+
+  describe('RootReducer', () => {
+    let testStore;
+
+    beforeAll( () => {
+      testStore = createStore(RootReducer);
+    });
+
+    it('exports a function', () => {
+      expect(typeof RootReducer).toEqual('function');
+    });
+
+    it('includes the ListingsReducer under the key `listings`', () => {
+      const listings = { id: 1, title: 'Root Reducer', content: 'Testing' };
+      const action = { type: 'RECEIVE_LISTINGS', listings };
+      testStore.dispatch(action);
+
+      expect(testStore.getState().listings).toEqual(ListingsReducer( listings, action));
+    });
+  })
 });
