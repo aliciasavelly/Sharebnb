@@ -19,6 +19,7 @@ class SpotForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToListings = this.navigateToListings.bind(this);
+    this.navigateToSpotShow = this.navigateToSpotShow.bind(this);
     this.handleCloudinary = this.handleCloudinary.bind(this);
     this.updateCoords = this.updateCoords.bind(this);
     this.updateDestination = this.updateDestination.bind(this);
@@ -29,6 +30,13 @@ class SpotForm extends React.Component {
     this.props.requestDestinations();
     // debugger
   }
+
+  componentWillReceiveProps(nextProps) {
+    if ( this.props.listings.length != nextProps.listings.length ) {
+      // debugger;
+      this.navigateToSpotShow(nextProps.listings[nextProps.listings.length - 1]);
+    }
+  };
 
   // componentWillUpdate(nextProps) {
   //   // debugger
@@ -42,6 +50,12 @@ class SpotForm extends React.Component {
 
   navigateToListings() {
     this.props.router.push("/my-listings");
+  }
+
+  navigateToSpotShow(id) {
+    // debugger;
+    // debugger;
+    this.props.router.push(`/spots/${id}`);
   }
 
   update(property) {
@@ -84,8 +98,12 @@ class SpotForm extends React.Component {
 
     this.updateCoords();
     const spot = Object.assign({}, this.state, this.coords);
-    this.props.createSpot( spot );
-    // debugger
+    this.newSpot = this.props.createSpot( spot );
+    // debugger;
+    this.props.requestListings();
+    this.navigateToSpotShow();
+    // this.navigateToListings();
+    // debugger;
     // if (this.props.spotDetail.errors.length == 0) {
     //   // this.navigateToListings();
     // } else {
