@@ -31,9 +31,9 @@ class SpotForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    debugger;
+    // debugger;
     if ( this.props.listings.length != nextProps.listings.length ) {
-      debugger;
+      // debugger;
       let lastListing = nextProps.listings[nextProps.listings.length - 1];
       this.navigateToSpotShow(lastListing.id);
     }
@@ -96,12 +96,13 @@ class SpotForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    debugger;
+    // debugger;
 
-    this.props.requestListings();
     this.updateCoords();
     const spot = Object.assign({}, this.state, this.coords);
     this.newSpot = this.props.createSpot( spot );
+    setTimeout(function(){ console.log("timeout"); }, 3000);
+    this.props.requestListings();
     // this.navigateToSpotShow();
 
     // if (this.props.spotDetail.errors.length == 0) {
