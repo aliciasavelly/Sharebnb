@@ -14,8 +14,7 @@ class SpotForm extends React.Component {
       description: "",
       host_id: this.props.currentUser.id,
       destination_id: 1,
-      errors: [],
-      id: 0
+      errors: []
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,7 +24,7 @@ class SpotForm extends React.Component {
     this.updateCoords = this.updateCoords.bind(this);
     this.updateDestination = this.updateDestination.bind(this);
     this.renderImage = this.renderImage.bind(this);
-    this.setId = this.setId.bind(this);
+    // this.setId = this.setId.bind(this);
   }
 
   componentDidMount() {
@@ -33,45 +32,32 @@ class SpotForm extends React.Component {
     this.props.requestListings();
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   // debugger;
-  //   if ( this.props.listings.length != nextProps.listings.length ) {
-  //     // debugger;
-  //     let lastListing = nextProps.listings[nextProps.listings.length - 1];
-  //     this.navigateToSpotShow(lastListing.id);
-  //   }
-  // };
-
-  // componentWillUpdate(nextProps) {
-  //   // debugger
-  //   if (nextProps.spotDetail.errors.length > 0) {
-  //     this.setState({ errors: this.props.spotDetail.errors })
-  //   }
-  //   // else {
-  //     // this.navigateToListings();
-  //   // }
-  // }
-
-  setId() {
-    let lastListingId = this.props.listings[this.props.listings.length - 1].id;
-    let userId = this.props.currentUser.id;
-    let newId;
-    if (String(lastListingId).slice(0, 3) === String(userId)) {
-      newId = lastListingId + 1;
-    } else {
-      newId = Number(String(userId) + '001')
+  componentWillReceiveProps(nextProps) {
+    if ( this.props.listings.length != nextProps.listings.length ) {
+      let lastListing = nextProps.listings[nextProps.listings.length - 1];
+      this.navigateToSpotShow(lastListing.id);
     }
-    this.state.id = newId;
-    // debugger;
-  }
+  };
+
+  // setId() {
+  //   let lastListingId = this.props.listings[this.props.listings.length - 1].id;
+  //   let userId = this.props.currentUser.id;
+  //   let newId;
+  //   if (String(lastListingId).slice(0, 3) === String(userId)) {
+  //     newId = lastListingId + 1;
+  //   } else {
+  //     newId = Number(String(userId) + '001')
+  //   }
+  //   this.state.id = newId;
+  // }
 
   navigateToListings() {
     this.props.router.push("/my-listings");
   }
 
-  navigateToSpotShow() {
-    // debugger;
-    this.props.router.push(`/spots/${this.state.id}`);
+  navigateToSpotShow(id) {
+    // this.props.router.push(`/spots/${this.state.id}`);
+    this.props.router.push(`/spots/${id}`);
   }
 
   update(property) {
@@ -113,14 +99,16 @@ class SpotForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    this.setId();
-    // debugger;
+    // this.setId();
+
     this.updateCoords();
     const spot = Object.assign({}, this.state, this.coords);
     this.newSpot = this.props.createSpot( spot );
-    // this.props.requestListings();
-    this.navigateToSpotShow();
-    // setTimeout(function(){ console.log("timeout"); }, 3000);
+
+    this.props.requestListings();
+    this.props.requestListings();
+    this.props.requestListings();
+
     // this.navigateToSpotShow();
 
     // if (this.props.spotDetail.errors.length == 0) {
