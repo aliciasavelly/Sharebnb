@@ -10,7 +10,7 @@ class SpotForm extends React.Component {
     this.state = {
       title: "",
       price: 0,
-      image_url: "",
+      image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1494639317/no-propertyfound_pu5vkf.png",
       description: "",
       host_id: this.props.currentUser.id,
       destination_id: 1,
@@ -31,7 +31,9 @@ class SpotForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    debugger;
     if ( this.props.listings.length != nextProps.listings.length ) {
+      debugger;
       let lastListing = nextProps.listings[nextProps.listings.length - 1];
       this.navigateToSpotShow(lastListing.id);
     }
@@ -94,10 +96,12 @@ class SpotForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
+    debugger;
+
+    this.props.requestListings();
     this.updateCoords();
     const spot = Object.assign({}, this.state, this.coords);
     this.newSpot = this.props.createSpot( spot );
-    this.props.requestListings();
     // this.navigateToSpotShow();
 
     // if (this.props.spotDetail.errors.length == 0) {
