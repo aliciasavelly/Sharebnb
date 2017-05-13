@@ -14,7 +14,8 @@ class SpotForm extends React.Component {
       description: "",
       host_id: this.props.currentUser.id,
       destination_id: 1,
-      errors: []
+      errors: [],
+      id: 0
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,20 +25,22 @@ class SpotForm extends React.Component {
     this.updateCoords = this.updateCoords.bind(this);
     this.updateDestination = this.updateDestination.bind(this);
     this.renderImage = this.renderImage.bind(this);
+    this.setId = this.setId.bind(this);
   }
 
   componentDidMount() {
     this.props.requestDestinations();
+    this.props.requestListings();
   }
 
-  componentWillReceiveProps(nextProps) {
-    // debugger;
-    if ( this.props.listings.length != nextProps.listings.length ) {
-      // debugger;
-      let lastListing = nextProps.listings[nextProps.listings.length - 1];
-      this.navigateToSpotShow(lastListing.id);
-    }
-  };
+  // componentWillReceiveProps(nextProps) {
+  //   // debugger;
+  //   if ( this.props.listings.length != nextProps.listings.length ) {
+  //     // debugger;
+  //     let lastListing = nextProps.listings[nextProps.listings.length - 1];
+  //     this.navigateToSpotShow(lastListing.id);
+  //   }
+  // };
 
   // componentWillUpdate(nextProps) {
   //   // debugger
@@ -49,12 +52,26 @@ class SpotForm extends React.Component {
   //   // }
   // }
 
+  setId() {
+    let lastListingId = this.props.listings[this.props.listings.length - 1].id;
+    let userId = this.props.currentUser.id;
+    let newId;
+    if (String(lastListingId).slice(0, 3) === String(userId)) {
+      newId = lastListingId + 1;
+    } else {
+      newId = Number(String(userId) + '001')
+    }
+    this.state.id = newId;
+    // debugger;
+  }
+
   navigateToListings() {
     this.props.router.push("/my-listings");
   }
 
-  navigateToSpotShow(id) {
-    this.props.router.push(`/spots/${id}`);
+  navigateToSpotShow() {
+    // debugger;
+    this.props.router.push(`/spots/${this.state.id}`);
   }
 
   update(property) {
@@ -96,13 +113,14 @@ class SpotForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
+    this.setId();
     // debugger;
-
     this.updateCoords();
     const spot = Object.assign({}, this.state, this.coords);
     this.newSpot = this.props.createSpot( spot );
+    // this.props.requestListings();
+    this.navigateToSpotShow();
     // setTimeout(function(){ console.log("timeout"); }, 3000);
-    this.props.requestListings();
     // this.navigateToSpotShow();
 
     // if (this.props.spotDetail.errors.length == 0) {
@@ -146,6 +164,7 @@ class SpotForm extends React.Component {
   render() {
     const { title, description, price, image_url } = this.state;
     const { lat, lng } = this.coords;
+    // debugger
 
     return(
       <div className="spot-form-container">

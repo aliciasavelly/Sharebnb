@@ -64,7 +64,8 @@ class Api::SpotsController < ApplicationController
       :host_id,
       :description,
       :lat,
-      :lng
+      :lng,
+      :id
     )
   end
 

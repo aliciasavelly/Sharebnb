@@ -103,6 +103,7 @@ class AppPage extends React.Component {
 
   goToHost() {
     this.props.router.push('/my-listings');
+    window.scrollTo(0, 0);
   }
 
   goToTrips() {
