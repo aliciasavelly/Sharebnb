@@ -101,7 +101,7 @@ class SpotForm extends React.Component {
     this.updateCoords();
     const spot = Object.assign({}, this.state, this.coords);
     this.newSpot = this.props.createSpot( spot );
-    setTimeout(function(){ console.log("timeout"); }, 3000);
+    // setTimeout(function(){ console.log("timeout"); }, 3000);
     this.props.requestListings();
     // this.navigateToSpotShow();
 
