@@ -45,9 +45,9 @@
         .fa-search {
           position: absolute;
           font-size: 13px;
-          color: #AEA9A9;
+          color: #6d6d6d;
           cursor: default;
-          left: 30px;
+          left: 35px;
           top: 15px;
         }
 
@@ -75,9 +75,10 @@
             border-bottom: 1px solid #DBDBDB;
             border-left: 1px solid #DBDBDB;
             padding: 13.5px 0 13.5px 35px;
-            -webkit-border-top-left-radius: 2px;
-            -webkit-border-bottom-left-radius: 2px;
+            -webkit-border-top-left-radius: 4px;
+            -webkit-border-bottom-left-radius: 4px;
             -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
           }
 
           label {
@@ -85,7 +86,7 @@
             // color: #AEA9A9;
             color: #484848;
             // padding: 5px 0 0 5px;
-            padding: 13.5px 0 13.5px 5px;
+            padding: 13.5px 0 13.5px 13px;
             border-top: 1px solid #DBDBDB;
             border-bottom: 1px solid #DBDBDB;
             border-left: 1px solid #DBDBDB;
@@ -102,8 +103,8 @@
             cursor: pointer;
             background: transparent;
             -webkit-appearance: button;
-            -webkit-border-top-right-radius: 2px;
-            -webkit-border-bottom-right-radius: 2px;
+            -webkit-border-top-right-radius: 4px;
+            -webkit-border-bottom-right-radius: 4px;
             -webkit-border-top-left-radius: 0px;
             -webkit-border-bottom-left-radius: 0px;
             -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
@@ -118,7 +119,7 @@
             // color: #AEA9A9;
             color: #484848;
             overflow: hidden;
-            padding: 5px 0 5px 5px;
+            padding: 5px 0 5px 13px;
             text-overflow: ellipsis;
             white-space: nowrap;
             width: 100px;
