@@ -67,8 +67,9 @@
 
           .search-input {
             font-size: 14px;
-            color: #767676;
+            // color: #767676;
             // color: #AEA9A9;
+            color: #484848;
             border-top: 1px solid #DBDBDB;
             border-bottom: 1px solid #DBDBDB;
             border-left: 1px solid #DBDBDB;
@@ -81,6 +82,7 @@
           label {
             font-size: 14px;
             color: #AEA9A9;
+            color: #484848;
             // padding: 5px 0 0 5px;
             padding: 13.5px 0 13.5px 5px;
             border-top: 1px solid #DBDBDB;
@@ -91,6 +93,7 @@
 
             .form-control {
               cursor: pointer;
+              // color: #484848;
             }
           }
 
@@ -111,7 +114,8 @@
             background-repeat: no-repeat;
             border: 1px solid #DBDBDB;
             font-size: 14px;
-            color: #AEA9A9;
+            // color: #AEA9A9;
+            color: #484848;
             overflow: hidden;
             padding: 5px 0 5px 5px;
             text-overflow: ellipsis;
@@ -215,6 +219,7 @@
 
       .nav-link-show {
         padding: 25px 40px 25px 0;
+        color: #494949;
       }
     }
   }
