@@ -1,16 +1,16 @@
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #AEA9A9;
+    color:    #484848;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #AEA9A9;
+   color:    #484848;
    opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #AEA9A9;
+   color:    #484848;
    opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #AEA9A9;
+   color:    #484848;
 }
 
 .main {
@@ -61,7 +61,7 @@
           margin-left: 20px;
           display: flex;
           font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-          font-size: 19px;
+          // font-size: 19px;
           color: #484848;
           width: 100%;
 
@@ -69,7 +69,8 @@
             font-size: 14px;
             // color: #767676;
             // color: #AEA9A9;
-            color: #484848;
+            // color: #484848;
+            color: blue;
             border-top: 1px solid #DBDBDB;
             border-bottom: 1px solid #DBDBDB;
             border-left: 1px solid #DBDBDB;
@@ -81,7 +82,7 @@
 
           label {
             font-size: 14px;
-            color: #AEA9A9;
+            // color: #AEA9A9;
             color: #484848;
             // padding: 5px 0 0 5px;
             padding: 13.5px 0 13.5px 5px;
