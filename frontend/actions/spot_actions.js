@@ -16,9 +16,9 @@ export const receiveSingleSpot = spot => ({
   spot
 });
 
-export const destroySpot = spot => ({
+export const destroySpot = spotId => ({
   type: DESTROY_SPOT,
-  spot
+  spotId
 });
 
 export const updateFilter = (filter, value) => ({
@@ -64,6 +64,6 @@ export const updateSpot = (spotId, data) => dispatch => (
 
 export const deleteSpot = spotId => dispatch => (
   APIUtil.deleteSpot(spotId).then(
-    spot => dispatch(destroySpot(spot))
+    spot => dispatch(destroySpot(spot.id))
   )
 );

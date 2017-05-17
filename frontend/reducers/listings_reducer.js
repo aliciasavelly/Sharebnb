@@ -10,7 +10,8 @@ const ListingsReducer = (state = {}, action) => {
       return merge({}, state, action.listings);
     case DESTROY_SPOT:
       let nextState = merge({}, state);
-      delete nextState[action.spot.id];
+      // delete nextState[action.spot.id];
+      delete nextState[action.spotId];
       return nextState;
     default:
       return state;
