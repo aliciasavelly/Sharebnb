@@ -874,6 +874,20 @@ spot41 = Spot.create!(
   lng: -122.305703
 )
 
+spot42 = Spot.create!(
+  title: "Comfy home near Chicago",
+  destination_id: destination5.id,
+  price: 87,
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1495329438/nathan-fertig-249917_qwl6qh.jpg",
+  host_id: user19.id,
+  description: "We look forward to seeing you for your stay. You'll be sharing our house with us and our cats! They
+                are very friendly with strangers, and would love to spend time with you if you want! We'll provide
+                complimentary breakfast in the morning (usually a bagel and/or toast with coffee and tea). We look
+                forward to meeting you! We can give you a lot of advice about what you will enjoy doing in the area.",
+  lat: 41.899867,
+  lng: -87.703358
+)
+
 trip1 = Trip.create!(
   user_id: user1.id,
   spot_id: spot1.id,
