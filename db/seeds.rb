@@ -804,17 +804,17 @@ spot36 = Spot.create!(
   lng: -122.321153
 )
 
-# spot37 = Spot.create!(
-#   title:
-#   destination_id: destination4.id,
-#   price:
-#   image_url:
-#   host_id:
-#   description:
-#   lat:
-#   lng:
-# )
-#
+spot37 = Spot.create!(
+  title: "Spacious home with quirky furnishings",
+  destination_id: destination4.id,
+  price: 145,
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1495329808/flaunter-com-237602_hlitkw.jpg",
+  host_id: user21.id,
+  description: "Here, you will have plenty of space to stay. Contact us for more information. We would love to have you!",
+  lat: 47.628647,
+  lng: -122.354455
+)
+
 # spot38 = Spot.create!(
 #   title:
 #   destination_id: destination4.id,
