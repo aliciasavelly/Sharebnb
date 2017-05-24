@@ -24,6 +24,8 @@ class SpotsMap extends React.Component {
           this.map.setCenter(destinationsList[key].center);
           this.map.setZoom(destinationsList[key].zoom);
         } else {
+          // debugger;
+          this.map.setZoom(1);
         }
       }
     });
@@ -35,14 +37,20 @@ class SpotsMap extends React.Component {
     if(nextProps.filters.letters) {
       if (nextProps.filters.letters !== this.props.filters.letters) {
         this.state = { letters: nextProps.filters.letters };
+        let foundLocation = false;
         Object.keys(destinationsList).forEach( key => {
+          // debugger;
           if(key.toLowerCase().includes(this.state.letters.toLowerCase())) {
             this.map.setCenter(destinationsList[key].center);
             this.map.setZoom(destinationsList[key].zoom);
+            foundLocation = true;
           } else {
-
+            // debugger;
           }
         });
+        if (!foundLocation) {
+          this.map.setZoom(2);
+        }
         this.MarkerManager.updateMarkers(this.props.spots);
       }
     }
