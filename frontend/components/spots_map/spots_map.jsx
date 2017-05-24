@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter, hashHistory} from 'react-router';
+import { Link, withRouter, hashHistory } from 'react-router';
 import MarkerManager from '../../util/marker_manager';
 
 const destinationsList = {"Boston": {center: { lat: 42.357004, lng: -71.062309 }, zoom: 11},
@@ -55,9 +55,13 @@ class SpotsMap extends React.Component {
         });
         if (!foundLocation) {
           // debugger;
+          // TODO
           // window.findElementById("no-results-found").css('display', 'block');
+          $('no-results-found').css('display', 'block');
           this.map.setZoom(2);
         }
+        // TODO
+        // why here and below?
         this.MarkerManager.updateMarkers(this.props.spots);
       }
     }
@@ -83,4 +87,5 @@ class SpotsMap extends React.Component {
   }
 }
 
+// TODO think i can remove withRouter
 export default withRouter(SpotsMap);

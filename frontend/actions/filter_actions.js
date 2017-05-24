@@ -12,3 +12,4 @@ export const updateFilter = (filter, value) => (dispatch, getState) => {
   dispatch(changeFilter(filter, value));
   dispatch(requestSpots(getState().filters));
 };
+// TODO getState?

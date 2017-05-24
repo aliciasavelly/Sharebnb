@@ -2,7 +2,7 @@ import * as APIUtil from '../util/destination_api_util';
 
 export const RECEIVE_DESTINATIONS = "RECEIVE_DESTINATIONS";
 
-export const receiveDestinations = (destinations) => ({
+export const receiveDestinations = destinations => ({
   type: RECEIVE_DESTINATIONS,
   destinations
 });
