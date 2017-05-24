@@ -5,6 +5,7 @@ body, html {
   margin: 0;
 }
 
+
 .spots-index-container {
   display: flex;
   flex-direction: row;
@@ -15,6 +16,12 @@ body, html {
   .spots-index-left {
     width: 60%;
     position: relative;
+
+    #no-results-found {
+      margin-top: 20px;
+      text-align: center;
+      display: none;
+    }
 
     .spots-index-filters {
       z-index: 1;
@@ -82,7 +89,7 @@ body, html {
 
         .spot-index-item-detail {
           display: flex;
-          
+
           p {
             padding-right: 10px;
             padding-top: 5px;

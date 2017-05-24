@@ -54,6 +54,8 @@ class SpotsMap extends React.Component {
           }
         });
         if (!foundLocation) {
+          // debugger;
+          // window.findElementById("no-results-found").css('display', 'block');
           this.map.setZoom(2);
         }
         this.MarkerManager.updateMarkers(this.props.spots);
