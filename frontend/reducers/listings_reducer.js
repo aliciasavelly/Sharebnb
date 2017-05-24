@@ -7,7 +7,9 @@ const ListingsReducer = (state = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_LISTINGS:
-      return merge({}, state, action.listings);
+    // TODO edited this
+      const listings = action.listings
+      return merge({}, state, listings);
     case DESTROY_SPOT:
       let nextState = merge({}, state);
       delete nextState[action.spotId];

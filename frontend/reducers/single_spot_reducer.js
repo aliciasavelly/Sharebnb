@@ -4,13 +4,14 @@ import merge from 'lodash/merge';
 const SingleSpotReducer = (state = {errors: []}, action) => {
   Object.freeze(state);
 
+// TODO changed let to const below in two spots
   switch(action.type){
     case RECEIVE_SINGLE_SPOT:
-      let spot = action.spot;
+      const spot = action.spot;
       return merge({}, state, spot);
     case RECEIVE_SPOT_ERRORS:
-      let errors = action.errors;
-      return merge({}, state, {errors});
+      const errors = action.errors;
+      return merge({}, state, { errors });
     case CLEAR_SPOT_ERRORS:
       return Object.assign({}, state, { errors: [] });
     default:

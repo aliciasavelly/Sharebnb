@@ -1,5 +1,4 @@
 import { RECEIVE_SPOTS } from '../actions/spot_actions';
-import merge from 'lodash/merge';
 
 const SpotsReducer = (state = {}, action) => {
   Object.freeze(state);

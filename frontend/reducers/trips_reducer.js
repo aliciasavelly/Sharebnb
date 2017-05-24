@@ -8,7 +8,8 @@ const TripsReducer = (state = {}, action) => {
     case RECEIVE_TRIPS:
       return action.trips;
     case RECEIVE_SINGLE_TRIP:
-      let trip = action.trip;
+      // TODO change to const
+      const trip = action.trip;
       return merge({}, state, { trip });
     case DESTROY_TRIP:
       let nextState = merge({}, state);
