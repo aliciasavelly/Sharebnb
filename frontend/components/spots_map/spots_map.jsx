@@ -7,7 +7,14 @@ const destinationsList = {"Boston": {center: { lat: 42.357004, lng: -71.062309 }
                           "Detroit": {center: { lat: 42.336985, lng: -83.054480 }, zoom: 10},
                           "New York City": {center: { lat: 40.777878, lng: -73.937499 }, zoom: 10},
                           "San Francisco": {center: { lat: 37.777072, lng: -122.447774 }, zoom: 12},
-                          "Seattle": {center: { lat: 47.598559, lng: -122.326300 }, zoom: 10}}
+                          "Seattle": {center: { lat: 47.598559, lng: -122.326300 }, zoom: 10},
+                          "Michigan": {center: { lat: 43.244789, lng: -84.533682 }, zoom: 6 },
+                          "California": {center: { lat: 37.588421, lng: -120.228597 }, zoom: 6},
+                          "Washington": {center: { lat: 47.417435, lng: -120.072763 }, zoom: 6},
+                          "NYC": {center: { lat: 40.777878, lng: -73.937499 }, zoom: 10},
+                          "SF": {center: { lat: 37.777072, lng: -122.447774 }, zoom: 12},
+                          "Massachusetts": {center: { lat: 42.407140, lng: -71.643438}, zoom: 7},
+                          "Illinois": {center: { lat: 40.876589, lng: -88.832609}, zoom: 7}}
 
 class SpotsMap extends React.Component {
 
@@ -32,9 +39,9 @@ class SpotsMap extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    // debugger;
     if(nextProps.filters.letters) {
       if (nextProps.filters.letters !== this.props.filters.letters) {
-        // debugger;
         this.state = { letters: nextProps.filters.letters };
         let foundLocation = false;
         Object.keys(destinationsList).forEach( key => {
