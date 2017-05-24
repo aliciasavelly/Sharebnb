@@ -24,8 +24,6 @@ class SpotsMap extends React.Component {
           this.map.setCenter(destinationsList[key].center);
           this.map.setZoom(destinationsList[key].zoom);
         } else {
-          // debugger;
-          this.map.setZoom(1);
         }
       }
     });
@@ -33,19 +31,18 @@ class SpotsMap extends React.Component {
     this.MarkerManager.updateMarkers(this.props.spots);
   }
 
-  componentDidUpdate(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if(nextProps.filters.letters) {
       if (nextProps.filters.letters !== this.props.filters.letters) {
+        // debugger;
         this.state = { letters: nextProps.filters.letters };
         let foundLocation = false;
         Object.keys(destinationsList).forEach( key => {
-          // debugger;
           if(key.toLowerCase().includes(this.state.letters.toLowerCase())) {
             this.map.setCenter(destinationsList[key].center);
             this.map.setZoom(destinationsList[key].zoom);
             foundLocation = true;
           } else {
-            // debugger;
           }
         });
         if (!foundLocation) {
@@ -56,6 +53,29 @@ class SpotsMap extends React.Component {
     }
     this.MarkerManager.updateMarkers(this.props.spots);
   }
+
+  // componentDidUpdate(nextProps) {
+  //   if(nextProps.filters.letters) {
+  //     if (nextProps.filters.letters !== this.props.filters.letters) {
+  //       debugger;
+  //       this.state = { letters: nextProps.filters.letters };
+  //       let foundLocation = false;
+  //       Object.keys(destinationsList).forEach( key => {
+  //         if(key.toLowerCase().includes(this.state.letters.toLowerCase())) {
+  //           this.map.setCenter(destinationsList[key].center);
+  //           this.map.setZoom(destinationsList[key].zoom);
+  //           foundLocation = true;
+  //         } else {
+  //         }
+  //       });
+  //       if (!foundLocation) {
+  //         this.map.setZoom(2);
+  //       }
+  //       this.MarkerManager.updateMarkers(this.props.spots);
+  //     }
+  //   }
+  //   this.MarkerManager.updateMarkers(this.props.spots);
+  // }
 
   _registerListeners() {
     google.maps.event.addListener(this.map, 'idle', () => {
