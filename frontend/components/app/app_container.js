@@ -9,6 +9,7 @@ const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
   filters: state.filters
 });
+// TODO remove filters
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
     requestLogout: () => dispatch(requestLogout()),

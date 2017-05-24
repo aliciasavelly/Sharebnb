@@ -9,10 +9,11 @@ const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
   destinations: selectAllDestinations(state)
 });
+// TODO remove loggedin, currentUser
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    requestDestinations: () => dispatch(requestDestinations()),
-    updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
+  requestDestinations: () => dispatch(requestDestinations()),
+  updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
 });
 
 export default connect(
