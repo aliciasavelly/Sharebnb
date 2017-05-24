@@ -1,4 +1,5 @@
 import * as APIUtil from '../util/session_api_util';
+import * as UsersAPIUtil from '../util/users_api_util';
 
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_LOGOUT_SUCCESS = "RECEIVE_LOGOUT_SUCCESS";
@@ -48,6 +49,15 @@ export const requestSignup = user => dispatch => (
 export const requestGuestUser = () => dispatch => (
   APIUtil.loginGuestUser().then(
     currentUser => dispatch(receiveCurrentUser(currentUser))
+  ).fail(
+    error => dispatch(receiveErrors(error.responseJSON))
+  )
+);
+
+// TODO make sure this works, added it from other file
+export const updateUser = (currentUserId, data) => dispatch => (
+  UsersAPIUtil.updateUser(currentUserId, data).then(
+    user => dispatch(receiveCurrentUser(user))
   ).fail(
     error => dispatch(receiveErrors(error.responseJSON))
   )
