@@ -5,10 +5,11 @@ export const fetchDestinations = () => (
   })
 );
 
-export const fetchSearchDestinations = letters => (
-  $.ajax({
-    method: 'GET',
-    url: '/api/search/destinations',
-    data: { letters }
-  })
-);
+// TODO isn't called anywhere..
+// export const fetchSearchDestinations = letters => (
+//   $.ajax({
+//     method: 'GET',
+//     url: '/api/search/destinations',
+//     data: { letters }
+//   })
+// );
