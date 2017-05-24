@@ -1,9 +1,9 @@
 import { requestSpots } from './spot_actions';
 
-export const UPDATE_FILTER = "UPDATE_FILTER";
+export const CHANGE_FILTER = "CHANGE_FILTER";
 
 export const changeFilter = (filter, value) => ({
-  type: UPDATE_FILTER,
+  type: CHANGE_FILTER,
   filter,
   value
 });
