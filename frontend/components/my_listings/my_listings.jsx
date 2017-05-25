@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
 import SpotListingItem from './spot_listing_item';
 
 class MyListings extends React.Component {
@@ -18,6 +18,16 @@ class MyListings extends React.Component {
     if (this.props.listings != nextProps.listings && this.count == 0) {
       this.count += 1;
       this.props.requestListings();
+    }
+  }
+
+  componentDidUpdate() {
+    this.redirectIfLoggedOut();
+  }
+
+  redirectIfLoggedOut() {
+    if(!this.props.loggedIn && this.props.location.pathname != "/main") {
+      this.props.router.push('/main');
     }
   }
 
@@ -46,4 +56,4 @@ class MyListings extends React.Component {
   }
 }
 
-export default MyListings;
+export default withRouter(MyListings);

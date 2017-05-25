@@ -14,6 +14,16 @@ class MyTrips extends React.Component {
     this.props.requestSpots();
   }
 
+  componentDidUpdate() {
+    this.redirectIfLoggedOut();
+  }
+
+  redirectIfLoggedOut() {
+    if(!this.props.loggedIn) {
+      this.props.router.push('/main');
+    }
+  }
+
   renderTrips() {
     const { deleteTrip, trips, requestTrips, requestSpots, spots } = this.props;
 
@@ -43,4 +53,4 @@ class MyTrips extends React.Component {
   }
 }
 
-export default MyTrips;
+export default withRouter(MyTrips);

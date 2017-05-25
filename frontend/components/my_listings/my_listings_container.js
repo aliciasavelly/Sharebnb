@@ -5,7 +5,8 @@ import { createSpot, updateSpot, deleteSpot, requestSingleSpot } from '../../act
 import { requestListings } from '../../actions/listings_actions';
 
 const mapStateToProps = state => ({
-  listings: selectAllListings(state)
+  listings: selectAllListings(state),
+  loggedIn: !!state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
