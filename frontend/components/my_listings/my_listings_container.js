@@ -11,12 +11,13 @@ const mapStateToProps = state => ({
   listings: selectAllListings(state),
   spotDetail: state.spotDetail
 });
+// TODO remove logged in, currentuser, spotdetail, createspot, updatespot
 
 const mapDispatchToProps = dispatch => ({
-  createSpot: (spot) => dispatch(createSpot(spot)),
+  createSpot: spot => dispatch(createSpot(spot)),
   updateSpot: (spotId, data) => dispatch(updateSpot(spotId, data)),
-  deleteSpot: (spotId) => dispatch(deleteSpot(spotId)),
-  requestSingleSpot: (spotId) => dispatch(requestSingleSpot(spotId)),
+  deleteSpot: spotId => dispatch(deleteSpot(spotId)),
+  requestSingleSpot: spotId => dispatch(requestSingleSpot(spotId)),
   requestListings: () => dispatch(requestListings())
 });
 
