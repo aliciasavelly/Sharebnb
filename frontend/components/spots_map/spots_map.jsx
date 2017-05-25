@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, withRouter, hashHistory } from 'react-router';
 import MarkerManager from '../../util/marker_manager';
 
 const destinationsList = {"Boston": {center: { lat: 42.357004, lng: -71.062309 }, zoom: 11},
@@ -85,5 +84,4 @@ class SpotsMap extends React.Component {
   }
 }
 
-// TODO think i can remove withRouter
-export default withRouter(SpotsMap);
+export default SpotsMap;
