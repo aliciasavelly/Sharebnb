@@ -14,23 +14,18 @@ class MyTrips extends React.Component {
     this.props.requestSpots();
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (this.props.trips.length != nextProps.trips.length) {
-  //     this.props.requestTrips();
-  //     // debugger;
-  //   }
-  // }
-
   renderTrips() {
+    const { deleteTrip, trips, requestTrips, requestSpots, spots } = this.props;
+
     return(
       <div className="trips-index">
         {this.props.trips.map( (trip, idx) => (
-          <SpotTripItem deleteTrip={ this.props.deleteTrip }
-                        trips={ this.props.trips }
-                        requestSpots={ this.props.requestSpots }
-                        requestTrips={ this.props.requestTrips }
-                        spots={ this.props.spots }
+          <SpotTripItem deleteTrip={ deleteTrip }
                         trip={ trip }
+                        trips={ trips }
+                        requestTrips={ requestTrips }
+                        requestSpots={ requestSpots }
+                        spots={ spots }
                         key={`trips-${idx}`} />
         ))}
       </div>

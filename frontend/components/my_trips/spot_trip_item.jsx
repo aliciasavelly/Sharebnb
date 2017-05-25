@@ -10,16 +10,9 @@ class SpotTripItem extends React.Component {
     this.deleteTrip = this.deleteTrip.bind(this);
   }
 
-  // componentWillReceiveProps(nextProps) {
-    // debugger;
-    // if (t)
-    // this.props.requestSpots();
-  // }
-
   componentWillReceiveProps(nextProps) {
     if (this.props.trips.length != nextProps.trips.length) {
       this.props.requestTrips();
-      // debugger;
     }
   }
 
@@ -42,29 +35,32 @@ class SpotTripItem extends React.Component {
       }
     })
 
-    if (this.currentSpot.image_url) {
+    const { image_url, title, price, host } = this.currentSpot;
+    const trip = this.props.trip;
+
+    if (image_url) {
       return(
         <div className="trip-item-outer">
           <div className="trip-index-item" onClick={this.handleClick}>
             <div className="image-container">
-              <img src={this.currentSpot.image_url} />
+              <img src={image_url} />
             </div>
             <div className="item-details">
-              <h1>{this.currentSpot.title}</h1>
-              <p>${this.currentSpot.price}</p>
+              <h1>{title}</h1>
+              <p>${price}</p>
               <div className="dates-container">
                 <div className="dates">
                   <p>Check in: </p>
-                  {this.props.trip.check_in}
+                  {trip.check_in}
                 </div>
                 <div className="dates">
                   <p>Check out: </p>
-                  {this.props.trip.check_out}
+                  {trip.check_out}
                 </div>
               </div>
 
               <div id="round">
-                <img className="host-image" id="host-image" src={this.currentSpot.host.image_url} />
+                <img className="host-image" id="host-image" src={host.image_url} />
               </div>
             </div>
           </div>
