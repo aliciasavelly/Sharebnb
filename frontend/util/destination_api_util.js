@@ -5,7 +5,7 @@ export const fetchDestinations = () => (
   })
 );
 
-// TODO isn't called anywhere..
+// TODO this isn't called anywhere..
 // export const fetchSearchDestinations = letters => (
 //   $.ajax({
 //     method: 'GET',

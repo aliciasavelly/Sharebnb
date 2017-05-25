@@ -4,7 +4,6 @@ import merge from 'lodash/merge';
 const SingleSpotReducer = (state = {errors: []}, action) => {
   Object.freeze(state);
 
-// TODO changed let to const below in two spots
   switch(action.type){
     case RECEIVE_SINGLE_SPOT:
       const spot = action.spot;
