@@ -3,10 +3,9 @@ import { withRouter, hashHistory, Link } from 'react-router';
 import SpotDetail from './spot_detail';
 import Datetime from 'react-datetime';
 
+// TODO add reviews
 // import ReviewButton from './review_button';
 
-//TODO
-//add children here?
 class SpotShow extends React.Component {
   constructor(props) {
     super(props);

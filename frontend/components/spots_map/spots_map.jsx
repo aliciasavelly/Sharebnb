@@ -50,6 +50,7 @@ class SpotsMap extends React.Component {
             this.map.setCenter(destinationsList[key].center);
             this.map.setZoom(destinationsList[key].zoom);
             foundLocation = true;
+            $('#no-results-found').css('display', 'none');
           } else {
           }
         });
@@ -57,7 +58,7 @@ class SpotsMap extends React.Component {
           // debugger;
           // TODO
           // window.findElementById("no-results-found").css('display', 'block');
-          $('no-results-found').css('display', 'block');
+          $('#no-results-found').css('display', 'block');
           this.map.setZoom(2);
         }
         // TODO
