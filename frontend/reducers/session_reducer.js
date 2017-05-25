@@ -13,7 +13,6 @@ const SessionReducer = (state = _nullUser, action) => {
     case RECEIVE_LOGOUT_SUCCESS:
       return merge({}, state);
     case RECEIVE_ERRORS:
-    // TODO changed this
       const errors = action.errors;
       return merge({}, state, { errors });
     case CLEAR_ERRORS:
