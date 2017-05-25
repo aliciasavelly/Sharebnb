@@ -10,7 +10,20 @@ class SpotTripItem extends React.Component {
     this.deleteTrip = this.deleteTrip.bind(this);
   }
 
-  componentWillReceiveProps() {
+  // componentWillReceiveProps(nextProps) {
+    // debugger;
+    // if (t)
+    // this.props.requestSpots();
+  // }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.trips.length != nextProps.trips.length) {
+      this.props.requestTrips();
+      // debugger;
+    }
+  }
+
+  componentDidMount(nextProps) {
     this.props.requestSpots();
   }
 
