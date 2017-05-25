@@ -54,7 +54,6 @@ export const requestGuestUser = () => dispatch => (
   )
 );
 
-// TODO make sure this works, added it from other file
 export const updateUser = (currentUserId, data) => dispatch => (
   UsersAPIUtil.updateUser(currentUserId, data).then(
     user => dispatch(receiveCurrentUser(user))
