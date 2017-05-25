@@ -18,7 +18,7 @@ class MyTrips extends React.Component {
     return(
       <div className="trips-index">
         {this.props.trips.map( (trip, idx) => (
-          <SpotTripItem deleteTrip={ this.props.deleteTrip } requestSpots={ requestSpots } spots={ this.props.spots } trip={ trip } key={`trips-${idx}`} />
+          <SpotTripItem deleteTrip={ this.props.deleteTrip } requestSpots={ this.props.requestSpots } spots={ this.props.spots } trip={ trip } key={`trips-${idx}`} />
         ))}
       </div>
     )

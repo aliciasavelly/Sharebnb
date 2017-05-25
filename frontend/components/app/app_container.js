@@ -5,10 +5,8 @@ import { updateFilter } from '../../actions/filter_actions';
 
 const mapStateToProps = state => ({
   loggedIn: !!state.session.currentUser,
-  currentUser: state.session.currentUser,
-  filters: state.filters
+  currentUser: state.session.currentUser
 });
-// TODO remove filters
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
     requestLogout: () => dispatch(requestLogout()),

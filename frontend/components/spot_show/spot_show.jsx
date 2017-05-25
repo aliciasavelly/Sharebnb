@@ -11,15 +11,13 @@ class SpotShow extends React.Component {
   constructor(props) {
     super(props);
 
-    if (this.props.currentUser)
+    if (this.props.currentUser) {
       this.state = {
         user_id: this.props.currentUser.id,
         check_in: "",
         check_out: "",
         num_guests: 1
       }
-    else {
-      // TODO what goes here?
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -57,21 +55,23 @@ class SpotShow extends React.Component {
   }
 
   render () {
-    if (this.props.spot && this.props.currentUser) {
+    const { spot, currentUser, destinations } = this.props;
+
+    if (spot && currentUser) {
       return(
         <div className="spot-show">
           <div className="spot-image-cover">
             <div className="spot-image">
-              <img src={this.props.spot.image_url} />
+              <img src={spot.image_url} />
             </div>
           </div>
 
           <div id="spot-show-detail">
-            <SpotDetail destinations={ this.props.destinations } spot={ this.props.spot } />
+            <SpotDetail destinations={ destinations } spot={ spot } />
           </div>
 
           <div className="booking-section">
-            <p>${this.props.spot.price} per night</p>
+            <p>${spot.price} per night</p>
 
             <div className="bookings-form">
               <form onSubmit={this.handleSubmit} className="form">
@@ -113,17 +113,17 @@ class SpotShow extends React.Component {
           </div>
         </div>
       )
-    } else if (this.props.spot) {
+    } else if (spot) {
       return(
         <div className="spot-show">
           <div className="spot-image-cover">
             <div className="spot-image">
-              <img src={this.props.spot.image_url} />
+              <img src={spot.image_url} />
             </div>
           </div>
 
           <div id="spot-show-detail">
-            <SpotDetail destinations={ this.props.destinations } spot={ this.props.spot } />
+            <SpotDetail destinations={ destinations } spot={ spot } />
           </div>
         </div>
       )
