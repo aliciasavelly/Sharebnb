@@ -3,7 +3,6 @@ import * as APIUtil from '../util/spot_api_util';
 export const RECEIVE_SPOTS = "RECEIVE_SPOTS";
 export const RECEIVE_SINGLE_SPOT = "RECEIVE_SINGLE_SPOT";
 export const DESTROY_SPOT = "DESTROY_SPOT";
-// export const UPDATE_FILTER = "UPDATE_FILTER";
 export const RECEIVE_SPOT_ERRORS = "RECEIVE_SPOT_ERRORS";
 
 export const receiveSpots = spots => ({
@@ -20,13 +19,6 @@ export const destroySpot = spotId => ({
   type: DESTROY_SPOT,
   spotId
 });
-
-// TODO unneeded???
-// export const updateFilter = (filter, value) => ({
-//   type: UPDATE_FILTER,
-//   filter,
-//   value
-// });
 
 export const receiveSpotErrors = (errors) => ({
   type: RECEIVE_SPOT_ERRORS,

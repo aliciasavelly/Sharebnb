@@ -14,9 +14,9 @@ export const receiveSingleTrip = trip => ({
   trip
 });
 
-export const destroyTrip = trip => ({
+export const destroyTrip = tripId => ({
   type: DESTROY_TRIP,
-  trip
+  tripId
 });
 
 export const requestTrips = () => dispatch => (
@@ -31,9 +31,8 @@ export const createTrip = trip => dispatch => (
   )
 );
 
-// TODO switch this so destroytrip only takes an id
 export const deleteTrip = tripId => dispatch => (
   APIUtil.deleteTrip(tripId).then(
-    trip => dispatch(destroyTrip(trip))
+    trip => dispatch(destroyTrip(trip.id))
   )
 );
