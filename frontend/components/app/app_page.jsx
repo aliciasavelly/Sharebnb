@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
 import AppContainer from './app_container';
-// require('react-datetime');
 import Datetime from 'react-datetime';
 
 class AppPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { city: "" };
+    this.state = { city: "", loggedIn: this.props.loggedIn };
 
     this.logoutUser = this.logoutUser.bind(this);
     this.leftNav = this.leftNav.bind(this);
@@ -22,6 +21,7 @@ class AppPage extends React.Component {
 
   logoutUser() {
     this.props.requestLogout();
+    this.state.loggedIn = false;
   }
 
   handleCloudinary(e) {
@@ -111,7 +111,7 @@ class AppPage extends React.Component {
   }
 
   rightNav() {
-    if (this.props.loggedIn) {
+    if (this.state.loggedIn || this.props.loggedIn) {
       return (
       <div className="right">
 
