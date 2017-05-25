@@ -22,11 +22,15 @@ class MyListings extends React.Component {
   }
 
   renderListings() {
+    const { requestSingleSpot, deleteSpot } = this.props;
+
     return(
       <div className="listings-index">
         {this.props.listings.map( (spot, idx) => (
-          <SpotListingItem requestSingleSpot={ this.props.requestSingleSpot } deleteSpot={ this.props.deleteSpot } spot={ spot } key={`listings-${idx}`} />
-        ))}
+          <SpotListingItem requestSingleSpot={ requestSingleSpot }
+                           deleteSpot={ deleteSpot }
+                           spot={ spot }
+                           key={`listings-${idx}`} /> ))}
       </div>
     )
   }
