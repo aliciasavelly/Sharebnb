@@ -1,26 +1,26 @@
 import React from 'react';
-import { Link, withRouter, hashHistory } from 'react-router';
+import { withRouter } from 'react-router';
 
 class SpotListingItem extends React.Component {
   constructor(props) {
     super(props);
+    this.spotId = this.props.spot.id;
 
     this.handleClick = this.handleClick.bind(this);
-    this.deleteSpot = this.deleteSpot.bind(this);
     this.updateSpot = this.updateSpot.bind(this);
+    this.deleteSpot = this.deleteSpot.bind(this);
   }
 
   handleClick() {
-    const spotId = this.props.spot.id;
-    this.props.router.push(`spots/${spotId}`)
+    this.props.router.push(`spots/${this.spotId}`)
   }
 
   updateSpot() {
-    this.props.router.push(`/edit-listing/${this.props.spot.id}`);
+    this.props.router.push(`/edit-listing/${this.spotId}`);
   }
 
   deleteSpot() {
-    this.props.deleteSpot(this.props.spot.id);
+    this.props.deleteSpot(this.spotId);
   }
 
   render() {
@@ -39,7 +39,7 @@ class SpotListingItem extends React.Component {
         <div className="spot-listing-item"
              onClick={this.handleClick}>
           <div className="img-container">
-            <img src={this.props.spot.image_url} />
+            <img src={image_url} />
           </div>
 
           <div className="spot-listing-item-detail">
