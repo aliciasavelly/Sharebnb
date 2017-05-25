@@ -59,11 +59,11 @@ class SpotsMap extends React.Component {
           this.map.setZoom(2);
         }
         // TODO
-        // why here and below?
-        this.MarkerManager.updateMarkers(this.props.spots);
+        // why here and below? don't even need these?
+        // this.MarkerManager.updateMarkers(this.props.spots);
       }
     }
-    this.MarkerManager.updateMarkers(this.props.spots);
+    // this.MarkerManager.updateMarkers(this.props.spots);
   }
 
   _registerListeners() {
