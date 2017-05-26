@@ -67,7 +67,7 @@ class AppPage extends React.Component {
         <div className="hidden">
           <ul>
             <div className="hidden-search" id="hidden-search">
-              <li>Search homes</li>
+              <Link to="/spots-search">Search homes</Link>
               <hr/>
             </div>
             <li>Host</li>

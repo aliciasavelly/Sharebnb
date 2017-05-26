@@ -65,12 +65,16 @@
           display: none;
         }
 
-        li {
+        li, a {
           font-weight: normal;
           color: #646464;
           padding: 18px 30px 15px 15px;
           cursor: pointer;
           font-size: 14px;
+        }
+
+        a {
+          display: block;
         }
 
         hr {
@@ -82,7 +86,7 @@
           // text-align: center;
         }
 
-        li:hover + hr {
+        li:hover + hr, a:hover + hr {
           background: black;
         }
       }
@@ -93,7 +97,8 @@
           display: block;
         }
 
-        .carot:hover + .hidden, .hidden:hover, a:hover ~ .hidden {
+        .hidden {
+        // .carot:hover + .hidden, .hidden:hover, a:hover ~ .hidden {
           box-sizing: padding-box;
           display: block;
           position: absolute;
