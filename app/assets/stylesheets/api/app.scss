@@ -83,7 +83,6 @@
           height: 1px;
           width: 90%;
           margin: 5px 10px;
-          // text-align: center;
         }
 
         li:hover + hr, a:hover + hr {
@@ -97,8 +96,9 @@
           display: block;
         }
 
-        .hidden {
-        // .carot:hover + .hidden, .hidden:hover, a:hover ~ .hidden {
+        // toggle here to show dropdown not only on hover
+        // .hidden {
+        .carot:hover + .hidden, .hidden:hover, a:hover ~ .hidden {
           box-sizing: padding-box;
           display: block;
           position: absolute;

@@ -70,13 +70,13 @@ class AppPage extends React.Component {
               <Link to="/spots-search">Search homes</Link>
               <hr/>
             </div>
-            <li>Host</li>
+            <li onClick={this.goToHost}>Host</li>
             <hr/>
-            <li>Trips</li>
+            <li onClick={this.goToTrips}>Trips</li>
             <hr/>
-            <li>Add user icon</li>
+            <li onClick={this.handleCloudinary}>Add user icon</li>
             <hr/>
-            <li>Log out</li>
+            <li onClick={this.logoutUser}>Log out</li>
             <hr/>
           </ul>
         </div>
