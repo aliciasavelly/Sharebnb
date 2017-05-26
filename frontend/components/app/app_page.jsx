@@ -59,6 +59,9 @@ class AppPage extends React.Component {
     return(
       <div id="left" className="left">
         <Link to='/main' onClick={this.clearFilters}>Sharebnb</Link>
+
+
+
         <div className="search-div">
           <form className="search-form" >
             <i className="fa fa-search" aria-hidden="true"></i>
