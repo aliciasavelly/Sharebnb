@@ -6,7 +6,25 @@
   flex-direction: column;
 
   .top-title-div {
-    margin: 0 20px;
+    margin: 0 40px;
+  }
+
+  @media screen and (max-width: 1215px) {
+    .top-title-div {
+      margin: 0 210px;
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    .top-title-div {
+      margin: 0 150px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .top-title-div {
+      margin: 0 45px;
+    }
   }
 
   .top-title {
@@ -22,6 +40,20 @@
       font-weight: normal;
       color: #1D9C73;
       letter-spacing: 1px;
+    }
+
+  }
+
+  @media (max-width: 680px) {
+    .top-title {
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .top-title {
+      font-size: 30px;
+      margin: 0 10px;
     }
   }
 
