@@ -155,6 +155,25 @@
     }
   }
 
+  @media only screen and (max-device-width: 600px) {
+    .destinations-index-outer {
+      .destinations-index {
+        .destinations-items, #destinations-items {
+          width: 80%;
+
+          .cursor-responsive {
+            width: 100%;
+
+            .city-image {
+              width: 100%;
+              height: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+
   @media (max-width: 600px) {
     .destinations-index-outer {
       .destinations-index {
