@@ -3,6 +3,7 @@ class Api::DestinationsController < ApplicationController
     @destinations = Destination.all
   end
 
+  # TODO This isn't used
   # def search
   #   if params[:letters].length < 1
   #     @cities = []

@@ -17,6 +17,9 @@ class AppPage extends React.Component {
     this.clearFilters = this.clearFilters.bind(this);
     this.goToHost = this.goToHost.bind(this);
     this.goToTrips = this.goToTrips.bind(this);
+    this.goToLogin = this.goToLogin.bind(this);
+    this.goToSignup = this.goToSignup.bind(this);
+    this.hiddenDropdown = this.hiddenDropdown.bind(this);
   }
 
   logoutUser() {
@@ -55,6 +58,60 @@ class AppPage extends React.Component {
     this.setState({ city: "" });
   }
 
+  goToHost() {
+    this.props.router.push('/my-listings');
+    window.scrollTo(0, 0);
+  }
+
+  goToTrips() {
+    this.props.router.push('/my-trips');
+    window.scrollTo(0, 0);
+  }
+
+  goToLogin() {
+    this.props.router.push('/login');
+    window.scrollTo(0, 0);
+  }
+
+  goToSignup() {
+    this.props.router.push('/signup');
+    window.scrollTo(0, 0);
+  }
+
+  hiddenDropdown() {
+    if (this.state.loggedIn || this.props.loggedIn) {
+      return(
+        <ul>
+          <div className="hidden-search" id="hidden-search">
+            <Link to="/spots-search">Search homes</Link>
+            <hr/>
+          </div>
+          <li onClick={this.goToHost}>Host</li>
+          <hr/>
+          <li onClick={this.goToTrips}>Trips</li>
+          <hr/>
+          <li onClick={this.handleCloudinary}>Add user icon</li>
+          <hr/>
+          <li onClick={this.logoutUser}>Log out</li>
+          <hr/>
+        </ul>
+      )
+    } else {
+      return(
+        <ul>
+          <div className="hidden-search" id="hidden-search">
+            <Link to="/spots-search">Search homes</Link>
+            <hr/>
+          </div>
+          <li onClick={this.goToLogin}>Log in</li>
+          <hr/>
+          <li onClick={this.goToSignup}>Sign up</li>
+          <hr/>
+        </ul>
+      )
+    }
+  }
+
   leftNav() {
     return(
       <div id="left" className="left">
@@ -65,20 +122,7 @@ class AppPage extends React.Component {
         </div>
 
         <div className="hidden">
-          <ul>
-            <div className="hidden-search" id="hidden-search">
-              <Link to="/spots-search">Search homes</Link>
-              <hr/>
-            </div>
-            <li onClick={this.goToHost}>Host</li>
-            <hr/>
-            <li onClick={this.goToTrips}>Trips</li>
-            <hr/>
-            <li onClick={this.handleCloudinary}>Add user icon</li>
-            <hr/>
-            <li onClick={this.logoutUser}>Log out</li>
-            <hr/>
-          </ul>
+          {this.hiddenDropdown()}
         </div>
 
         <div className="search-div">
@@ -121,15 +165,6 @@ class AppPage extends React.Component {
         </div>
       </div>
     )
-  }
-
-  goToHost() {
-    this.props.router.push('/my-listings');
-    window.scrollTo(0, 0);
-  }
-
-  goToTrips() {
-    this.props.router.push('/my-trips');
   }
 
   rightNav() {
