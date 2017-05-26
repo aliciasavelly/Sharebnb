@@ -60,7 +60,26 @@ class AppPage extends React.Component {
       <div id="left" className="left">
         <Link to='/main' onClick={this.clearFilters}>Sharebnb</Link>
 
+        <div className="carot" id="carot">
+          <img className="img-carot" src="https://res.cloudinary.com/sharebnb/image/upload/v1495754937/down-carot_rkc0ch.png"></img>
+        </div>
 
+        <div className="hidden">
+          <ul>
+            <div className="hidden-search" id="hidden-search">
+              <li>Search homes</li>
+              <hr/>
+            </div>
+            <li>Host</li>
+            <hr/>
+            <li>Trips</li>
+            <hr/>
+            <li>Add user icon</li>
+            <hr/>
+            <li>Log out</li>
+            <hr/>
+          </ul>
+        </div>
 
         <div className="search-div">
           <form className="search-form" >

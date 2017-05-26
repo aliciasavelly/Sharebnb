@@ -33,7 +33,7 @@
       flex-direction: row;
 
       .carot {
-
+        display: none;
         cursor: default;
 
         img {
@@ -43,11 +43,15 @@
         }
       }
 
+      // a:hover {
+      //   background: black;
+      // }
+
       .hidden {
         display: none;
         position: relative;
         border: 1px solid black;
-        width: 200px;
+        width: 150px;
 
         background-color: #ffffff;
         border: 1px solid #DBDBDB;
@@ -56,17 +60,51 @@
         ul {
           list-style: none;
         }
+
+        .hidden-search {
+          display: none;
+        }
+
+        li {
+          font-weight: normal;
+          color: #646464;
+          padding: 18px 30px 15px 15px;
+          cursor: pointer;
+          font-size: 14px;
+        }
+
+        hr {
+          background: #DBDBDB;
+          border: 0;
+          height: 1px;
+          width: 90%;
+          margin: 5px 10px;
+          // text-align: center;
+        }
+
+        li:hover + hr {
+          background: black;
+        }
       }
 
-      .carot:hover + .hidden, .hidden:hover {
+      a:hover {
+
+      }
+
+      .carot:hover + .hidden, .hidden:hover, a:hover ~ .hidden {
         box-sizing: padding-box;
         display: block;
         position: absolute;
-        // right: -5px;
-        left: 30px;
+        left: 12px;
         top: 35px;
         z-index: 1;
         margin: 20px;
+      }
+
+      .carot:hover {
+        // padding: 10px;
+        // box-sizing: padding-box;
+        // position: relative;
       }
 
       a {
@@ -164,7 +202,22 @@
       }
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 980px) {
+
+      #carot {
+        display: block;
+      }
+
+      .right {
+        visibility: hidden;
+      }
+    }
+
+    @media (max-width: 815px) {
+      #hidden-search {
+        display: block;
+      }
+
       #left, .left {
         width: 0;
       }
