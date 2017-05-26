@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { requestSingleSpot } from '../../actions/spot_actions';
-// import { selectSpot } from '../../reducers/selectors';
 import { requestDestinations } from '../../actions/destination_actions';
 import { selectAllDestinations } from '../../reducers/selectors';
 import { createTrip } from '../../actions/trip_actions';

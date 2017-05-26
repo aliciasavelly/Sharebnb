@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
 import MainContainer from './main_container';
 // import { GenericScrollBox, ScrollBox, ScrollAxes, FastTrack } from 'react-scroll-box';
-// var Slider = require('react-slick');
 import Slider from 'react-slick';
 
 class MainPage extends React.Component {
