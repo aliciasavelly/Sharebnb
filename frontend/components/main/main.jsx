@@ -41,7 +41,7 @@ class MainPage extends React.Component {
       return(
         <div className="outer-main-div">
           <div className="top-title-div" id="top-title-div">
-            <p className="top-title"><strong>Where to?</strong> Start your next adventure on Sharebnb.</p>
+            <p className="top-title" id="top-title"><strong>Where to?</strong> Start your next adventure on Sharebnb.</p>
           </div>
           <div className="destinations-index-outer">
             <div className="destinations-index">
