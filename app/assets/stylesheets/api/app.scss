@@ -43,10 +43,6 @@
         }
       }
 
-      // a:hover {
-      //   background: black;
-      // }
-
       .hidden {
         display: none;
         position: relative;
@@ -156,9 +152,7 @@
 
           label {
             font-size: 14px;
-            // color: #AEA9A9;
             color: #484848;
-            // padding: 5px 0 0 5px;
             padding: 13.5px 0 13.5px 13px;
             border-top: 1px solid #DBDBDB;
             border-bottom: 1px solid #DBDBDB;
@@ -168,7 +162,6 @@
 
             .form-control {
               cursor: pointer;
-              // color: #484848;
             }
           }
 
