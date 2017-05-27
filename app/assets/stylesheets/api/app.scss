@@ -32,12 +32,12 @@
       display: flex;
       flex-direction: row;
 
-      a {
-        padding-right: 15px;
-      }
-
       #title-carot {
         display: flex;
+      }
+
+      a {
+        padding-right: 15px;
       }
 
       .carot {
@@ -46,7 +46,6 @@
 
         img {
           width: 15px;
-          // margin-left: 15px;
           cursor: pointer;
         }
       }
@@ -56,7 +55,6 @@
         position: relative;
         border: 1px solid black;
         width: 150px;
-
         background-color: #ffffff;
         border: 1px solid #DBDBDB;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -116,7 +114,6 @@
       }
 
       @media (max-width: 980px) {
-
         #carot {
           display: block;
           cursor: pointer;
@@ -243,7 +240,6 @@
       }
 
       .search-div {
-        // visibility: hidden;
         width: 0;
 
         .first-label, .second-label, .search-input-guest {
@@ -279,12 +275,6 @@
           .search-input {
             width: 150px;
           }
-        }
-
-        @media (max-width: 410px) {
-          // .search-input {
-            // width: 250px;
-          // }
         }
       }
     }
@@ -323,13 +313,7 @@
 
       .hidden {
         display: none;
-        position: relative;
-        border: 1px solid black;
         width: 200px;
-
-        background-color: #ffffff;
-        border: 1px solid #DBDBDB;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 
         hr {
           background: #DBDBDB;
@@ -372,7 +356,6 @@
     }
 
     @media (max-width: 980px) {
-
       .right {
         visibility: hidden;
       }
@@ -380,7 +363,6 @@
   }
 
   @media only screen and (max-device-width: 400px) {
-
     .navbar {
       height: 350px;
       border-bottom: 1px solid #ffffff;
@@ -405,7 +387,6 @@
         }
 
         .search-div {
-
           .search-form {
             padding-top: 30px;
             width: 100rem;
@@ -431,14 +412,11 @@
           }
         }
       }
+
+      a:hover ~ .hidden {
+        display: none;
+        visibility: hidden;
+      }
     }
-  }
-}
-
-@media only screen and (max-device-width: 400px) {
-
-  a:hover ~ .hidden {
-    display: none;
-    visibility: hidden;
   }
 }
