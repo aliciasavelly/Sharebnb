@@ -82,10 +82,6 @@ class AppPage extends React.Component {
     if (this.state.loggedIn || this.props.loggedIn) {
       return(
         <ul>
-          <div className="hidden-search" id="hidden-search">
-            <Link to="/spots-search">Search homes</Link>
-            <hr/>
-          </div>
           <li onClick={this.goToHost}>Host</li>
           <hr/>
           <li onClick={this.goToTrips}>Trips</li>
@@ -99,10 +95,6 @@ class AppPage extends React.Component {
     } else {
       return(
         <ul>
-          <div className="hidden-search" id="hidden-search">
-            <Link to="/spots-search">Search homes</Link>
-            <hr/>
-          </div>
           <li onClick={this.goToLogin}>Log in</li>
           <hr/>
           <li onClick={this.goToSignup}>Sign up</li>
@@ -121,7 +113,7 @@ class AppPage extends React.Component {
           <div className="carot" id="carot">
             <img className="img-carot" src="https://res.cloudinary.com/sharebnb/image/upload/v1495754937/down-carot_rkc0ch.png"></img>
           </div>
-          
+
           <div className="hidden">
             {this.hiddenDropdown()}
           </div>
