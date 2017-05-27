@@ -32,6 +32,10 @@
       display: flex;
       flex-direction: row;
 
+      #title-carot {
+        display: flex;
+      }
+
       .carot {
         display: none;
         cursor: default;
@@ -372,10 +376,17 @@
   }
 
   @media only screen and (max-device-width: 400px) {
+
     .navbar {
-      height: 130px;
+      height: 350px;
+      border-bottom: 1px solid #ffffff;
+
+      a {
+        padding-left: 30px;
+      }
 
       .left {
+        flex-direction: column;
 
         .carot {
           margin-top: 40px;
@@ -389,8 +400,30 @@
         }
 
         .search-div {
-          visibility: hidden;
-          display: none;
+
+          .search-form {
+            padding-top: 30px;
+            width: 100rem;
+
+            i {
+              font-size: 50px;
+              top: 80px;
+              left: 55px;
+            }
+
+            .search-input {
+              font-size: 60px;
+              font-weight: 300;
+              padding: 37px 0 37px 103px;
+              border-right: 1px solid #DBDBDB;
+              -webkit-border-top-right-radius: 4px;
+              -webkit-border-bottom-right-radius: 4px;
+            }
+
+            .first-label, .second-label, .search-input-guest {
+              display: none;
+            }
+          }
         }
       }
     }

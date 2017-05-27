@@ -115,10 +115,12 @@ class AppPage extends React.Component {
   leftNav() {
     return(
       <div id="left" className="left">
-        <Link to='/main' onClick={this.clearFilters}>Sharebnb</Link>
+        <div id="title-carot">
+          <Link to='/main' onClick={this.clearFilters}>Sharebnb</Link>
 
-        <div className="carot" id="carot">
-          <img className="img-carot" src="https://res.cloudinary.com/sharebnb/image/upload/v1495754937/down-carot_rkc0ch.png"></img>
+          <div className="carot" id="carot">
+            <img className="img-carot" src="https://res.cloudinary.com/sharebnb/image/upload/v1495754937/down-carot_rkc0ch.png"></img>
+          </div>
         </div>
 
         <div className="hidden">
