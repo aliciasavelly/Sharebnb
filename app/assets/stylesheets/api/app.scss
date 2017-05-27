@@ -196,6 +196,12 @@
           }
         }
       }
+
+      @media only screen and (max-device-width: 400px) {
+        a {
+          font-size: 80px;
+        }
+      }
     }
 
     @media (max-width: 815px) {
@@ -299,6 +305,31 @@
 
       .right {
         visibility: hidden;
+      }
+    }
+  }
+
+  @media only screen and (max-device-width: 400px) {
+    .navbar {
+      height: 130px;
+
+      .left {
+
+        .carot {
+          margin-top: 40px;
+          margin-left: 17px;
+
+          img {
+            width: 40px;
+            margin-left: 15px;
+            cursor: pointer;
+          }
+        }
+
+        .search-div {
+          visibility: hidden;
+          display: none;
+        }
       }
     }
   }
