@@ -96,7 +96,7 @@
           }
         }
 
-        #carot:hover + .hidden, .hidden:hover, a:hover ~ .hidden {
+        #carot:hover + .hidden, .hidden:hover {
           box-sizing: padding-box;
           display: block;
           position: absolute;
