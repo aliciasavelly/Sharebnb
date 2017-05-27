@@ -100,7 +100,7 @@
         p {
           font-weight: 600;
           font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
-          font-size: 15px;
+          font-size: 150px;
           text-align: left;
         }
       }
@@ -197,5 +197,14 @@
 @media only screen and (max-device-width: 400px) {
   .outer-main-div {
     padding-top: 130px;
+
+    #destinations-items {
+      div {
+        p {
+          font-size: 55px;
+          font-weight: 400;
+        }
+      }
+    }
   }
 }

@@ -29,7 +29,7 @@ class MainPage extends React.Component {
         {this.props.destinations.map( (destination, idx) => (
           <div className="cursor-responsive" key={`destination-${idx}`} value={destination.city} onClick={this.handleClick} >
             <img className="city-image" src={destination.image_url} value={destination.city} />
-            <p className="city-name">{destination.city}</p>
+            <p className="city-name" id="city-name">{destination.city}</p>
           </div>
         ))}
       </div>
