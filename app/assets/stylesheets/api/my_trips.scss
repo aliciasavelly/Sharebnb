@@ -21,7 +21,7 @@
       padding: 20px;
       margin: 20px 0 20px 0;
       display: flex;
-      flex-direction: row;
+      // flex-direction: row;
 
       .trip-index-item {
         display: flex;
@@ -94,14 +94,29 @@
     color: #fff7f8;
     width: 180px;
     height: 50px;
-    margin: 0 0 0 100px;
+    margin: 0 0 0 20px;
     padding: 15px;
     font-weight: 300;
     letter-spacing: 1.5px;
-    margin-left: 100px;
   }
 
   .delete-button:hover {
     background: #38A783;
+  }
+
+  @media (max-width: 965px) {
+    .trips-index {
+      .trip-item-outer {
+        flex-direction: column;
+
+        .delete-button-holder {
+          margin-left: 0px;
+
+          .delete-button {
+            margin: 13px 0 0 0;
+          }
+        }
+      }
+    }
   }
 }

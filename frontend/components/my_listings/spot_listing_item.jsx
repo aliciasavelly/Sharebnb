@@ -53,7 +53,8 @@ class SpotListingItem extends React.Component {
                   Delete this listing
           </button>
           <button onClick={this.updateSpot}
-                  className="delete-button">
+                  className="delete-button"
+                  id="update-button">
                   Update this listing
           </button>
         </div>

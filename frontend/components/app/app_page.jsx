@@ -8,20 +8,15 @@ class AppPage extends React.Component {
     super(props);
     this.state = { city: "", loggedIn: this.props.loggedIn };
 
-    this.logoutUser = this.logoutUser.bind(this);
-    this.leftNav = this.leftNav.bind(this);
-    this.rightNav = this.rightNav.bind(this);
     this.handleCloudinary = this.handleCloudinary.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
     this.update = this.update.bind(this);
     this.clearFilters = this.clearFilters.bind(this);
     this.goToLink = this.goToLink.bind(this);
+    this.logoutUser = this.logoutUser.bind(this);
     this.hiddenDropdown = this.hiddenDropdown.bind(this);
-  }
-
-  logoutUser() {
-    this.props.requestLogout();
-    this.state.loggedIn = false;
+    this.leftNav = this.leftNav.bind(this);
+    this.rightNav = this.rightNav.bind(this);
   }
 
   handleCloudinary(e) {
@@ -58,6 +53,11 @@ class AppPage extends React.Component {
   goToLink(location) {
     this.props.router.push(location);
     window.scrollTo(0, 0);
+  }
+
+  logoutUser() {
+    this.props.requestLogout();
+    this.state.loggedIn = false;
   }
 
   hiddenDropdown() {
@@ -100,7 +100,6 @@ class AppPage extends React.Component {
             {this.hiddenDropdown()}
           </div>
         </div>
-
 
         <div className="search-div">
           <form className="search-form" >

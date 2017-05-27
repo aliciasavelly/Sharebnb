@@ -93,5 +93,24 @@
         }
       }
     }
+
+    @media (max-width: 1085px) {
+      .spot-listing-item-outer {
+        flex-direction: column;
+
+        .delete-button-holder {
+          margin: 0;
+
+          .delete-button {
+            margin: 25px 0 0 0;
+          }
+
+          #update-button {
+            // margin: 10px;
+            margin: 25px 0 0 10px;
+          }
+        }
+      }
+    }
   }
 }
