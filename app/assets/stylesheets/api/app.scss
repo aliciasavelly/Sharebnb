@@ -429,3 +429,18 @@
     }
   }
 }
+
+@media only screen and (max-device-width: 400px) {
+
+  a:hover ~ .hidden {
+    // box-sizing: padding-box;
+    display: none;
+    visibility: hidden;
+    border: 3px solid green;
+    // position: absolute;
+    // left: 12px;
+    // top: 35px;
+    // z-index: 1;
+    // margin: 20px;
+  }
+}

@@ -121,11 +121,12 @@ class AppPage extends React.Component {
           <div className="carot" id="carot">
             <img className="img-carot" src="https://res.cloudinary.com/sharebnb/image/upload/v1495754937/down-carot_rkc0ch.png"></img>
           </div>
+          
+          <div className="hidden">
+            {this.hiddenDropdown()}
+          </div>
         </div>
 
-        <div className="hidden">
-          {this.hiddenDropdown()}
-        </div>
 
         <div className="search-div">
           <form className="search-form" >
