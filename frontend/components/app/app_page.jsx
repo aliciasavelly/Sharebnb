@@ -15,10 +15,7 @@ class AppPage extends React.Component {
     this.handleDateChange = this.handleDateChange.bind(this);
     this.update = this.update.bind(this);
     this.clearFilters = this.clearFilters.bind(this);
-    this.goToHost = this.goToHost.bind(this);
-    this.goToTrips = this.goToTrips.bind(this);
-    this.goToLogin = this.goToLogin.bind(this);
-    this.goToSignup = this.goToSignup.bind(this);
+    this.goToLink = this.goToLink.bind(this);
     this.hiddenDropdown = this.hiddenDropdown.bind(this);
   }
 
@@ -58,23 +55,8 @@ class AppPage extends React.Component {
     this.setState({ city: "" });
   }
 
-  goToHost() {
-    this.props.router.push('/my-listings');
-    window.scrollTo(0, 0);
-  }
-
-  goToTrips() {
-    this.props.router.push('/my-trips');
-    window.scrollTo(0, 0);
-  }
-
-  goToLogin() {
-    this.props.router.push('/login');
-    window.scrollTo(0, 0);
-  }
-
-  goToSignup() {
-    this.props.router.push('/signup');
+  goToLink(location) {
+    this.props.router.push(location);
     window.scrollTo(0, 0);
   }
 
@@ -82,9 +64,9 @@ class AppPage extends React.Component {
     if (this.state.loggedIn || this.props.loggedIn) {
       return(
         <ul>
-          <li onClick={this.goToHost}>Host</li>
+          <li onClick={ () => (this.goToLink('/my-listings')) }>Host</li>
           <hr/>
-          <li onClick={this.goToTrips}>Trips</li>
+          <li onClick={ () => (this.goToLink('/my-trips')) }>Trips</li>
           <hr/>
           <li onClick={this.handleCloudinary}>Add user icon</li>
           <hr/>
@@ -95,9 +77,9 @@ class AppPage extends React.Component {
     } else {
       return(
         <ul>
-          <li onClick={this.goToLogin}>Log in</li>
+          <li onClick={ () => (this.goToLink('/login')) }>Log in</li>
           <hr/>
-          <li onClick={this.goToSignup}>Sign up</li>
+          <li onClick={ () => (this.goToLink('/signup')) }>Sign up</li>
           <hr/>
         </ul>
       )
@@ -167,8 +149,8 @@ class AppPage extends React.Component {
       return (
       <div className="right">
 
-        <h3 className="nav-redirect" onClick={this.goToHost}>Host</h3>
-        <h3 className="nav-redirect" onClick={this.goToTrips}>Trips</h3>
+        <h3 className="nav-redirect" onClick={ () => (this.goToLink('/my-listings')) }>Host</h3>
+        <h3 className="nav-redirect" onClick={ () => (this.goToLink('/my-trips')) }>Trips</h3>
         <div className="outer-round">
           <div className="round">
             <img className="index-image" src={this.props.currentUser.image_url} />
