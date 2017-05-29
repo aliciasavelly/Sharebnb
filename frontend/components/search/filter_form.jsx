@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router';
 
 class FilterForm extends React.Component {
   constructor(props) {
@@ -42,4 +41,4 @@ class FilterForm extends React.Component {
   }
 }
 
-export default withRouter(FilterForm);
+export default FilterForm;

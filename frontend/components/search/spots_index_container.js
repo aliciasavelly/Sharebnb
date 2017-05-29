@@ -6,7 +6,6 @@ import Search from './search';
 
 const mapStateToProps = state => ({
   spots: selectAllSpots(state),
-  destination: state.filters.destination,
   filters: state.filters,
   minPrice: state.filters.minPrice,
   maxPrice: state.filters.maxPrice
