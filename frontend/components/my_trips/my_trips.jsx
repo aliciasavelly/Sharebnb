@@ -46,7 +46,6 @@ class MyTrips extends React.Component {
     return(
       <div className="my-trips">
         <h1>Trips</h1>
-
         {this.renderTrips()}
       </div>
     )

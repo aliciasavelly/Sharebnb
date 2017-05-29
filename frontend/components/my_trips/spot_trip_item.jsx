@@ -10,14 +10,14 @@ class SpotTripItem extends React.Component {
     this.deleteTrip = this.deleteTrip.bind(this);
   }
 
+  componentDidMount(nextProps) {
+    this.props.requestSpots();
+  }
+
   componentWillReceiveProps(nextProps) {
     if (this.props.trips.length != nextProps.trips.length) {
       this.props.requestTrips();
     }
-  }
-
-  componentDidMount(nextProps) {
-    this.props.requestSpots();
   }
 
   handleClick() {
@@ -45,14 +45,17 @@ class SpotTripItem extends React.Component {
             <div className="image-container">
               <img src={image_url} />
             </div>
+
             <div className="item-details">
               <h1>{title}</h1>
               <p>${price}</p>
+
               <div className="dates-container">
                 <div className="dates">
                   <p>Check in: </p>
                   {trip.check_in}
                 </div>
+                
                 <div className="dates">
                   <p>Check out: </p>
                   {trip.check_out}
@@ -64,6 +67,7 @@ class SpotTripItem extends React.Component {
               </div>
             </div>
           </div>
+
           <div className="delete-button-holder">
             <button onClick={this.deleteTrip}
               className="delete-button">
