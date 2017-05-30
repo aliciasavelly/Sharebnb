@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, hashHistory, Link } from 'react-router';
+
 // import ReviewShow from './review_show.jsx';
 //
 // const reviewList = (reviews = []) => (

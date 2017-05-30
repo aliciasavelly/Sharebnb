@@ -19,7 +19,6 @@ const mapStateToProps = (state, { params }) => {
 
 const mapDispatchToProps = dispatch => ({
   requestSingleSpot: id => dispatch(requestSingleSpot(id)),
-  requestSpots: () => dispatch(requestSpots()),
   requestDestinations: () => dispatch(requestDestinations()),
   createTrip: (trip) => dispatch(createTrip(trip))
 });

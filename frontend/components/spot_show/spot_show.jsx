@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, hashHistory, Link } from 'react-router';
+import { hashHistory } from 'react-router';
 import SpotDetail from './spot_detail';
 import Datetime from 'react-datetime';
 
@@ -25,6 +25,7 @@ class SpotShow extends React.Component {
   }
 
   componentDidMount() {
+    // what's this? params? TODO
     this.props.requestSingleSpot(this.props.params.spotId);
     this.props.requestDestinations();
   }
@@ -134,4 +135,4 @@ class SpotShow extends React.Component {
   }
 };
 
-export default withRouter(SpotShow);
+export default SpotShow;
