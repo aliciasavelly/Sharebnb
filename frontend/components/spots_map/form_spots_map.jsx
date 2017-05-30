@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter, hashHistory} from 'react-router';
+import { withRouter } from 'react-router';
 import FormMarkerManager from '../../util/form_marker_manager';
 
 const _getCoordsObj = latLng => ({

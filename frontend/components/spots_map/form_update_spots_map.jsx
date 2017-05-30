@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, withRouter, hashHistory} from 'react-router';
 import FormMarkerManager from '../../util/form_marker_manager';
 
 const _getCoordsObj = latLng => ({
@@ -36,4 +35,4 @@ class FormUpdateSpotsMap extends React.Component {
   }
 }
 
-export default withRouter(FormUpdateSpotsMap);
+export default FormUpdateSpotsMap;
