@@ -52,7 +52,7 @@ const Root = ({ store }) => {
                                   onEnter={_redirectIfLoggedOut} />
           <Route path='/my-listings' component={ MyListingsContainer }
                                      onEnter={_redirectIfLoggedOut}  />
-    </Router>
+        </Router>
       </Router>
     </Provider>
   )

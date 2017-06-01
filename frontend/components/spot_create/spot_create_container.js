@@ -7,13 +7,11 @@ import { selectAllDestinations, selectAllListings } from '../../reducers/selecto
 import { requestListings } from '../../actions/listings_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-    loggedIn: !!state.session.currentUser,
     currentUser: state.session.currentUser,
-    filters: state.filters,
     lat: ownProps.location.query.lat,
     lng: ownProps.location.query.lng,
     destinations: selectAllDestinations(state),
-    spotDetail: state.spotDetail,
+    // spotDetail: state.spotDetail,
     listings: selectAllListings(state)
 });
 
