@@ -17,9 +17,6 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
   createSpot: (spot) => dispatch(createSpot(spot)),
-  updateSpot: (spotId, data) => dispatch(updateSpot(spotId, data)),
-  deleteSpot: (spotId) => dispatch(deleteSpot(spotId)),
-  updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
   requestDestinations: () => dispatch(requestDestinations()),
   requestListings: () => dispatch(requestListings())
 });
