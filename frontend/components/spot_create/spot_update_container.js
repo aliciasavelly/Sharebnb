@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import SpotUpdateForm from './spot_update_form';
-import { createSpot, updateSpot, deleteSpot } from '../../actions/spot_actions';
-import { updateFilter } from '../../actions/filter_actions';
+import { updateSpot } from '../../actions/spot_actions';
 import { requestDestinations } from '../../actions/destination_actions';
 import { selectAllDestinations } from '../../reducers/selectors';
 
