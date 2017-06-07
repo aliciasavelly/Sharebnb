@@ -8,5 +8,8 @@ RSpec.describe User, type: :model do
   it { should validate_length_of(:password).is_at_least(6) }
   it { should have_many(:hosted_spots) }
   it { should have_many(:trips) }
-  # it { should validate_uniqueness_of(:username) }
+  describe "uniqueness" do
+    subject { User.new(username: "username", first_name: "first", password: "password123") }
+    it { should validate_uniqueness_of(:username) }
+  end
 end
