@@ -22,5 +22,17 @@ RSpec.describe User, type: :model do
       user = User.find_by_username("username")
       expect(user.password).not_to be("password123")
     end
+
+    it "encrypts the password using BCrypt" do
+      expect(BCrypt::Password).to receive(:create)
+      User.new(username: "username", first_name: "first", password: "password123")
+    end
+  end
+
+  describe "session token" do
+    it "assigns a session_token if one isn't given" do
+      user = User.create!(username: "username", first_name: "first", password: "password123")
+      expect(user.session_token).not_to be_nil
+    end
   end
 end
