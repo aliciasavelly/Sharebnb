@@ -18,21 +18,28 @@ RSpec.describe User, type: :model do
 
   describe "password encryption" do
     it "doesn't save passwords to the database" do
-      User.create!(username: "username", first_name: "first", password: "password123")
-      user = User.find_by_username("username")
+      User.create!(username: "username5", first_name: "first", password: "password123")
+      user = User.find_by_username("username5")
       expect(user.password).not_to be("password123")
     end
 
     it "encrypts the password using BCrypt" do
       expect(BCrypt::Password).to receive(:create)
-      User.new(username: "username", first_name: "first", password: "password123")
+      User.new(username: "username3", first_name: "first", password: "password123")
     end
   end
 
   describe "session token" do
     it "assigns a session_token if one isn't given" do
-      user = User.create!(username: "username", first_name: "first", password: "password123")
+      user = User.create!(username: "username4", first_name: "first", password: "password123")
       expect(user.session_token).not_to be_nil
+    end
+  end
+
+  describe ".find_by_credentials" do
+    it "finds correct user with username and password" do
+      user = User.create!(username: "username6", first_name: "first123", password: "password123")
+      expect(User.find_by_credentials("username6", "password123")).to eq(user)
     end
   end
 end
