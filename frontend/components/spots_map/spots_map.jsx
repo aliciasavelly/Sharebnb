@@ -59,10 +59,10 @@ class SpotsMap extends React.Component {
         }
         // TODO
         // why here and below? don't even need these?
-        // this.MarkerManager.updateMarkers(this.props.spots);
+        this.MarkerManager.updateMarkers(this.props.spots);
       }
     }
-    // this.MarkerManager.updateMarkers(this.props.spots);
+    this.MarkerManager.updateMarkers(this.props.spots);
   }
 
   _registerListeners() {
