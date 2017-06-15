@@ -335,18 +335,21 @@
         top: 35px;
         z-index: 1;
         margin: 20px;
+        border: 1px solid #DBDBDB;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
       }
 
       .nav-link, .new-user-icon {
         font-weight: normal;
         color: #646464;
-        padding: 18px 80px 15px 15px;
+        padding: 18px 98px 15px 15px;
         cursor: pointer;
         font-size: 14px;
       }
 
       .nav-link {
-        padding: 13px 120px 13px 15px;
+        padding: 13px 140px 13px 15px;
       }
 
       .nav-link-show {
