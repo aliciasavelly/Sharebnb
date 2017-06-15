@@ -7,7 +7,7 @@ user1 = User.create!(
   username: "aliciacodes",
   first_name: "Alicia",
   password: "codingissupercool",
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489784361/marion-michele-66097_ncghwp.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489784361/marion-michele-66097_ncghwp.jpg",
 )
 
 user2 = User.create!(
@@ -21,7 +21,7 @@ user3 = User.create!(
   username: "kayhermiston",
   first_name: "Kay",
   password: Faker::Internet.password,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876140/alex-harvey-34864-woman_kqybyx.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876140/alex-harvey-34864-woman_kqybyx.jpg"
 )
 
 user4 = User.create!(
@@ -70,105 +70,105 @@ user10 = User.create!(
   username: "travels4sean",
   first_name: "Sean",
   password: Faker::Internet.password,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876794/fritz-walter-152075-man_byvsql.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876794/fritz-walter-152075-man_byvsql.jpg"
 )
 
 user11 = User.create!(
   username: "mara.leannon",
   first_name: "Mara",
   password: Faker::Internet.password,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876822/eli-defaria-14556-woman_mtzakc.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876822/eli-defaria-14556-woman_mtzakc.jpg"
 )
 
 user12 = User.create!(
   username: "worldtraveler28",
   first_name: "Boyd",
   password: "C4BtZbPzQ4NoZkX6",
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876731/juil-yoon-155233-man_i3siec.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876731/juil-yoon-155233-man_i3siec.jpg"
 )
 
 user13 = User.create!(
   username: "adventurewithpuppies",
   first_name: "Misael",
   password: "RlS43t0bE4",
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876758/jez-timms-50295-dog_loxq5g.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876758/jez-timms-50295-dog_loxq5g.jpg"
 )
 
 user14 = User.create!(
   username: "football4life",
   first_name: "Clement",
   password: Faker::Internet.password,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876626/keith-johnston-216347-man_ctvtib.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876626/keith-johnston-216347-man_ctvtib.jpg"
 )
 
 user15 = User.create!(
   username: "delilah.jakubowski",
   first_name: "Delilah",
   password: Faker::Internet.password,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876651/cristian-newman-153712-woman_k7uslq.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876651/cristian-newman-153712-woman_k7uslq.jpg"
 )
 
 user16 = User.create!(
   username: "emmitt.reichert",
   first_name: "Emmitt",
   password: Faker::Internet.password,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876680/kahar-saidyhalam-159353-man_kerqzc.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876680/kahar-saidyhalam-159353-man_kerqzc.jpg"
 )
 
 user17 = User.create!(
   username: "worldtraveler29",
   first_name: "Elias",
   password: Faker::Internet.password,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876700/jean-gerber-36509-man_dbdi7v.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876700/jean-gerber-36509-man_dbdi7v.jpg"
 )
 
 user18 = User.create!(
   username: "photosoftheworld",
   first_name: "Monte",
   password: Faker::Internet.password,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876588/lesly-b-juarez-220440-man_cujtga.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876588/lesly-b-juarez-220440-man_cujtga.jpg"
 )
 
 user19 = User.create!(
   username: "lisette.bauch",
   first_name: "Lisette",
   password: Faker::Internet.password,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876557/lau-keith-146366-woman_vvhnfp.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876557/lau-keith-146366-woman_vvhnfp.jpg"
 )
 
 user20 = User.create!(
   username: "yoga4life",
   first_name: "Laverne",
   password: Faker::Internet.password,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876526/marion-michele-191320-woman_vmmccq.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876526/marion-michele-191320-woman_vmmccq.jpg"
 )
 
 user21 = User.create!(
   username: "trishatravels91",
   first_name: "Trisha",
   password: "QrZp0mDj1sLwLw",
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876399/freestocks-org-147688-woman_pwn9ew.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876399/freestocks-org-147688-woman_pwn9ew.jpg"
 )
 
 user22 = User.create!(
   username: "sunshineflowers",
   first_name: "Herta",
   password: "DqTd8h7qP4",
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876432/tim-mossholder-155004-woman_ognzfy.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876432/tim-mossholder-155004-woman_ognzfy.jpg"
 )
 
 user23 = User.create!(
   username: "luv4nature",
   first_name: "Rodrigo",
   password: Faker::Internet.password,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876466/peter-hershey-112798-man_o2wc2l.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876466/peter-hershey-112798-man_o2wc2l.jpg"
 )
 
 user24 = User.create!(
   username: "masterchefmaureen",
   first_name: "Maureen",
   password: Faker::Internet.password,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489876498/william-stitt-162611-woman_xllngf.jpg"
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489876498/william-stitt-162611-woman_xllngf.jpg"
 )
 
 destination2 = Destination.create!(
@@ -194,7 +194,7 @@ destination3 = Destination.create!(
 
 destination4 = Destination.create!(
   city: "Seattle",
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489776342/seattle-horizontal_oaldvs.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489776342/seattle-horizontal_oaldvs.jpg",
   lat: 47.598559,
   lng: -122.326300
 )
@@ -217,7 +217,7 @@ spot1 = Spot.create!(
   title: "Tent under the stars!",
   destination_id: destination1.id,
   price: 113,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879217/sayan-nath-165552-san-francisco_uiourb.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489879217/sayan-nath-165552-san-francisco_uiourb.jpg",
   host_id: user2.id,
   description: "Spend a night under the stars in a tent. You'll feel close to nature! It is an incredible
                 location to go camping. We will provide this tent to you and can put it together for an
