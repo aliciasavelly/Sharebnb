@@ -232,7 +232,7 @@ spot2 = Spot.create!(
   title: "Beautiful villa with a pool",
   destination_id: destination1.id,
   price: 347,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879215/vita-vilcina-3217-san-francisco_sshrfn.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489879215/vita-vilcina-3217-san-francisco_sshrfn.jpg",
   host_id: user3.id,
   description: "Stay with us in the beautiful Presidio Heights of San Francisco. This home can fit up to 10
                 people quite comfortably. You will enjoy our beautiful, heated pool. There is a beautiful kitchen
@@ -248,7 +248,7 @@ spot3 = Spot.create!(
   title: "View of Lombard Street in the heart of San Francisco",
   destination_id: destination1.id,
   price: 139,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879213/pedro-lastra-167351-san-francisco_dwcrmf.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489879213/pedro-lastra-167351-san-francisco_dwcrmf.jpg",
   host_id: user1.id,
   description: "You will be conveniently located in the heart of San Fransisco, with a view of Lombard Street,
                 and easy access to Fisherman's Wharf, Ghirardelli Square, Coit Tower,  and Chinatown. We will
@@ -263,7 +263,7 @@ spot4 = Spot.create!(
   title: "Stunning views of the entire city at the top of Nob Hill",
   destination_id: destination1.id,
   price: 137,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879211/rezaul-karim-124516-san-francisco_etcx47.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489879211/rezaul-karim-124516-san-francisco_etcx47.jpg",
   host_id: user1.id,
   description: "Nob Hill will provide a lot of nightlife, great restaurants, and wonderful views of the city. To
                 the north you will see the bay, and to the west you have a great view of the Bay Bridge. Walking up
@@ -282,7 +282,7 @@ spot5 = Spot.create!(
   title: "Relaxing porch space near the heart of the mission",
   destination_id: destination1.id,
   price: 39,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879211/mad-house-37992-san-francisco_ov2hx3.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489879211/mad-house-37992-san-francisco_ov2hx3.jpg",
   host_id: user4.id,
   description: "We provide you a very comfortable couch on the porch. There is great weather here, so you'll
                 enjoy! There is great food in the mission that you can't miss! You will have full access to the
@@ -297,7 +297,7 @@ spot6 = Spot.create!(
   title: "Great view and spacious room near Twin Peaks",
   destination_id: destination1.id,
   price: 136,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879208/kevin-fernandez-37634-san-francisco_xfcszn.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489879208/kevin-fernandez-37634-san-francisco_xfcszn.jpg",
   host_id: user1.id,
   description: "You will have full access to a kitchen and living room, which you will be sharing with other
                 guests. You'll have your own room, which is quite spacious. There is a couch to sleep on, and
@@ -317,7 +317,7 @@ spot7 = Spot.create!(
   title: "Private trailer for camping near the ocean",
   destination_id: destination1.id,
   price: 195,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879203/eugene-quek-111785-san-francisco_j1i4tu.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489879203/eugene-quek-111785-san-francisco_j1i4tu.jpg",
   host_id: user5.id,
   description: "There is a small kitchen for your use. This space will be private for you. We provide, towels,
                 blankets, and other important necessities. We can provide more information if requested. This
@@ -333,7 +333,7 @@ spot8 = Spot.create!(
   title: "Beautiful view of the Golden Gate Bridge",
   destination_id: destination1.id,
   price: 145,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879206/joseph-barrientos-17377-san-francisco_hu5lgj.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489879206/joseph-barrientos-17377-san-francisco_hu5lgj.jpg",
   host_id: user5.id,
   description: "Enjoy your stay near the Coastal Trail, with a great view of the Golden Gate Bridge! This will be
                 a lovely camping experience, and you'll still be quite close to the city. We'd love to have you.
@@ -347,7 +347,7 @@ spot9 = Spot.create!(
   title: "Stay in a San Francisco Painted Lady home!",
   destination_id: destination1.id,
   price: 226,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1489879204/jakob-owens-127176-san-francisco_ya5smu.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1489879204/jakob-owens-127176-san-francisco_ya5smu.jpg",
   host_id: user6.id,
   description: "The painted ladies are more beautiful in person than can be seen in a photo. This is quite
                 a unique experience! We'd love to have you! You'll be staying in our extra bedroom, with your
@@ -399,7 +399,7 @@ spot12 = Spot.create!(
   title: "Coder house near Embarcadero",
   destination_id: destination1.id,
   price: 32,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1490165498/beds-1132612_1280_gzqneh.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1490165498/beds-1132612_1280_gzqneh.jpg",
   host_id: user7.id,
   description: "Each room will be shared with up to 8 people. Many people who stay here are learning to code.
                 We gladly welcome long-term stays, as many people are staying here while attending coding bootcamps.
@@ -445,7 +445,7 @@ spot15 = Spot.create!(
   title: "Okay-sized closet for one",
   destination_id: destination1.id,
   price: 27,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_60/v1489879203/hannah-morgan-39891-san-francisco_rxves2.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_60/v1489879203/hannah-morgan-39891-san-francisco_rxves2.jpg",
   host_id: user2.id,
   description: "My closet still has some clothing in it, but it also has a bed for you to use. You can feel free
                 to join us in the kitchen/living room areas. The closet is really small, but we're also not
@@ -460,7 +460,7 @@ spot16 = Spot.create!(
   title: "Beautiful home with a pool",
   destination_id: destination1.id,
   price: 209,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_80/v1490163951/jason-briscoe-152939_uixaq4.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_80/v1490163951/jason-briscoe-152939_uixaq4.jpg",
   host_id: user22.id,
   description: "We look forward to having you here to stay. This home is very spacious, so you will be
                 able to have many guests. We limit stays to four weeks because we love meeting new visitors
@@ -522,7 +522,7 @@ spot21 = Spot.create!(
   title: "Beautiful home near Millennium Park",
   destination_id: destination5.id,
   price: 111,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_54/v1490396046/christian-deknock-222409-chicago_tvqnf0.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_54/v1490396046/christian-deknock-222409-chicago_tvqnf0.jpg",
   host_id: user8.id,
   description: "Chicago is an amazing city, and we look forward to hosting you here. We're very close to Millennium Park,
                 which is beautiful during all seasons. You'll have your own private room and bathroom. Please feel free
@@ -538,7 +538,7 @@ spot22 = Spot.create!(
   title: "Sleep on our sailboat near the North End",
   destination_id: destination2.id,
   price: 114,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_62/v1489879199/bonnie-kittle-115760-boston_zz5ibf.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_62/v1489879199/bonnie-kittle-115760-boston_zz5ibf.jpg",
   host_id: user11.id,
   description: "It's quite the experience to spend a night on our small boat. You'll sleep under the stars. Hopefully
                 you'll be able to stay warm! We'll provide several blankets, and other supplies! We look forward to
@@ -556,7 +556,7 @@ spot23 = Spot.create!(
   title: "Cozy home near Detroit",
   destination_id: destination6.id,
   price: 112,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_60/v1489879217/wesley-tingey-182281-detroit_krljmb.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_60/v1489879217/wesley-tingey-182281-detroit_krljmb.jpg",
   host_id: user9.id,
   description: "We welcome you to our lovely home, especially cozy during the winter! You will have access
                 to the full house, and will not be sharing your space with any other guests. There is a
@@ -575,7 +575,7 @@ spot24 = Spot.create!(
   title: "Gorgeous castle in the country",
   destination_id: destination6.id,
   price: 758,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_61/v1489879213/rachel-davis-50329-detroit-neuschwanstein-castle-schwangau-germany_thvxd7.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_61/v1489879213/rachel-davis-50329-detroit-neuschwanstein-castle-schwangau-germany_thvxd7.jpg",
   host_id: user15.id,
   description: "You'll be only a short 30 minute drive to Detroit, but you won't run out of places to explore
                 in this amazing castle. It is an exact replica of the Neuschwanstein Castle in Germany. There
@@ -593,7 +593,7 @@ spot25 = Spot.create!(
   title: "Shared apartment in the heart of Detroit",
   destination_id: destination6.id,
   price: 57,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_80/v1489879207/joshua-davis-172644-detroit_a3r0rp.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_80/v1489879207/joshua-davis-172644-detroit_a3r0rp.jpg",
   host_id: user13.id,
   description: "It's easy to get around the city from our place. I live here with my wife. We are happy
                 to share our space with you! You will have a full bed in your private room, and are
@@ -608,7 +608,7 @@ spot26 = Spot.create!(
   title: "Private room in our family home",
   destination_id: destination6.id,
   price: 67,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_41/v1489879206/flo-pappert-201009-detroit_erx3mx.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_41/v1489879206/flo-pappert-201009-detroit_erx3mx.jpg",
   host_id: user13.id,
   description: "We look forward to meeting you! We love to meet new people! I live here with my husband and
                 our two children. We have a spare bedroom that you will be able to stay in, and your own
@@ -623,7 +623,7 @@ spot27 = Spot.create!(
   title: "Cabin at the lake",
   destination_id: destination6.id,
   price: 78,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_60/v1489879204/hannu-keski-hakuni-11194-detroit_wdqaui.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_60/v1489879204/hannu-keski-hakuni-11194-detroit_wdqaui.jpg",
   host_id: user10.id,
   description: "This lake is great to enjoy! Our cabin is right on the lake, and we hope that you'll spend
                 some time on the lake! We have a small boat that you may use. We welcome long-term stays, but short-term
@@ -639,7 +639,7 @@ spot28 = Spot.create!(
   title: "Stay the night at the Boston Public Library!",
   destination_id: destination2.id,
   price: 357,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_58/v1489879361/sanwal-deen-94584-boston_c2dobc.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_58/v1489879361/sanwal-deen-94584-boston_c2dobc.jpg",
   host_id: user17.id,
   description: "The Boston Public Library prides itself in its openness to world travelers who want a unique
                 experience in the city. You may stay the night in the library, but be sure to be careful with
@@ -660,7 +660,7 @@ spot42 = Spot.create!(
   title: "Puppy paradise",
   destination_id: destination2.id,
   price: 475,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/v1490505631/seeley-paapa_iamxgl.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/v1490505631/seeley-paapa_iamxgl.jpg",
   host_id: user1.id,
   description: "If you want a nice, quiet getaway and some undisturbed peace and quiet during your vacation, this is NOT
                 the listing for you. But if you're looking for unconditional love from an overly energetic pup, this might
@@ -676,7 +676,7 @@ spot29 = Spot.create!(
   title: "Beautiful brownstone in the Back Bay near Kenmore Square",
   destination_id: destination2.id,
   price: 187,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_58/v1489879205/jace-grandinetti-93036-boston_w1nybh.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_58/v1489879205/jace-grandinetti-93036-boston_w1nybh.jpg",
   host_id: user18.id,
   description: "We welcome you into our historical brownstone. You'll have a private bedroom, with one queen
                 sized bed. You will also have a private bathroom. We have a large kitchen and other living
@@ -694,7 +694,7 @@ spot30 = Spot.create!(
   title: "Full home in Somerville",
   destination_id: destination2.id,
   price: 133,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_62/v1489879207/joshua-ness-109299-boston_vhzugb.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_62/v1489879207/joshua-ness-109299-boston_vhzugb.jpg",
   host_id: user18.id,
   description: "You'll have the house to yourself, with two queen sized beds and a pullout bed in the living room.
                 We have a large kitchen and other living spaces that you'll be able to enjoy. There are many places
@@ -710,7 +710,7 @@ spot31 = Spot.create!(
   title: "Fun place in Brooklyn",
   destination_id: destination3.id,
   price: 122,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_57/v1489879202/gabriel-beaudry-93843-new-york_bmhz6e.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_57/v1489879202/gabriel-beaudry-93843-new-york_bmhz6e.jpg",
   host_id: user15.id,
   description: "This is a great place to stay! You'll love spending time in the city! I never run
                 out of things to do. I'd be happy to give you some advice on where to visit. You'll
@@ -725,7 +725,7 @@ spot32 = Spot.create!(
   title: "Room above a diner (free breakfast)",
   destination_id: destination3.id,
   price: 189,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_80/v1490163954/zhifei-zhou-28092_ethdfr.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_80/v1490163954/zhifei-zhou-28092_ethdfr.jpg",
   host_id: user12.id,
   description: "We provide you a private room, and a bathroom you'll share with other guests. You
                 will be staying above our diner, which will provide you with a lovely free breakfast.
@@ -744,7 +744,7 @@ spot33 = Spot.create!(
   title: "Cozy shared room in Manhattan",
   destination_id: destination3.id,
   price: 122,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_81/v1490163954/sophia-baboolal-86214_mykwrc.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_81/v1490163954/sophia-baboolal-86214_mykwrc.jpg",
   host_id: user14.id,
   description: "This is a shared room with one other guest, and includes a full bed (not bunk beds). You'll
                 share a bathroom with your roommate and with two other people sharing one of the other rooms.
@@ -759,7 +759,7 @@ spot34 = Spot.create!(
   title: "Shared room with large community area and a kitchen (hostel style)",
   destination_id: destination3.id,
   price: 67,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_80/v1490163952/jungwoo-hong-112133_rknkbz.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_80/v1490163952/jungwoo-hong-112133_rknkbz.jpg",
   host_id: user20.id,
   description: "You're in Astoria, which is a beautiful area, and easy to get to the city from, so you are only
                 a short ride away from many of the best tourist attractions. New York is a great place to be
@@ -775,7 +775,7 @@ spot35 = Spot.create!(
   title: "Tent with a great view",
   destination_id: destination4.id,
   price: 67,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_60/v1489879215/wilson-ye-201705-seattle_o8r8hs.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_60/v1489879215/wilson-ye-201705-seattle_o8r8hs.jpg",
   host_id: user16.id,
   description: "It's not much, but I love it! Camping in this area is an amazing experience. You're
                 not too far from the city, and there are great hikes around here. I look forward
@@ -789,7 +789,7 @@ spot36 = Spot.create!(
   title: "Beautiful hall fit for a party",
   destination_id: destination4.id,
   price: 202,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_80/v1490163954/sweet-ice-cream-photography-89501_hfners.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_80/v1490163954/sweet-ice-cream-photography-89501_hfners.jpg",
   host_id: user21.id,
   description: "We offer both rooms to stay the night in, and a giant hall that is a perfect place
                 to have a beautiful get together with family/friends/business partners or whatever
@@ -830,7 +830,7 @@ spot39 = Spot.create!(
   title: "Cozy home with Darcy the cat!",
   destination_id: destination5.id,
   price: 97,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_59/v1489879201/daria-nepriakhina-99254-chicago_vpsrrs.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_59/v1489879201/daria-nepriakhina-99254-chicago_vpsrrs.jpg",
   host_id: user19.id,
   description: "We love Darcy the cat and we know you will too. He's a sweetie. He's really friendly
                 so I'm sure he'll want to spend time with you. If you love friendly kitties, this is
@@ -865,7 +865,7 @@ spot41 = Spot.create!(
   title: "Bright, cozy home near Seattle",
   destination_id: destination4.id,
   price: 112,
-  image_url: "http://res.cloudinary.com/sharebnb/image/upload/q_80/v1490163951/james-garcia-88107_dw4w1n.jpg",
+  image_url: "https://res.cloudinary.com/sharebnb/image/upload/q_80/v1490163951/james-garcia-88107_dw4w1n.jpg",
   host_id: user23.id,
   description: "We look forward to seeing you for your stay. We have plenty of outdoor space you can enjoy. There
                 are also several places that you are able to hike nearby. We highly suggest you take advantage of that!
