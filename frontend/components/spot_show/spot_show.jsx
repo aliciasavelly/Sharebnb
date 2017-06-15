@@ -25,7 +25,6 @@ class SpotShow extends React.Component {
   }
 
   componentDidMount() {
-    // what's this? params? TODO
     this.props.requestSingleSpot(this.props.params.spotId);
     this.props.requestDestinations();
   }
