@@ -21,9 +21,7 @@ export default class FormMarkerManager {
     const pos = new google.maps.LatLng(spot.lat, spot.lng);
     const icon = {
       url: "https://res.cloudinary.com/sharebnb/image/upload/v1497489602/Entypo_2302_0__512_bpsfhn.png", // url
-      scaledSize: new google.maps.Size(30, 30), // scaled size
-      origin: new google.maps.Point(0, 0), // origin
-      anchor: new google.maps.Point(0, 0) // anchor
+      scaledSize: new google.maps.Size(30, 30)
     };
     const marker = new google.maps.Marker({
       position: pos,
