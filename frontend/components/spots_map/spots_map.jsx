@@ -57,8 +57,6 @@ class SpotsMap extends React.Component {
           $('#no-results-found').css('display', 'block');
           this.map.setZoom(2);
         }
-        // TODO
-        // why here and below? don't even need these?
         this.MarkerManager.updateMarkers(this.props.spots);
       }
     }
