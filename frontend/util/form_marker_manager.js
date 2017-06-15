@@ -27,7 +27,7 @@ export default class FormMarkerManager {
       position: pos,
       map: this.map,
       spotId: spot.id,
-      icon: icon
+      icon
     });
 
     this.markers.push(marker);
