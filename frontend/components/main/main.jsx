@@ -46,6 +46,7 @@ class MainPage extends React.Component {
               {this.renderDestinations()}
             </div>
           </div>
+          <div className="personal-links"><a><i className="fa fa-github" aria-hidden="true"></i></a></div>
         </div>
       )
     } else {
