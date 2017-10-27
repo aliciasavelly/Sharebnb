@@ -83,7 +83,7 @@ class SpotShow extends Component {
   }
 
   render() {
-    const { spot, currentUser, destinations } = this.props;
+    const { spot, currentUser } = this.props;
 
     if (spot && currentUser) {
       return (
