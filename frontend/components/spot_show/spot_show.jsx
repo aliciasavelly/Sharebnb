@@ -53,6 +53,16 @@ class SpotShow extends Component {
     this.state.check_out = e._d.toJSON().slice(0,10)
   }
 
+  createGuestOptions() {
+    let items = [];
+
+    for (let i = 2; i <= 12; i++) {
+      items.push(<option value={`${i} guests`}>{`${i} guests`}</option>);
+    }
+
+    return items;
+  }
+
   render() {
     const { spot, currentUser, destinations } = this.props;
 
@@ -66,7 +76,7 @@ class SpotShow extends Component {
           </div>
 
           <div id="spot-show-detail">
-            <SpotDetail destinations={ destinations } spot={ spot } />
+            <SpotDetail destinations={destinations} spot={spot} />
           </div>
 
           <div className="booking-section">
@@ -91,17 +101,7 @@ class SpotShow extends Component {
 
                 <select onChange={this.updateGuests} defaultValue="1 guest">
                   <option value="1 guest">1 guest</option>
-                  <option value="2 guests">2 guests</option>
-                  <option value="3 guests">3 guests</option>
-                  <option value="4 guests">4 guests</option>
-                  <option value="5 guests">5 guests</option>
-                  <option value="6 guests">6 guests</option>
-                  <option value="7 guests">7 guests</option>
-                  <option value="8 guests">8 guests</option>
-                  <option value="9 guests">9 guests</option>
-                  <option value="10 guests">10 guests</option>
-                  <option value="11 guests">11 guests</option>
-                  <option value="12 guests">12 guests</option>
+                  {this.createGuestOptions()}
                 </select>
 
                 <div id="special" className="submit-button">
