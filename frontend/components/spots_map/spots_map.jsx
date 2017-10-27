@@ -35,6 +35,7 @@ class SpotsMap extends React.Component {
         }
       }
     });
+
     this._registerListeners();
     this.MarkerManager.updateMarkers(this.props.spots);
   }
@@ -44,19 +45,21 @@ class SpotsMap extends React.Component {
       if (nextProps.filters.letters !== this.props.filters.letters) {
         this.state = { letters: nextProps.filters.letters };
         let foundLocation = false;
+
         Object.keys(destinationsList).forEach( key => {
           if(key.toLowerCase().includes(this.state.letters.toLowerCase())) {
             this.map.setCenter(destinationsList[key].center);
             this.map.setZoom(destinationsList[key].zoom);
             foundLocation = true;
             $('#no-results-found').css('display', 'none');
-          } else {
           }
         });
+
         if (!foundLocation) {
           $('#no-results-found').css('display', 'block');
           this.map.setZoom(2);
         }
+
         this.MarkerManager.updateMarkers(this.props.spots);
       }
     }
@@ -70,14 +73,14 @@ class SpotsMap extends React.Component {
         northEast: { lat: north, lng: east },
         southWest: { lat: south, lng: west }
       };
+
       this.props.updateFilter('bounds', bounds);
     });
   }
 
   render() {
     return(
-      <div id="map-container" className="map" ref="map">Map
-      </div>
+      <div id="map-container" className="map" ref="map">Map</div>
     )
   }
 }

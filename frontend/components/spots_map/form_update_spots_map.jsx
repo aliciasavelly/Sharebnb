@@ -29,8 +29,7 @@ class FormUpdateSpotsMap extends React.Component {
 
   render() {
     return(
-      <div id="map-container" className="map" ref="map">Map
-      </div>
+      <div id="map-container" className="map" ref="map">Map</div>
     )
   }
 }
