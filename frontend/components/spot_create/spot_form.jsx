@@ -34,7 +34,7 @@ class SpotForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if ( this.props.listings.length != nextProps.listings.length ) {
-      let lastListing = nextProps.listings[nextProps.listings.length - 1];
+      const lastListing = nextProps.listings[nextProps.listings.length - 1];
       this.navigateToSpotShow(lastListing.id);
     }
   };
@@ -79,7 +79,7 @@ class SpotForm extends React.Component {
     let field = "destination_id";
     this.setState({
       [field]: destinationId
-    })
+    });
   }
 
   updateCoords() {
@@ -107,6 +107,7 @@ class SpotForm extends React.Component {
     const spot = Object.assign({}, this.state, this.coords);
     this.newSpot = this.props.createSpot( spot );
 
+    // TODO why is this listed three times?
     this.props.requestListings();
     this.props.requestListings();
     this.props.requestListings();
@@ -122,9 +123,10 @@ class SpotForm extends React.Component {
   }
 
   renderErrors() {
-    let errors = this.state.errors;
+    const errors = this.state.errors;
+
     if (errors.length > 0) {
-      return(
+      return (
         <ul className="spot-errors">
           {errors.map( (error, idx) => (
             <li key={`spot-error-${idx}`}>
@@ -132,31 +134,24 @@ class SpotForm extends React.Component {
             </li>
           ))}
         </ul>
-      )
-    } else {
-      return(
-        <div></div>
-      )
+      );
     }
+    return (<div />);
   }
 
   renderImage() {
     if (this.state.image_url.length > 0) {
-      return(
-        <img src={this.state.image_url} />
-      )
-    } else {
-      return(
-        <div></div>
-      )
+      return (
+        <img src={this.state.image_url} alt="Image of Home" />
+      );
     }
+    return (<div />);
   }
 
   render() {
     const { title, description, price, image_url } = this.state;
     const { lat, lng } = this.coords;
-    // debugger
-
+// TODO fix options (more dynamic)
     return(
       <div className="spot-form-container">
         <div className="header">
