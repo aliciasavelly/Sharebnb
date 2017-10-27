@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { hashHistory } from 'react-router';
 import SpotDetail from './spot_detail';
 import Datetime from 'react-datetime';
@@ -6,7 +6,7 @@ import Datetime from 'react-datetime';
 // TODO add reviews
 // import ReviewButton from './review_button';
 
-class SpotShow extends React.Component {
+class SpotShow extends Component {
   constructor(props) {
     super(props);
 
@@ -53,11 +53,11 @@ class SpotShow extends React.Component {
     this.state.check_out = e._d.toJSON().slice(0,10)
   }
 
-  render () {
+  render() {
     const { spot, currentUser, destinations } = this.props;
 
     if (spot && currentUser) {
-      return(
+      return (
         <div className="spot-show">
           <div className="spot-image-cover">
             <div className="spot-image">
@@ -111,25 +111,23 @@ class SpotShow extends React.Component {
             </div>
           </div>
         </div>
-      )
+      );
     } else if (spot) {
-      return(
+      return (
         <div className="spot-show">
           <div className="spot-image-cover">
             <div className="spot-image">
-              <img src={spot.image_url} />
+              <img src={spot.image_url} alt="Image of Home for Rent" />
             </div>
           </div>
 
           <div id="spot-show-detail">
-            <SpotDetail destinations={ destinations } spot={ spot } />
+            <SpotDetail destinations={destinations} spot={spot} />
           </div>
         </div>
-      )
+      );
     } else {
-      return(
-        <div></div>
-      )
+      return (<div />);
     }
   }
 };
