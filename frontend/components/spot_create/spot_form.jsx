@@ -39,6 +39,7 @@ class SpotForm extends React.Component {
     }
   };
 
+  // TODO
   // setId() {
   //   let lastListingId = this.props.listings[this.props.listings.length - 1].id;
   //   let userId = this.props.currentUser.id;
@@ -56,6 +57,7 @@ class SpotForm extends React.Component {
   }
 
   navigateToSpotShow(id) {
+    // TODO
     // this.props.router.push(`/spots/${this.state.id}`);
     this.props.router.push(`/spots/${id}`);
   }
@@ -109,6 +111,7 @@ class SpotForm extends React.Component {
     this.props.requestListings();
     this.props.requestListings();
 
+    // TODO
     // this.navigateToSpotShow();
 
     // if (this.props.spotDetail.errors.length == 0) {

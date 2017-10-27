@@ -1,15 +1,16 @@
-import { connect } from 'react-redux';
-import SpotForm from './spot_form';
+import { selectAllDestinations, selectAllListings } from '../../reducers/selectors';
 import { createSpot } from '../../actions/spot_actions';
 import { requestDestinations } from '../../actions/destination_actions';
-import { selectAllDestinations, selectAllListings } from '../../reducers/selectors';
 import { requestListings } from '../../actions/listings_actions';
+import { connect } from 'react-redux';
+import SpotForm from './spot_form';
 
 const mapStateToProps = (state, ownProps) => ({
     currentUser: state.session.currentUser,
     lat: ownProps.location.query.lat,
     lng: ownProps.location.query.lng,
     destinations: selectAllDestinations(state),
+    // TODO
     // spotDetail: state.spotDetail,
     listings: selectAllListings(state)
 });
