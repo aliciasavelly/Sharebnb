@@ -97,16 +97,20 @@ class SpotShow extends Component {
               <form onSubmit={this.handleSubmit} className="form">
                 <div className="dates">
                   <div className="check-in-out">
-                    <Datetime className="check-field"
+                    <Datetime
+                      className="check-field"
                       defaultValue="Check In"
                       timeFormat={false}
-                      onChange={this.handleCheckInDateChange}/>
+                      onChange={this.handleCheckInDateChange}
+                    />
                   </div>
                   <div className="check-in-out">
-                    <Datetime className="check-field"
+                    <Datetime
+                      className="check-field"
                       defaultValue="Check Out"
                       timeFormat={false}
-                      onChange={this.handleCheckOutDateChange}/>
+                      onChange={this.handleCheckOutDateChange}
+                    />
                   </div>
                 </div>
 
