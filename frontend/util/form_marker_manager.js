@@ -11,7 +11,9 @@ export default class FormMarkerManager {
     for(let i = 0; i < this.markers.length; i++) {
       this.markers[i].setMap(null);
     }
+
     this.markers.length = 0;
+    
     if (spot) {
       this._createMarkerFromSpot(spot);
     }
@@ -19,10 +21,12 @@ export default class FormMarkerManager {
 
   _createMarkerFromSpot(spot) {
     const pos = new google.maps.LatLng(spot.lat, spot.lng);
+
     const icon = {
       url: "https://res.cloudinary.com/sharebnb/image/upload/v1497489602/Entypo_2302_0__512_bpsfhn.png", // url
       scaledSize: new google.maps.Size(30, 30)
     };
+
     const marker = new google.maps.Marker({
       position: pos,
       map: this.map,
