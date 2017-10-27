@@ -148,11 +148,22 @@ class SpotForm extends React.Component {
     return (<div />);
   }
 
+  createCityOptions() {
+    const cities = ["other", "Boston", "San Francisco", "New York City", "Seattle", "Chicago", "Detroit"];
+    const options = [];
+
+    for (let i = 0; i < cities.length; i++) {
+      options.push(<option value={cities[i]}>{cities[i]}</option>);
+    }
+
+    return options;
+  }
+
   render() {
     const { title, description, price, image_url } = this.state;
     const { lat, lng } = this.coords;
-// TODO fix options (more dynamic)
-    return(
+    // TODO fix options (more dynamic)
+    return (
       <div className="spot-form-container">
         <div className="header">
           <h2 className="new-spot-header">Hi, {this.props.currentUser.first_name}! Let's get you ready to </h2><h2 className="green">become a host.</h2>
@@ -161,33 +172,33 @@ class SpotForm extends React.Component {
 
           <form onSubmit={this.handleSubmit} className="form">
             <label className="title">Title</label>
-            <input className="title-field"
-                   type="text"
-                   value={title}
-                   onChange={this.update("title")} />
+            <input
+              className="title-field"
+              type="text"
+              value={title}
+              onChange={this.update("title")}
+            />
 
             <label className="description">Description</label>
-            <textarea className="description-field"
-                      rows="7" cols="70"
-                      value={description}
-                      onChange={this.update("description")} />
+            <textarea
+              className="description-field"
+              rows="7" cols="70"
+              value={description}
+              onChange={this.update("description")}
+            />
 
             <label className="price">Price</label>
-            <input className="price-field"
-                   type="number"
-                   value={price}
-                   onChange={this.update("price")} />
+            <input
+              className="price-field"
+              type="number"
+              value={price}
+              onChange={this.update("price")}
+            />
 
             <label className="destination">City</label>
             <select onChange={this.updateDestination} defaultValue="select">
               <option value="select" disabled>Select city</option>
-              <option value="other">Other</option>
-              <option value="Boston">Boston</option>
-              <option value="San Francisco">San Francisco</option>
-              <option value="New York City">New York City</option>
-              <option value="Seattle">Seattle</option>
-              <option value="Chicago">Chicago</option>
-              <option value="Detroit">Detroit</option>
+              {this.createCityOptions()}
             </select>
 
             <div className="image-container">
@@ -199,13 +210,15 @@ class SpotForm extends React.Component {
                 </button>
               </div>
 
-              <div className="image">
-                {this.renderImage()}
-              </div>
+              <div className="image">{this.renderImage()}</div>
             </div>
 
             <div className="submit-button">
-              <input type="submit" value="Create listing" className="new-spot-button" />
+              <input
+                type="submit"
+                value="Create listing"
+                className="new-spot-button"
+              />
             </div>
           </form>
 
@@ -221,13 +234,13 @@ class SpotForm extends React.Component {
 
         <div className="listings-button-holder">
           <button
-              onClick={this.navigateToListings}
-              className="listings-button">
-              Back to your listings
+            onClick={this.navigateToListings}
+            className="listings-button">
+            Back to your listings
           </button>
         </div>
       </div>
-    )
+    );
   }
 }
 
