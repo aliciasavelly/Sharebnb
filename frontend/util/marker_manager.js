@@ -1,7 +1,6 @@
 export default class MarkerManager {
-  constructor(map, handleClick) {
+  constructor(map) {
     this.map = map;
-    this.handleClick = handleClick;
     this.markers = [];
 
     this._createMarkerFromSpot = this._createMarkerFromSpot.bind(this);

@@ -1,7 +1,6 @@
 export default class FormMarkerManager {
-  constructor(map, handleClick) {
+  constructor(map) {
     this.map = map;
-    this.handleClick = handleClick;
     this.markers = [];
 
     this._createMarkerFromSpot = this._createMarkerFromSpot.bind(this);
@@ -13,7 +12,7 @@ export default class FormMarkerManager {
     }
 
     this.markers.length = 0;
-    
+
     if (spot) {
       this._createMarkerFromSpot(spot);
     }
