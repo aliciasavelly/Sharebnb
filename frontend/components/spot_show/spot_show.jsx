@@ -22,6 +22,7 @@ class SpotShow extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCheckInDateChange = this.handleCheckInDateChange.bind(this);
     this.handleCheckOutDateChange = this.handleCheckOutDateChange.bind(this);
+    this.spotShowStandard = this.spotShowStandard.bind(this);
   }
 
   componentDidMount() {
@@ -57,10 +58,28 @@ class SpotShow extends Component {
     let items = [];
 
     for (let i = 2; i <= 12; i++) {
-      items.push(<option value={`${i} guests`}>{`${i} guests`}</option>);
+      items.push(<option value={`${i} guests`} key={i}>{`${i} guests`}</option>);
     }
 
     return items;
+  }
+
+  spotShowStandard() {
+    const { spot, destinations } = this.props;
+
+    return (
+      <div>
+        <div className="spot-image-cover">
+          <div className="spot-image">
+            <img src={spot.image_url} alt="Image of Home for Rent" />
+          </div>
+        </div>
+
+        <div id="spot-show-detail">
+          <SpotDetail destinations={destinations} spot={spot} />
+        </div>
+      </div>
+    );
   }
 
   render() {
@@ -69,15 +88,7 @@ class SpotShow extends Component {
     if (spot && currentUser) {
       return (
         <div className="spot-show">
-          <div className="spot-image-cover">
-            <div className="spot-image">
-              <img src={spot.image_url} />
-            </div>
-          </div>
-
-          <div id="spot-show-detail">
-            <SpotDetail destinations={destinations} spot={spot} />
-          </div>
+          {this.spotShowStandard()}
 
           <div className="booking-section">
             <p>${spot.price} per night</p>
@@ -100,7 +111,7 @@ class SpotShow extends Component {
                 </div>
 
                 <select onChange={this.updateGuests} defaultValue="1 guest">
-                  <option value="1 guest">1 guest</option>
+                  <option value="1 guest" key="1">1 guest</option>
                   {this.createGuestOptions()}
                 </select>
 
@@ -114,17 +125,7 @@ class SpotShow extends Component {
       );
     } else if (spot) {
       return (
-        <div className="spot-show">
-          <div className="spot-image-cover">
-            <div className="spot-image">
-              <img src={spot.image_url} alt="Image of Home for Rent" />
-            </div>
-          </div>
-
-          <div id="spot-show-detail">
-            <SpotDetail destinations={destinations} spot={spot} />
-          </div>
-        </div>
+        <div className="spot-show">{this.spotShowStandard()}</div>
       );
     } else {
       return (<div />);
