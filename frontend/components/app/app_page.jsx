@@ -93,7 +93,11 @@ class AppPage extends React.Component {
           <Link to='/main' onClick={this.clearFilters}>Sharebnb</Link>
 
           <div className="carot" id="carot">
-            <img className="img-carot" src="https://res.cloudinary.com/sharebnb/image/upload/v1495754937/down-carot_rkc0ch.png"></img>
+            <img
+              className="img-carot"
+              src="https://res.cloudinary.com/sharebnb/image/upload/v1495754937/down-carot_rkc0ch.png"
+              alt="Hover For Options"
+            />
           </div>
 
           <div className="hidden">

@@ -8,13 +8,18 @@ import React from 'react';
 //   ))
 // );
 
-const SpotDetail = ({ spot, destinations }) => {
+const SpotDetail = ({ spot }) => {
   if (spot.host) {
     return(
       <div className="spot-detail">
         <div className="overview">
           <div className="round">
-            <img className="host-image" id="host-image" src={spot.host.image_url} />
+            <img
+              className="host-image"
+              id="host-image"
+              src={spot.host.image_url}
+              alt="Host Image"
+            />
           </div>
           <div className="detail">
             <h2>{spot.title}</h2>
@@ -29,9 +34,7 @@ const SpotDetail = ({ spot, destinations }) => {
       </div>
     )
   } else {
-    return(
-      <div></div>
-    )
+    return (<div />);
   }
 }
 
