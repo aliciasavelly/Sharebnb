@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
+import { selectAllDestinations } from '../../reducers/selectors';
 import { requestSingleSpot } from '../../actions/spot_actions';
 import { requestDestinations } from '../../actions/destination_actions';
-import { selectAllDestinations } from '../../reducers/selectors';
 import { createTrip } from '../../actions/trip_actions';
+import { connect } from 'react-redux';
 import SpotShow from './spot_show';
 
 const mapStateToProps = (state, { params }) => {
@@ -20,7 +20,7 @@ const mapStateToProps = (state, { params }) => {
 const mapDispatchToProps = dispatch => ({
   requestSingleSpot: id => dispatch(requestSingleSpot(id)),
   requestDestinations: () => dispatch(requestDestinations()),
-  createTrip: (trip) => dispatch(createTrip(trip))
+  createTrip: trip => dispatch(createTrip(trip))
 });
 
 export default connect(
