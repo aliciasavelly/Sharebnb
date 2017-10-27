@@ -1,5 +1,6 @@
 import React from 'react';
 
+// TODO
 // import ReviewShow from './review_show.jsx';
 //
 // const reviewList = (reviews = []) => (
@@ -10,7 +11,7 @@ import React from 'react';
 
 const SpotDetail = ({ spot }) => {
   if (spot.host) {
-    return(
+    return (
       <div className="spot-detail">
         <div className="overview">
           <div className="round">
@@ -32,7 +33,7 @@ const SpotDetail = ({ spot }) => {
           <p>{spot.description}</p>
         </div>
       </div>
-    )
+    );
   } else {
     return (<div />);
   }
