@@ -141,9 +141,7 @@ class SpotForm extends React.Component {
 
   renderImage() {
     if (this.state.image_url.length > 0) {
-      return (
-        <img src={this.state.image_url} alt="Image of Home" />
-      );
+      return (<img src={this.state.image_url} alt="Image of Home" />);
     }
     return (<div />);
   }
@@ -162,7 +160,7 @@ class SpotForm extends React.Component {
   render() {
     const { title, description, price, image_url } = this.state;
     const { lat, lng } = this.coords;
-    
+
     return (
       <div className="spot-form-container">
         <div className="header">

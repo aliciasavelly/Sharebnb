@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
-import SpotUpdateForm from './spot_update_form';
+import { selectAllDestinations } from '../../reducers/selectors';
 import { updateSpot } from '../../actions/spot_actions';
 import { requestDestinations } from '../../actions/destination_actions';
-import { selectAllDestinations } from '../../reducers/selectors';
+import { connect } from 'react-redux';
+import SpotUpdateForm from './spot_update_form';
 
 const mapStateToProps = (state, ownProps) => ({
     currentUser: state.session.currentUser,

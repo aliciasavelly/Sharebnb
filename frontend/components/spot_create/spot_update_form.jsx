@@ -1,8 +1,7 @@
-import React from 'react';
-import FormUpdateSpotsMap from '../spots_map/form_update_spots_map';
+import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 
-class SpotUpdateForm extends React.Component {
+class SpotUpdateForm extends Component {
   constructor(props) {
     super(props);
 
@@ -11,7 +10,7 @@ class SpotUpdateForm extends React.Component {
       if(spot.id === parseInt(this.props.url_id)) {
         this.spot = spot;
       }
-    })
+    });
 
     this.coords = {lat: this.spot.lat, lng: this.spot.lng};
     this.state = {
@@ -60,7 +59,7 @@ class SpotUpdateForm extends React.Component {
     e.preventDefault();
 
     cloudinary.openUploadWidget(cloudinary_options, (error, results) => {
-      if(error){
+      if (error){
         console.log(error);
       } else {
         this.setState({ image_url: results[0].secure_url });
@@ -80,7 +79,7 @@ class SpotUpdateForm extends React.Component {
     const { title, description, price, image_url } = this.state;
     const { lat, lng } = this.coords;
 
-    return(
+    return (
       <div className="spot-form-container">
         <div className="header">
           <h2 className="new-spot-header">Hi, {this.props.currentUser.first_name}! Let's </h2><h2 className="green">update your listing.</h2>
@@ -89,22 +88,28 @@ class SpotUpdateForm extends React.Component {
 
           <form onSubmit={this.handleSubmit} className="form">
             <label className="title">Title</label>
-            <input className="title-field"
-                   type="text"
-                   value={title}
-                   onChange={this.update("title")} />
+            <input
+              className="title-field"
+              type="text"
+              value={title}
+              onChange={this.update("title")}
+            />
 
             <label className="description">Description</label>
-            <textarea className="description-field"
-                      rows="7" cols="70"
-                      value={description}
-                      onChange={this.update("description")} />
+            <textarea
+              className="description-field"
+              rows="7" cols="70"
+              value={description}
+              onChange={this.update("description")}
+            />
 
             <label className="price">Price</label>
-            <input className="price-field"
-                   type="number"
-                   value={price}
-                   onChange={this.update("price")} />
+            <input
+              className="price-field"
+              type="number"
+              value={price}
+              onChange={this.update("price")}
+            />
 
             <div className="image-container">
               <div className="image-button" onClick={this.handleCloudinary}>
@@ -116,7 +121,7 @@ class SpotUpdateForm extends React.Component {
               </div>
 
               <div className="image">
-                <img src={image_url} />
+                <img src={image_url} alt="Home Image" />
               </div>
             </div>
 
@@ -128,13 +133,13 @@ class SpotUpdateForm extends React.Component {
 
         <div className="listings-button-holder">
           <button
-              onClick={this.navigateToListings}
-              className="listings-button">
-              Back to your listings
+            onClick={this.navigateToListings}
+            className="listings-button">
+            Back to your listings
           </button>
         </div>
       </div>
-    )
+    );
   }
 }
 
