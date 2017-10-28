@@ -162,7 +162,7 @@ class SpotForm extends React.Component {
   render() {
     const { title, description, price, image_url } = this.state;
     const { lat, lng } = this.coords;
-    // TODO fix options (more dynamic)
+    
     return (
       <div className="spot-form-container">
         <div className="header">
