@@ -21,10 +21,10 @@ class SpotUpdateForm extends Component {
       destination_id: this.spot.destination_id
     };
 
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToListings = this.navigateToListings.bind(this);
-    this.handleCloudinary = this.handleCloudinary.bind(this);
     this.updateDestination = this.updateDestination.bind(this);
+    this.handleCloudinary = this.handleCloudinary.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -52,7 +52,7 @@ class SpotUpdateForm extends Component {
     let field = "destination_id";
     this.setState({
       [field]: destinationId
-    })
+    });
   }
 
   handleCloudinary(e) {
@@ -77,12 +77,12 @@ class SpotUpdateForm extends Component {
 
   render() {
     const { title, description, price, image_url } = this.state;
-    const { lat, lng } = this.coords;
 
     return (
       <div className="spot-form-container">
         <div className="header">
-          <h2 className="new-spot-header">Hi, {this.props.currentUser.first_name}! Let's </h2><h2 className="green">update your listing.</h2>
+          <h2 className="new-spot-header">Hi, {this.props.currentUser.first_name}! Let's </h2>
+          <h2 className="green">update your listing.</h2>
         </div>
         <div className="new-spot-form">
 
@@ -126,7 +126,11 @@ class SpotUpdateForm extends Component {
             </div>
 
             <div id="update-button" className="submit-button">
-              <input type="submit" value="Update listing" className="new-spot-button" />
+              <input
+                type="submit"
+                value="Update listing"
+                className="new-spot-button"
+              />
             </div>
           </form>
         </div>
