@@ -1,12 +1,11 @@
-import { connect } from 'react-redux';
-import MyTrips from './my_trips';
 import { selectAllTrips, selectAllSpots } from '../../reducers/selectors';
 import { requestTrips, deleteTrip } from '../../actions/trip_actions';
 import { requestSpots } from '../../actions/spot_actions';
+import { connect } from 'react-redux';
+import MyTrips from './my_trips';
 
 const mapStateToProps = state => ({
   loggedIn: !!state.session.currentUser,
-  currentUser: state.session.currentUser,
   trips: selectAllTrips(state),
   spots: selectAllSpots(state)
 });

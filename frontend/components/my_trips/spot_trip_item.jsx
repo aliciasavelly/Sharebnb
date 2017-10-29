@@ -33,17 +33,17 @@ class SpotTripItem extends React.Component {
       if (spot.id === this.props.trip.spot_id) {
         this.currentSpot = spot;
       }
-    })
+    });
 
     const { image_url, title, price, host } = this.currentSpot;
     const trip = this.props.trip;
 
     if (image_url) {
-      return(
+      return (
         <div className="trip-item-outer">
           <div className="trip-index-item" onClick={this.handleClick}>
             <div className="image-container">
-              <img src={image_url} />
+              <img src={image_url} alt="Home Image" />
             </div>
 
             <div className="item-details">
@@ -55,7 +55,7 @@ class SpotTripItem extends React.Component {
                   <p>Check in: </p>
                   {trip.check_in}
                 </div>
-                
+
                 <div className="dates">
                   <p>Check out: </p>
                   {trip.check_out}
@@ -63,23 +63,27 @@ class SpotTripItem extends React.Component {
               </div>
 
               <div id="round">
-                <img className="host-image" id="host-image" src={host.image_url} />
+                <img
+                  className="host-image"
+                  id="host-image"
+                  src={host.image_url}
+                  alt="Image of Host"
+                />
               </div>
             </div>
           </div>
 
           <div className="delete-button-holder">
-            <button onClick={this.deleteTrip}
+            <button
+              onClick={this.deleteTrip}
               className="delete-button">
               Cancel booking
             </button>
           </div>
         </div>
-      )
+      );
     } else {
-      return(
-        <div></div>
-      )
+      return (<div />);
     }
   }
 }

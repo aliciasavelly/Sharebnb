@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter, hashHistory } from 'react-router';
+import { withRouter } from 'react-router';
 import SpotTripItem from './spot_trip_item'
 
 class MyTrips extends React.Component {
@@ -19,7 +19,7 @@ class MyTrips extends React.Component {
   }
 
   redirectIfLoggedOut() {
-    if(!this.props.loggedIn) {
+    if (!this.props.loggedIn) {
       this.props.router.push('/main');
     }
   }
@@ -27,7 +27,7 @@ class MyTrips extends React.Component {
   renderTrips() {
     const { deleteTrip, trips, requestTrips, requestSpots, spots } = this.props;
 
-    return(
+    return (
       <div className="trips-index">
         {this.props.trips.map( (trip, idx) => (
           <SpotTripItem deleteTrip={ deleteTrip }
@@ -39,16 +39,16 @@ class MyTrips extends React.Component {
                         key={`trips-${idx}`} />
         ))}
       </div>
-    )
+    );
   }
 
   render() {
-    return(
+    return (
       <div className="my-trips">
         <h1>Trips</h1>
         {this.renderTrips()}
       </div>
-    )
+    );
   }
 }
 
