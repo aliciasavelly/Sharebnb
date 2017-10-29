@@ -1,7 +1,7 @@
-import { connect } from 'react-redux';
+import { selectAllSpots } from '../../reducers/selectors';
 import { updateFilter } from '../../actions/filter_actions';
 import { requestSpots } from '../../actions/spot_actions';
-import { selectAllSpots } from '../../reducers/selectors';
+import { connect } from 'react-redux';
 import Search from './search';
 
 const mapStateToProps = state => ({

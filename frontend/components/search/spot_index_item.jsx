@@ -16,18 +16,18 @@ class SpotIndexItem extends React.Component {
   render() {
     const { title, price, image_url } = this.props.spot;
 
-    return(
+    return (
       <div className="spot-index-item" onClick={this.handleClick}>
         <div className="img-container">
-          <img src={this.props.spot.image_url} />
+          <img src={image_url} alt={`Home Image: ${title}`} />
         </div>
 
         <div className="spot-index-item-detail">
-          <p>${this.props.spot.price}</p>
-          <p>{this.props.spot.title}</p>
+          <p>${price}</p>
+          <p>{title}</p>
         </div>
       </div>
-    )
+    );
   }
 };
 

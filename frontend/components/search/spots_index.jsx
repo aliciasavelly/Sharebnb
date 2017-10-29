@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, withRouter, hashHistory } from 'react-router';
 import SpotIndexItem from './spot_index_item';
 
 const SpotsIndex = ({ spots }) => (
@@ -9,6 +8,6 @@ const SpotsIndex = ({ spots }) => (
       <SpotIndexItem spot={spot} key={spot.id} />
     ))}
   </div>
-)
+);
 
 export default SpotsIndex;
