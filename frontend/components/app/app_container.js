@@ -1,7 +1,7 @@
-import { connect } from 'react-redux';
-import AppPage from './app_page';
 import { requestLogout, updateUser } from '../../actions/session_actions';
 import { updateFilter } from '../../actions/filter_actions';
+import { connect } from 'react-redux';
+import AppPage from './app_page';
 
 const mapStateToProps = state => ({
   loggedIn: !!state.session.currentUser,

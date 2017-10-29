@@ -86,8 +86,18 @@ class AppPage extends React.Component {
     }
   }
 
+  createGuestOptions() {
+    let items = [];
+
+    for (let i = 2; i <= 12; i++) {
+      items.push(<option value={`${i} guests`} key={i}>{`${i} guests`}</option>);
+    }
+
+    return items;
+  }
+
   leftNav() {
-    return(
+    return (
       <div id="left" className="left">
         <div id="title-carot">
           <Link to='/main' onClick={this.clearFilters}>Sharebnb</Link>
@@ -109,89 +119,91 @@ class AppPage extends React.Component {
           <form className="search-form" >
             <i className="fa fa-search" aria-hidden="true"></i>
 
-            <input className="search-input"
-                   value={this.state.city}
-                   placeholder="Where to?"
-                   onChange={this.update("city")}
-                   type="text" ></input>
+            <input
+              className="search-input"
+              value={this.state.city}
+              placeholder="Where to?"
+              onChange={this.update("city")}
+              type="text"
+            />
 
             <label className="first-label">
-              <Datetime className="datetime"
+              <Datetime
+                className="datetime"
                 defaultValue="Check In"
                 timeFormat={false}
-                onChange={this.handleDateChange}/>
+                onChange={this.handleDateChange}
+              />
             </label>
             <p></p>
             <label className="second-label">
-              <Datetime className="datetime"
+              <Datetime
+                className="datetime"
                 defaultValue="Check Out"
-                timeFormat={false}/>
+                timeFormat={false}
+              />
             </label>
             <select className="search-input-guest">
               <option value="1">1 guest</option>
-              <option value="2">2 guests</option>
-              <option value="3">3 guests</option>
-              <option value="4">4 guests</option>
-              <option value="5">5 guests</option>
-              <option value="6">6 guests</option>
-              <option value="7">7 guests</option>
-              <option value="8">8 guests</option>
-              <option value="9">9 guests</option>
-              <option value="10">10 guests</option>
-              <option value="11">11 guests</option>
-              <option value="12">12 guests</option>
+              {this.createGuestOptions()}
             </select>
           </form>
         </div>
       </div>
-    )
+    );
   }
 
   rightNav() {
     if (this.state.loggedIn || this.props.loggedIn) {
       return (
-      <div className="right">
+        <div className="right">
 
-        <h3 className="nav-redirect" onClick={ () => (this.goToLink('/my-listings')) }>Host</h3>
-        <h3 className="nav-redirect" onClick={ () => (this.goToLink('/my-trips')) }>Trips</h3>
-        <div className="outer-round">
-          <div className="round">
-            <img className="index-image" src={this.props.currentUser.image_url} />
+          <h3 className="nav-redirect" onClick={ () => (this.goToLink('/my-listings')) }>Host</h3>
+          <h3 className="nav-redirect" onClick={ () => (this.goToLink('/my-trips')) }>Trips</h3>
+          <div className="outer-round">
+            <div className="round">
+              <img
+                className="index-image"
+                src={this.props.currentUser.image_url}
+                alt="User Icon"
+              />
+            </div>
+          </div>
+
+          <div className="hidden">
+
+            <button
+              className="new-user-icon"
+              onClick={this.handleCloudinary}>Add user icon
+            </button>
+            <hr />
+            <form className="nav-link-form" onSubmit={this.logoutUser}>
+              <input className="nav-link" type="submit" value="Log out" />
+              <hr />
+            </form>
           </div>
         </div>
-
-        <div className="hidden">
-
-          <button className="new-user-icon"
-            onClick={this.handleCloudinary}>Add user icon
-          </button>
-          <hr />
-          <form className="nav-link-form" onSubmit={this.logoutUser}>
-            <input className="nav-link" type="submit" value="Log out" />
-            <hr />
-          </form>
-        </div>
-
-      </div>)
+      );
     } else {
       return (
-      <div className="right">
-        <Link to="/login" className="nav-link-show">Log in</Link>
-          <br />
-        <Link to="/signup" className="nav-link-show">Sign up</Link>
-      </div>)
+        <div className="right">
+          <Link to="/login" className="nav-link-show">Log in</Link>
+            <br />
+          <Link to="/signup" className="nav-link-show">Sign up</Link>
+        </div>
+      );
     }
   }
 
   render() {
-    return(
+    return (
       <div className="main">
         <div className="navbar">
           {this.leftNav()}
           {this.rightNav()}
         </div>
       </div>
-    )
+    );
   }
 }
 
