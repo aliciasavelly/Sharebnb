@@ -37,40 +37,42 @@ class SessionForm extends React.Component {
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
-    })
+    });
   }
 
   redirectLink() {
     if (this.props.formType === "login") {
       return (
-      <div className="redirect" id="bottom">
-        <p>Don't have a Sharebnb account?</p>
-        <Link to="/signup">Sign up</Link>
-      </div>)
+        <div className="redirect" id="bottom">
+          <p>Don't have a Sharebnb account?</p>
+          <Link to="/signup">Sign up</Link>
+        </div>
+      );
     } else {
       return (
-      <div className="redirect" id="bottom">
-        <p>Already have a Sharebnb account?</p>
-        <Link to="/login">Log in</Link>
-      </div>)
+        <div className="redirect" id="bottom">
+          <p>Already have a Sharebnb account?</p>
+          <Link to="/login">Log in</Link>
+        </div>
+      );
     }
   }
 
   renderErrors() {
-    let errors = this.props.errors;
+    const errors = this.props.errors;
+
     if (errors === undefined || errors.length < 1) {
       return "";
     } else {
-      return(
+      return (
         <ul className="errors">
           {errors.map( (error, idx) => (
             <li key={`error-${idx}`}>
               {error}
             </li>
           ))}
-
         </ul>
-      )
+      );
     }
   }
 
@@ -81,13 +83,11 @@ class SessionForm extends React.Component {
 
   topSection() {
     if (this.props.formType === "login") {
-      return(
-        <div></div>
-      )
+      return (<div />);
     } else {
-      return(
+      return (
         <p className="signup-top">Sign up to join Sharebnb's trusted community of millions and have your own unique experience.</p>
-      )
+      );
     }
   }
 
@@ -95,15 +95,17 @@ class SessionForm extends React.Component {
     if (this.props.formType === "login") {
       return "";
     } else {
-      return(
+      return (
         <div>
-          <input type="text"
-                 placeholder="First name"
-                 value={this.state.first_name}
-                 onChange={this.update("first_name")} />
+          <input
+            type="text"
+            placeholder="First name"
+            value={this.state.first_name}
+            onChange={this.update("first_name")}
+          />
           <i className="fa fa-user-o" aria-hidden="true"></i>
         </div>
-      )
+      );
     }
   }
 
@@ -118,7 +120,7 @@ class SessionForm extends React.Component {
           <h2>{title}</h2>
           <Link to='/main' className="main-redirect-x">
 
-            <i className="fa fa-times main-redirect-x" aria-hidden="true"></i>
+            <i className="fa fa-times main-redirect-x" aria-hidden="true" />
           </Link>
         </div>
 
@@ -127,7 +129,11 @@ class SessionForm extends React.Component {
             {this.topSection()}
 
             <form onSubmit={this.loginGuestUser}>
-              <input className="button" type="submit" value="Log in with guest account" />
+              <input
+                className="button"
+                type="submit"
+                value="Log in with guest account"
+              />
             </form>
 
           </div>
@@ -138,11 +144,13 @@ class SessionForm extends React.Component {
             {this.renderErrors()}
             <div className="login-signup-form">
               <div className="username-input">
-                <input type="text"
+                <input
+                  type="text"
                   placeholder="Username"
                   value={this.state.username}
-                  onChange={this.update("username")} />
-                <i className="fa fa-envelope-o" aria-hidden="true"></i>
+                  onChange={this.update("username")}
+                />
+                <i className="fa fa-envelope-o" aria-hidden="true" />
               </div>
 
               <div className="first-name-input">
@@ -150,20 +158,27 @@ class SessionForm extends React.Component {
               </div>
 
               <div className="password-input">
-                <input type="password"
+                <input
+                  type="password"
                   placeholder="Create a password"
                   value={this.state.password}
-                  onChange={this.update("password")} />
-                <i className="fa fa-lock" aria-hidden="true"></i>
+                  onChange={this.update("password")}
+                />
+                <i className="fa fa-lock" aria-hidden="true" />
               </div>
-              <input id="button" className="button here" type="submit" value={title} />
+              <input
+                id="button"
+                className="button here"
+                type="submit"
+                value={title}
+              />
             </div>
             <hr></hr>
           </form>
           {this.redirectLink()}
         </div>
       </div>
-    )
+    );
   }
 }
 

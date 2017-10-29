@@ -71,7 +71,7 @@ class SpotUpdateForm extends Component {
     e.preventDefault();
 
     const spot = Object.assign({}, this.state, this.coords);
-    this.props.updateSpot( this.spot.id, spot );
+    this.props.updateSpot(this.spot.id, spot);
     this.navigateToListings();
   }
 
