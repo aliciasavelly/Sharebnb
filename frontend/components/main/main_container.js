@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
-import MainPage from './main';
 import { selectAllDestinations } from '../../reducers/selectors';
 import { requestDestinations } from '../../actions/destination_actions';
 import { updateFilter } from '../../actions/filter_actions';
+import { connect } from 'react-redux';
+import MainPage from './main';
 
 const mapStateToProps = state => ({
   destinations: selectAllDestinations(state)

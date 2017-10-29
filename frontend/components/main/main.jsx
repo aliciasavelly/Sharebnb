@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter, hashHistory } from 'react-router';
+import { withRouter } from 'react-router';
 import MainContainer from './main_container';
 
 class MainPage extends React.Component {
@@ -7,6 +7,7 @@ class MainPage extends React.Component {
     super(props);
 
     this.state = { city: "" };
+
     this.renderDestinations = this.renderDestinations.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
@@ -22,21 +23,30 @@ class MainPage extends React.Component {
   }
 
   renderDestinations() {
-    return(
+    return (
       <div className="destinations-items" id="destinations-items">
         {this.props.destinations.map( (destination, idx) => (
-          <div className="cursor-responsive" key={`destination-${idx}`} value={destination.city} onClick={this.handleClick} >
-            <img className="city-image" src={destination.image_url} value={destination.city} />
+          <div
+            className="cursor-responsive"
+            key={`destination-${idx}`}
+            value={destination.city}
+            onClick={this.handleClick} >
+            <img
+              className="city-image"
+              src={destination.image_url}
+              value={destination.city}
+              alt={`${destination} Image`}
+            />
             <p className="city-name" id="city-name">{destination.city}</p>
           </div>
         ))}
       </div>
-    )
+    );
   }
 
   render() {
     if (this.props.destinations.length > 0) {
-      return(
+      return (
         <div className="outer-main-div">
           <div className="top-title-div" id="top-title-div">
             <p className="top-title" id="top-title"><strong>Where to?</strong> Start your next adventure on Sharebnb.</p>
@@ -49,12 +59,10 @@ class MainPage extends React.Component {
           <hr></hr>
           <div className="personal-links"><a><i className="fa fa-github" aria-hidden="true"></i></a></div>
         </div>
-      )
-    } else {
-      return(
-        <div></div>
-      )
+      );
     }
+
+    return (<div />);
   }
 }
 
