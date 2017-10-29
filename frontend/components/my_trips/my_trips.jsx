@@ -25,7 +25,11 @@ class MyTrips extends React.Component {
   }
 
   renderTrips() {
-    const { deleteTrip, trips, requestTrips, requestSpots, spots } = this.props;
+    const { deleteTrip,
+            trips,
+            requestTrips,
+            requestSpots,
+            spots } = this.props;
 
     return (
       <div className="trips-index">

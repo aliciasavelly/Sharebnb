@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router';
 import SpotListingItem from './spot_listing_item';
 
-class MyListings extends React.Component {
+class MyListings extends Component {
   constructor(props) {
     super(props);
     this.count = 0;
@@ -26,7 +26,7 @@ class MyListings extends React.Component {
   }
 
   redirectIfLoggedOut() {
-    if(!this.props.loggedIn && this.props.location.pathname != "/main") {
+    if (!this.props.loggedIn && this.props.location.pathname != "/main") {
       this.props.router.push('/main');
     }
   }
@@ -34,26 +34,26 @@ class MyListings extends React.Component {
   renderListings() {
     const { requestSingleSpot, deleteSpot } = this.props;
 
-    return(
+    return (
       <div className="listings-index">
         {this.props.listings.map( (spot, idx) => (
           <SpotListingItem
-            requestSingleSpot={ requestSingleSpot }
-            deleteSpot={ deleteSpot }
-            spot={ spot }
-            key={`listings-${idx}`} /> ))}
+            deleteSpot={deleteSpot}
+            spot={spot}
+            key={`listings-${idx}`}
+          /> ))}
       </div>
-    )
+    );
   }
 
   render() {
-    return(
+    return (
       <div className="my-listings">
         <h1>Listings</h1>
         <Link to="/new-listing" className="button">Add New Listings</Link>
         {this.renderListings()}
       </div>
-    )
+    );
   }
 }
 

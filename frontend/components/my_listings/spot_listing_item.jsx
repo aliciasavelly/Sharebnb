@@ -24,22 +24,13 @@ class SpotListingItem extends React.Component {
   }
 
   render() {
-    const { id,
-            title,
-            price,
-            image_url,
-            destination_id,
-            host_id,
-            description,
-            lat,
-            lng } = this.props.spot;
+    const { title, price, image_url } = this.props.spot;
 
-    return(
+    return (
       <div className="spot-listing-item-outer">
-        <div className="spot-listing-item"
-             onClick={this.handleClick}>
+        <div className="spot-listing-item" onClick={this.handleClick}>
           <div className="img-container">
-            <img src={image_url} />
+            <img src={image_url} alt="Home Image" />
           </div>
 
           <div className="spot-listing-item-detail">
@@ -48,18 +39,18 @@ class SpotListingItem extends React.Component {
           </div>
         </div>
         <div className="delete-button-holder">
-          <button onClick={this.deleteSpot}
-                  className="delete-button">
-                  Delete this listing
+          <button onClick={this.deleteSpot} className="delete-button">
+            Delete this listing
           </button>
-          <button onClick={this.updateSpot}
-                  className="delete-button"
-                  id="update-button">
-                  Update this listing
+          <button
+            onClick={this.updateSpot}
+            className="delete-button"
+            id="update-button">
+            Update this listing
           </button>
         </div>
       </div>
-    )
+    );
   }
 }
 
