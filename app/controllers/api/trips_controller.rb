@@ -24,10 +24,10 @@
   private
   def trip_paramas
     params.require(:trip).permit(:user_id,
-      :spot_id,
-      :check_in,
-      :check_out,
-      :num_guests
-    )
+                                 :spot_id,
+                                 :check_in,
+                                 :check_out,
+                                 :num_guests
+                                )
   end
 end

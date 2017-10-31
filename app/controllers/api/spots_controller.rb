@@ -25,7 +25,6 @@ class Api::SpotsController < ApplicationController
     if @spot.save
       render "api/spots/show"
     else
-      # debugger
       render json: @spot.errors.full_messages, status: 422
     end
   end
