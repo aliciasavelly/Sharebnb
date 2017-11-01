@@ -21,7 +21,7 @@ class Api::SpotsController < ApplicationController
 
   def create
     @spot = Spot.new(spot_params)
-    # render :show
+
     if @spot.save
       render "api/spots/show"
     else
